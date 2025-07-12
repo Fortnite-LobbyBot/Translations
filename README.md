@@ -1,0 +1,2 @@
+# Translations
+FNLB Official Translations
