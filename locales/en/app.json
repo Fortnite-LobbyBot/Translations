@@ -99,7 +99,7 @@
 		"tryAgain": "An error occurred, please try again."
 	},
 	"navbar": {
-		"connecting": "Connecting....",
+		"connecting": "Connecting…",
 		"menu": "Menu",
 		"systemStatus": "FNLB System Status",
 		"myAccount": "My Account",
@@ -183,7 +183,7 @@
 		"reorderingCategoriesWithBots": "Reordering {{categories}} categories with {{bots}} bots",
 		"noBotsFound": "No bots found",
 		"sortBy": "Sort by: {{criteria}}",
-		"searchForABot": "Search for a bot...",
+		"searchForABot": "Search for a bot…",
 		"createCategory": "Create category",
 		"createYourFirstBot": "Create your first bot.",
 		"trySearchingForSomethingElse": "Try searching for something else.",
@@ -200,7 +200,7 @@
 		"showingBots": "Showing {{start}}-{{end}} of {{total}} bots",
 		"noBotsFound": "No bots found",
 		"sortBy": "Sort by: {{criteria}}",
-		"searchForABot": "Search for a bot...",
+		"searchForABot": "Search for a bot…",
 		"noBotsOverHere": "No bots over here."
 	},
 	"authScreen": {
@@ -418,7 +418,7 @@
 		"bot": "Bot",
 		"welcome": "Welcome to the chat <b>@{{username}}</b>, make sure to follow the rules.",
 		"registerEpic": "Register & connect your Epic Games account to send messages.",
-		"placeholder": "Run a command...",
+		"placeholder": "Run a command…",
 		"send": "Send"
 	},
 	"success": {
@@ -436,8 +436,8 @@
 		"importBotTitle": "Let's Import your Bot's Epic Games Account",
 		"dontImportMainAccount": "Don't import your main account!",
 		"dontImportMainAccountDesc": "FNLB bots are designed to work on brand new accounts that no one else is using, make sure your bot account it's not the same account as your main account.",
-		"importingBot": "Importing your bot. Please click on confirm...",
-		"newTabOpened": "A new tab has been opened. Please click on confirm...",
+		"importingBot": "Importing your bot. Please click on confirm…",
+		"newTabOpened": "A new tab has been opened. Please click on confirm…",
 		"unableImportBot": "Unable to import your bot's account. Make sure to click on \"confirm\".",
 		"importBotAccount": "Import your bot's Epic Games account:",
 		"pageNotOpened": "If the page didn't open automatically, click here to open it.",
@@ -448,7 +448,7 @@
 		"setupCategory": "Let's set up a category",
 		"lastStep": "Last but not least",
 		"verifyAccountDesc": "You already have a bot! Verify your FNLB account to create more bots.",
-		"loading": "Loading...",
+		"loading": "Loading…",
 		"useAuthCodeInstead": "Use an authorization code instead.",
 		"getAuthorizationCode": "Get Authorization Code",
 		"authorizationCode": "Authorization Code",
@@ -473,7 +473,7 @@
 	},
 	"settingsModal": {
 		"changelogNotAvailable": "Changelog not available.",
-		"pressAnyKey": "Press any key...",
+		"pressAnyKey": "Press any key…",
 		"keybind": "Keybind: {{key}}",
 		"setKeybind": "Set keybind",
 		"clearKeybind": "Clear keybind",
@@ -531,7 +531,7 @@
 	},
 	"cosmeticModal": {
 		"selectCosmetic": "Select {{type}}",
-		"searchPlaceholder": "Search for {{label}}...",
+		"searchPlaceholder": "Search for {{label}}…",
 		"errorBroke": "Something went wrong while loading cosmetics",
 		"showingCosmetics": "Showing {{start}}-{{end}} of {{total}} {{label}}",
 		"noCosmetics": "No {{label}} found",
@@ -624,8 +624,8 @@
 		"connectViaDisplayNameDescription": "Connect your Epic Games account using your Display Name.",
 		"dontConnectBotAccount": "Don't connect your Bot account!",
 		"dontConnectBotAccountDesc": "When connecting your accounts, it must be the Epic Games account you will be using the bot with, not the bot's own account.",
-		"connectingAccount": "Connecting your account. Please click on confirm...",
-		"pleaseClickConfirm": "Please click on confirm...",
+		"connectingAccount": "Connecting your account. Please click on confirm…",
+		"pleaseClickConfirm": "Please click on confirm…",
 		"successfullyConnected": "Successfully connected your Epic Games Account:",
 		"unableToConnect": "Unable to connect your Epic Games Account. Make sure to click on \"confirm\".",
 		"connectEpicInstructions": "You can connect your Epic Games Account by pressing the button. Make sure is NOT your bot account.",
@@ -645,8 +645,8 @@
 	},
 	"discordLinkModal": {
 		"discordLinkModalTitle": "Connect your Discord Account",
-		"discordLinkModalConnecting": "Connecting your Discord account...",
-		"discordLinkModalPleaseAuthorize": "Please click on authorize...",
+		"discordLinkModalConnecting": "Connecting your Discord account…",
+		"discordLinkModalPleaseAuthorize": "Please click on authorize…",
 		"discordLinkModalSuccessfullyConnected": "Successfully connected your Discord Account: <b>{{username}}</b>",
 		"discordLinkModalInstructions": "You can connect your Discord Account by pressing the button below.",
 		"discordLinkModalPageDidntOpen": "If the page didn't open automatically, click here to open it.",
@@ -741,7 +741,7 @@
 	},
 	"presetModal": {
 		"selectPreset": "Select the preset",
-		"searchPlaceholder": "Search for presets...",
+		"searchPlaceholder": "Search for presets…",
 		"showingPresets": "Showing {{start}}-{{end}} of {{total}} presets",
 		"noPresets": "No presets over here.",
 		"unnamed": "Unnamed",
@@ -750,16 +750,16 @@
 		"skullTrooper": "Skull Trooper Preset",
 		"renegadeRaider": "Renegade Raider Preset",
 		"registerHeader": "Create your FNLB account to change the preset of the bot",
-		"errorBroke": "Oops! Something broke. Retrying..."
+		"errorBroke": "Oops! Something broke. Retrying…"
 	},
 	"playlistModal": {
 		"selectGameMode": "Select Game Mode",
-		"searchPlaceholder": "Search for game modes...",
+		"searchPlaceholder": "Search for game modes…",
 		"showingGameModes": "Showing {{start}}-{{end}} of {{total}} game modes",
 		"noGameModes": "No game modes found",
 		"unnamed": "Unnamed",
 		"registerHeader": "Create your FNLB account to select game modes",
-		"errorBroke": "Oops! Something broke. Retrying..."
+		"errorBroke": "Oops! Something broke. Retrying…"
 	},
 	"viewLogsModal": {
 		"title": "View Logs",
@@ -770,15 +770,15 @@
 		"noLogsOverHere": "No logs over here."
 	},
 	"selectModal": {
-		"searchPlaceholder": "Search... (Select with arrow keys)",
+		"searchPlaceholder": "Search… (Select with arrow keys)",
 		"empty": "Empty",
-		"nothingFound": "Nothing found...",
+		"nothingFound": "Nothing found…",
 		"searchEpicAccount": "Search Epic Games Account",
 		"enterEpicDisplayName": "Enter Epic Games Display Name or ID",
-		"selectTheme": "Select theme...",
+		"selectTheme": "Select theme…",
 		"recentlyUsed": "Recently used",
 		"setTheme": "Set theme",
-		"selectLanguage": "Select language...",
+		"selectLanguage": "Select language…",
 		"selectCommand": "Select command"
 	},
 	"botControl": {
@@ -812,21 +812,21 @@
 	},
 	"bannerModal": {
 		"selectBanner": "Select the banner",
-		"searchPlaceholder": "Search for banners...",
+		"searchPlaceholder": "Search for banners…",
 		"showingBanners": "Showing {{start}}-{{end}} of {{total}} banners",
 		"noBanners": "No banners over here.",
 		"unnamed": "Unnamed",
 		"registerHeader": "Create your FNLB account to change the banners of the bot",
-		"errorBroke": "Oops! Something broke. Retrying..."
+		"errorBroke": "Oops! Something broke. Retrying…"
 	},
 	"bannerColorModal": {
 		"selectBannerColor": "Select the banner color",
-		"searchPlaceholder": "Search for banner colors...",
+		"searchPlaceholder": "Search for banner colors…",
 		"showingBannerColors": "Showing {{start}}-{{end}} of {{total}} banner colors",
 		"noBannerColors": "No banner colors over here.",
 		"unnamed": "Unnamed",
 		"registerHeader": "Create your FNLB account to change the bannerColors of the bot",
-		"errorBroke": "Oops! Something broke. Retrying..."
+		"errorBroke": "Oops! Something broke. Retrying…"
 	},
 	"botLink": {
 		"editBot": "Edit Bot",
