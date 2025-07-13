@@ -1,0 +1,1307 @@
+{
+	"handler": {
+		"errors": {
+			"only_for_party_members": "此命令僅適用於我的聚會成員。",
+			"only_for_private_messages": "此命令僅在私人消息中可用。",
+			"need_party_leader": "我需要成為黨的負責人來執行此命令！",
+			"only_for_owners": "此命令僅適用於機器人所有者。",
+			"only_for_admins": "此命令僅適用於機器人管理員。",
+			"only_for_whitelist": "此命令僅適用於機器人白名單上的用戶。"
+		}
+	},
+	"all_items": {
+		"config": {
+			"description": "顯示遊戲的所有化妝品，可以添加一個可選的過濾器，您可以使用“ stop”命令停止。",
+			"usage": {
+				"filter": {
+					"name": "篩選",
+					"options": {
+						"outfits": "服裝",
+						"backpacks": "背包",
+						"emojis": "表情符號",
+						"emotes": "情緒",
+						"pickaxes": "採摘",
+						"shoes": "鞋"
+					},
+					"description": "通過顯示項目來設置的過濾器。"
+				},
+				"random_order": {
+					"name": "隨機順序",
+					"description": "使用隨機訂單而不是按最新訂購。",
+					"options": {
+						"yes": "是的",
+						"no": "不"
+					}
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"no_items": "無法獲取物品。",
+				"items_already_displaying": "化妝品已經在顯示，必須首先使用“停止”命令停止。",
+				"setting_items": "設置所有遊戲項目... {{filtered}}",
+				"filtered_by": "（由{{filter}}過濾）",
+				"items_showed": "我已經完成了所有項目..."
+			}
+		}
+	},
+	"backpack": {
+		"config": {
+			"description": "設置機器人的背包。",
+			"usage": {
+				"query": {
+					"name": "背包名稱或ID",
+					"description": "要設置的背包的名稱或ID。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"backpack_not_found": "背包{{item}}找不到！",
+				"backpack_changed": "將背包設置為{{name}}！ （{{id}}）"
+			}
+		}
+	},
+	"backpack_variants": {
+		"config": {
+			"description": "設置背包的變體。"
+		},
+		"run": {
+			"msg": {
+				"backpack_not_found": "機器人沒有背包！",
+				"invalid_backpack": "背包無效！",
+				"variants_not_founded": "這個背包沒有變體！",
+				"variants_select": "發送您要選擇{{type}}的變體",
+				"variants_changed": "設置背包變體！"
+			}
+		}
+	},
+	"banner": {
+		"config": {
+			"description": "設置了機器人的橫幅。",
+			"usage": {
+				"query": {
+					"name": "橫幅名稱或ID",
+					"description": "橫幅的名稱或ID設置。"
+				},
+				"color": {
+					"name": "顏色名稱或ID",
+					"description": "要設置的顏色的名稱或ID。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"banner_not_found": "橫幅{{item}}找不到！",
+				"color_not_found": "顏色{{item}}找不到！",
+				"banner_changed": "將橫幅設置為{{name}}！ （{{id}}）"
+			}
+		}
+	},
+	"clear_backpack": {
+		"config": {
+			"description": "卸下機器人的背包。"
+		},
+		"run": {
+			"msg": {
+				"backpack_cleared": "清理背包！"
+			}
+		}
+	},
+	"clear_emote": {
+		"config": {
+			"description": "停止機器人的舞蹈。"
+		},
+		"run": {
+			"msg": {
+				"emote_cleared": "清除了表情！"
+			}
+		}
+	},
+	"clear_shoes": {
+		"config": {
+			"description": "卸下機器人的鞋子。"
+		},
+		"run": {
+			"msg": {
+				"shoes_cleared": "清除的鞋子！"
+			}
+		}
+	},
+	"copy": {
+		"config": {
+			"description": "複製用戶的化妝品，或者，如果未指定參數，則將化妝品複製。",
+			"usage": {
+				"filter": {
+					"name": "篩選",
+					"options": {
+						"all": "全部",
+						"outfit": "全套服裝",
+						"backpack": "背包",
+						"emoji": "表情符號",
+						"emote": "表情",
+						"pickaxe": "Pickaxe",
+						"shoes": "鞋"
+					},
+					"description": "複製化妝品時要設置的過濾器。"
+				},
+				"query": {
+					"name": "會員名稱或ID",
+					"description": "會員的名稱或ID複製化妝品。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"members_found": "找到了多個成員：",
+				"member_not_found": "成員{{member}}找不到！",
+				"member_not_at_party": "你不是我黨的成員。",
+				"member_copied": "複製{{member}}！"
+			}
+		}
+	},
+	"cosmetic": {
+		"config": {
+			"description": "設置機器人的化妝品。",
+			"usage": {
+				"query": {
+					"name": "化妝品名稱或ID",
+					"description": "設置化妝品的名稱或ID。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"cosmetic_not_found": "找不到化妝品{{query}}找不到！",
+				"cosmetic_changed": "將{{type}}設置為{{name}}！ （{{id}}）"
+			}
+		}
+	},
+	"cosmetic_info": {
+		"config": {
+			"description": "顯示有​​關化妝品的信息。",
+			"usage": {
+				"query": {
+					"name": "化妝品名稱或ID",
+					"description": "設置化妝品的名稱或ID。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"cosmetic_not_found": "找不到化妝品{{query}}找不到！"
+			}
+		}
+	},
+	"emoji": {
+		"config": {
+			"description": "設置機器人的表情符號。",
+			"usage": {
+				"query": {
+					"name": "表情符號名稱或ID",
+					"description": "要設置的表情符號的名稱或ID。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"emoji_not_found": "emoji {{query}}找不到！",
+				"emoji_changed": "將表情符號設置為{{name}}！ （{{id}}）"
+			}
+		}
+	},
+	"emote": {
+		"config": {
+			"description": "設置機器人的表情。",
+			"usage": {
+				"query": {
+					"name": "表情名稱或ID",
+					"description": "符號的名稱或ID設置。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"emote_not_found": "emote {{query}}找不到！",
+				"emote_changed": "將表情符號設置為{{name}}！ （{{id}}）"
+			}
+		}
+	},
+	"mimic": {
+		"config": {
+			"description": "如果未指定參數，則與用戶相同或與您相同。 使用“停止”停止命令。",
+			"usage": {
+				"filter": {
+					"name": "篩選",
+					"options": {
+						"all": "全部",
+						"changes": "更改",
+						"outfits": "服裝",
+						"backpacks": "背包",
+						"emojis": "表情符號",
+						"emotes": "情緒",
+						"pickaxes": "採摘",
+						"shoes": "鞋"
+					},
+					"description": "模仿化妝品時要設置的過濾器。"
+				},
+				"query": {
+					"name": "會員名稱或ID",
+					"description": "成員的名稱或ID模仿化妝品。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"members_found": "找到了多個成員：",
+				"member_not_found": "成員{{query}}找不到！",
+				"member_not_at_party": "你不是我黨的成員。",
+				"mimic_enabled": "啟用模擬{{member}} {{filter}}！",
+				"filter": "使用過濾器{{filter}}"
+			}
+		}
+	},
+	"new_items": {
+		"config": {
+			"description": "顯示在遊戲中添加的最新化妝品，可以添加一個可選的過濾器，您可以使用“停止”命令停止。",
+			"usage": {
+				"filter": {
+					"name": "篩選",
+					"options": {
+						"outfits": "服裝",
+						"backpacks": "背包",
+						"emojis": "表情符號",
+						"emotes": "情緒",
+						"pickaxes": "採摘",
+						"shoes": "鞋"
+					},
+					"description": "通過顯示項目來設置的過濾器。"
+				},
+				"random_order": {
+					"name": "隨機順序",
+					"description": "使用隨機訂單而不是按最新訂購。",
+					"options": {
+						"yes": "是的",
+						"no": "不"
+					}
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"type_error": "如果您想要過濾器，請確保有效，只有衣服，背包，表情符號，情緒，拾音器或鞋子。",
+				"cosmetic_fetch_error": "無法獲取最近添加化妝品。",
+				"already_showing": "化妝品已經在顯示，必須首先使用“停止”命令停止。",
+				"showing_cosmetics": "設置所有最近添加的項目... {{filter}}",
+				"filter": "（由{{filter}}過濾）",
+				"ended": "完成了所有最近添加的項目..."
+			}
+		}
+	},
+	"outfit": {
+		"config": {
+			"description": "設置機器人的衣服。",
+			"usage": {
+				"query": {
+					"name": "服裝名稱或ID",
+					"description": "要設置的服裝的名稱或ID。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"outfit_not_found": "未找到服裝{{query}}！",
+				"outfit_changed": "將衣服設置為{{name}}！ （{{id}}）"
+			}
+		}
+	},
+	"outfit_variants": {
+		"config": {
+			"description": "設置服裝的變體。"
+		},
+		"run": {
+			"msg": {
+				"outfit_not_found": "機器人沒有衣服！",
+				"invalid_outfit": "無效的服裝！",
+				"variants_not_found": "這件衣服沒有變體！",
+				"variants_select": "發送您要選擇{{type}}的變體",
+				"changed": "設置服裝變體！"
+			}
+		}
+	},
+	"perfect_timing": {
+		"config": {
+			"description": "設置機器人的化妝品同步。",
+			"usage": {
+				"query": {
+					"name": "化妝品名稱或ID",
+					"description": "設置化妝品的名稱或ID。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"cosmetic_not_found": "找不到化妝品{{query}}找不到！",
+				"perfect_timing_success": "同步執行完美的時機...",
+				"perfect_timing_done": "將{{value}}同步到{{name}}！ （{{id}}）"
+			}
+		}
+	},
+	"pickaxe": {
+		"config": {
+			"description": "設置機器人的拾音器。",
+			"usage": {
+				"query": {
+					"name": "選擇名稱或ID",
+					"description": "要設置的Pickaxe的名稱或ID。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"pickaxe_not_found": "挑選{{query}}找不到！",
+				"pickaxe_changed": "將Pickaxe設置為{{name}}！ （{{id}}）"
+			}
+		}
+	},
+	"pickaxe_variants": {
+		"config": {
+			"description": "設置Pickaxe的變體。"
+		},
+		"run": {
+			"msg": {
+				"pickaxe_not_found": "機器人沒有拾音器！",
+				"invalid_pickaxe": "無效的Pickaxe！",
+				"variants_not_found": "這個拾音器沒有變體！",
+				"variants_select": "發送您要選擇{{type}}的變體",
+				"changed": "設置Pickaxe變體！"
+			}
+		}
+	},
+	"preset": {
+		"config": {
+			"description": "設置機器人的預設。 使用“無”去除化妝品。",
+			"usage": {
+				"outfit": {
+					"name": "服裝ID",
+					"description": "服裝的身份證。"
+				},
+				"backpack": {
+					"name": "背包ID",
+					"description": "背包的ID。"
+				},
+				"pickaxe": {
+					"name": "選擇ID",
+					"description": "Pickaxe的ID。"
+				},
+				"emote": {
+					"name": "emote id",
+					"description": "表情的ID。"
+				},
+				"shoes": {
+					"name": "鞋子ID",
+					"description": "鞋子的身份證。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"preset_changed": "設置預設！"
+			}
+		}
+	},
+	"shoes": {
+		"config": {
+			"description": "設置了機器人的鞋子。",
+			"usage": {
+				"query": {
+					"name": "鞋子或身份證",
+					"description": "要設置的鞋子的名稱或身份證。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"shoes_not_found": "鞋子{{query}}找不到！",
+				"shoes_changed": "將鞋子設置為{{name}}！ （{{id}}）"
+			}
+		}
+	},
+	"shoe_variants": {
+		"config": {
+			"description": "設置鞋子變體。"
+		},
+		"run": {
+			"msg": {
+				"shoes_not_found": "機器人沒有鞋子！",
+				"invalid_shoes": "無效的鞋子！",
+				"variants_not_found": "這雙鞋沒有變體！",
+				"variants_select": "發送您要選擇{{type}}的變體",
+				"changed": "設置鞋子變體！"
+			}
+		}
+	},
+	"shop_items": {
+		"config": {
+			"description": "顯示物料商店中的化妝品，可以添加一個可選的過濾器，您可以使用“停止”命令停止。",
+			"usage": {
+				"filter": {
+					"name": "篩選",
+					"options": {
+						"outfits": "服裝",
+						"backpacks": "背包",
+						"emojis": "表情符號",
+						"emotes": "情緒",
+						"pickaxes": "採摘",
+						"shoes": "鞋"
+					},
+					"description": "通過顯示項目來設置的過濾器。"
+				},
+				"random_order": {
+					"name": "隨機順序",
+					"description": "使用隨機訂單而不是按最新訂購。",
+					"options": {
+						"yes": "是的",
+						"no": "不"
+					}
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"invalid_type": "如果您想要過濾器，請確保有效，只有衣服，背包，表情符號，情緒，拾音器或鞋子。",
+				"fetch_failed": "無法獲取商店物品。",
+				"already_displaying": "化妝品已經在顯示，必須首先使用“停止”命令停止。",
+				"showing_items": "設置商店中的所有項目... {{filter}}",
+				"filter": "（由{{query}}過濾）",
+				"ended": "我已經完成了商店中的所有物品..."
+			}
+		}
+	},
+	"stop": {
+		"config": {
+			"description": "停止待處理的操作。"
+		},
+		"run": {
+			"msg": {
+				"stopped_items": "停止展示物品！",
+				"stopped_mimic": "停止模仿！",
+				"stopped_emote": "停止表情！",
+				"nothing_to_stop": "沒什麼可停止的！"
+			}
+		}
+	},
+	"accept_all_friends": {
+		"config": {
+			"description": "接受機器人的所有未決朋友。"
+		},
+		"run": {
+			"msg": {
+				"accepting_friends": "接受所有未決的朋友！",
+				"accepted_friends": "接受{{count}}朋友！"
+			}
+		}
+	},
+	"accept_friend": {
+		"config": {
+			"description": "接受朋友請求。",
+			"usage": {
+				"query": {
+					"name": "等待朋友的姓名或ID",
+					"description": "朋友的名稱或ID等待接受。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "找到了多個朋友：",
+				"friends_not_found": "朋友{{query}}找不到！",
+				"self_request": "等待的朋友請求是我的！",
+				"error": "等待的朋友不接受！",
+				"request_accepted": "等待的朋友{{name}}成功接受！"
+			}
+		}
+	},
+	"add_friend": {
+		"config": {
+			"description": "將朋友請求發送給用戶或接受朋友請求。",
+			"usage": {
+				"query": {
+					"name": "用戶名或ID",
+					"description": "用戶的名稱或ID要添加。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "找到了多個朋友：",
+				"friends_not_found": "朋友{{query}}找不到！",
+				"already_friends": "已經是朋友！",
+				"error": "無法添加用戶！",
+				"request_sent": "朋友請求發送到{{name}}"
+			}
+		}
+	},
+	"block_user": {
+		"config": {
+			"description": "阻止用戶。",
+			"usage": {
+				"query": {
+					"name": "用戶名或ID",
+					"description": "用戶的名稱或ID要阻止。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_users_found": "找到了多個用戶：",
+				"user_not_found": "用戶{{query}}找不到！",
+				"error": "無法阻止{{name}}！",
+				"user_blocked": "用戶{{name}}成功地阻止了！"
+			}
+		}
+	},
+	"decline_all_friends": {
+		"config": {
+			"description": "拒絕了所有尚待機​​器人的朋友。"
+		},
+		"run": {
+			"msg": {
+				"declining_friends": "拒絕所有等待的朋友！",
+				"declined_friends": "拒絕{{count}}朋友！"
+			}
+		}
+	},
+	"decline_friend": {
+		"config": {
+			"description": "拒絕或中止朋友請求。",
+			"usage": {
+				"query": {
+					"name": "等待朋友的姓名或ID",
+					"description": "朋友的名稱或身份證，等待拒絕或流產。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "找到了多個朋友：",
+				"friends_not_found": "朋友{{query}}找不到！",
+				"error": "待定的朋友沒有被刪除！",
+				"request_sent": "等待的朋友{{name}}成功地刪除了！"
+			}
+		}
+	},
+	"friend_count": {
+		"config": {
+			"description": "顯示了機器人的朋友的數量。"
+		},
+		"run": {
+			"msg": {
+				"info": "我有{{friends}}朋友，{{pending}}待定（{{incoming}}輸入，{{outgoing}}向外發出）和{{blocked}} blocked！"
+			}
+		}
+	},
+	"invite": {
+		"config": {
+			"description": "邀請朋友或您參加聚會。",
+			"usage": {
+				"query": {
+					"name": "朋友的姓名或ID",
+					"description": "朋友的名字或ID邀請。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"alone": "在與我的聚會上，需要邀請用戶。",
+				"multiple_friends_found": "找到了多個朋友：",
+				"friends_not_found": "朋友{{query}}找不到！",
+				"already_on_party": "{{name}}已經在我的聚會中！",
+				"invite_error": "無法將邀請發送到{{name}}！",
+				"invite_sent": "邀請發送到{{name}}！"
+			}
+		}
+	},
+	"join": {
+		"config": {
+			"description": "加入您的聚會或某些用戶聚會。",
+			"usage": {
+				"query": {
+					"name": "朋友的姓名或ID",
+					"description": "朋友的姓名或ID加入。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"invalid_param": "您需要成為我的朋友或指定朋友！",
+				"multiple_friends_found": "找到了多個朋友：",
+				"friend_not_found": "朋友{{query}}找不到！",
+				"already_on_party": "朋友已經在我的聚會中！",
+				"party_error": "{{name}}沒有聚會！",
+				"join_request_error": "無法將加入請求發送到{{name}}！",
+				"joined": "加入{{name}}！",
+				"join_request_sent": "加入發送到{{name}}的請求！"
+			}
+		}
+	},
+	"promote": {
+		"config": {
+			"description": "如果您不指定參數，則會促進會員或使您成為領導者。",
+			"usage": {
+				"query": {
+					"name": "會員名稱或ID",
+					"description": "黨派的名稱或ID上升。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "找到了多個朋友：",
+				"member_not_found": "成員{{query}}找不到！",
+				"member_not_at_party": "你不是我黨的成員。",
+				"member_promoted": "促進{{name}}！"
+			}
+		}
+	},
+	"remove_all_friends": {
+		"config": {
+			"description": "刪除所有機器人的朋友。 管理員和所有者被排除在外。"
+		},
+		"run": {
+			"msg": {
+				"removing_friends": "刪除所有朋友！",
+				"removed_friends": "刪除了{{count}}朋友！"
+			}
+		}
+	},
+	"remove_friend": {
+		"config": {
+			"description": "刪除了機器人的朋友。",
+			"usage": {
+				"query": {
+					"name": "朋友的姓名或ID",
+					"description": "朋友的姓名或ID要刪除。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "找到了多個朋友：",
+				"friend_not_found": "朋友{{query}}找不到！",
+				"error": "無法刪除{{name}}！",
+				"friend_removed": "朋友{{name}}成功刪除了！"
+			}
+		}
+	},
+	"unblock_all_users": {
+		"config": {
+			"description": "解散機器人的所有阻止用戶。"
+		},
+		"run": {
+			"msg": {
+				"removing_friends": "解除所有阻止用戶！",
+				"removed_friends": "未阻止{{count}}阻止用戶！"
+			}
+		}
+	},
+	"unblock_user": {
+		"config": {
+			"description": "解開用戶。",
+			"usage": {
+				"query": {
+					"name": "用戶名或ID",
+					"description": "用戶的名稱或ID取消阻止。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_users_found": "找到了多個用戶：",
+				"user_not_found": "用戶{{query}}找不到！",
+				"error": "不能解開{{name}}！",
+				"user_unblocked": "用戶{{name}}成功地取消了封鎖！"
+			}
+		}
+	},
+	"user_info": {
+		"config": {
+			"description": "顯示指定用戶的信息。",
+			"usage": {
+				"query": {
+					"name": "用戶名或ID",
+					"description": "用戶的名稱或ID。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_users_found": "找到了多個用戶：",
+				"user_not_found": "用戶{{query}}找不到！"
+			}
+		}
+	},
+	"eval": {
+		"run": {
+			"msg": {
+				"unauthorized_error": "只有tnfangel可以訪問此命令。"
+			}
+		}
+	},
+	"help": {
+		"config": {
+			"description": "顯示幫助和指揮面板。",
+			"usage": {
+				"query": {
+					"name": "命令的名稱或ID",
+					"description": "命令的名稱或ID獲得詳細幫助。"
+				}
+			}
+		}
+	},
+	"message": {
+		"config": {
+			"description": "向聚會發送消息。",
+			"usage": {
+				"message": {
+					"name": "訊息",
+					"description": "將發送給聚會的消息。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "向聚會發送消息"
+			}
+		}
+	},
+	"ping": {
+		"config": {
+			"description": "顯示機器人的延遲。"
+		},
+		"run": {
+			"msg": {
+				"measuring": "測量...",
+				"info": "p！ {{time}} MS"
+			}
+		}
+	},
+	"prev": {
+		"config": {
+			"description": "執行上一個命令。"
+		},
+		"run": {
+			"msg": {
+				"not_found": "以前的命令尚未執行！"
+			}
+		}
+	},
+	"restart_bot": {
+		"config": {
+			"description": "重新啟動當前機器人。"
+		},
+		"run": {
+			"msg": {
+				"success": "機器人現在正在重新啟動！"
+			}
+		}
+	},
+	"restart_category": {
+		"config": {
+			"description": "重新啟動當前類別。"
+		},
+		"run": {
+			"msg": {
+				"success": "該類別正在重新啟動！"
+			}
+		}
+	},
+	"restart_shard": {
+		"config": {
+			"description": "重新啟動當前的碎片。"
+		},
+		"run": {
+			"msg": {
+				"success": "碎片現在正在重新啟動！",
+				"error": "抱歉，該機器人在碎片中沒有運行。"
+			}
+		}
+	},
+	"send": {
+		"config": {
+			"description": "將命令發送到指定機器人。",
+			"usage": {
+				"bot": {
+					"name": "機器人ID",
+					"description": "機器人ID發送命令。"
+				},
+				"command": {
+					"name": "命令",
+					"description": "該命令要在機器人中執行。"
+				},
+				"args": {
+					"name": "爭論",
+					"description": "需要該命令的論點。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "將命令發送到bot {{user}}"
+			}
+		}
+	},
+	"send_all": {
+		"config": {
+			"description": "向所有機器人發送命令。",
+			"usage": {
+				"command": {
+					"name": "命令",
+					"description": "該命令要在機器人中執行。"
+				},
+				"args": {
+					"name": "爭論",
+					"description": "需要該命令的論點。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "將命令發送到所有機器人..."
+			}
+		}
+	},
+	"send_category": {
+		"config": {
+			"description": "將命令發送到機器人類別。",
+			"usage": {
+				"command": {
+					"name": "命令",
+					"description": "該命令要在機器人中執行。"
+				},
+				"args": {
+					"name": "爭論",
+					"description": "需要該命令的論點。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "將命令發送到我的碎片中的所有機器人...",
+				"error": "抱歉，此機器人在類別內沒有運行。"
+			}
+		}
+	},
+	"send_number": {
+		"config": {
+			"description": "將命令發送到指定數量的機器人。",
+			"usage": {
+				"number": {
+					"name": "機器人數",
+					"description": "發送命令的機器人數。"
+				},
+				"command": {
+					"name": "命令",
+					"description": "該命令要在機器人中執行。"
+				},
+				"args": {
+					"name": "爭論",
+					"description": "需要該命令的論點。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"count_negative": "這個數字必須大於0！",
+				"sending_command": "將命令發送到{{number}} bot ..."
+			}
+		}
+	},
+	"send_party": {
+		"config": {
+			"description": "向共享同一方的所有機器人發送命令。",
+			"usage": {
+				"command": {
+					"name": "命令",
+					"description": "該命令要在機器人中執行。"
+				},
+				"args": {
+					"name": "爭論",
+					"description": "需要該命令的論點。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "將命令發送到我的聚會中的所有機器人..."
+			}
+		}
+	},
+	"send_shard": {
+		"config": {
+			"description": "將命令發送到機器人的碎片。",
+			"usage": {
+				"command": {
+					"name": "命令",
+					"description": "該命令要在機器人中執行。"
+				},
+				"args": {
+					"name": "爭論",
+					"description": "需要該命令的論點。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "將命令發送到我的碎片中的所有機器人..."
+			}
+		}
+	},
+	"set_status": {
+		"config": {
+			"description": "設置機器人狀態",
+			"usage": {
+				"status": {
+					"name": "地位",
+					"description": "機器人的新狀態。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "狀態設置成功！"
+			}
+		}
+	},
+	"whisper": {
+		"config": {
+			"description": "向朋友發送私人消息。",
+			"usage": {
+				"query": {
+					"name": "朋友的姓名或ID",
+					"description": "朋友的姓名或ID發送私人消息。"
+				},
+				"message": {
+					"name": "訊息",
+					"description": "發送給朋友的消息。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "找到了多個朋友：",
+				"friend_not_found": "朋友{{query}}找不到！",
+				"whisper_sent": "發送到{{name}}！"
+			}
+		}
+	},
+	"bp_level": {
+		"config": {
+			"description": "設置機器人的戰鬥級別。",
+			"usage": {
+				"level": {
+					"name": "等級",
+					"description": "戰鬥通行證的設定水平。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"bp_level_set": "將戰鬥傳球級別設置為{{level}}！"
+			}
+		}
+	},
+	"clear_custom_key": {
+		"config": {
+			"description": "清除自定義對接密鑰。"
+		},
+		"run": {
+			"msg": {
+				"success": "清除了自定義對接密鑰！"
+			}
+		}
+	},
+	"crowns": {
+		"config": {
+			"description": "設置機器人冠。",
+			"usage": {
+				"crowns": {
+					"name": "皇冠",
+					"description": "冠冕。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "將皇冠設置為{{crowns}}！"
+			}
+		}
+	},
+	"hide": {
+		"config": {
+			"description": "隱藏派對的球員，或者如果您不指定參數，則會隱藏您。",
+			"usage": {
+				"query": {
+					"name": "會員名稱或ID",
+					"description": "黨員的名稱或ID隱藏。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "找到了多個朋友：",
+				"member_not_found": "成員{{query}}找不到！",
+				"member_not_at_party": "你不是我黨的成員。",
+				"success": "隱藏{{name}}！"
+			}
+		}
+	},
+	"hide_all": {
+		"config": {
+			"description": "隱藏了聚會中的所有球員。"
+		},
+		"run": {
+			"msg": {
+				"success": "隱藏所有成員！"
+			}
+		}
+	},
+	"kick": {
+		"config": {
+			"description": "踢是聚會的球員。",
+			"usage": {
+				"query": {
+					"name": "會員名稱或ID",
+					"description": "該黨成員的名字或ID踢。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "找到了多個朋友：",
+				"member_not_found": "成員{{query}}找不到！",
+				"success": "踢{{name}}！"
+			}
+		}
+	},
+	"kick_all": {
+		"config": {
+			"description": "踢派對中的所有球員。"
+		},
+		"run": {
+			"msg": {
+				"user_kicked": "踢{{name}}！",
+				"success": "完成所有成員！"
+			}
+		}
+	},
+	"leave": {
+		"config": {
+			"description": "機器人離開聚會。"
+		},
+		"run": {
+			"msg": {
+				"success": "再見！"
+			}
+		}
+	},
+	"level": {
+		"config": {
+			"description": "設置機器人級別。",
+			"usage": {
+				"level": {
+					"name": "等級",
+					"description": "要設置的級別。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "將級別設置為{{level}}！"
+			}
+		}
+	},
+	"match": {
+		"config": {
+			"description": "設定州玩遊戲。",
+			"usage": {
+				"number": {
+					"name": "球員數量",
+					"description": "遊戲中的玩家數量。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "設置狀態！"
+			}
+		}
+	},
+	"party_info": {
+		"config": {
+			"description": "顯示有​​關聚會的信息。"
+		}
+	},
+	"playlist": {
+		"config": {
+			"description": "設置黨的播放列表。",
+			"usage": {
+				"query": {
+					"name": "播放列表的名稱或ID",
+					"description": "要設置的播放列表的名稱或ID。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"error": "錯誤設置播放列表！",
+				"success": "將播放列表設置為{{query}}！"
+			}
+		}
+	},
+	"privacy": {
+		"config": {
+			"description": "設定黨的隱私。",
+			"usage": {
+				"privacy": {
+					"name": "隱私",
+					"options": {
+						"public": "民眾",
+						"private": "私人的"
+					},
+					"description": "政黨設定的隱私。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "將政黨隱私設置為{{privacy}}！",
+				"error": "無效的隱私，必須是公共或私人的！"
+			}
+		}
+	},
+	"rank": {
+		"config": {
+			"description": "設置機器人等級。",
+			"usage": {
+				"rank": {
+					"name": "秩",
+					"description": "等級。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "將等級設置為{{rank}}！"
+			}
+		}
+	},
+	"ready": {
+		"config": {
+			"description": "設置國家準備就緒。"
+		},
+		"run": {
+			"msg": {
+				"warning": "警告：如果您想發起對接會，請不要使用此命令！ 只要自己打個準備就緒，我會自動打擊。",
+				"success": "準備好！"
+			}
+		}
+	},
+	"say": {
+		"config": {
+			"description": "向聚會聊天發送消息。",
+			"usage": {
+				"message": {
+					"name": "訊息",
+					"description": "將發送給聚會的消息。"
+				}
+			}
+		},
+		"run": {}
+	},
+	"set_custom_key": {
+		"config": {
+			"description": "設置一個自定義對接密鑰。",
+			"usage": {
+				"key": {
+					"name": "自定義密鑰",
+					"description": "要設置的自定義對接鍵。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "設置自定義對接密鑰！"
+			}
+		}
+	},
+	"show": {
+		"config": {
+			"description": "在聚會中顯示隱藏的玩家，或者向您展示您是否沒有指定參數。",
+			"usage": {
+				"query": {
+					"name": "會員名稱或ID",
+					"description": "該黨成員的名稱或ID顯示。"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "找到了多個朋友：",
+				"member_not_found": "成員{{query}}找不到！",
+				"member_not_at_party": "你不是我黨的成員。",
+				"success": "顯示{{name}}！"
+			}
+		}
+	},
+	"show_all": {
+		"config": {
+			"description": "展示聚會中所有隱藏的球員。"
+		},
+		"run": {
+			"msg": {
+				"success": "顯示所有成員！"
+			}
+		}
+	},
+	"sit_in": {
+		"config": {
+			"description": "設定國家參加。"
+		},
+		"run": {
+			"msg": {
+				"success": "坐在..."
+			}
+		}
+	},
+	"sit_out": {
+		"config": {
+			"description": "設定國家不參加。"
+		},
+		"run": {
+			"msg": {
+				"success": "坐..."
+			}
+		}
+	},
+	"unmatch": {
+		"config": {
+			"description": "設定州不玩遊戲。"
+		},
+		"run": {
+			"msg": {
+				"success": "刪除了比賽狀態！"
+			}
+		}
+	},
+	"unready": {
+		"config": {
+			"description": "設置國家未準備就緒。"
+		},
+		"run": {
+			"msg": {
+				"success": "還沒準備好！"
+			}
+		}
+	}
+}

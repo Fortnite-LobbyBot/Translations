@@ -1,0 +1,1307 @@
+{
+	"handler": {
+		"errors": {
+			"only_for_party_members": "هذا الأمر متاح فقط لأعضاء حزبي.",
+			"only_for_private_messages": "هذا الأمر متاح فقط في الرسائل الخاصة.",
+			"need_party_leader": "أحتاج إلى أن أكون قائد الحزب لتنفيذ هذا الأمر!",
+			"only_for_owners": "هذا الأمر متاح فقط لأصحاب الروبوت.",
+			"only_for_admins": "هذا الأمر متاح فقط لمسؤولي BOT.",
+			"only_for_whitelist": "هذا الأمر متاح فقط للمستخدمين على القائمة البيضاء في الروبوت."
+		}
+	},
+	"all_items": {
+		"config": {
+			"description": "يعرض جميع مستحضرات التجميل للعبة ، ويمكن إضافة مرشح اختياري ويمكنك التوقف مع أمر \"stop\".",
+			"usage": {
+				"filter": {
+					"name": "فلتر",
+					"options": {
+						"outfits": "ملابس",
+						"backpacks": "حقائب الظهر",
+						"emojis": "الرموز التعبيرية",
+						"emotes": "العواطف",
+						"pickaxes": "Pickaxes",
+						"shoes": "أحذية"
+					},
+					"description": "المرشح ليتم تعيينه من خلال عرض العناصر."
+				},
+				"random_order": {
+					"name": "ترتيب عشوائي",
+					"description": "استخدم ترتيبًا عشوائيًا بدلاً من الطلب حسب الأحدث أولاً.",
+					"options": {
+						"yes": "نعم",
+						"no": "لا"
+					}
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"no_items": "غير قادر على جلب العناصر.",
+				"items_already_displaying": "يتم عرض مستحضرات التجميل بالفعل ، يجب أولاً إيقافها مع أمر \"stop\".",
+				"setting_items": "تعيين جميع عناصر اللعبة ... {{filtered}}",
+				"filtered_by": "(تم ترشيحه بواسطة {{filter}})",
+				"items_showed": "لقد انتهيت من عرض جميع العناصر ..."
+			}
+		}
+	},
+	"backpack": {
+		"config": {
+			"description": "يحدد حقيبة الظهر الروبوت.",
+			"usage": {
+				"query": {
+					"name": "اسم حقيبة الظهر أو معرف",
+					"description": "اسم أو معرف حقيبة الظهر ليتم تعيينه."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"backpack_not_found": "حقيبة الظهر {{item}} لم يتم العثور عليها!",
+				"backpack_changed": "اضبط حقيبة الظهر على {{name}}! ({{id}})"
+			}
+		}
+	},
+	"backpack_variants": {
+		"config": {
+			"description": "يضع متغيرات حقيبة الظهر."
+		},
+		"run": {
+			"msg": {
+				"backpack_not_found": "الروبوت ليس لديه حقيبة ظهر!",
+				"invalid_backpack": "حقيبة ظهر غير صالحة!",
+				"variants_not_founded": "هذه حقيبة الظهر لا تحتوي على متغيرات!",
+				"variants_select": "أرسل المتغير الذي تريد تحديده لـ {{type}}",
+				"variants_changed": "اضبط متغيرات الظهر!"
+			}
+		}
+	},
+	"banner": {
+		"config": {
+			"description": "يضع لافتة الروبوت.",
+			"usage": {
+				"query": {
+					"name": "اسم الشعار أو الهوية",
+					"description": "اسم أو معرف اللافتة لتعيين."
+				},
+				"color": {
+					"name": "اسم اللون أو معرف",
+					"description": "اسم أو معرف اللون لتعيينه."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"banner_not_found": "لافتة {{item}} لم يتم العثور عليها!",
+				"color_not_found": "اللون {{item}} لم يتم العثور عليه!",
+				"banner_changed": "اضبط اللافتة على {{name}}! ({{id}})"
+			}
+		}
+	},
+	"clear_backpack": {
+		"config": {
+			"description": "يزيل حقيبة الظهر من الروبوت."
+		},
+		"run": {
+			"msg": {
+				"backpack_cleared": "تم مسح حقيبة الظهر!"
+			}
+		}
+	},
+	"clear_emote": {
+		"config": {
+			"description": "توقف رقصة الروبوت."
+		},
+		"run": {
+			"msg": {
+				"emote_cleared": "تطهير emote!"
+			}
+		}
+	},
+	"clear_shoes": {
+		"config": {
+			"description": "يزيل أحذية الروبوت."
+		},
+		"run": {
+			"msg": {
+				"shoes_cleared": "أحذية مسح!"
+			}
+		}
+	},
+	"copy": {
+		"config": {
+			"description": "انسخ مستحضرات التجميل للمستخدم أو انسخ مستحضرات التجميل لك إن لم يكن تحديد الوسائط.",
+			"usage": {
+				"filter": {
+					"name": "فلتر",
+					"options": {
+						"all": "الجميع",
+						"outfit": "زيّ",
+						"backpack": "حقيبة ظهر",
+						"emoji": "الرموز التعبيرية",
+						"emote": "emote",
+						"pickaxe": "معول",
+						"shoes": "أحذية"
+					},
+					"description": "المرشح لتعيين عند نسخ مستحضرات التجميل."
+				},
+				"query": {
+					"name": "اسم العضو أو الهوية",
+					"description": "اسم العضو أو معرفه لنسخ مستحضرات التجميل."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"members_found": "تم العثور على أعضاء متعددين:",
+				"member_not_found": "عضو {{member}} لم يتم العثور عليه!",
+				"member_not_at_party": "أنت لست عضوًا في حزبي.",
+				"member_copied": "نسخ {{member}}!"
+			}
+		}
+	},
+	"cosmetic": {
+		"config": {
+			"description": "يحدد مستحضرات التجميل الروبوت.",
+			"usage": {
+				"query": {
+					"name": "اسم مستحضرات التجميل أو الهوية",
+					"description": "اسم أو معرف التجميل لتعيين."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"cosmetic_not_found": "مستحضرات التجميل {{query}} لم يتم العثور عليها!",
+				"cosmetic_changed": "اضبط {{type}} على {{name}}! ({{id}})"
+			}
+		}
+	},
+	"cosmetic_info": {
+		"config": {
+			"description": "يظهر معلومات حول مستحضرات التجميل.",
+			"usage": {
+				"query": {
+					"name": "اسم مستحضرات التجميل أو الهوية",
+					"description": "اسم أو معرف التجميل لتعيين."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"cosmetic_not_found": "مستحضرات التجميل {{query}} لم يتم العثور عليها!"
+			}
+		}
+	},
+	"emoji": {
+		"config": {
+			"description": "يضع الروبوت الروبوت.",
+			"usage": {
+				"query": {
+					"name": "اسم الرموز التعبيرية أو الهوية",
+					"description": "اسم أو معرف الرموز التعبيرية لتعيين."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"emoji_not_found": "الرموز التعبيرية {{query}} لم يتم العثور عليها!",
+				"emoji_changed": "اضبط الرموز التعبيرية على {{name}}! ({{id}})"
+			}
+		}
+	},
+	"emote": {
+		"config": {
+			"description": "يضع emote الروبوت.",
+			"usage": {
+				"query": {
+					"name": "اسم emote أو معرف",
+					"description": "اسم أو معرف emote لتعيين."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"emote_not_found": "emote {{query}} لم يتم العثور عليها!",
+				"emote_changed": "اضبط Emote Emoji على {{name}}! ({{id}})"
+			}
+		}
+	},
+	"mimic": {
+		"config": {
+			"description": "هل نفس الشيء مثل المستخدم أو نفسك إذا لم تحدد الوسائط. استخدم \"stop\" لإيقاف الأمر.",
+			"usage": {
+				"filter": {
+					"name": "فلتر",
+					"options": {
+						"all": "الجميع",
+						"changes": "التغييرات",
+						"outfits": "ملابس",
+						"backpacks": "حقائب الظهر",
+						"emojis": "الرموز التعبيرية",
+						"emotes": "العواطف",
+						"pickaxes": "Pickaxes",
+						"shoes": "أحذية"
+					},
+					"description": "المرشح لضبطه عند تقليد مستحضرات التجميل."
+				},
+				"query": {
+					"name": "اسم العضو أو الهوية",
+					"description": "اسم العضو أو معرفه لتقليد مستحضرات التجميل."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"members_found": "تم العثور على أعضاء متعددين:",
+				"member_not_found": "العضو {{query}} لم يتم العثور عليه!",
+				"member_not_at_party": "أنت لست عضوًا في حزبي.",
+				"mimic_enabled": "تمكين تقليد لـ {{member}} {{filter}}!",
+				"filter": "مع Filter {{filter}}"
+			}
+		}
+	},
+	"new_items": {
+		"config": {
+			"description": "يعرض أحدث مستحضرات التجميل التي تمت إضافتها إلى اللعبة ، ويمكن إضافة مرشح اختياري ويمكنك التوقف مع أمر \"stop\".",
+			"usage": {
+				"filter": {
+					"name": "فلتر",
+					"options": {
+						"outfits": "ملابس",
+						"backpacks": "حقائب الظهر",
+						"emojis": "الرموز التعبيرية",
+						"emotes": "العواطف",
+						"pickaxes": "Pickaxes",
+						"shoes": "أحذية"
+					},
+					"description": "المرشح ليتم تعيينه من خلال عرض العناصر."
+				},
+				"random_order": {
+					"name": "ترتيب عشوائي",
+					"description": "استخدم ترتيبًا عشوائيًا بدلاً من الطلب حسب الأحدث أولاً.",
+					"options": {
+						"yes": "نعم",
+						"no": "لا"
+					}
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"type_error": "إذا كنت تريد مرشحًا ، فتأكد من أنه صالح ، فقط الملابس أو حقائب الظهر أو الرموز التعبيرية أو العواطف أو الاختيار أو الأحذية.",
+				"cosmetic_fetch_error": "غير قادر على جلب مستحضرات التجميل المضافة مؤخرًا.",
+				"already_showing": "يتم عرض مستحضرات التجميل بالفعل ، يجب أولاً إيقافها مع أمر \"stop\".",
+				"showing_cosmetics": "تعيين جميع العناصر المضافة مؤخرًا ... {{filter}}",
+				"filter": "(تم ترشيحه بواسطة {{filter}})",
+				"ended": "انتهى من عرض جميع العناصر المضافة مؤخرًا ..."
+			}
+		}
+	},
+	"outfit": {
+		"config": {
+			"description": "يضع ملابس الروبوت.",
+			"usage": {
+				"query": {
+					"name": "اسم الزي أو معرف",
+					"description": "اسم أو معرف الزي المراد تعيينه."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"outfit_not_found": "الزي {{query}} لم يتم العثور عليه!",
+				"outfit_changed": "اضبط الزي على {{name}}! ({{id}})"
+			}
+		}
+	},
+	"outfit_variants": {
+		"config": {
+			"description": "يضع متغيرات الزي."
+		},
+		"run": {
+			"msg": {
+				"outfit_not_found": "الروبوت ليس لديه الزي!",
+				"invalid_outfit": "ملابس غير صالحة!",
+				"variants_not_found": "هذا الزي ليس لديه متغيرات!",
+				"variants_select": "أرسل المتغير الذي تريد تحديده لـ {{type}}",
+				"changed": "تعيين المتغيرات الزي!"
+			}
+		}
+	},
+	"perfect_timing": {
+		"config": {
+			"description": "يضبط مستحضرات التجميل في الروبوت.",
+			"usage": {
+				"query": {
+					"name": "اسم مستحضرات التجميل أو الهوية",
+					"description": "اسم أو معرف التجميل لتعيين."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"cosmetic_not_found": "مستحضرات التجميل {{query}} لم يتم العثور عليها!",
+				"perfect_timing_success": "المزامنة لأداء توقيت مثالي ...",
+				"perfect_timing_done": "مزامنة {{value}} إلى {{name}}! ({{id}})"
+			}
+		}
+	},
+	"pickaxe": {
+		"config": {
+			"description": "يضبط اختيار الروبوت.",
+			"usage": {
+				"query": {
+					"name": "Pickaxe اسم أو معرف",
+					"description": "اسم أو معرف pickaxe ليتم تعيينه."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"pickaxe_not_found": "Pickaxe {{query}} لم يتم العثور عليه!",
+				"pickaxe_changed": "اضبط Pickaxe على {{name}}! ({{id}})"
+			}
+		}
+	},
+	"pickaxe_variants": {
+		"config": {
+			"description": "يضبط متغيرات Pickaxe."
+		},
+		"run": {
+			"msg": {
+				"pickaxe_not_found": "الروبوت ليس لديه pickaxe!",
+				"invalid_pickaxe": "Pickaxe غير صالح!",
+				"variants_not_found": "هذا pickaxe ليس لديه متغيرات!",
+				"variants_select": "أرسل المتغير الذي تريد تحديده لـ {{type}}",
+				"changed": "اضبط متغيرات Pickaxe!"
+			}
+		}
+	},
+	"preset": {
+		"config": {
+			"description": "يضع مسبقًا الروبوت. استخدم \"none\" لإزالة مستحضرات التجميل.",
+			"usage": {
+				"outfit": {
+					"name": "معرف الزي",
+					"description": "معرف الزي."
+				},
+				"backpack": {
+					"name": "معرف الظهر",
+					"description": "معرف حقيبة الظهر."
+				},
+				"pickaxe": {
+					"name": "معرف Pickaxe",
+					"description": "معرف pickaxe."
+				},
+				"emote": {
+					"name": "emote id",
+					"description": "معرف emote."
+				},
+				"shoes": {
+					"name": "معرف الأحذية",
+					"description": "معرف الأحذية."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"preset_changed": "تعيين الإعداد المسبق!"
+			}
+		}
+	},
+	"shoes": {
+		"config": {
+			"description": "يضع أحذية الروبوت.",
+			"usage": {
+				"query": {
+					"name": "اسم الأحذية أو الهوية",
+					"description": "اسم أو معرف الأحذية المراد تعيينها."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"shoes_not_found": "الأحذية {{query}} لم يتم العثور عليها!",
+				"shoes_changed": "اضبط الأحذية على {{name}}! ({{id}})"
+			}
+		}
+	},
+	"shoe_variants": {
+		"config": {
+			"description": "يضع متغيرات الأحذية."
+		},
+		"run": {
+			"msg": {
+				"shoes_not_found": "الروبوت ليس لديه أحذية!",
+				"invalid_shoes": "أحذية غير صالحة!",
+				"variants_not_found": "هذه الأحذية لا تحتوي على متغيرات!",
+				"variants_select": "أرسل المتغير الذي تريد تحديده لـ {{type}}",
+				"changed": "اضبط متغيرات الأحذية!"
+			}
+		}
+	},
+	"shop_items": {
+		"config": {
+			"description": "يعرض مستحضرات التجميل من متجر العناصر ، ويمكن إضافة مرشح اختياري ويمكنك التوقف مع أمر \"stop\".",
+			"usage": {
+				"filter": {
+					"name": "فلتر",
+					"options": {
+						"outfits": "ملابس",
+						"backpacks": "حقائب الظهر",
+						"emojis": "الرموز التعبيرية",
+						"emotes": "العواطف",
+						"pickaxes": "Pickaxes",
+						"shoes": "أحذية"
+					},
+					"description": "المرشح ليتم تعيينه من خلال عرض العناصر."
+				},
+				"random_order": {
+					"name": "ترتيب عشوائي",
+					"description": "استخدم ترتيبًا عشوائيًا بدلاً من الطلب حسب الأحدث أولاً.",
+					"options": {
+						"yes": "نعم",
+						"no": "لا"
+					}
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"invalid_type": "إذا كنت تريد مرشحًا ، فتأكد من أنه صالح ، فقط الملابس أو حقائب الظهر أو الرموز التعبيرية أو العواطف أو الاختيار أو الأحذية.",
+				"fetch_failed": "غير قادر على جلب عناصر المتجر.",
+				"already_displaying": "يتم عرض مستحضرات التجميل بالفعل ، يجب أولاً إيقافها مع أمر \"stop\".",
+				"showing_items": "تعيين جميع العناصر في المتجر ... {{filter}}",
+				"filter": "(تم ترشيحه بواسطة {{query}})",
+				"ended": "لقد انتهيت من عرض جميع العناصر الموجودة في المتجر ..."
+			}
+		}
+	},
+	"stop": {
+		"config": {
+			"description": "توقف العمليات المعلقة."
+		},
+		"run": {
+			"msg": {
+				"stopped_items": "توقف عن إظهار العناصر!",
+				"stopped_mimic": "توقف التقليد!",
+				"stopped_emote": "توقف emote!",
+				"nothing_to_stop": "لا شيء يتوقف!"
+			}
+		}
+	},
+	"accept_all_friends": {
+		"config": {
+			"description": "يقبل جميع الأصدقاء المعلقين في الروبوت."
+		},
+		"run": {
+			"msg": {
+				"accepting_friends": "قبول جميع الأصدقاء المعلقين!",
+				"accepted_friends": "مقبول {{count}} أصدقاء!"
+			}
+		}
+	},
+	"accept_friend": {
+		"config": {
+			"description": "اقبل طلب صداقة.",
+			"usage": {
+				"query": {
+					"name": "اسم الصديق المعلق أو الهوية",
+					"description": "اسم أو معرف الصديق المعلق لقبوله."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "وجدت العديد من الأصدقاء:",
+				"friends_not_found": "صديق {{query}} لم يتم العثور عليه!",
+				"self_request": "طلب الصداقة المعلق هو لي!",
+				"error": "صديق معلق غير مقبول!",
+				"request_accepted": "صديق معلق {{name}} قبول بنجاح!"
+			}
+		}
+	},
+	"add_friend": {
+		"config": {
+			"description": "أرسل طلب صداقة إلى مستخدم أو قبول طلب صداقة.",
+			"usage": {
+				"query": {
+					"name": "اسم المستخدم أو الهوية",
+					"description": "اسم المستخدم أو معرفه لإضافته."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "وجدت العديد من الأصدقاء:",
+				"friends_not_found": "صديق {{query}} لم يتم العثور عليه!",
+				"already_friends": "بالفعل صديق!",
+				"error": "لا يمكن إضافة المستخدم!",
+				"request_sent": "تم إرسال طلب الصداقة إلى {{name}}"
+			}
+		}
+	},
+	"block_user": {
+		"config": {
+			"description": "يمنع المستخدم.",
+			"usage": {
+				"query": {
+					"name": "اسم المستخدم أو الهوية",
+					"description": "اسم المستخدم أو معرفه لحظره."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_users_found": "تم العثور على عدة مستخدمين:",
+				"user_not_found": "المستخدم {{query}} لم يتم العثور عليه!",
+				"error": "لا يمكن منع {{name}}!",
+				"user_blocked": "المستخدم {{name}} تم حظره بنجاح!"
+			}
+		}
+	},
+	"decline_all_friends": {
+		"config": {
+			"description": "يرفض جميع أصدقاء البوت المعلق."
+		},
+		"run": {
+			"msg": {
+				"declining_friends": "انخفاض جميع الأصدقاء المعلقين!",
+				"declined_friends": "رفض {{count}} أصدقاء!"
+			}
+		}
+	},
+	"decline_friend": {
+		"config": {
+			"description": "رفض أو إحباط طلب صداقة.",
+			"usage": {
+				"query": {
+					"name": "اسم الصديق المعلق أو الهوية",
+					"description": "اسم أو معرف الصديق المعلق لرفض أو إحباط."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "وجدت العديد من الأصدقاء:",
+				"friends_not_found": "صديق {{query}} لم يتم العثور عليه!",
+				"error": "صديق معلق لم تتم إزالته!",
+				"request_sent": "معلق صديق {{name}} تم إزالته بنجاح!"
+			}
+		}
+	},
+	"friend_count": {
+		"config": {
+			"description": "يظهر عدد أصدقاء الروبوت."
+		},
+		"run": {
+			"msg": {
+				"info": "لدي {{friends}} أصدقاء ، {{pending}} المعلق ({{incoming}} الواردة ، {{outgoing}} صادر) و {{blocked}} محظور!"
+			}
+		}
+	},
+	"invite": {
+		"config": {
+			"description": "يدعو صديق أو أنت إلى الحفلة.",
+			"usage": {
+				"query": {
+					"name": "اسم الصديق أو معرفه",
+					"description": "اسم الصديق أو معرفه للدعوة."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"alone": "على طرف معي ، مطلوب المستخدم للدعوة.",
+				"multiple_friends_found": "وجدت العديد من الأصدقاء:",
+				"friends_not_found": "صديق {{query}} لم يتم العثور عليه!",
+				"already_on_party": "{{name}} موجود بالفعل في حزبي!",
+				"invite_error": "لا يمكن إرسال الدعوة إلى {{name}}!",
+				"invite_sent": "تم إرسال دعوة إلى {{name}}!"
+			}
+		}
+	},
+	"join": {
+		"config": {
+			"description": "ينضم إلى حزبك أو حفلة المستخدم.",
+			"usage": {
+				"query": {
+					"name": "اسم الصديق أو معرفه",
+					"description": "اسم الصديق أو معرفه للانضمام."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"invalid_param": "يجب أن تكون صديقي أو تحديد صديق!",
+				"multiple_friends_found": "وجدت العديد من الأصدقاء:",
+				"friend_not_found": "صديق {{query}} لم يتم العثور عليه!",
+				"already_on_party": "صديق بالفعل في حزبي!",
+				"party_error": "{{name}} ليس لديه حفلة!",
+				"join_request_error": "لا يمكن إرسال طلب الانضمام إلى {{name}}!",
+				"joined": "انضم إلى {{name}}!",
+				"join_request_sent": "انضم إلى الطلب المرسل إلى {{name}}!"
+			}
+		}
+	},
+	"promote": {
+		"config": {
+			"description": "يعزز عضوًا أو يجعلك قائدًا إذا لم تحدد الوسائط.",
+			"usage": {
+				"query": {
+					"name": "اسم العضو أو الهوية",
+					"description": "اسم أو معرف الطرف إلى الصعود."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "وجدت العديد من الأصدقاء:",
+				"member_not_found": "العضو {{query}} لم يتم العثور عليه!",
+				"member_not_at_party": "أنت لست عضوًا في حزبي.",
+				"member_promoted": "تمت ترقيته {{name}}!"
+			}
+		}
+	},
+	"remove_all_friends": {
+		"config": {
+			"description": "يزيل جميع أصدقاء الروبوت. يتم استبعاد المسؤولين والمالكين."
+		},
+		"run": {
+			"msg": {
+				"removing_friends": "إزالة جميع الأصدقاء!",
+				"removed_friends": "أزال {{count}} أصدقاء!"
+			}
+		}
+	},
+	"remove_friend": {
+		"config": {
+			"description": "يزيل صديق الروبوت.",
+			"usage": {
+				"query": {
+					"name": "اسم الصديق أو معرفه",
+					"description": "اسم الصديق أو معرفه لإزالته."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "وجدت العديد من الأصدقاء:",
+				"friend_not_found": "صديق {{query}} لم يتم العثور عليه!",
+				"error": "لا يمكن إزالة {{name}}!",
+				"friend_removed": "صديق {{name}} تمت إزالته بنجاح!"
+			}
+		}
+	},
+	"unblock_all_users": {
+		"config": {
+			"description": "قم بإلغاء حظر جميع المستخدمين المحظورين على الروبوت."
+		},
+		"run": {
+			"msg": {
+				"removing_friends": "إلغاء حظر جميع المستخدمين المحظورة!",
+				"removed_friends": "إلغاء الحظر {{count}} المستخدمين!"
+			}
+		}
+	},
+	"unblock_user": {
+		"config": {
+			"description": "إلغاء حظر المستخدم.",
+			"usage": {
+				"query": {
+					"name": "اسم المستخدم أو الهوية",
+					"description": "اسم المستخدم أو معرفه لإلغاء الحظر."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_users_found": "تم العثور على عدة مستخدمين:",
+				"user_not_found": "المستخدم {{query}} لم يتم العثور عليه!",
+				"error": "لا يمكن إلغاء حظر {{name}}!",
+				"user_unblocked": "المستخدم {{name}} غير محظور بنجاح!"
+			}
+		}
+	},
+	"user_info": {
+		"config": {
+			"description": "يعرض معلومات مستخدم محدد.",
+			"usage": {
+				"query": {
+					"name": "اسم المستخدم أو الهوية",
+					"description": "اسم المستخدم أو معرفه."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_users_found": "تم العثور على عدة مستخدمين:",
+				"user_not_found": "المستخدم {{query}} لم يتم العثور عليه!"
+			}
+		}
+	},
+	"eval": {
+		"run": {
+			"msg": {
+				"unauthorized_error": "فقط Tnfangel يمكنه الوصول إلى هذا الأمر."
+			}
+		}
+	},
+	"help": {
+		"config": {
+			"description": "يعرض لوحة المساعدة ولوحة الأوامر.",
+			"usage": {
+				"query": {
+					"name": "اسم أو معرف الأمر",
+					"description": "اسم أو معرف الأمر للحصول على مساعدة مفصلة."
+				}
+			}
+		}
+	},
+	"message": {
+		"config": {
+			"description": "يرسل رسالة إلى الحفلة.",
+			"usage": {
+				"message": {
+					"name": "رسالة",
+					"description": "الرسالة التي سيتم إرسالها إلى الحزب."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "أرسل رسالة إلى الحفلة"
+			}
+		}
+	},
+	"ping": {
+		"config": {
+			"description": "يظهر زمن انتقال الروبوت."
+		},
+		"run": {
+			"msg": {
+				"measuring": "قياس ...",
+				"info": "بونج! {{time}} MS"
+			}
+		}
+	},
+	"prev": {
+		"config": {
+			"description": "ينفذ الأمر السابق."
+		},
+		"run": {
+			"msg": {
+				"not_found": "لم يتم تنفيذ أمر سابق!"
+			}
+		}
+	},
+	"restart_bot": {
+		"config": {
+			"description": "إعادة تشغيل الروبوت الحالي."
+		},
+		"run": {
+			"msg": {
+				"success": "الروبوت يعيد تشغيله الآن!"
+			}
+		}
+	},
+	"restart_category": {
+		"config": {
+			"description": "إعادة تشغيل الفئة الحالية."
+		},
+		"run": {
+			"msg": {
+				"success": "الفئة هي إعادة تشغيل الآن!"
+			}
+		}
+	},
+	"restart_shard": {
+		"config": {
+			"description": "إعادة تشغيل Shard الحالي."
+		},
+		"run": {
+			"msg": {
+				"success": "Shard يعيد تشغيله الآن!",
+				"error": "آسف ، هذا الروبوت لا يركض داخل قشرة."
+			}
+		}
+	},
+	"send": {
+		"config": {
+			"description": "يرسل أمرًا إلى BOT.",
+			"usage": {
+				"bot": {
+					"name": "معرف بوت",
+					"description": "معرف الروبوت لإرسال الأمر."
+				},
+				"command": {
+					"name": "يأمر",
+					"description": "يتم تنفيذ الأمر في الروبوت."
+				},
+				"args": {
+					"name": "الحجج",
+					"description": "حجج الأمر مطلوب."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "إرسال الأمر إلى bot {{user}}"
+			}
+		}
+	},
+	"send_all": {
+		"config": {
+			"description": "يرسل الأمر إلى جميع الروبوتات.",
+			"usage": {
+				"command": {
+					"name": "يأمر",
+					"description": "أمر ليتم تنفيذه في الروبوتات."
+				},
+				"args": {
+					"name": "الحجج",
+					"description": "حجج الأمر مطلوب."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "إرسال الأمر إلى جميع الروبوتات ..."
+			}
+		}
+	},
+	"send_category": {
+		"config": {
+			"description": "يرسل أمرًا إلى فئة الروبوت.",
+			"usage": {
+				"command": {
+					"name": "يأمر",
+					"description": "أمر ليتم تنفيذه في الروبوتات."
+				},
+				"args": {
+					"name": "الحجج",
+					"description": "حجج الأمر مطلوب."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "إرسال الأمر إلى جميع الروبوتات في قطة بلدي ...",
+				"error": "آسف ، هذا الروبوت لا يعمل داخل فئة."
+			}
+		}
+	},
+	"send_number": {
+		"config": {
+			"description": "يرسل أمرًا إلى عدد من الروبوتات.",
+			"usage": {
+				"number": {
+					"name": "عدد الروبوتات",
+					"description": "عدد الروبوتات لإرسال الأمر."
+				},
+				"command": {
+					"name": "يأمر",
+					"description": "أمر ليتم تنفيذه في الروبوتات."
+				},
+				"args": {
+					"name": "الحجج",
+					"description": "حجج الأمر مطلوب."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"count_negative": "يجب أن يكون الرقم أكبر من 0!",
+				"sending_command": "إرسال الأمر إلى {{number}} bots ..."
+			}
+		}
+	},
+	"send_party": {
+		"config": {
+			"description": "يرسل أمرًا إلى جميع الروبوتات التي تشترك في نفس الطرف.",
+			"usage": {
+				"command": {
+					"name": "يأمر",
+					"description": "أمر ليتم تنفيذه في الروبوتات."
+				},
+				"args": {
+					"name": "الحجج",
+					"description": "حجج الأمر مطلوب."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "إرسال الأمر إلى جميع الروبوتات في حزبي ..."
+			}
+		}
+	},
+	"send_shard": {
+		"config": {
+			"description": "يرسل أمرًا إلى قشرة الروبوت.",
+			"usage": {
+				"command": {
+					"name": "يأمر",
+					"description": "أمر ليتم تنفيذه في الروبوتات."
+				},
+				"args": {
+					"name": "الحجج",
+					"description": "حجج الأمر مطلوب."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "إرسال الأمر إلى جميع الروبوتات في قطة بلدي ..."
+			}
+		}
+	},
+	"set_status": {
+		"config": {
+			"description": "يحدد حالة الروبوت",
+			"usage": {
+				"status": {
+					"name": "حالة",
+					"description": "الوضع الجديد للروبوت."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "مجموعة الحالة بنجاح!"
+			}
+		}
+	},
+	"whisper": {
+		"config": {
+			"description": "يرسل رسالة خاصة إلى صديق.",
+			"usage": {
+				"query": {
+					"name": "اسم الصديق أو معرفه",
+					"description": "اسم الصديق أو معرفه لإرسال الرسالة الخاصة."
+				},
+				"message": {
+					"name": "رسالة",
+					"description": "رسالة لإرسالها إلى الصديق."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "وجدت العديد من الأصدقاء:",
+				"friend_not_found": "صديق {{query}} لم يتم العثور عليه!",
+				"whisper_sent": "أرسل إلى {{name}}!"
+			}
+		}
+	},
+	"bp_level": {
+		"config": {
+			"description": "يضع مستوى تمريرة المعركة من الروبوت.",
+			"usage": {
+				"level": {
+					"name": "مستوى",
+					"description": "مستوى ممر المعركة ليتم تعيينه."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"bp_level_set": "تعيين مستوى تمرير المعركة إلى {{level}}!"
+			}
+		}
+	},
+	"clear_custom_key": {
+		"config": {
+			"description": "يمسح مفتاح التوفيق المخصص."
+		},
+		"run": {
+			"msg": {
+				"success": "مسح مفتاح التوفيق المخصص!"
+			}
+		}
+	},
+	"crowns": {
+		"config": {
+			"description": "يضع تيجان الروبوت.",
+			"usage": {
+				"crowns": {
+					"name": "التيجان",
+					"description": "التيجان لتعيين."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "اضبط التيجان على {{crowns}}!"
+			}
+		}
+	},
+	"hide": {
+		"config": {
+			"description": "يخفي اللاعب من الحفلة أو يخفيك إذا لم تحدد الوسائط.",
+			"usage": {
+				"query": {
+					"name": "اسم العضو أو الهوية",
+					"description": "اسم أو معرف عضو الحزب للاختباء."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "وجدت العديد من الأصدقاء:",
+				"member_not_found": "العضو {{query}} لم يتم العثور عليه!",
+				"member_not_at_party": "أنت لست عضوًا في حزبي.",
+				"success": "مخفي {{name}}!"
+			}
+		}
+	},
+	"hide_all": {
+		"config": {
+			"description": "يخفي جميع اللاعبين في الحفلة."
+		},
+		"run": {
+			"msg": {
+				"success": "مخبأ جميع الأعضاء!"
+			}
+		}
+	},
+	"kick": {
+		"config": {
+			"description": "ركلة لاعب من الحفلة.",
+			"usage": {
+				"query": {
+					"name": "اسم العضو أو الهوية",
+					"description": "اسم أو معرف عضو الحزب للركل."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "وجدت العديد من الأصدقاء:",
+				"member_not_found": "العضو {{query}} لم يتم العثور عليه!",
+				"success": "ركل {{name}}!"
+			}
+		}
+	},
+	"kick_all": {
+		"config": {
+			"description": "يركل جميع اللاعبين في الحفلة."
+		},
+		"run": {
+			"msg": {
+				"user_kicked": "ركل {{name}}!",
+				"success": "أنهى ركل جميع الأعضاء!"
+			}
+		}
+	},
+	"leave": {
+		"config": {
+			"description": "الروبوت يغادر الحفلة."
+		},
+		"run": {
+			"msg": {
+				"success": "الوداع!"
+			}
+		}
+	},
+	"level": {
+		"config": {
+			"description": "يحدد مستوى الروبوت.",
+			"usage": {
+				"level": {
+					"name": "مستوى",
+					"description": "المستوى المراد تعيينه."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "ضبط المستوى على {{level}}!"
+			}
+		}
+	},
+	"match": {
+		"config": {
+			"description": "يضع الدولة للعب لعبة.",
+			"usage": {
+				"number": {
+					"name": "عدد اللاعبين",
+					"description": "عدد اللاعبين في اللعبة."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "تعيين للعب دولة!"
+			}
+		}
+	},
+	"party_info": {
+		"config": {
+			"description": "يظهر معلومات حول الحزب."
+		}
+	},
+	"playlist": {
+		"config": {
+			"description": "يضع قائمة تشغيل الحفلة.",
+			"usage": {
+				"query": {
+					"name": "اسم أو معرف قائمة التشغيل",
+					"description": "اسم أو معرف قائمة التشغيل المراد تعيينها."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"error": "خطأ في إعداد قائمة التشغيل!",
+				"success": "اضبط قائمة التشغيل على {{query}}!"
+			}
+		}
+	},
+	"privacy": {
+		"config": {
+			"description": "يحدد خصوصية الحزب.",
+			"usage": {
+				"privacy": {
+					"name": "خصوصية",
+					"options": {
+						"public": "عام",
+						"private": "خاص"
+					},
+					"description": "خصوصية الحزب لضبط."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "تعيين خصوصية الطرف على {{privacy}}!",
+				"error": "خصوصية غير صالحة ، يجب أن تكون عامة أو خاصة!"
+			}
+		}
+	},
+	"rank": {
+		"config": {
+			"description": "يحدد رتبة الروبوت.",
+			"usage": {
+				"rank": {
+					"name": "رتبة",
+					"description": "رتبة لتعيين."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "اضبط الرتبة على {{rank}}!"
+			}
+		}
+	},
+	"ready": {
+		"config": {
+			"description": "يضع الدولة جاهزة."
+		},
+		"run": {
+			"msg": {
+				"warning": "تحذير: إذا كنت تحاول بدء التوفيق ، فلا تستخدم هذا الأمر! فقط اضغط على استعداد نفسك وسأضرب جاهزًا تلقائيًا.",
+				"success": "مستعد!"
+			}
+		}
+	},
+	"say": {
+		"config": {
+			"description": "أرسل رسالة إلى الدردشة الحزبية.",
+			"usage": {
+				"message": {
+					"name": "رسالة",
+					"description": "الرسالة التي سيتم إرسالها إلى الحزب."
+				}
+			}
+		},
+		"run": {}
+	},
+	"set_custom_key": {
+		"config": {
+			"description": "يضبط مفتاح التوفيق المخصص.",
+			"usage": {
+				"key": {
+					"name": "مفتاح مخصص",
+					"description": "مفتاح التوفيق المخصص لتعيين."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "تعيين مفتاح التوفيق المخصص!"
+			}
+		}
+	},
+	"show": {
+		"config": {
+			"description": "يعرض لاعب مخفي من الحفلة أو يظهر لك إذا لم تحدد الوسائط.",
+			"usage": {
+				"query": {
+					"name": "اسم العضو أو الهوية",
+					"description": "اسم أو معرف عضو الحزب لإظهاره."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "وجدت العديد من الأصدقاء:",
+				"member_not_found": "العضو {{query}} لم يتم العثور عليه!",
+				"member_not_at_party": "أنت لست عضوًا في حزبي.",
+				"success": "يظهر {{name}}!"
+			}
+		}
+	},
+	"show_all": {
+		"config": {
+			"description": "يظهر جميع اللاعبين المخفيين في الحفلة."
+		},
+		"run": {
+			"msg": {
+				"success": "أظهر جميع الأعضاء!"
+			}
+		}
+	},
+	"sit_in": {
+		"config": {
+			"description": "يضع الدولة على المشاركة."
+		},
+		"run": {
+			"msg": {
+				"success": "يجلس في ..."
+			}
+		}
+	},
+	"sit_out": {
+		"config": {
+			"description": "يضع الدولة على عدم المشاركة."
+		},
+		"run": {
+			"msg": {
+				"success": "يجلس ..."
+			}
+		}
+	},
+	"unmatch": {
+		"config": {
+			"description": "يضع الدولة لعدم لعب لعبة."
+		},
+		"run": {
+			"msg": {
+				"success": "إزالة دولة اللعب!"
+			}
+		}
+	},
+	"unready": {
+		"config": {
+			"description": "يضع الدولة على عدم استعداد."
+		},
+		"run": {
+			"msg": {
+				"success": "ليس جاهزا!"
+			}
+		}
+	}
+}

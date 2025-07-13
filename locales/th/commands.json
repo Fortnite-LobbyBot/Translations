@@ -1,0 +1,1307 @@
+{
+	"handler": {
+		"errors": {
+			"only_for_party_members": "คำสั่งนี้ใช้ได้เฉพาะกับสมาชิกในปาร์ตี้ของฉัน",
+			"only_for_private_messages": "คำสั่งนี้มีเฉพาะในข้อความส่วนตัว",
+			"need_party_leader": "ฉันต้องเป็นหัวหน้าพรรคเพื่อดำเนินการตามคำสั่งนี้!",
+			"only_for_owners": "คำสั่งนี้ใช้ได้เฉพาะกับเจ้าของบอทเท่านั้น",
+			"only_for_admins": "คำสั่งนี้ใช้ได้เฉพาะสำหรับผู้ดูแลระบบบอทเท่านั้น",
+			"only_for_whitelist": "คำสั่งนี้ใช้ได้เฉพาะกับผู้ใช้ที่ได้รับการอนุญาตของบอท"
+		}
+	},
+	"all_items": {
+		"config": {
+			"description": "แสดงเครื่องสำอางทั้งหมดของเกมสามารถเพิ่มตัวกรองเสริมและคุณสามารถหยุดด้วยคำสั่ง \"stop\"",
+			"usage": {
+				"filter": {
+					"name": "กรอง",
+					"options": {
+						"outfits": "ชุด",
+						"backpacks": "กระเป๋าเป้สะพายหลัง",
+						"emojis": "อีโมจิ",
+						"emotes": "อารมณ์",
+						"pickaxes": "เพล็กซ์",
+						"shoes": "รองเท้า"
+					},
+					"description": "ตัวกรองที่จะตั้งค่าโดยแสดงรายการ"
+				},
+				"random_order": {
+					"name": "คำสั่งซื้อแบบสุ่ม",
+					"description": "ใช้คำสั่งซื้อแบบสุ่มแทนการสั่งซื้อโดยใหม่ล่าสุดก่อน",
+					"options": {
+						"yes": "ใช่",
+						"no": "เลขที่"
+					}
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"no_items": "ไม่สามารถดึงรายการได้",
+				"items_already_displaying": "เครื่องสำอางกำลังแสดงอยู่แล้วต้องหยุดด้วยคำสั่ง \"stop\" ก่อน",
+				"setting_items": "การตั้งค่ารายการเกมทั้งหมด ... {{filtered}}",
+				"filtered_by": "(กรองโดย {{filter}})",
+				"items_showed": "ฉันแสดงรายการทั้งหมดเสร็จแล้ว ..."
+			}
+		}
+	},
+	"backpack": {
+		"config": {
+			"description": "ตั้งค่ากระเป๋าเป้สะพายหลังของบอท",
+			"usage": {
+				"query": {
+					"name": "ชื่อกระเป๋าเป้สะพายหลังหรือ ID",
+					"description": "ชื่อหรือ ID ของกระเป๋าเป้สะพายหลังที่จะตั้งค่า"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"backpack_not_found": "ไม่พบกระเป๋าเป้สะพายหลัง {{item}}!",
+				"backpack_changed": "ตั้งค่ากระเป๋าเป้สะพายหลังเป็น {{name}}! ({{id}})"
+			}
+		}
+	},
+	"backpack_variants": {
+		"config": {
+			"description": "ตั้งค่าตัวแปรของกระเป๋าเป้สะพายหลัง"
+		},
+		"run": {
+			"msg": {
+				"backpack_not_found": "บอทไม่มีกระเป๋าเป้!",
+				"invalid_backpack": "กระเป๋าเป้สะพายหลังไม่ถูกต้อง!",
+				"variants_not_founded": "กระเป๋าเป้สะพายหลังนี้ไม่มีตัวแปร!",
+				"variants_select": "ส่งตัวแปรที่คุณต้องการเลือกสำหรับ {{type}}",
+				"variants_changed": "ตั้งค่าตัวแปรกระเป๋าเป้สะพายหลัง!"
+			}
+		}
+	},
+	"banner": {
+		"config": {
+			"description": "ตั้งธงบอท",
+			"usage": {
+				"query": {
+					"name": "ชื่อแบนเนอร์หรือรหัส",
+					"description": "ชื่อหรือรหัสของแบนเนอร์ที่จะตั้งค่า"
+				},
+				"color": {
+					"name": "ชื่อสีหรือรหัส",
+					"description": "ชื่อหรือรหัสของสีที่จะตั้งค่า"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"banner_not_found": "แบนเนอร์ {{item}} ไม่พบ!",
+				"color_not_found": "ไม่พบสี {{item}}!",
+				"banner_changed": "ตั้งค่าแบนเนอร์เป็น {{name}}! ({{id}})"
+			}
+		}
+	},
+	"clear_backpack": {
+		"config": {
+			"description": "ลบกระเป๋าเป้สะพายหลังของบอท"
+		},
+		"run": {
+			"msg": {
+				"backpack_cleared": "เป้สะพายหลังล้าง!"
+			}
+		}
+	},
+	"clear_emote": {
+		"config": {
+			"description": "หยุดการเต้นรำของบอท"
+		},
+		"run": {
+			"msg": {
+				"emote_cleared": "เคลียร์ Emote!"
+			}
+		}
+	},
+	"clear_shoes": {
+		"config": {
+			"description": "ลบรองเท้าของบอท"
+		},
+		"run": {
+			"msg": {
+				"shoes_cleared": "เคลียร์รองเท้า!"
+			}
+		}
+	},
+	"copy": {
+		"config": {
+			"description": "คัดลอกเครื่องสำอางของผู้ใช้หรือคัดลอกเครื่องสำอางให้คุณหากไม่ได้ระบุอาร์กิวเมนต์",
+			"usage": {
+				"filter": {
+					"name": "กรอง",
+					"options": {
+						"all": "ทั้งหมด",
+						"outfit": "ชุดเสื้อผ้า",
+						"backpack": "กระเป๋าเป้สะพายหลัง",
+						"emoji": "อีโมจิ",
+						"emote": "เปล่งเสียง",
+						"pickaxe": "รั้ว",
+						"shoes": "รองเท้า"
+					},
+					"description": "ตัวกรองที่จะตั้งค่าเมื่อคัดลอกเครื่องสำอาง"
+				},
+				"query": {
+					"name": "ชื่อสมาชิกหรือรหัส",
+					"description": "ชื่อสมาชิกหรือรหัสของสมาชิกเพื่อคัดลอกเครื่องสำอาง"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"members_found": "พบสมาชิกหลายคน:",
+				"member_not_found": "สมาชิก {{member}} ไม่พบ!",
+				"member_not_at_party": "คุณไม่ได้เป็นสมาชิกของปาร์ตี้ของฉัน",
+				"member_copied": "คัดลอก {{member}}!"
+			}
+		}
+	},
+	"cosmetic": {
+		"config": {
+			"description": "ตั้งค่าเครื่องสำอางของบอท",
+			"usage": {
+				"query": {
+					"name": "ชื่อเครื่องสำอางหรือรหัส",
+					"description": "ชื่อหรือ ID ของเครื่องสำอางที่จะตั้งค่า"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"cosmetic_not_found": "ไม่พบเครื่องสำอาง {{query}}!",
+				"cosmetic_changed": "ตั้งค่า {{type}} เป็น {{name}}! ({{id}})"
+			}
+		}
+	},
+	"cosmetic_info": {
+		"config": {
+			"description": "แสดงข้อมูลเกี่ยวกับเครื่องสำอาง",
+			"usage": {
+				"query": {
+					"name": "ชื่อเครื่องสำอางหรือรหัส",
+					"description": "ชื่อหรือ ID ของเครื่องสำอางที่จะตั้งค่า"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"cosmetic_not_found": "ไม่พบเครื่องสำอาง {{query}}!"
+			}
+		}
+	},
+	"emoji": {
+		"config": {
+			"description": "ตั้งอีโมจิของบอท",
+			"usage": {
+				"query": {
+					"name": "ชื่ออีโมจิชื่อหรือรหัส",
+					"description": "ชื่อหรือรหัสของอิโมจิที่จะตั้งค่า"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"emoji_not_found": "ไม่พบอิโมจิ {{query}}!",
+				"emoji_changed": "ตั้งค่าอิโมจิเป็น {{name}}! ({{id}})"
+			}
+		}
+	},
+	"emote": {
+		"config": {
+			"description": "ตั้งค่า Emote ของบอท",
+			"usage": {
+				"query": {
+					"name": "ชื่อหรือรหัส",
+					"description": "ชื่อหรือ ID ของ EMOTE ที่จะตั้งค่า"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"emote_not_found": "ไม่พบ emote {{query}}!",
+				"emote_changed": "ตั้งค่า emot emoji เป็น {{name}}! ({{id}})"
+			}
+		}
+	},
+	"mimic": {
+		"config": {
+			"description": "ทำเช่นเดียวกับผู้ใช้หรือเหมือนกับคุณหากไม่ได้ระบุอาร์กิวเมนต์ ใช้ \"stop\" เพื่อหยุดคำสั่ง",
+			"usage": {
+				"filter": {
+					"name": "กรอง",
+					"options": {
+						"all": "ทั้งหมด",
+						"changes": "การเปลี่ยนแปลง",
+						"outfits": "ชุด",
+						"backpacks": "กระเป๋าเป้สะพายหลัง",
+						"emojis": "อีโมจิ",
+						"emotes": "อารมณ์",
+						"pickaxes": "เพล็กซ์",
+						"shoes": "รองเท้า"
+					},
+					"description": "ตัวกรองที่จะตั้งค่าเมื่อเลียนแบบเครื่องสำอาง"
+				},
+				"query": {
+					"name": "ชื่อสมาชิกหรือรหัส",
+					"description": "ชื่อหรือรหัสสมาชิกเพื่อเลียนแบบเครื่องสำอาง"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"members_found": "พบสมาชิกหลายคน:",
+				"member_not_found": "สมาชิก {{query}} ไม่พบ!",
+				"member_not_at_party": "คุณไม่ได้เป็นสมาชิกของปาร์ตี้ของฉัน",
+				"mimic_enabled": "เปิดใช้งาน MIMIC สำหรับ {{member}} {{filter}}!",
+				"filter": "ด้วยตัวกรอง {{filter}}"
+			}
+		}
+	},
+	"new_items": {
+		"config": {
+			"description": "แสดงเครื่องสำอางล่าสุดที่เพิ่มเข้ามาในเกมสามารถเพิ่มตัวกรองเสริมและคุณสามารถหยุดด้วยคำสั่ง \"stop\"",
+			"usage": {
+				"filter": {
+					"name": "กรอง",
+					"options": {
+						"outfits": "ชุด",
+						"backpacks": "กระเป๋าเป้สะพายหลัง",
+						"emojis": "อีโมจิ",
+						"emotes": "อารมณ์",
+						"pickaxes": "เพล็กซ์",
+						"shoes": "รองเท้า"
+					},
+					"description": "ตัวกรองที่จะตั้งค่าโดยแสดงรายการ"
+				},
+				"random_order": {
+					"name": "คำสั่งซื้อแบบสุ่ม",
+					"description": "ใช้คำสั่งซื้อแบบสุ่มแทนการสั่งซื้อโดยใหม่ล่าสุดก่อน",
+					"options": {
+						"yes": "ใช่",
+						"no": "เลขที่"
+					}
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"type_error": "หากคุณต้องการตัวกรองตรวจสอบให้แน่ใจว่าถูกต้องมีเพียงชุดเป้สะพายหลังอีโมจิอิม็อต pickaxes หรือรองเท้า",
+				"cosmetic_fetch_error": "ไม่สามารถดึงเครื่องสำอางได้เมื่อเร็ว ๆ นี้",
+				"already_showing": "เครื่องสำอางกำลังแสดงอยู่แล้วต้องหยุดด้วยคำสั่ง \"stop\" ก่อน",
+				"showing_cosmetics": "การตั้งค่ารายการที่เพิ่มขึ้นทั้งหมด ... {{filter}}",
+				"filter": "(กรองโดย {{filter}})",
+				"ended": "เสร็จสิ้นการแสดงรายการที่เพิ่มเมื่อเร็ว ๆ นี้ทั้งหมด ..."
+			}
+		}
+	},
+	"outfit": {
+		"config": {
+			"description": "ตั้งค่าชุดบอท",
+			"usage": {
+				"query": {
+					"name": "ชื่อชุดหรือรหัส",
+					"description": "ชื่อหรือรหัสของชุดที่จะตั้งค่า"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"outfit_not_found": "ไม่พบชุด {{query}}!",
+				"outfit_changed": "ตั้งค่าชุดเป็น {{name}}! ({{id}})"
+			}
+		}
+	},
+	"outfit_variants": {
+		"config": {
+			"description": "ตั้งค่าตัวแปรของชุด"
+		},
+		"run": {
+			"msg": {
+				"outfit_not_found": "บอทไม่มีชุด!",
+				"invalid_outfit": "ชุดที่ไม่ถูกต้อง!",
+				"variants_not_found": "ชุดนี้ไม่มีตัวแปร!",
+				"variants_select": "ส่งตัวแปรที่คุณต้องการเลือกสำหรับ {{type}}",
+				"changed": "ตั้งค่าชุดเครื่องแต่งกาย!"
+			}
+		}
+	},
+	"perfect_timing": {
+		"config": {
+			"description": "ตั้งค่าเครื่องสำอางของบอทซิงโครไนซ์",
+			"usage": {
+				"query": {
+					"name": "ชื่อเครื่องสำอางหรือรหัส",
+					"description": "ชื่อหรือ ID ของเครื่องสำอางที่จะตั้งค่า"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"cosmetic_not_found": "ไม่พบเครื่องสำอาง {{query}}!",
+				"perfect_timing_success": "การซิงโครไนซ์เพื่อทำช่วงเวลาที่สมบูรณ์แบบ ...",
+				"perfect_timing_done": "ซิงโครไนซ์ {{value}} ถึง {{name}}! ({{id}})"
+			}
+		}
+	},
+	"pickaxe": {
+		"config": {
+			"description": "ตั้งค่า pickaxe ของบอท",
+			"usage": {
+				"query": {
+					"name": "ชื่อ Pickaxe หรือ id",
+					"description": "ชื่อหรือรหัสของ pickaxe ที่จะตั้งค่า"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"pickaxe_not_found": "ไม่พบ pickaxe {{query}}!",
+				"pickaxe_changed": "ตั้งค่า pickaxe เป็น {{name}}! ({{id}})"
+			}
+		}
+	},
+	"pickaxe_variants": {
+		"config": {
+			"description": "ตั้งค่าตัวแปรของ Pickaxe"
+		},
+		"run": {
+			"msg": {
+				"pickaxe_not_found": "บอทไม่มี pickaxe!",
+				"invalid_pickaxe": "Pickaxe ไม่ถูกต้อง!",
+				"variants_not_found": "pickaxe นี้ไม่มีตัวแปร!",
+				"variants_select": "ส่งตัวแปรที่คุณต้องการเลือกสำหรับ {{type}}",
+				"changed": "ตั้งค่าตัวแปร pickaxe!"
+			}
+		}
+	},
+	"preset": {
+		"config": {
+			"description": "ตั้งค่าที่ตั้งไว้ล่วงหน้าของบอท ใช้ \"none\" เพื่อถอดเครื่องสำอาง",
+			"usage": {
+				"outfit": {
+					"name": "รหัสเครื่องแต่งกาย",
+					"description": "ID ของชุด"
+				},
+				"backpack": {
+					"name": "Backpack ID",
+					"description": "ID ของกระเป๋าเป้สะพายหลัง"
+				},
+				"pickaxe": {
+					"name": "Pickaxe ID",
+					"description": "ID ของ pickaxe"
+				},
+				"emote": {
+					"name": "Emote ID",
+					"description": "ID ของ Emote"
+				},
+				"shoes": {
+					"name": "รหัสรองเท้า",
+					"description": "ID ของรองเท้า"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"preset_changed": "ตั้งค่าล่วงหน้า!"
+			}
+		}
+	},
+	"shoes": {
+		"config": {
+			"description": "ตั้งรองเท้าของบอท",
+			"usage": {
+				"query": {
+					"name": "ชื่อรองเท้าหรือรหัส",
+					"description": "ชื่อหรือรหัสของรองเท้าที่จะตั้งค่า"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"shoes_not_found": "ไม่พบรองเท้า {{query}}!",
+				"shoes_changed": "ตั้งค่ารองเท้าเป็น {{name}}! ({{id}})"
+			}
+		}
+	},
+	"shoe_variants": {
+		"config": {
+			"description": "ตั้งค่าตัวแปรรองเท้า"
+		},
+		"run": {
+			"msg": {
+				"shoes_not_found": "บอทไม่มีรองเท้า!",
+				"invalid_shoes": "รองเท้าไม่ถูกต้อง!",
+				"variants_not_found": "รองเท้านี้ไม่มีสายพันธุ์!",
+				"variants_select": "ส่งตัวแปรที่คุณต้องการเลือกสำหรับ {{type}}",
+				"changed": "ตั้งค่าชุดรองเท้า!"
+			}
+		}
+	},
+	"shop_items": {
+		"config": {
+			"description": "แสดงเครื่องสำอางจากร้านค้าสามารถเพิ่มตัวกรองเสริมและคุณสามารถหยุดด้วยคำสั่ง \"stop\"",
+			"usage": {
+				"filter": {
+					"name": "กรอง",
+					"options": {
+						"outfits": "ชุด",
+						"backpacks": "กระเป๋าเป้สะพายหลัง",
+						"emojis": "อีโมจิ",
+						"emotes": "อารมณ์",
+						"pickaxes": "เพล็กซ์",
+						"shoes": "รองเท้า"
+					},
+					"description": "ตัวกรองที่จะตั้งค่าโดยแสดงรายการ"
+				},
+				"random_order": {
+					"name": "คำสั่งซื้อแบบสุ่ม",
+					"description": "ใช้คำสั่งซื้อแบบสุ่มแทนการสั่งซื้อโดยใหม่ล่าสุดก่อน",
+					"options": {
+						"yes": "ใช่",
+						"no": "เลขที่"
+					}
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"invalid_type": "หากคุณต้องการตัวกรองตรวจสอบให้แน่ใจว่าถูกต้องมีเพียงชุดเป้สะพายหลังอีโมจิอิม็อต pickaxes หรือรองเท้า",
+				"fetch_failed": "ไม่สามารถดึงรายการร้านค้าได้",
+				"already_displaying": "เครื่องสำอางกำลังแสดงอยู่แล้วต้องหยุดด้วยคำสั่ง \"stop\" ก่อน",
+				"showing_items": "การตั้งค่ารายการทั้งหมดในร้าน ... {{filter}}",
+				"filter": "(กรองโดย {{query}})",
+				"ended": "ฉันแสดงรายการทั้งหมดในร้านเสร็จแล้ว ..."
+			}
+		}
+	},
+	"stop": {
+		"config": {
+			"description": "หยุดการดำเนินงานที่รอดำเนินการ"
+		},
+		"run": {
+			"msg": {
+				"stopped_items": "หยุดแสดงรายการ!",
+				"stopped_mimic": "หยุดเลียนแบบ!",
+				"stopped_emote": "หยุด emote!",
+				"nothing_to_stop": "ไม่มีอะไรจะหยุด!"
+			}
+		}
+	},
+	"accept_all_friends": {
+		"config": {
+			"description": "ยอมรับเพื่อนที่ค้างอยู่ทั้งหมดของบอท"
+		},
+		"run": {
+			"msg": {
+				"accepting_friends": "ยอมรับเพื่อนที่รอดำเนินการทั้งหมด!",
+				"accepted_friends": "ยอมรับ {{count}} เพื่อน!"
+			}
+		}
+	},
+	"accept_friend": {
+		"config": {
+			"description": "ยอมรับคำขอเป็นเพื่อน",
+			"usage": {
+				"query": {
+					"name": "ชื่อเพื่อนหรือรหัสที่รอดำเนินการ",
+					"description": "ชื่อหรือรหัสของเพื่อนที่รอการยอมรับ"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "พบเพื่อนหลายคน:",
+				"friends_not_found": "ไม่พบเพื่อน {{query}}!",
+				"self_request": "คำขอเป็นเพื่อนที่รอดำเนินการเป็นของฉัน!",
+				"error": "เพื่อนรอดำเนินการไม่ได้รับการยอมรับ!",
+				"request_accepted": "รอเพื่อน {{name}} ยอมรับได้สำเร็จ!"
+			}
+		}
+	},
+	"add_friend": {
+		"config": {
+			"description": "ส่งคำขอเป็นเพื่อนไปยังผู้ใช้หรือยอมรับคำขอเป็นเพื่อน",
+			"usage": {
+				"query": {
+					"name": "ชื่อผู้ใช้หรือรหัส",
+					"description": "ชื่อหรือรหัสของผู้ใช้ที่จะเพิ่ม"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "พบเพื่อนหลายคน:",
+				"friends_not_found": "ไม่พบเพื่อน {{query}}!",
+				"already_friends": "เพื่อนอยู่แล้ว!",
+				"error": "ไม่สามารถเพิ่มผู้ใช้ได้!",
+				"request_sent": "คำขอเป็นเพื่อนส่งไปยัง {{name}}"
+			}
+		}
+	},
+	"block_user": {
+		"config": {
+			"description": "บล็อกผู้ใช้",
+			"usage": {
+				"query": {
+					"name": "ชื่อผู้ใช้หรือรหัส",
+					"description": "ชื่อหรือ ID ของผู้ใช้ในการบล็อก"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_users_found": "พบผู้ใช้หลายคน:",
+				"user_not_found": "ไม่พบผู้ใช้ {{query}}!",
+				"error": "ไม่สามารถบล็อก {{name}}!",
+				"user_blocked": "ผู้ใช้ {{name}} ถูกบล็อกสำเร็จ!"
+			}
+		}
+	},
+	"decline_all_friends": {
+		"config": {
+			"description": "ปฏิเสธเพื่อนที่ค้างอยู่ทั้งหมดของบอท"
+		},
+		"run": {
+			"msg": {
+				"declining_friends": "ปฏิเสธเพื่อนที่ค้างอยู่ทั้งหมด!",
+				"declined_friends": "ปฏิเสธ {{count}} เพื่อน!"
+			}
+		}
+	},
+	"decline_friend": {
+		"config": {
+			"description": "ปฏิเสธหรือยกเลิกคำขอเป็นเพื่อน",
+			"usage": {
+				"query": {
+					"name": "ชื่อเพื่อนหรือรหัสที่รอดำเนินการ",
+					"description": "ชื่อหรือรหัสของเพื่อนที่รอการปฏิเสธหรือยกเลิก"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "พบเพื่อนหลายคน:",
+				"friends_not_found": "ไม่พบเพื่อน {{query}}!",
+				"error": "เพื่อนรอดำเนินการไม่ได้ลบออก!",
+				"request_sent": "รอเพื่อน {{name}} ลบออกสำเร็จ!"
+			}
+		}
+	},
+	"friend_count": {
+		"config": {
+			"description": "แสดงจำนวนเพื่อนของบอท"
+		},
+		"run": {
+			"msg": {
+				"info": "ฉันมีเพื่อน {{friends}} {{pending}} รอดำเนินการ ({{incoming}} ขาเข้า {{outgoing}} ขาออก) และ {{blocked}} บล็อก!"
+			}
+		}
+	},
+	"invite": {
+		"config": {
+			"description": "เชิญเพื่อนหรือคุณไปงานปาร์ตี้",
+			"usage": {
+				"query": {
+					"name": "ชื่อหรือรหัสของเพื่อน",
+					"description": "ชื่อหรือรหัสของเพื่อนที่จะเชิญ"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"alone": "ในปาร์ตี้กับฉันผู้ใช้จะต้องเชิญ",
+				"multiple_friends_found": "พบเพื่อนหลายคน:",
+				"friends_not_found": "ไม่พบเพื่อน {{query}}!",
+				"already_on_party": "{{name}} อยู่ในปาร์ตี้ของฉันแล้ว!",
+				"invite_error": "ไม่สามารถส่งคำเชิญไปที่ {{name}}!",
+				"invite_sent": "คำเชิญที่ส่งไปยัง {{name}}!"
+			}
+		}
+	},
+	"join": {
+		"config": {
+			"description": "เข้าร่วมปาร์ตี้ของคุณหรือปาร์ตี้ของผู้ใช้",
+			"usage": {
+				"query": {
+					"name": "ชื่อหรือรหัสของเพื่อน",
+					"description": "ชื่อหรือรหัสของเพื่อนที่จะเข้าร่วม"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"invalid_param": "คุณต้องเป็นเพื่อนของฉันหรือระบุเพื่อน!",
+				"multiple_friends_found": "พบเพื่อนหลายคน:",
+				"friend_not_found": "ไม่พบเพื่อน {{query}}!",
+				"already_on_party": "เพื่อนอยู่ในปาร์ตี้ของฉันแล้ว!",
+				"party_error": "{{name}} ไม่มีปาร์ตี้!",
+				"join_request_error": "ไม่สามารถส่งคำขอเข้าร่วมไปที่ {{name}}!",
+				"joined": "เข้าร่วมกับ {{name}}!",
+				"join_request_sent": "เข้าร่วมคำขอที่ส่งไปยัง {{name}}!"
+			}
+		}
+	},
+	"promote": {
+		"config": {
+			"description": "ส่งเสริมสมาชิกหรือทำให้คุณเป็นผู้นำหากคุณไม่ได้ระบุข้อโต้แย้ง",
+			"usage": {
+				"query": {
+					"name": "ชื่อสมาชิกหรือรหัส",
+					"description": "ชื่อหรือ ID ของปาร์ตี้ที่จะขึ้น"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "พบเพื่อนหลายคน:",
+				"member_not_found": "สมาชิก {{query}} ไม่พบ!",
+				"member_not_at_party": "คุณไม่ได้เป็นสมาชิกของปาร์ตี้ของฉัน",
+				"member_promoted": "โปรโมต {{name}}!"
+			}
+		}
+	},
+	"remove_all_friends": {
+		"config": {
+			"description": "ลบเพื่อนทั้งหมดของบอท ผู้ดูแลระบบและเจ้าของได้รับการยกเว้น"
+		},
+		"run": {
+			"msg": {
+				"removing_friends": "ลบเพื่อนทั้งหมด!",
+				"removed_friends": "ลบ {{count}} เพื่อน!"
+			}
+		}
+	},
+	"remove_friend": {
+		"config": {
+			"description": "ลบเพื่อนของบอท",
+			"usage": {
+				"query": {
+					"name": "ชื่อหรือรหัสของเพื่อน",
+					"description": "ชื่อหรือรหัสของเพื่อนที่จะลบ"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "พบเพื่อนหลายคน:",
+				"friend_not_found": "ไม่พบเพื่อน {{query}}!",
+				"error": "ไม่สามารถลบ {{name}} ได้!",
+				"friend_removed": "เพื่อน {{name}} ลบออกสำเร็จ!"
+			}
+		}
+	},
+	"unblock_all_users": {
+		"config": {
+			"description": "ปลดบล็อกผู้ใช้ที่ถูกบล็อกทั้งหมดของบอท"
+		},
+		"run": {
+			"msg": {
+				"removing_friends": "ยกเลิกการบล็อกผู้ใช้ที่ถูกบล็อกทั้งหมด!",
+				"removed_friends": "unblocked {{count}} ผู้ใช้ที่ถูกบล็อก!"
+			}
+		}
+	},
+	"unblock_user": {
+		"config": {
+			"description": "ปลดบล็อกผู้ใช้",
+			"usage": {
+				"query": {
+					"name": "ชื่อผู้ใช้หรือรหัส",
+					"description": "ชื่อหรือ ID ของผู้ใช้เพื่อปลดบล็อก"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_users_found": "พบผู้ใช้หลายคน:",
+				"user_not_found": "ไม่พบผู้ใช้ {{query}}!",
+				"error": "ไม่สามารถปลดบล็อก {{name}}!",
+				"user_unblocked": "ผู้ใช้ {{name}} ไม่ถูกบล็อกสำเร็จ!"
+			}
+		}
+	},
+	"user_info": {
+		"config": {
+			"description": "แสดงข้อมูลของผู้ใช้ที่ระบุ",
+			"usage": {
+				"query": {
+					"name": "ชื่อผู้ใช้หรือรหัส",
+					"description": "ชื่อหรือรหัสของผู้ใช้"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_users_found": "พบผู้ใช้หลายคน:",
+				"user_not_found": "ไม่พบผู้ใช้ {{query}}!"
+			}
+		}
+	},
+	"eval": {
+		"run": {
+			"msg": {
+				"unauthorized_error": "เฉพาะ tnfangel เท่านั้นที่สามารถเข้าถึงคำสั่งนี้ได้"
+			}
+		}
+	},
+	"help": {
+		"config": {
+			"description": "แสดงความช่วยเหลือและแผงควบคุม",
+			"usage": {
+				"query": {
+					"name": "ชื่อหรือรหัสของคำสั่ง",
+					"description": "ชื่อหรือ ID ของคำสั่งเพื่อรับความช่วยเหลืออย่างละเอียด"
+				}
+			}
+		}
+	},
+	"message": {
+		"config": {
+			"description": "ส่งข้อความไปยังปาร์ตี้",
+			"usage": {
+				"message": {
+					"name": "ข้อความ",
+					"description": "ข้อความที่จะส่งไปยังปาร์ตี้"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "ส่งข้อความถึงปาร์ตี้"
+			}
+		}
+	},
+	"ping": {
+		"config": {
+			"description": "แสดงเวลาแฝงของบอท"
+		},
+		"run": {
+			"msg": {
+				"measuring": "วัด ...",
+				"info": "ป่อง {{time}} ms"
+			}
+		}
+	},
+	"prev": {
+		"config": {
+			"description": "ดำเนินการคำสั่งก่อนหน้า"
+		},
+		"run": {
+			"msg": {
+				"not_found": "คำสั่งก่อนหน้านี้ยังไม่ถูกดำเนินการ!"
+			}
+		}
+	},
+	"restart_bot": {
+		"config": {
+			"description": "รีสตาร์ทบอทปัจจุบัน"
+		},
+		"run": {
+			"msg": {
+				"success": "บอทกำลังรีสตาร์ทแล้ว!"
+			}
+		}
+	},
+	"restart_category": {
+		"config": {
+			"description": "รีสตาร์ทหมวดหมู่ปัจจุบัน"
+		},
+		"run": {
+			"msg": {
+				"success": "หมวดหมู่กำลังเริ่มต้นใหม่แล้ว!"
+			}
+		}
+	},
+	"restart_shard": {
+		"config": {
+			"description": "รีสตาร์ท Shard ปัจจุบัน"
+		},
+		"run": {
+			"msg": {
+				"success": "ชาร์ดกำลังเริ่มต้นใหม่แล้ว!",
+				"error": "ขออภัยบอทตัวนี้ไม่ได้ทำงานอยู่ในเศษซาก"
+			}
+		}
+	},
+	"send": {
+		"config": {
+			"description": "ส่งคำสั่งไปยัง Bot ระบุ",
+			"usage": {
+				"bot": {
+					"name": "BOT ID",
+					"description": "BOT ID เพื่อส่งคำสั่ง"
+				},
+				"command": {
+					"name": "สั่งการ",
+					"description": "คำสั่งที่จะดำเนินการในบอท"
+				},
+				"args": {
+					"name": "ข้อโต้แย้ง",
+					"description": "ต้องมีข้อโต้แย้งของคำสั่ง"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "การส่งคำสั่งไปยังบอท {{user}}"
+			}
+		}
+	},
+	"send_all": {
+		"config": {
+			"description": "ส่งคำสั่งไปยังบอททั้งหมด",
+			"usage": {
+				"command": {
+					"name": "สั่งการ",
+					"description": "คำสั่งที่จะดำเนินการในบอท"
+				},
+				"args": {
+					"name": "ข้อโต้แย้ง",
+					"description": "ต้องมีข้อโต้แย้งของคำสั่ง"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "ส่งคำสั่งไปยังบอททั้งหมด ..."
+			}
+		}
+	},
+	"send_category": {
+		"config": {
+			"description": "ส่งคำสั่งไปยังหมวดหมู่ของบอท",
+			"usage": {
+				"command": {
+					"name": "สั่งการ",
+					"description": "คำสั่งที่จะดำเนินการในบอท"
+				},
+				"args": {
+					"name": "ข้อโต้แย้ง",
+					"description": "ต้องมีข้อโต้แย้งของคำสั่ง"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "ส่งคำสั่งไปยังบอททั้งหมดในเศษของฉัน ...",
+				"error": "ขออภัยบอทนี้ไม่ทำงานในหมวดหมู่"
+			}
+		}
+	},
+	"send_number": {
+		"config": {
+			"description": "ส่งคำสั่งไปยังจำนวนบอทที่ระบุ",
+			"usage": {
+				"number": {
+					"name": "จำนวนบอท",
+					"description": "จำนวนบอทที่จะส่งคำสั่ง"
+				},
+				"command": {
+					"name": "สั่งการ",
+					"description": "คำสั่งที่จะดำเนินการในบอท"
+				},
+				"args": {
+					"name": "ข้อโต้แย้ง",
+					"description": "ต้องมีข้อโต้แย้งของคำสั่ง"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"count_negative": "จำนวนต้องมากกว่า 0!",
+				"sending_command": "การส่งคำสั่งไปยัง {{number}} บอท ..."
+			}
+		}
+	},
+	"send_party": {
+		"config": {
+			"description": "ส่งคำสั่งไปยังบอททั้งหมดที่แบ่งปันบุคคลเดียวกัน",
+			"usage": {
+				"command": {
+					"name": "สั่งการ",
+					"description": "คำสั่งที่จะดำเนินการในบอท"
+				},
+				"args": {
+					"name": "ข้อโต้แย้ง",
+					"description": "ต้องมีข้อโต้แย้งของคำสั่ง"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "ส่งคำสั่งไปยังบอททั้งหมดในปาร์ตี้ของฉัน ..."
+			}
+		}
+	},
+	"send_shard": {
+		"config": {
+			"description": "ส่งคำสั่งไปยังเศษของบอท",
+			"usage": {
+				"command": {
+					"name": "สั่งการ",
+					"description": "คำสั่งที่จะดำเนินการในบอท"
+				},
+				"args": {
+					"name": "ข้อโต้แย้ง",
+					"description": "ต้องมีข้อโต้แย้งของคำสั่ง"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "ส่งคำสั่งไปยังบอททั้งหมดในเศษของฉัน ..."
+			}
+		}
+	},
+	"set_status": {
+		"config": {
+			"description": "ตั้งค่าสถานะบอท",
+			"usage": {
+				"status": {
+					"name": "สถานะ",
+					"description": "สถานะใหม่ของบอท"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "ตั้งสถานะให้สำเร็จ!"
+			}
+		}
+	},
+	"whisper": {
+		"config": {
+			"description": "ส่งข้อความส่วนตัวถึงเพื่อน",
+			"usage": {
+				"query": {
+					"name": "ชื่อหรือรหัสของเพื่อน",
+					"description": "ชื่อหรือรหัสของเพื่อนเพื่อส่งข้อความส่วนตัว"
+				},
+				"message": {
+					"name": "ข้อความ",
+					"description": "ข้อความที่จะส่งถึงเพื่อน"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "พบเพื่อนหลายคน:",
+				"friend_not_found": "ไม่พบเพื่อน {{query}}!",
+				"whisper_sent": "ส่งไปยัง {{name}}!"
+			}
+		}
+	},
+	"bp_level": {
+		"config": {
+			"description": "ตั้งค่าระดับการต่อสู้ของบอท",
+			"usage": {
+				"level": {
+					"name": "ระดับ",
+					"description": "ระดับของการต่อสู้ผ่านที่จะตั้งค่า"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"bp_level_set": "ตั้งค่าระดับ Battle Pass เป็น {{level}}!"
+			}
+		}
+	},
+	"clear_custom_key": {
+		"config": {
+			"description": "ล้างคีย์การจับคู่แบบกำหนดเอง"
+		},
+		"run": {
+			"msg": {
+				"success": "ล้างกุญแจการจับคู่แบบกำหนดเอง!"
+			}
+		}
+	},
+	"crowns": {
+		"config": {
+			"description": "ตั้งมงกุฎบอท",
+			"usage": {
+				"crowns": {
+					"name": "มงกุฎ",
+					"description": "มงกุฎที่จะตั้งค่า"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "ตั้งมงกุฎเป็น {{crowns}}!"
+			}
+		}
+	},
+	"hide": {
+		"config": {
+			"description": "ซ่อนผู้เล่นจากปาร์ตี้หรือซ่อนคุณหากคุณไม่ได้ระบุข้อโต้แย้ง",
+			"usage": {
+				"query": {
+					"name": "ชื่อสมาชิกหรือรหัส",
+					"description": "ชื่อหรือรหัสของสมาชิกของพรรคเพื่อซ่อน"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "พบเพื่อนหลายคน:",
+				"member_not_found": "สมาชิก {{query}} ไม่พบ!",
+				"member_not_at_party": "คุณไม่ได้เป็นสมาชิกของปาร์ตี้ของฉัน",
+				"success": "ซ่อน {{name}}!"
+			}
+		}
+	},
+	"hide_all": {
+		"config": {
+			"description": "ซ่อนผู้เล่นทุกคนในงานปาร์ตี้"
+		},
+		"run": {
+			"msg": {
+				"success": "ซ่อนสมาชิกทุกคน!"
+			}
+		}
+	},
+	"kick": {
+		"config": {
+			"description": "Kick เป็นผู้เล่นจากปาร์ตี้",
+			"usage": {
+				"query": {
+					"name": "ชื่อสมาชิกหรือรหัส",
+					"description": "ชื่อหรือรหัสของสมาชิกของพรรคที่จะเตะ"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "พบเพื่อนหลายคน:",
+				"member_not_found": "สมาชิก {{query}} ไม่พบ!",
+				"success": "เตะ {{name}}!"
+			}
+		}
+	},
+	"kick_all": {
+		"config": {
+			"description": "เตะผู้เล่นทุกคนในงานปาร์ตี้"
+		},
+		"run": {
+			"msg": {
+				"user_kicked": "เตะ {{name}}!",
+				"success": "เตะสมาชิกทุกคนเสร็จแล้ว!"
+			}
+		}
+	},
+	"leave": {
+		"config": {
+			"description": "บอทออกจากงานปาร์ตี้"
+		},
+		"run": {
+			"msg": {
+				"success": "ลาก่อน!"
+			}
+		}
+	},
+	"level": {
+		"config": {
+			"description": "ตั้งค่าระดับบอท",
+			"usage": {
+				"level": {
+					"name": "ระดับ",
+					"description": "ระดับที่จะตั้งค่า"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "ตั้งค่าระดับเป็น {{level}}!"
+			}
+		}
+	},
+	"match": {
+		"config": {
+			"description": "กำหนดสถานะให้เล่นเกม",
+			"usage": {
+				"number": {
+					"name": "จำนวนผู้เล่น",
+					"description": "จำนวนผู้เล่นในเกม"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "ตั้งค่าให้เล่นสถานะ!"
+			}
+		}
+	},
+	"party_info": {
+		"config": {
+			"description": "แสดงข้อมูลเกี่ยวกับพรรค"
+		}
+	},
+	"playlist": {
+		"config": {
+			"description": "ตั้งค่าเพลย์ลิสต์ของปาร์ตี้",
+			"usage": {
+				"query": {
+					"name": "ชื่อหรือรหัสของเพลย์ลิสต์",
+					"description": "ชื่อหรือรหัสของเพลย์ลิสต์ที่จะตั้งค่า"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"error": "การตั้งค่าเพลย์ลิสต์ข้อผิดพลาด!",
+				"success": "ตั้งค่าเพลย์ลิสต์เป็น {{query}}!"
+			}
+		}
+	},
+	"privacy": {
+		"config": {
+			"description": "ตั้งค่าความเป็นส่วนตัวของพรรค",
+			"usage": {
+				"privacy": {
+					"name": "ความเป็นส่วนตัว",
+					"options": {
+						"public": "สาธารณะ",
+						"private": "ส่วนตัว"
+					},
+					"description": "ความเป็นส่วนตัวของพรรคที่จะตั้งค่า"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "ตั้งค่าความเป็นส่วนตัวของปาร์ตี้เป็น {{privacy}}!",
+				"error": "ความเป็นส่วนตัวที่ไม่ถูกต้องจะต้องเป็นสาธารณะหรือเป็นส่วนตัว!"
+			}
+		}
+	},
+	"rank": {
+		"config": {
+			"description": "ตั้งค่าบอท",
+			"usage": {
+				"rank": {
+					"name": "จัดอันดับ",
+					"description": "อันดับที่จะตั้งค่า"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "ตั้งค่าให้เป็น {{rank}}!"
+			}
+		}
+	},
+	"ready": {
+		"config": {
+			"description": "กำหนดสถานะให้พร้อม"
+		},
+		"run": {
+			"msg": {
+				"warning": "คำเตือน: หากคุณกำลังพยายามเริ่มต้นการจับคู่อย่าใช้คำสั่งนี้! เพียงแค่เตรียมพร้อมตัวเองและฉันจะไปพร้อมโดยอัตโนมัติ",
+				"success": "พร้อม!"
+			}
+		}
+	},
+	"say": {
+		"config": {
+			"description": "ส่งข้อความถึงการแชทปาร์ตี้",
+			"usage": {
+				"message": {
+					"name": "ข้อความ",
+					"description": "ข้อความที่จะส่งไปยังปาร์ตี้"
+				}
+			}
+		},
+		"run": {}
+	},
+	"set_custom_key": {
+		"config": {
+			"description": "ตั้งค่าคีย์การจับคู่แบบกำหนดเอง",
+			"usage": {
+				"key": {
+					"name": "คีย์ที่กำหนดเอง",
+					"description": "คีย์การจับคู่แบบกำหนดเองที่จะตั้งค่า"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "ตั้งคีย์การจับคู่แบบกำหนดเอง!"
+			}
+		}
+	},
+	"show": {
+		"config": {
+			"description": "แสดงผู้เล่นที่ซ่อนอยู่จากปาร์ตี้หรือแสดงให้คุณเห็นหากคุณไม่ได้ระบุอาร์กิวเมนต์",
+			"usage": {
+				"query": {
+					"name": "ชื่อสมาชิกหรือรหัส",
+					"description": "ชื่อหรือรหัสของสมาชิกของพรรคที่จะแสดง"
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "พบเพื่อนหลายคน:",
+				"member_not_found": "สมาชิก {{query}} ไม่พบ!",
+				"member_not_at_party": "คุณไม่ได้เป็นสมาชิกของปาร์ตี้ของฉัน",
+				"success": "แสดง {{name}}!"
+			}
+		}
+	},
+	"show_all": {
+		"config": {
+			"description": "แสดงผู้เล่นที่ซ่อนอยู่ทั้งหมดในงานปาร์ตี้"
+		},
+		"run": {
+			"msg": {
+				"success": "แสดงสมาชิกทุกคน!"
+			}
+		}
+	},
+	"sit_in": {
+		"config": {
+			"description": "กำหนดสถานะให้เข้าร่วม"
+		},
+		"run": {
+			"msg": {
+				"success": "นั่งใน ..."
+			}
+		}
+	},
+	"sit_out": {
+		"config": {
+			"description": "กำหนดสถานะให้ไม่เข้าร่วม"
+		},
+		"run": {
+			"msg": {
+				"success": "นั่งอยู่ ..."
+			}
+		}
+	},
+	"unmatch": {
+		"config": {
+			"description": "กำหนดสถานะให้ไม่เล่นเกม"
+		},
+		"run": {
+			"msg": {
+				"success": "ลบสถานะการเล่น!"
+			}
+		}
+	},
+	"unready": {
+		"config": {
+			"description": "กำหนดสถานะให้ไม่พร้อม"
+		},
+		"run": {
+			"msg": {
+				"success": "ไม่พร้อม!"
+			}
+		}
+	}
+}

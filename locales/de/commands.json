@@ -1,0 +1,1307 @@
+{
+	"handler": {
+		"errors": {
+			"only_for_party_members": "Dieser Befehl ist nur für Mitglieder meiner Partei verfügbar.",
+			"only_for_private_messages": "Dieser Befehl ist nur in privaten Nachrichten verfügbar.",
+			"need_party_leader": "Ich muss der Parteiführer sein, um diesen Befehl auszuführen!",
+			"only_for_owners": "Dieser Befehl ist nur für Bot -Besitzer verfügbar.",
+			"only_for_admins": "Dieser Befehl ist nur für Bot -Administratoren verfügbar.",
+			"only_for_whitelist": "Dieser Befehl ist nur für Benutzer der Whitelist des Bots verfügbar."
+		}
+	},
+	"all_items": {
+		"config": {
+			"description": "Zeigt alle Kosmetika des Spiels an, ein optionaler Filter kann hinzugefügt werden und Sie können mit dem Befehl \"stop\" anhalten.",
+			"usage": {
+				"filter": {
+					"name": "Filter",
+					"options": {
+						"outfits": "Outfits",
+						"backpacks": "Rucksäcke",
+						"emojis": "Emojis",
+						"emotes": "Emotes",
+						"pickaxes": "Spitzhahn",
+						"shoes": "Schuhe"
+					},
+					"description": "Der Filter muss durch Anzeigen der Elemente festgelegt werden."
+				},
+				"random_order": {
+					"name": "Zufällige Reihenfolge",
+					"description": "Verwenden Sie eine zufällige Reihenfolge anstatt nach dem neuesten zuerst zu bestellen.",
+					"options": {
+						"yes": "Ja",
+						"no": "NEIN"
+					}
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"no_items": "Die Gegenstände nicht abrufen.",
+				"items_already_displaying": "Kosmetika werden bereits angezeigt, es muss zuerst mit dem Befehl \"stop\" gestoppt werden.",
+				"setting_items": "Setzen Sie alle Spielelemente ... {{filtered}}",
+				"filtered_by": "(filtriert von {{filter}})",
+				"items_showed": "Ich habe fertig mit allen Artikeln ..."
+			}
+		}
+	},
+	"backpack": {
+		"config": {
+			"description": "Legt den Rucksack des Bots fest.",
+			"usage": {
+				"query": {
+					"name": "Rucksackname oder ID",
+					"description": "Der Name oder die ID des zu setzenden Rucksacks."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"backpack_not_found": "Backpack {{item}} Nicht gefunden!",
+				"backpack_changed": "Setzen Sie den Rucksack auf {{name}}! ({{id}})"
+			}
+		}
+	},
+	"backpack_variants": {
+		"config": {
+			"description": "Legt die Varianten des Rucksacks fest."
+		},
+		"run": {
+			"msg": {
+				"backpack_not_found": "Der Bot hat keinen Rucksack!",
+				"invalid_backpack": "Ungültiger Rucksack!",
+				"variants_not_founded": "Dieser Rucksack hat keine Varianten!",
+				"variants_select": "Senden Sie die Variante, die Sie für {{type}} auswählen möchten",
+				"variants_changed": "Stellen Sie die Rucksackvarianten ein!"
+			}
+		}
+	},
+	"banner": {
+		"config": {
+			"description": "Legt das Banner des Bots fest.",
+			"usage": {
+				"query": {
+					"name": "Bannername oder ID",
+					"description": "Der Name oder die ID des zu setzen."
+				},
+				"color": {
+					"name": "Farbname oder ID",
+					"description": "Der Name oder die ID der zu festgelegten Farbe."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"banner_not_found": "Banner {{item}} nicht gefunden!",
+				"color_not_found": "Farbe {{item}} Nicht gefunden!",
+				"banner_changed": "Setzen Sie das Banner auf {{name}}! ({{id}})"
+			}
+		}
+	},
+	"clear_backpack": {
+		"config": {
+			"description": "Entfernt den Rucksack des Bots."
+		},
+		"run": {
+			"msg": {
+				"backpack_cleared": "Löschter Rucksack!"
+			}
+		}
+	},
+	"clear_emote": {
+		"config": {
+			"description": "Stoppt den Tanz des Bots."
+		},
+		"run": {
+			"msg": {
+				"emote_cleared": "Löschte Emote!"
+			}
+		}
+	},
+	"clear_shoes": {
+		"config": {
+			"description": "Entfernt die Schuhe des Bots."
+		},
+		"run": {
+			"msg": {
+				"shoes_cleared": "Gelöschte Schuhe!"
+			}
+		}
+	},
+	"copy": {
+		"config": {
+			"description": "Kopieren Sie die Kosmetik eines Benutzers oder kopieren Sie die Kosmetik an Sie, wenn Sie keine Argumente angeben.",
+			"usage": {
+				"filter": {
+					"name": "Filter",
+					"options": {
+						"all": "Alle",
+						"outfit": "Outfit",
+						"backpack": "Rucksack",
+						"emoji": "Emoji",
+						"emote": "Emote",
+						"pickaxe": "Spitzhacke",
+						"shoes": "Schuhe"
+					},
+					"description": "Der Filter, der beim Kopieren von Kosmetika festgelegt ist."
+				},
+				"query": {
+					"name": "Mitgliedsname oder ID",
+					"description": "Der Name oder die ID des Mitglieds, um die Kosmetik zu kopieren."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"members_found": "Mehrere Mitglieder gefunden:",
+				"member_not_found": "Mitglied {{member}} Nicht gefunden!",
+				"member_not_at_party": "Sie sind kein Mitglied meiner Partei.",
+				"member_copied": "Kopiert {{member}}!"
+			}
+		}
+	},
+	"cosmetic": {
+		"config": {
+			"description": "Legt die Kosmetik des Bots fest.",
+			"usage": {
+				"query": {
+					"name": "Kosmetischer Name oder ID",
+					"description": "Der Name oder die ID der zu setzenden Kosmetik."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"cosmetic_not_found": "Kosmetische {{query}} Nicht gefunden!",
+				"cosmetic_changed": "Setzen Sie den {{type}} auf {{name}}! ({{id}})"
+			}
+		}
+	},
+	"cosmetic_info": {
+		"config": {
+			"description": "Zeigt Informationen zu einer Kosmetik.",
+			"usage": {
+				"query": {
+					"name": "Kosmetischer Name oder ID",
+					"description": "Der Name oder die ID der zu setzenden Kosmetik."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"cosmetic_not_found": "Kosmetische {{query}} Nicht gefunden!"
+			}
+		}
+	},
+	"emoji": {
+		"config": {
+			"description": "Legt den Emoji des Bots fest.",
+			"usage": {
+				"query": {
+					"name": "Emoji -Name oder ID",
+					"description": "Der Name oder die ID des Emoji zu setzen."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"emoji_not_found": "Emoji {{query}} Nicht gefunden!",
+				"emoji_changed": "Setzen Sie das Emoji auf {{name}}! ({{id}})"
+			}
+		}
+	},
+	"emote": {
+		"config": {
+			"description": "Legt die Emote des Bots fest.",
+			"usage": {
+				"query": {
+					"name": "Emote Name oder ID",
+					"description": "Der Name oder die ID der zu festgelegten Emote."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"emote_not_found": "Emote {{query}} Nicht gefunden!",
+				"emote_changed": "Setzen Sie das Emote Emoji auf {{name}}! ({{id}})"
+			}
+		}
+	},
+	"mimic": {
+		"config": {
+			"description": "Tut dasselbe wie ein Benutzer oder das gleiche wie Sie, wenn nicht Argumente angeben. Verwenden Sie \"stop\", um den Befehl zu stoppen.",
+			"usage": {
+				"filter": {
+					"name": "Filter",
+					"options": {
+						"all": "Alle",
+						"changes": "Änderungen",
+						"outfits": "Outfits",
+						"backpacks": "Rucksäcke",
+						"emojis": "Emojis",
+						"emotes": "Emotes",
+						"pickaxes": "Spitzhahn",
+						"shoes": "Schuhe"
+					},
+					"description": "Der Filter, der beim Nachahmung von Kosmetika festgelegt wird."
+				},
+				"query": {
+					"name": "Mitgliedsname oder ID",
+					"description": "Der Name oder die ID des Mitglieds, um Kosmetika zu imitieren."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"members_found": "Mehrere Mitglieder gefunden:",
+				"member_not_found": "Mitglied {{query}} Nicht gefunden!",
+				"member_not_at_party": "Sie sind kein Mitglied meiner Partei.",
+				"mimic_enabled": "Aktiviert mimic für {{member}} {{filter}}!",
+				"filter": "mit filter {{filter}}"
+			}
+		}
+	},
+	"new_items": {
+		"config": {
+			"description": "Zeigt die neuesten Kosmetik, die dem Spiel hinzugefügt wurden, ein optionaler Filter kann hinzugefügt werden und Sie können mit dem Befehl \"stop\" anhalten.",
+			"usage": {
+				"filter": {
+					"name": "Filter",
+					"options": {
+						"outfits": "Outfits",
+						"backpacks": "Rucksäcke",
+						"emojis": "Emojis",
+						"emotes": "Emotes",
+						"pickaxes": "Spitzhahn",
+						"shoes": "Schuhe"
+					},
+					"description": "Der Filter muss durch Anzeigen der Elemente festgelegt werden."
+				},
+				"random_order": {
+					"name": "Zufällige Reihenfolge",
+					"description": "Verwenden Sie eine zufällige Reihenfolge anstatt nach dem neuesten zuerst zu bestellen.",
+					"options": {
+						"yes": "Ja",
+						"no": "NEIN"
+					}
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"type_error": "Wenn Sie einen Filter wünschen, stellen Sie sicher, dass es gültig ist, nur Outfits, Rucksäcke, Emojis, Emotes oder Spitzhörer",
+				"cosmetic_fetch_error": "Kürzlich nicht abzurufen Kosmetika.",
+				"already_showing": "Kosmetika werden bereits angezeigt, es muss zuerst mit dem Befehl \"stop\" gestoppt werden.",
+				"showing_cosmetics": "Setzen Sie alle kürzlich hinzugefügten Elemente ein ... {{filter}}",
+				"filter": "(filtriert von {{filter}})",
+				"ended": "Fertiggestellt alle kürzlich hinzugefügten Artikel ..."
+			}
+		}
+	},
+	"outfit": {
+		"config": {
+			"description": "Legt das Outfit des Bots fest.",
+			"usage": {
+				"query": {
+					"name": "Outfit -Name oder ID",
+					"description": "Der Name oder die ID des zu setzen."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"outfit_not_found": "Outfit {{query}} Nicht gefunden!",
+				"outfit_changed": "Setzen Sie das Outfit auf {{name}}! ({{id}})!"
+			}
+		}
+	},
+	"outfit_variants": {
+		"config": {
+			"description": "Legt die Varianten des Outfits fest."
+		},
+		"run": {
+			"msg": {
+				"outfit_not_found": "Der Bot hat kein Outfit!",
+				"invalid_outfit": "Ungültiges Outfit!",
+				"variants_not_found": "Dieses Outfit hat keine Varianten!",
+				"variants_select": "Senden Sie die Variante, die Sie für {{type}} auswählen möchten",
+				"changed": "Setzen Sie die Outfit -Varianten!"
+			}
+		}
+	},
+	"perfect_timing": {
+		"config": {
+			"description": "Legt die Kosmetik des Bots synchron.",
+			"usage": {
+				"query": {
+					"name": "Kosmetischer Name oder ID",
+					"description": "Der Name oder die ID der zu setzenden Kosmetik."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"cosmetic_not_found": "Kosmetische {{query}} Nicht gefunden!",
+				"perfect_timing_success": "Synchronisierung, um ein perfektes Timing durchzuführen ...",
+				"perfect_timing_done": "Synchronisierte {{value}} mit {{name}}! ({{id}})"
+			}
+		}
+	},
+	"pickaxe": {
+		"config": {
+			"description": "Legt die Spitzhacke des Bots fest.",
+			"usage": {
+				"query": {
+					"name": "Pickaxe Name oder ID",
+					"description": "Der Name oder die ID der zu festen Spickaxe."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"pickaxe_not_found": "Pickaxe {{query}} nicht gefunden!",
+				"pickaxe_changed": "Setzen Sie die Spickaxe auf {{name}}! ({{id}})"
+			}
+		}
+	},
+	"pickaxe_variants": {
+		"config": {
+			"description": "Setzt die Varianten von Pickaxe."
+		},
+		"run": {
+			"msg": {
+				"pickaxe_not_found": "Der Bot hat keine Spitzhahn!",
+				"invalid_pickaxe": "Ungültige Spickaxe!",
+				"variants_not_found": "Diese Spitzhahn hat keine Varianten!",
+				"variants_select": "Senden Sie die Variante, die Sie für {{type}} auswählen möchten",
+				"changed": "Setzen Sie die Spickaxe -Varianten!"
+			}
+		}
+	},
+	"preset": {
+		"config": {
+			"description": "Legt die Voreinstellung des Bots fest. Verwenden Sie \"none\", um eine Kosmetik zu entfernen.",
+			"usage": {
+				"outfit": {
+					"name": "Outfit ID",
+					"description": "Die ID des Outfits."
+				},
+				"backpack": {
+					"name": "Rucksack -ID",
+					"description": "Die ID des Rucksacks."
+				},
+				"pickaxe": {
+					"name": "Pickaxe ID",
+					"description": "Die ID der Spitzhacke."
+				},
+				"emote": {
+					"name": "Emote ID",
+					"description": "Die ID der Emote."
+				},
+				"shoes": {
+					"name": "Schuhe id",
+					"description": "Der Ausweis der Schuhe."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"preset_changed": "Setzen Sie die Voreinstellung!"
+			}
+		}
+	},
+	"shoes": {
+		"config": {
+			"description": "Stellt die Schuhe des Bots fest.",
+			"usage": {
+				"query": {
+					"name": "Schuhe Name oder ID",
+					"description": "Der Name oder die ID der zu setzenden Schuhe."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"shoes_not_found": "Schuhe {{query}} Nicht gefunden!",
+				"shoes_changed": "Setzen Sie die Schuhe auf {{name}}! ({{id}})"
+			}
+		}
+	},
+	"shoe_variants": {
+		"config": {
+			"description": "Legt die Schuhvarianten fest."
+		},
+		"run": {
+			"msg": {
+				"shoes_not_found": "Der Bot hat keine Schuhe!",
+				"invalid_shoes": "Ungültige Schuhe!",
+				"variants_not_found": "Diese Schuhe haben keine Varianten!",
+				"variants_select": "Senden Sie die Variante, die Sie für {{type}} auswählen möchten",
+				"changed": "Stellen Sie die Schuhvarianten ein!"
+			}
+		}
+	},
+	"shop_items": {
+		"config": {
+			"description": "Zeigt die Kosmetik aus dem Artikelladen an, ein optionaler Filter kann hinzugefügt werden und Sie können mit dem Befehl \"stop\" anhalten.",
+			"usage": {
+				"filter": {
+					"name": "Filter",
+					"options": {
+						"outfits": "Outfits",
+						"backpacks": "Rucksäcke",
+						"emojis": "Emojis",
+						"emotes": "Emotes",
+						"pickaxes": "Spitzhahn",
+						"shoes": "Schuhe"
+					},
+					"description": "Der Filter muss durch Anzeigen der Elemente festgelegt werden."
+				},
+				"random_order": {
+					"name": "Zufällige Reihenfolge",
+					"description": "Verwenden Sie eine zufällige Reihenfolge anstatt nach dem neuesten zuerst zu bestellen.",
+					"options": {
+						"yes": "Ja",
+						"no": "NEIN"
+					}
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"invalid_type": "Wenn Sie einen Filter wünschen, stellen Sie sicher, dass es gültig ist, nur Outfits, Rucksäcke, Emojis, Emotes oder Spitzhörer",
+				"fetch_failed": "Die Ladenartikel können nicht abrufen.",
+				"already_displaying": "Kosmetika werden bereits angezeigt, es muss zuerst mit dem Befehl \"stop\" gestoppt werden.",
+				"showing_items": "Stellen Sie alle Artikel im Shop ein ... {{filter}}",
+				"filter": "(gefiltert von {{query}})",
+				"ended": "Ich habe fertig mit allen Artikeln im Laden gezeigt ..."
+			}
+		}
+	},
+	"stop": {
+		"config": {
+			"description": "Stoppt ausstehende Operationen."
+		},
+		"run": {
+			"msg": {
+				"stopped_items": "Hör auf, Gegenstände zu zeigen!",
+				"stopped_mimic": "Hör auf im Mimic!",
+				"stopped_emote": "Hör auf Emote!",
+				"nothing_to_stop": "Nichts zu stoppen!"
+			}
+		}
+	},
+	"accept_all_friends": {
+		"config": {
+			"description": "Akzeptiert alle anstehenden Freunde des Bots."
+		},
+		"run": {
+			"msg": {
+				"accepting_friends": "Annahme aller anstehenden Freunde!",
+				"accepted_friends": "Angenommene Freunde!"
+			}
+		}
+	},
+	"accept_friend": {
+		"config": {
+			"description": "Akzeptiere eine Freundschaftsanfrage.",
+			"usage": {
+				"query": {
+					"name": "Name oder Ausweis des Freundes ausstehend",
+					"description": "Der Name oder der ID des anhängigen Freundes, der angenommen wird."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Mehrere Freunde gefunden:",
+				"friends_not_found": "Freund {{query}} Nicht gefunden!",
+				"self_request": "Die anstehende Freundschaftsanfrage gehört mir!",
+				"error": "Anhängiger Freund nicht akzeptiert!",
+				"request_accepted": "Ausstehend Freund $ {{name}} erfolgreich akzeptiert!"
+			}
+		}
+	},
+	"add_friend": {
+		"config": {
+			"description": "Senden Sie eine Freundschaftsanfrage an einen Benutzer oder nehmen Sie eine Freundschaftsanfrage an.",
+			"usage": {
+				"query": {
+					"name": "Benutzername oder ID",
+					"description": "Der Name oder die ID des Benutzers hinzufügen."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Mehrere Freunde gefunden:",
+				"friends_not_found": "Freund {{query}} Nicht gefunden!",
+				"already_friends": "Schon ein Freund!",
+				"error": "Den Benutzer kann nicht hinzugefügt werden!",
+				"request_sent": "Freundschaftsanfrage an {{name}} gesendet"
+			}
+		}
+	},
+	"block_user": {
+		"config": {
+			"description": "Blockiert einen Benutzer.",
+			"usage": {
+				"query": {
+					"name": "Benutzername oder ID",
+					"description": "Der Name oder die ID des Benutzers blockieren."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_users_found": "Mehrere Benutzer gefunden:",
+				"user_not_found": "Benutzer {{query}} Nicht gefunden!",
+				"error": "Kann {{name}} nicht blockieren!",
+				"user_blocked": "Benutzer {{name}} erfolgreich blockiert!"
+			}
+		}
+	},
+	"decline_all_friends": {
+		"config": {
+			"description": "Deklinas alle anstehenden Freunde des Bots."
+		},
+		"run": {
+			"msg": {
+				"declining_friends": "Ablehnen Sie alle anstehenden Freunde!",
+				"declined_friends": "Abgelehnt {{count}} Freunde!"
+			}
+		}
+	},
+	"decline_friend": {
+		"config": {
+			"description": "Eine Freundschaftsanfrage ablehnen oder abbrechen.",
+			"usage": {
+				"query": {
+					"name": "Name oder Ausweis des Freundes ausstehend",
+					"description": "Der Name oder der ID des Freundes, der anhängig ist, um abzulehnen oder abzubrechen."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Mehrere Freunde gefunden:",
+				"friends_not_found": "Freund {{query}} Nicht gefunden!",
+				"error": "Anhängiger Freund nicht entfernt!",
+				"request_sent": "Ausstehender Freund {{name}} erfolgreich entfernt!"
+			}
+		}
+	},
+	"friend_count": {
+		"config": {
+			"description": "Zeigt die Anzahl der Freunde des Bots an."
+		},
+		"run": {
+			"msg": {
+				"info": "Ich habe {{friends}} Freunde, {{pending}} anhängig ({{incoming}} eingeholt, {{outgoing}} ausgehändig) und {{blocked}} blockiert!"
+			}
+		}
+	},
+	"invite": {
+		"config": {
+			"description": "Lädt einen Freund oder Sie zur Party ein.",
+			"usage": {
+				"query": {
+					"name": "Name oder ID des Freundes",
+					"description": "Der Name oder die ID des Freundes einladen."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"alone": "Auf einer Party mit mir ist der Benutzer zur Einladung erforderlich.",
+				"multiple_friends_found": "Mehrere Freunde gefunden:",
+				"friends_not_found": "Freund {{query}} Nicht gefunden!",
+				"already_on_party": "{{name}} ist bereits in meiner Party!",
+				"invite_error": "Kann die Einladung nicht an {{name}} senden!",
+				"invite_sent": "Einladung an {{name}}!"
+			}
+		}
+	},
+	"join": {
+		"config": {
+			"description": "Schließt sich Ihrer Party oder einer Party eines Benutzers an.",
+			"usage": {
+				"query": {
+					"name": "Name oder ID des Freundes",
+					"description": "Der Name oder die ID des Freundes zum Schließen."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"invalid_param": "Du musst mein Freund sein oder einen Freund angeben!",
+				"multiple_friends_found": "Mehrere Freunde gefunden:",
+				"friend_not_found": "Freund {{query}} Nicht gefunden!",
+				"already_on_party": "Freund schon in meiner Party!",
+				"party_error": "{{name}} hat keine Party!",
+				"join_request_error": "Die Anfrage Join kann nicht an {{name}} gesendet werden!",
+				"joined": "Verbunden mit {{name}}!",
+				"join_request_sent": "Schließen Sie die Anfrage an, die an {{name}} gesendet wurde!"
+			}
+		}
+	},
+	"promote": {
+		"config": {
+			"description": "Fördert ein Mitglied oder macht Ihren Führer, wenn Sie keine Argumente angeben.",
+			"usage": {
+				"query": {
+					"name": "Mitgliedsname oder ID",
+					"description": "Der Name oder die ID der Partei aufsteigen."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Mehrere Freunde gefunden:",
+				"member_not_found": "Mitglied {{query}} Nicht gefunden!",
+				"member_not_at_party": "Sie sind kein Mitglied meiner Partei.",
+				"member_promoted": "Werbung {{name}}!"
+			}
+		}
+	},
+	"remove_all_friends": {
+		"config": {
+			"description": "Entfernt alle Freunde des Bots."
+		},
+		"run": {
+			"msg": {
+				"removing_friends": "Alle Freunde entfernen!",
+				"removed_friends": "Freunde entfernt {{count}} Freunde!"
+			}
+		}
+	},
+	"remove_friend": {
+		"config": {
+			"description": "Entfernt den Freund eines Bots.",
+			"usage": {
+				"query": {
+					"name": "Name oder ID des Freundes",
+					"description": "Der Name oder die ID des Freundes zu entfernen."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Mehrere Freunde gefunden:",
+				"friend_not_found": "Freund {{query}} Nicht gefunden!",
+				"error": "Kann {{name}} nicht entfernen!",
+				"friend_removed": "Freund {{name}} erfolgreich entfernt!"
+			}
+		}
+	},
+	"unblock_all_users": {
+		"config": {
+			"description": "Entsperren Sie alle blockierten Benutzer des Bots."
+		},
+		"run": {
+			"msg": {
+				"removing_friends": "Entfernen Sie alle blockierten Benutzer!",
+				"removed_friends": "Entsperrte {{count}} blockierte Benutzer!"
+			}
+		}
+	},
+	"unblock_user": {
+		"config": {
+			"description": "Entsperren Sie einen Benutzer.",
+			"usage": {
+				"query": {
+					"name": "Benutzername oder ID",
+					"description": "Der Name oder die ID des Benutzers zu entsperren."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_users_found": "Mehrere Benutzer gefunden:",
+				"user_not_found": "Benutzer {{query}} Nicht gefunden!",
+				"error": "Kann nicht entsperren {{name}}!",
+				"user_unblocked": "Benutzer {{name}} erfolgreich entsperrt!"
+			}
+		}
+	},
+	"user_info": {
+		"config": {
+			"description": "Zeigt die Informationen eines bestimmten Benutzers an.",
+			"usage": {
+				"query": {
+					"name": "Benutzername oder ID",
+					"description": "Der Name oder die ID des Benutzers."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_users_found": "Mehrere Benutzer gefunden:",
+				"user_not_found": "Benutzer {{query}} Nicht gefunden!"
+			}
+		}
+	},
+	"eval": {
+		"run": {
+			"msg": {
+				"unauthorized_error": "Nur TNFangel hat Zugriff auf diesen Befehl."
+			}
+		}
+	},
+	"help": {
+		"config": {
+			"description": "Zeigt das Hilfs- und Befehlsfeld an.",
+			"usage": {
+				"query": {
+					"name": "Name oder ID des Befehls",
+					"description": "Der Name oder die ID des Befehls, um detaillierte Hilfe zu erhalten."
+				}
+			}
+		}
+	},
+	"message": {
+		"config": {
+			"description": "Sendet eine Nachricht an die Partei.",
+			"usage": {
+				"message": {
+					"name": "Nachricht",
+					"description": "Die Nachricht, die an die Partei gesendet wird."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Senden Sie eine Nachricht an die Partei"
+			}
+		}
+	},
+	"ping": {
+		"config": {
+			"description": "Zeigt die Latenz des Bots."
+		},
+		"run": {
+			"msg": {
+				"measuring": "Messung...",
+				"info": "Pong! {{time}} ms"
+			}
+		}
+	},
+	"prev": {
+		"config": {
+			"description": "Führt den vorherigen Befehl aus."
+		},
+		"run": {
+			"msg": {
+				"not_found": "Ein früherer Befehl wurde nicht ausgeführt!"
+			}
+		}
+	},
+	"restart_bot": {
+		"config": {
+			"description": "Startet den aktuellen Bot neu."
+		},
+		"run": {
+			"msg": {
+				"success": "Der Bot startet jetzt neu!"
+			}
+		}
+	},
+	"restart_category": {
+		"config": {
+			"description": "Starten Sie die aktuelle Kategorie neu."
+		},
+		"run": {
+			"msg": {
+				"success": "Die Kategorie startet jetzt neu!"
+			}
+		}
+	},
+	"restart_shard": {
+		"config": {
+			"description": "Startet die aktuelle Scherbe neu."
+		},
+		"run": {
+			"msg": {
+				"success": "Die Scherbe startet jetzt neu!",
+				"error": "Entschuldigung, dieser Bot läuft nicht in einem Shard."
+			}
+		}
+	},
+	"send": {
+		"config": {
+			"description": "Sendet einen Befehl an einen angebenen Bot.",
+			"usage": {
+				"bot": {
+					"name": "Bot ID",
+					"description": "Die Bot -ID zum Senden des Befehls."
+				},
+				"command": {
+					"name": "Befehl",
+					"description": "Der Befehl, der im Bot ausgeführt wird."
+				},
+				"args": {
+					"name": "Argumente",
+					"description": "Die Argumente des Befehls sind erforderlich."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "Befehl an bot {{user}} senden"
+			}
+		}
+	},
+	"send_all": {
+		"config": {
+			"description": "Sendet einen Befehl an alle Bots.",
+			"usage": {
+				"command": {
+					"name": "Befehl",
+					"description": "Der Befehl, der in den Bots ausgeführt wird."
+				},
+				"args": {
+					"name": "Argumente",
+					"description": "Die Argumente des Befehls sind erforderlich."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "Senden Sie den Befehl an alle Bots ..."
+			}
+		}
+	},
+	"send_category": {
+		"config": {
+			"description": "Sendet einen Befehl an die Kategorie des Bots.",
+			"usage": {
+				"command": {
+					"name": "Befehl",
+					"description": "Der Befehl, der in den Bots ausgeführt wird."
+				},
+				"args": {
+					"name": "Argumente",
+					"description": "Die Argumente des Befehls sind erforderlich."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "Senden Sie den Befehl an alle Bots in meinem Shard ...",
+				"error": "Entschuldigung, dieser Bot läuft nicht in einer Kategorie."
+			}
+		}
+	},
+	"send_number": {
+		"config": {
+			"description": "Sendet einen Befehl an eine Angabe der Anzahl von Bots.",
+			"usage": {
+				"number": {
+					"name": "Anzahl der Bots",
+					"description": "Die Anzahl der Bots zum Senden des Befehls."
+				},
+				"command": {
+					"name": "Befehl",
+					"description": "Der Befehl, der in den Bots ausgeführt wird."
+				},
+				"args": {
+					"name": "Argumente",
+					"description": "Die Argumente des Befehls sind erforderlich."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"count_negative": "Die Zahl muss größer als 0 sein!",
+				"sending_command": "Befehl an {{number}} bots senden ..."
+			}
+		}
+	},
+	"send_party": {
+		"config": {
+			"description": "Sendet einen Befehl an alle Bots, die dieselbe Partei teilen.",
+			"usage": {
+				"command": {
+					"name": "Befehl",
+					"description": "Der Befehl, der in den Bots ausgeführt wird."
+				},
+				"args": {
+					"name": "Argumente",
+					"description": "Die Argumente des Befehls sind erforderlich."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "Senden Sie den Befehl an alle Bots in meiner Party ..."
+			}
+		}
+	},
+	"send_shard": {
+		"config": {
+			"description": "Sendet einen Befehl an den Bot Shard.",
+			"usage": {
+				"command": {
+					"name": "Befehl",
+					"description": "Der Befehl, der in den Bots ausgeführt wird."
+				},
+				"args": {
+					"name": "Argumente",
+					"description": "Die Argumente des Befehls sind erforderlich."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "Senden Sie den Befehl an alle Bots in meinem Shard ..."
+			}
+		}
+	},
+	"set_status": {
+		"config": {
+			"description": "Legt den Bot -Status fest",
+			"usage": {
+				"status": {
+					"name": "Status",
+					"description": "Der neue Status des Bots."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Status erfolgreich eingestellt!"
+			}
+		}
+	},
+	"whisper": {
+		"config": {
+			"description": "Sendet eine private Nachricht an einen Freund.",
+			"usage": {
+				"query": {
+					"name": "Name oder ID des Freundes",
+					"description": "Der Name oder die ID des Freundes, um die private Nachricht zu senden."
+				},
+				"message": {
+					"name": "Nachricht",
+					"description": "Die Nachricht an den Freund zu senden."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Mehrere Freunde gefunden:",
+				"friend_not_found": "Freund {{query}} Nicht gefunden!",
+				"whisper_sent": "Gesendet an {{name}}!"
+			}
+		}
+	},
+	"bp_level": {
+		"config": {
+			"description": "Legt die Schlachtpassebene des Bots fest.",
+			"usage": {
+				"level": {
+					"name": "Ebene",
+					"description": "Die Ebene des Schlachtpasses, der festgelegt werden soll."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"bp_level_set": "Setzen Sie das Battle Pass Level auf {{level}}!"
+			}
+		}
+	},
+	"clear_custom_key": {
+		"config": {
+			"description": "Löscht den benutzerdefinierten Matchmaking -Schlüssel."
+		},
+		"run": {
+			"msg": {
+				"success": "Löscht den benutzerdefinierten Matchmaking -Schlüssel!"
+			}
+		}
+	},
+	"crowns": {
+		"config": {
+			"description": "Stellt die Bot -Kronen fest.",
+			"usage": {
+				"crowns": {
+					"name": "Kronen",
+					"description": "Die Kronen zu setzen."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Setzen Sie die Kronen auf {{crowns}}!"
+			}
+		}
+	},
+	"hide": {
+		"config": {
+			"description": "Versteckt einen Spieler aus der Party oder verbirgt Sie, wenn Sie keine Argumente angeben.",
+			"usage": {
+				"query": {
+					"name": "Mitgliedsname oder ID",
+					"description": "Der Name oder die ID des Mitglieds der Partei zu verbergen."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Mehrere Freunde gefunden:",
+				"member_not_found": "Mitglied {{query}} Nicht gefunden!",
+				"member_not_at_party": "Sie sind kein Mitglied meiner Partei.",
+				"success": "Versteckt {{name}}!"
+			}
+		}
+	},
+	"hide_all": {
+		"config": {
+			"description": "Versteckt alle Spieler in der Party."
+		},
+		"run": {
+			"msg": {
+				"success": "Alle Mitglieder versteckt!"
+			}
+		}
+	},
+	"kick": {
+		"config": {
+			"description": "Kick ist ein Spieler aus der Party.",
+			"usage": {
+				"query": {
+					"name": "Mitgliedsname oder ID",
+					"description": "Der Name oder die ID des Mitglieds der Partei zu vertreiben."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Mehrere Freunde gefunden:",
+				"member_not_found": "Mitglied {{query}} Nicht gefunden!",
+				"success": "Kicked {{name}}!"
+			}
+		}
+	},
+	"kick_all": {
+		"config": {
+			"description": "Tritt alle Spieler in der Party."
+		},
+		"run": {
+			"msg": {
+				"user_kicked": "Kicked {{name}}!",
+				"success": "Fertig, alle Mitglieder zu treten!"
+			}
+		}
+	},
+	"leave": {
+		"config": {
+			"description": "Der Bot verlässt die Party."
+		},
+		"run": {
+			"msg": {
+				"success": "Tschüss!."
+			}
+		}
+	},
+	"level": {
+		"config": {
+			"description": "Legt die Bot -Ebene fest.",
+			"usage": {
+				"level": {
+					"name": "Ebene",
+					"description": "Das Level eingestellt werden."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Setzen Sie Level auf {{level}}!"
+			}
+		}
+	},
+	"match": {
+		"config": {
+			"description": "Setzt den Staat auf ein Spiel.",
+			"usage": {
+				"number": {
+					"name": "Anzahl der Spieler",
+					"description": "Die Anzahl der Spieler im Spiel."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Setzen Sie sich den Staat!"
+			}
+		}
+	},
+	"party_info": {
+		"config": {
+			"description": "Zeigt Informationen über die Party an."
+		}
+	},
+	"playlist": {
+		"config": {
+			"description": "Legt die Playlist der Party fest.",
+			"usage": {
+				"query": {
+					"name": "Name oder ID der Wiedergabeliste",
+					"description": "Der Name oder die ID der zu festen Wiedergabeliste."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"error": "Fehlereinstellung Playlist!",
+				"success": "Setzen Sie die Wiedergabeliste auf {{query}}!"
+			}
+		}
+	},
+	"privacy": {
+		"config": {
+			"description": "Legt die Privatsphäre der Partei fest.",
+			"usage": {
+				"privacy": {
+					"name": "Privatsphäre",
+					"options": {
+						"public": "Öffentlich",
+						"private": "Privat"
+					},
+					"description": "Die Privatsphäre der Partei zu setzen."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Setzen Sie die Privatsphäre der Partei auf {{privacy}}!",
+				"error": "Ungültige Privatsphäre, muss öffentlich oder privat sein!"
+			}
+		}
+	},
+	"rank": {
+		"config": {
+			"description": "Legt den Bot -Rang fest.",
+			"usage": {
+				"rank": {
+					"name": "Rang",
+					"description": "Der Rang zu setzen."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Setzen Sie den Rang auf {{rank}}!"
+			}
+		}
+	},
+	"ready": {
+		"config": {
+			"description": "Setzt den Staat bereit."
+		},
+		"run": {
+			"msg": {
+				"warning": "Warnung: Wenn Sie versuchen, das Matchmaking zu initieren, verwenden Sie diesen Befehl nicht! Schlagen Sie einfach bereit und ich werde automatisch fertig schlagen.",
+				"success": "Bereit!"
+			}
+		}
+	},
+	"say": {
+		"config": {
+			"description": "Senden Sie eine Nachricht an den Party -Chat.",
+			"usage": {
+				"message": {
+					"name": "Nachricht",
+					"description": "Die Nachricht, die an die Partei gesendet wird."
+				}
+			}
+		},
+		"run": {}
+	},
+	"set_custom_key": {
+		"config": {
+			"description": "Legt einen benutzerdefinierten Matchmaking -Schlüssel fest.",
+			"usage": {
+				"key": {
+					"name": "Benutzerdefinierte Schlüssel",
+					"description": "Die benutzerdefinierte Matchmaking -Taste zum Setzen."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Stellen Sie den benutzerdefinierten Matchmaking -Schlüssel ein!"
+			}
+		}
+	},
+	"show": {
+		"config": {
+			"description": "Zeigt einen versteckten Spieler aus der Party oder zeigt Ihnen, ob Sie keine Argumente angeben.",
+			"usage": {
+				"query": {
+					"name": "Mitgliedsname oder ID",
+					"description": "Der Name oder die ID des Mitglieds der Partei zu zeigen."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Mehrere Freunde gefunden:",
+				"member_not_found": "Mitglied {{query}} Nicht gefunden!",
+				"member_not_at_party": "Sie sind kein Mitglied meiner Partei.",
+				"success": "Angezeigter Name}!"
+			}
+		}
+	},
+	"show_all": {
+		"config": {
+			"description": "Zeigt alle versteckten Spieler in der Party."
+		},
+		"run": {
+			"msg": {
+				"success": "Alle Mitglieder gezeigt!"
+			}
+		}
+	},
+	"sit_in": {
+		"config": {
+			"description": "Setzt den Staat auf die Teilnahme."
+		},
+		"run": {
+			"msg": {
+				"success": "Sitzen in..."
+			}
+		}
+	},
+	"sit_out": {
+		"config": {
+			"description": "Legt den Staat auf nicht teil."
+		},
+		"run": {
+			"msg": {
+				"success": "Sitzen ..."
+			}
+		}
+	},
+	"unmatch": {
+		"config": {
+			"description": "Setzt den Staat so, dass kein Spiel gespielt wird."
+		},
+		"run": {
+			"msg": {
+				"success": "Spielen des Spielstaates entfernt!"
+			}
+		}
+	},
+	"unready": {
+		"config": {
+			"description": "Setzt den Staat nicht bereit."
+		},
+		"run": {
+			"msg": {
+				"success": "Nicht bereit!"
+			}
+		}
+	}
+}

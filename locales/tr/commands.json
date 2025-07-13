@@ -1,0 +1,1307 @@
+{
+	"handler": {
+		"errors": {
+			"only_for_party_members": "Bu komut yalnızca partimin üyeleri için kullanılabilir.",
+			"only_for_private_messages": "Bu komut yalnızca özel mesajlarda mevcuttur.",
+			"need_party_leader": "Bu komutu yürütmek için parti lideri olmalıyım!",
+			"only_for_owners": "Bu komut yalnızca bot sahipleri için kullanılabilir.",
+			"only_for_admins": "Bu komut yalnızca bot yöneticileri için kullanılabilir.",
+			"only_for_whitelist": "Bu komut yalnızca botun beyaz listesindeki kullanıcılar için kullanılabilir."
+		}
+	},
+	"all_items": {
+		"config": {
+			"description": "Oyunun tüm kozmetiklerini gösterir, isteğe bağlı bir filtre eklenebilir ve \"stop\" komutuyla durabilirsiniz.",
+			"usage": {
+				"filter": {
+					"name": "Filtre",
+					"options": {
+						"outfits": "Kıyafetler",
+						"backpacks": "Sırt çantaları",
+						"emojis": "Emojiler",
+						"emotes": "Eşler",
+						"pickaxes": "Kazık",
+						"shoes": "Ayakkabı"
+					},
+					"description": "Öğeleri göstererek ayarlanacak filtre."
+				},
+				"random_order": {
+					"name": "Rastgele sipariş",
+					"description": "İlk önce sipariş vermek yerine rastgele bir sipariş kullanın.",
+					"options": {
+						"yes": "Evet",
+						"no": "HAYIR"
+					}
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"no_items": "Öğeleri alamıyor.",
+				"items_already_displaying": "Kozmetikler zaten görüntüleniyor, önce \"stop\" komutuyla durdurulmalıdır.",
+				"setting_items": "Tüm oyun öğelerini ayarlama ... {{filtered}}",
+				"filtered_by": "({{filter}} tarafından filtrelenmiş)",
+				"items_showed": "Tüm öğeleri göstermeyi bitirdim ..."
+			}
+		}
+	},
+	"backpack": {
+		"config": {
+			"description": "Botun sırt çantasını ayarlar.",
+			"usage": {
+				"query": {
+					"name": "Sırt çantası adı veya kimliği",
+					"description": "Ayarlanacak sırt çantasının adı veya kimliği."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"backpack_not_found": "Sırt çantası {{item}} bulunamadı!",
+				"backpack_changed": "Sırt çantasını {{name}} olarak ayarlayın! ({{id}})"
+			}
+		}
+	},
+	"backpack_variants": {
+		"config": {
+			"description": "Sırt çantasının varyantlarını ayarlar."
+		},
+		"run": {
+			"msg": {
+				"backpack_not_found": "Botun bir sırt çantası yok!",
+				"invalid_backpack": "Geçersiz sırt çantası!",
+				"variants_not_founded": "Bu sırt çantasının varyantları yok!",
+				"variants_select": "{{type}} için seçmek istediğiniz varyantı gönderin",
+				"variants_changed": "Sırt çantası varyantlarını ayarlayın!"
+			}
+		}
+	},
+	"banner": {
+		"config": {
+			"description": "Botun afişini ayarlar.",
+			"usage": {
+				"query": {
+					"name": "Banner Adı veya Kimliği",
+					"description": "Banner'ın adı veya kimliği ayarlanacak."
+				},
+				"color": {
+					"name": "Renk Adı veya Kimliği",
+					"description": "Ayarlanacak rengin adı veya kimliği."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"banner_not_found": "Banner {{item}} bulunamadı!",
+				"color_not_found": "Renk {{item}} bulunamadı!",
+				"banner_changed": "Banneyi {{name}} olarak ayarlayın! ({{id}})"
+			}
+		}
+	},
+	"clear_backpack": {
+		"config": {
+			"description": "Botun sırt çantasını kaldırır."
+		},
+		"run": {
+			"msg": {
+				"backpack_cleared": "Sıralı sırt çantası!"
+			}
+		}
+	},
+	"clear_emote": {
+		"config": {
+			"description": "Botun dansını durdurur."
+		},
+		"run": {
+			"msg": {
+				"emote_cleared": "Emote'u temizledi!"
+			}
+		}
+	},
+	"clear_shoes": {
+		"config": {
+			"description": "Botun ayakkabılarını kaldırır."
+		},
+		"run": {
+			"msg": {
+				"shoes_cleared": "Temizlenmiş ayakkabılar!"
+			}
+		}
+	},
+	"copy": {
+		"config": {
+			"description": "Bir kullanıcının kozmetiklerini kopyalayın veya bağımsız değişkenler belirtmezse kozmetikleri size kopyalayın.",
+			"usage": {
+				"filter": {
+					"name": "Filtre",
+					"options": {
+						"all": "Tüm",
+						"outfit": "Kıyafet",
+						"backpack": "Sırt çantası",
+						"emoji": "Emoji",
+						"emote": "Zorlamak",
+						"pickaxe": "Kazma",
+						"shoes": "Ayakkabı"
+					},
+					"description": "Kozmetik kopyalarken ayarlanacak filtre."
+				},
+				"query": {
+					"name": "Üye Adı veya Kimlik",
+					"description": "Kozmetikleri kopyalamak için üyenin adı veya kimliği."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"members_found": "Birden fazla üye bulundu:",
+				"member_not_found": "Üye {{member}} bulunamadı!",
+				"member_not_at_party": "Partimin bir üyesi değilsin.",
+				"member_copied": "Kopyalandı {{member}}!"
+			}
+		}
+	},
+	"cosmetic": {
+		"config": {
+			"description": "Botun kozmetikini ayarlar.",
+			"usage": {
+				"query": {
+					"name": "Kozmetik Adı veya Kimliği",
+					"description": "Set için kozmetik adı veya kimliği."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"cosmetic_not_found": "Kozmetik {{query}} bulunamadı!",
+				"cosmetic_changed": "{{type}} 'ye {{name}} olarak ayarlayın! ({{id}})"
+			}
+		}
+	},
+	"cosmetic_info": {
+		"config": {
+			"description": "Bir kozmetik hakkında bilgi gösterir.",
+			"usage": {
+				"query": {
+					"name": "Kozmetik Adı veya Kimliği",
+					"description": "Set için kozmetik adı veya kimliği."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"cosmetic_not_found": "Kozmetik {{query}} bulunamadı!"
+			}
+		}
+	},
+	"emoji": {
+		"config": {
+			"description": "Botun emojisini ayarlar.",
+			"usage": {
+				"query": {
+					"name": "Emoji adı veya kimliği",
+					"description": "Emoji'nin adı veya kimliği ayarlanacak."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"emoji_not_found": "Emoji {{query}} bulunamadı!",
+				"emoji_changed": "Emoji'yi {{name}} olarak ayarlayın! ({{id}})"
+			}
+		}
+	},
+	"emote": {
+		"config": {
+			"description": "Botun emotesini ayarlar.",
+			"usage": {
+				"query": {
+					"name": "Emote Adı veya Kimliği",
+					"description": "Ayarlanacak emote adı veya kimliği."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"emote_not_found": "Emote {{query}} bulunamadı!",
+				"emote_changed": "Emote emojisini {{name}} olarak ayarlayın! ({{id}})"
+			}
+		}
+	},
+	"mimic": {
+		"config": {
+			"description": "Bir kullanıcı ile aynı veya bağımsız değişkenler belirtmezseniz sizinle aynı yapar. Komutu durdurmak için \"stop\" kullanın.",
+			"usage": {
+				"filter": {
+					"name": "Filtre",
+					"options": {
+						"all": "Tüm",
+						"changes": "Değişim",
+						"outfits": "Kıyafetler",
+						"backpacks": "Sırt çantaları",
+						"emojis": "Emojiler",
+						"emotes": "Eşler",
+						"pickaxes": "Kazık",
+						"shoes": "Ayakkabı"
+					},
+					"description": "Kozmetik taklit ederken ayarlanacak filtre."
+				},
+				"query": {
+					"name": "Üye Adı veya Kimlik",
+					"description": "Kozmetikleri taklit etmek için üyenin adı veya kimliği."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"members_found": "Birden fazla üye bulundu:",
+				"member_not_found": "Üye {{query}} bulunamadı!",
+				"member_not_at_party": "Partimin bir üyesi değilsin.",
+				"mimic_enabled": "{{member}} {{filter}} için etkinleştirilmiş mimik!",
+				"filter": "filtre ile {{filter}}"
+			}
+		}
+	},
+	"new_items": {
+		"config": {
+			"description": "Oyuna eklenen en son kozmetikleri gösterir, isteğe bağlı bir filtre eklenebilir ve \"stop\" komutuyla durabilirsiniz.",
+			"usage": {
+				"filter": {
+					"name": "Filtre",
+					"options": {
+						"outfits": "Kıyafetler",
+						"backpacks": "Sırt çantaları",
+						"emojis": "Emojiler",
+						"emotes": "Eşler",
+						"pickaxes": "Kazık",
+						"shoes": "Ayakkabı"
+					},
+					"description": "Öğeleri göstererek ayarlanacak filtre."
+				},
+				"random_order": {
+					"name": "Rastgele sipariş",
+					"description": "İlk önce sipariş vermek yerine rastgele bir sipariş kullanın.",
+					"options": {
+						"yes": "Evet",
+						"no": "HAYIR"
+					}
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"type_error": "Bir filtre istiyorsanız, geçerli olduğundan emin olun, sadece kıyafetler, sırt çantaları, emojiler, emotlar veya kazıklar",
+				"cosmetic_fetch_error": "Yakın zamanda eklenemiyor kozmetikler eklenemiyor.",
+				"already_showing": "Kozmetikler zaten görüntüleniyor, önce \"stop\" komutuyla durdurulmalıdır.",
+				"showing_cosmetics": "Yakın zamanda eklenen tüm öğeleri ayarlama ... {{filter}}",
+				"filter": "({{filter}} tarafından filtrelenmiş)",
+				"ended": "Yakın zamanda eklenen tüm öğeleri göstermeyi bitirdim ..."
+			}
+		}
+	},
+	"outfit": {
+		"config": {
+			"description": "Botun kıyafetini ayarlar.",
+			"usage": {
+				"query": {
+					"name": "Kıyafet Adı veya Kimliği",
+					"description": "Ayarlanacak kıyafetin adı veya kimliği."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"outfit_not_found": "Kıyafet {{query}} bulunamadı!",
+				"outfit_changed": "Kıyafeti {{name}} olarak ayarlayın! ({{id}})!"
+			}
+		}
+	},
+	"outfit_variants": {
+		"config": {
+			"description": "Kıyafetin varyantlarını ayarlar."
+		},
+		"run": {
+			"msg": {
+				"outfit_not_found": "Botun bir kıyafeti yok!",
+				"invalid_outfit": "Geçersiz kıyafet!",
+				"variants_not_found": "Bu kıyafetin varyantları yok!",
+				"variants_select": "{{type}} için seçmek istediğiniz varyantı gönderin",
+				"changed": "Kıyafet varyantlarını ayarlayın!"
+			}
+		}
+	},
+	"perfect_timing": {
+		"config": {
+			"description": "Bot'un kozmetiklerini senkronize ettirir.",
+			"usage": {
+				"query": {
+					"name": "Kozmetik Adı veya Kimliği",
+					"description": "Set için kozmetik adı veya kimliği."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"cosmetic_not_found": "Kozmetik {{query}} bulunamadı!",
+				"perfect_timing_success": "Mükemmel bir zamanlama yapmak için senkronizasyon ...",
+				"perfect_timing_done": "{{value}} ile {{name}} ile senkronize! ({{id}})"
+			}
+		}
+	},
+	"pickaxe": {
+		"config": {
+			"description": "Botun kazışmasını ayarlar.",
+			"usage": {
+				"query": {
+					"name": "Kaçak Adı veya Kimliği",
+					"description": "Ayarlanacak kazma adı veya kimliği."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"pickaxe_not_found": "Picsaxe {{query}} bulunamadı!",
+				"pickaxe_changed": "Kuşunu {{name}} olarak ayarlayın! ({{id}})"
+			}
+		}
+	},
+	"pickaxe_variants": {
+		"config": {
+			"description": "Picakse'nin varyantlarını ayarlar."
+		},
+		"run": {
+			"msg": {
+				"pickaxe_not_found": "Botun bir kazma yok!",
+				"invalid_pickaxe": "Geçersiz kazma!",
+				"variants_not_found": "Bu kazma işleminin varyantları yok!",
+				"variants_select": "{{type}} için seçmek istediğiniz varyantı gönderin",
+				"changed": "Picakse varyantlarını ayarlayın!"
+			}
+		}
+	},
+	"preset": {
+		"config": {
+			"description": "Botun ön ayarını ayarlar. Bir kozmetiği kaldırmak için \"none\" kullanın.",
+			"usage": {
+				"outfit": {
+					"name": "Kıyafet kimliği",
+					"description": "Kıyafet kimliği."
+				},
+				"backpack": {
+					"name": "Sırt çantası kimliği",
+					"description": "Sırt çantasının kimliği."
+				},
+				"pickaxe": {
+					"name": "Kişme Kimliği",
+					"description": "Kuşkse kimliği."
+				},
+				"emote": {
+					"name": "Emote ID",
+					"description": "Emote kimliği."
+				},
+				"shoes": {
+					"name": "Ayakkabı kimliği",
+					"description": "Ayakkabıların kimliği."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"preset_changed": "Ön ayarını ayarlayın!"
+			}
+		}
+	},
+	"shoes": {
+		"config": {
+			"description": "Botun ayakkabılarını ayarlar.",
+			"usage": {
+				"query": {
+					"name": "Ayakkabı adı veya kimliği",
+					"description": "Ayarlanacak ayakkabıların adı veya kimliği."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"shoes_not_found": "Ayakkabı {{query}} bulunamadı!",
+				"shoes_changed": "Ayakkabıları {{name}} olarak ayarlayın! ({{id}})"
+			}
+		}
+	},
+	"shoe_variants": {
+		"config": {
+			"description": "Ayakkabı varyantlarını ayarlar."
+		},
+		"run": {
+			"msg": {
+				"shoes_not_found": "Botun ayakkabı yok!",
+				"invalid_shoes": "Geçersiz ayakkabılar!",
+				"variants_not_found": "Bu ayakkabıların varyantları yok!",
+				"variants_select": "{{type}} için seçmek istediğiniz varyantı gönderin",
+				"changed": "Ayakkabı varyantlarını ayarlayın!"
+			}
+		}
+	},
+	"shop_items": {
+		"config": {
+			"description": "Ürün dükkanından kozmetikleri gösterir, isteğe bağlı bir filtre eklenebilir ve \"stop\" komutuyla durabilirsiniz.",
+			"usage": {
+				"filter": {
+					"name": "Filtre",
+					"options": {
+						"outfits": "Kıyafetler",
+						"backpacks": "Sırt çantaları",
+						"emojis": "Emojiler",
+						"emotes": "Eşler",
+						"pickaxes": "Kazık",
+						"shoes": "Ayakkabı"
+					},
+					"description": "Öğeleri göstererek ayarlanacak filtre."
+				},
+				"random_order": {
+					"name": "Rastgele sipariş",
+					"description": "İlk önce sipariş vermek yerine rastgele bir sipariş kullanın.",
+					"options": {
+						"yes": "Evet",
+						"no": "HAYIR"
+					}
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"invalid_type": "Bir filtre istiyorsanız, geçerli olduğundan emin olun, sadece kıyafetler, sırt çantaları, emojiler, emotlar veya kazıklar",
+				"fetch_failed": "Mağaza eşyalarını alamıyor.",
+				"already_displaying": "Kozmetikler zaten görüntüleniyor, önce \"stop\" komutuyla durdurulmalıdır.",
+				"showing_items": "Dükkandaki tüm öğeleri ayarlayın ... {{filter}}",
+				"filter": "({{query}} tarafından filtrelenmiş)",
+				"ended": "Mağazadaki tüm öğeleri göstermeyi bitirdim ..."
+			}
+		}
+	},
+	"stop": {
+		"config": {
+			"description": "Bekleyen operasyonları durdurur."
+		},
+		"run": {
+			"msg": {
+				"stopped_items": "Öğeleri göstermeyi bıraktı!",
+				"stopped_mimic": "Mimik'i durdurdu!",
+				"stopped_emote": "Emote durdu!",
+				"nothing_to_stop": "Duracak bir şey yok!"
+			}
+		}
+	},
+	"accept_all_friends": {
+		"config": {
+			"description": "Botun bekleyen tüm arkadaşlarını kabul eder."
+		},
+		"run": {
+			"msg": {
+				"accepting_friends": "Bekleyen tüm arkadaşları kabul ediyorum!",
+				"accepted_friends": "Kabul Edildi {{count}} Arkadaşlar!"
+			}
+		}
+	},
+	"accept_friend": {
+		"config": {
+			"description": "Bir arkadaşlık isteğini kabul edin.",
+			"usage": {
+				"query": {
+					"name": "Bekleyen Arkadaşın Adı veya Kimliği",
+					"description": "Kabul etmek için bekleyen arkadaşın adı veya kimliği."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Birden fazla arkadaş buldum:",
+				"friends_not_found": "Arkadaş {{query}} bulunamadı!",
+				"self_request": "Bekleyen arkadaşlık isteği benim!",
+				"error": "Bekleyen arkadaş kabul edilmedi!",
+				"request_accepted": "Bekleyen arkadaş {{name}} başarılı bir şekilde kabul edildi!"
+			}
+		}
+	},
+	"add_friend": {
+		"config": {
+			"description": "Bir kullanıcıya bir arkadaşlık isteği gönderin veya bir arkadaşlık isteğini kabul edin.",
+			"usage": {
+				"query": {
+					"name": "Kullanıcı adı veya kimlik",
+					"description": "Kullanıcının adı veya kimliği eklemek için."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Birden fazla arkadaş buldum:",
+				"friends_not_found": "Arkadaş {{query}} bulunamadı!",
+				"already_friends": "Zaten bir arkadaş!",
+				"error": "Kullanıcıyı ekleyemezsiniz!",
+				"request_sent": "{{name}} 'e gönderilen arkadaş isteği"
+			}
+		}
+	},
+	"block_user": {
+		"config": {
+			"description": "Bir kullanıcıyı engeller.",
+			"usage": {
+				"query": {
+					"name": "Kullanıcı adı veya kimlik",
+					"description": "Kullanıcının adı veya kimliği engellemek için."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_users_found": "Birden fazla kullanıcı bulundu:",
+				"user_not_found": "Kullanıcı {{query}} bulunamadı!",
+				"error": "{{name}} engellenemez!",
+				"user_blocked": "Kullanıcı {{name}} başarıyla engellendi!"
+			}
+		}
+	},
+	"decline_all_friends": {
+		"config": {
+			"description": "Botun bekleyen tüm arkadaşlarını çekin."
+		},
+		"run": {
+			"msg": {
+				"declining_friends": "Bekleyen tüm arkadaşları azaltmak!",
+				"declined_friends": "Redel {{count}} arkadaşlar!"
+			}
+		}
+	},
+	"decline_friend": {
+		"config": {
+			"description": "Bir arkadaşlık isteğini reddedin veya iptal edin.",
+			"usage": {
+				"query": {
+					"name": "Bekleyen Arkadaşın Adı veya Kimliği",
+					"description": "Reddetmek veya iptal etmek bekleyen arkadaşın adı veya kimliği."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Birden fazla arkadaş buldum:",
+				"friends_not_found": "Arkadaş {{query}} bulunamadı!",
+				"error": "Bekleyen arkadaş kaldırılmadı!",
+				"request_sent": "Bekleyen Friend {{name}} başarıyla kaldırıldı!"
+			}
+		}
+	},
+	"friend_count": {
+		"config": {
+			"description": "Botun arkadaşlarının sayısını gösterir."
+		},
+		"run": {
+			"msg": {
+				"info": "{{friends}} arkadaşlarım var, {{pending}} Bekleyen ({{incoming}} Gelen, {{outgoing}} giden) ve {{blocked}} bloke!"
+			}
+		}
+	},
+	"invite": {
+		"config": {
+			"description": "Bir arkadaşınızı veya sizi partiye davet eder.",
+			"usage": {
+				"query": {
+					"name": "Arkadaşın Adı veya Kimliği",
+					"description": "Arkadaşın adı veya kimliği davet etmek."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"alone": "Benimle bir partide, kullanıcı davet etmek için gereklidir.",
+				"multiple_friends_found": "Birden fazla arkadaş buldum:",
+				"friends_not_found": "Arkadaş {{query}} bulunamadı!",
+				"already_on_party": "{{name}} zaten partimde!",
+				"invite_error": "Davetiyeyi {{name}} 'e gönderilemez!",
+				"invite_sent": "Davet {{name}} 'e gönderildi!"
+			}
+		}
+	},
+	"join": {
+		"config": {
+			"description": "Partinize veya bir kullanıcı partisine katılır.",
+			"usage": {
+				"query": {
+					"name": "Arkadaşın Adı veya Kimliği",
+					"description": "Arkadaşın adı veya kimliği katılacak."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"invalid_param": "Arkadaşım olmalısın veya bir arkadaşım belirtmelisin!",
+				"multiple_friends_found": "Birden fazla arkadaş buldum:",
+				"friend_not_found": "Arkadaş {{query}} bulunamadı!",
+				"already_on_party": "Arkadaşım zaten partimde!",
+				"party_error": "{{name}} 'nin bir partisi yok!",
+				"join_request_error": "Birleştirme isteğini {{name}} 'e gönderilemez!",
+				"joined": "{{name}} 'e katıldı!",
+				"join_request_sent": "{{name}} adresine gönderilen isteğe katılın!"
+			}
+		}
+	},
+	"promote": {
+		"config": {
+			"description": "Argüman belirtmezseniz bir üyesi tanıtır veya lider yapar.",
+			"usage": {
+				"query": {
+					"name": "Üye Adı veya Kimlik",
+					"description": "Partinin adı veya kimliği yükselecek."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Birden fazla arkadaş buldum:",
+				"member_not_found": "Üye {{query}} bulunamadı!",
+				"member_not_at_party": "Partimin bir üyesi değilsin.",
+				"member_promoted": "Tanıtıldı {{name}}!"
+			}
+		}
+	},
+	"remove_all_friends": {
+		"config": {
+			"description": "Botun tüm arkadaşlarını kaldırır."
+		},
+		"run": {
+			"msg": {
+				"removing_friends": "Tüm arkadaşları kaldırıyorum!",
+				"removed_friends": "Kaldırıldı {{count}} arkadaşlar!"
+			}
+		}
+	},
+	"remove_friend": {
+		"config": {
+			"description": "Bir botun arkadaşını kaldırır.",
+			"usage": {
+				"query": {
+					"name": "Arkadaşın Adı veya Kimliği",
+					"description": "Arkadaşın adı veya kimliği kaldırılacak."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Birden fazla arkadaş buldum:",
+				"friend_not_found": "Arkadaş {{query}} bulunamadı!",
+				"error": "{{name}} kaldırılamıyor!",
+				"friend_removed": "Arkadaş {{name}} başarıyla kaldırıldı!"
+			}
+		}
+	},
+	"unblock_all_users": {
+		"config": {
+			"description": "Botun tüm engellenen kullanıcılarını engeller."
+		},
+		"run": {
+			"msg": {
+				"removing_friends": "Tüm engellenen kullanıcıları engellemek!",
+				"removed_friends": "Engelsiz {{count}} bloke kullanıcıları!"
+			}
+		}
+	},
+	"unblock_user": {
+		"config": {
+			"description": "Bir kullanıcıyı engeller.",
+			"usage": {
+				"query": {
+					"name": "Kullanıcı adı veya kimlik",
+					"description": "Kullanıcının adı veya blok için kimliği."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_users_found": "Birden fazla kullanıcı bulundu:",
+				"user_not_found": "Kullanıcı {{query}} bulunamadı!",
+				"error": "Engellenemez {{name}}!",
+				"user_unblocked": "Kullanıcı {{name}} başarıyla engellenmedi!"
+			}
+		}
+	},
+	"user_info": {
+		"config": {
+			"description": "Belirli bir kullanıcının bilgilerini gösterir.",
+			"usage": {
+				"query": {
+					"name": "Kullanıcı adı veya kimlik",
+					"description": "Kullanıcının adı veya kimliği."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_users_found": "Birden fazla kullanıcı bulundu:",
+				"user_not_found": "Kullanıcı {{query}} bulunamadı!"
+			}
+		}
+	},
+	"eval": {
+		"run": {
+			"msg": {
+				"unauthorized_error": "Yalnızca tnfangel bu komuta erişebilir."
+			}
+		}
+	},
+	"help": {
+		"config": {
+			"description": "Yardım ve komut panelini gösterir.",
+			"usage": {
+				"query": {
+					"name": "Komutun adı veya kimliği",
+					"description": "Ayrıntılı yardım almak için komutun adı veya kimliği."
+				}
+			}
+		}
+	},
+	"message": {
+		"config": {
+			"description": "Partiye bir mesaj gönderir.",
+			"usage": {
+				"message": {
+					"name": "İleti",
+					"description": "Partiye gönderilecek mesaj."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Partiye bir mesaj gönderdi"
+			}
+		}
+	},
+	"ping": {
+		"config": {
+			"description": "Botun gecikmesini gösterir."
+		},
+		"run": {
+			"msg": {
+				"measuring": "Ölçme ...",
+				"info": "Pong! {{time}} ms"
+			}
+		}
+	},
+	"prev": {
+		"config": {
+			"description": "Önceki komutu yürütür."
+		},
+		"run": {
+			"msg": {
+				"not_found": "Önceki bir komut yürütülmedi!"
+			}
+		}
+	},
+	"restart_bot": {
+		"config": {
+			"description": "Geçerli botu yeniden başlatır."
+		},
+		"run": {
+			"msg": {
+				"success": "Bot şimdi yeniden başlıyor!"
+			}
+		}
+	},
+	"restart_category": {
+		"config": {
+			"description": "Geçerli kategoriyi yeniden başlatır."
+		},
+		"run": {
+			"msg": {
+				"success": "Kategori şimdi yeniden başlıyor!"
+			}
+		}
+	},
+	"restart_shard": {
+		"config": {
+			"description": "Geçerli parçayı yeniden başlatır."
+		},
+		"run": {
+			"msg": {
+				"success": "Kırık şimdi yeniden başlıyor!",
+				"error": "Üzgünüm, bu bot bir parçanın içinde koşmuyor."
+			}
+		}
+	},
+	"send": {
+		"config": {
+			"description": "Belirtme botuna bir komut gönderir.",
+			"usage": {
+				"bot": {
+					"name": "Bot kimliği",
+					"description": "Komutu göndermek için bot kimliği."
+				},
+				"command": {
+					"name": "Emretmek",
+					"description": "Botta yürütülecek komut."
+				},
+				"args": {
+					"name": "Argümanlar",
+					"description": "Komutun argümanları gereklidir."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "Bot için komut gönderme {{user}}"
+			}
+		}
+	},
+	"send_all": {
+		"config": {
+			"description": "Tüm botlara bir komut gönderir.",
+			"usage": {
+				"command": {
+					"name": "Emretmek",
+					"description": "Botlarda yürütülecek komut."
+				},
+				"args": {
+					"name": "Argümanlar",
+					"description": "Komutun argümanları gereklidir."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "Tüm botlara komut gönderme ..."
+			}
+		}
+	},
+	"send_category": {
+		"config": {
+			"description": "Bot kategorisine bir komut gönderir.",
+			"usage": {
+				"command": {
+					"name": "Emretmek",
+					"description": "Botlarda yürütülecek komut."
+				},
+				"args": {
+					"name": "Argümanlar",
+					"description": "Komutun argümanları gereklidir."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "Parçalığımdaki tüm botlara komut gönderiyorum ...",
+				"error": "Üzgünüm, bu bot bir kategorinin içinde koşmuyor."
+			}
+		}
+	},
+	"send_number": {
+		"config": {
+			"description": "Belirtilen sayıda bot için bir komut gönderir.",
+			"usage": {
+				"number": {
+					"name": "Bot sayısı",
+					"description": "Komutu gönderecek bot sayısı."
+				},
+				"command": {
+					"name": "Emretmek",
+					"description": "Botlarda yürütülecek komut."
+				},
+				"args": {
+					"name": "Argümanlar",
+					"description": "Komutun argümanları gereklidir."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"count_negative": "Sayı 0'dan büyük olmalı!",
+				"sending_command": "{{number}} botlarına komut gönderme ..."
+			}
+		}
+	},
+	"send_party": {
+		"config": {
+			"description": "Aynı partiyi paylaşan tüm botlara bir komut gönderir.",
+			"usage": {
+				"command": {
+					"name": "Emretmek",
+					"description": "Botlarda yürütülecek komut."
+				},
+				"args": {
+					"name": "Argümanlar",
+					"description": "Komutun argümanları gereklidir."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "Partimdeki tüm botlara komut gönderiyorum ..."
+			}
+		}
+	},
+	"send_shard": {
+		"config": {
+			"description": "Bot parçasına bir komut gönderir.",
+			"usage": {
+				"command": {
+					"name": "Emretmek",
+					"description": "Botlarda yürütülecek komut."
+				},
+				"args": {
+					"name": "Argümanlar",
+					"description": "Komutun argümanları gereklidir."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "Parçalığımdaki tüm botlara komut gönderiyorum ..."
+			}
+		}
+	},
+	"set_status": {
+		"config": {
+			"description": "Bot durumunu ayarlar",
+			"usage": {
+				"status": {
+					"name": "Durum",
+					"description": "Botun yeni durumu."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Durum başarıyla ayarlandı!"
+			}
+		}
+	},
+	"whisper": {
+		"config": {
+			"description": "Bir arkadaşınıza özel bir mesaj gönderir.",
+			"usage": {
+				"query": {
+					"name": "Arkadaşın Adı veya Kimliği",
+					"description": "Özel mesajı göndermek için arkadaşın adı veya kimliği."
+				},
+				"message": {
+					"name": "İleti",
+					"description": "Arkadaşa gönderilecek mesaj."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Birden fazla arkadaş buldum:",
+				"friend_not_found": "Arkadaş {{query}} bulunamadı!",
+				"whisper_sent": "{{name}} 'e gönderildi!"
+			}
+		}
+	},
+	"bp_level": {
+		"config": {
+			"description": "Botun Battle Pass seviyesini ayarlar.",
+			"usage": {
+				"level": {
+					"name": "Seviyesi",
+					"description": "Belirtilecek savaş geçişinin seviyesi."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"bp_level_set": "Battle Pass seviyesini {{level}} olarak ayarlayın!"
+			}
+		}
+	},
+	"clear_custom_key": {
+		"config": {
+			"description": "Özel eşleştirme anahtarını temizler."
+		},
+		"run": {
+			"msg": {
+				"success": "Özel eşleştirme anahtarını temizledi!"
+			}
+		}
+	},
+	"crowns": {
+		"config": {
+			"description": "Bot kronlarını ayarlar.",
+			"usage": {
+				"crowns": {
+					"name": "Kronlar",
+					"description": "Ayarlanacak kronlar."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Kronları {{crowns}} olarak ayarlayın!"
+			}
+		}
+	},
+	"hide": {
+		"config": {
+			"description": "Bir oyuncuyu partiden gizler veya argüman belirtmezseniz sizi gizler.",
+			"usage": {
+				"query": {
+					"name": "Üye Adı veya Kimlik",
+					"description": "Saklanacak partinin üyesinin adı veya kimliği."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Birden fazla arkadaş buldum:",
+				"member_not_found": "Üye {{query}} bulunamadı!",
+				"member_not_at_party": "Partimin bir üyesi değilsin.",
+				"success": "Gizli {{name}}!"
+			}
+		}
+	},
+	"hide_all": {
+		"config": {
+			"description": "Partideki tüm oyuncuları gizler."
+		},
+		"run": {
+			"msg": {
+				"success": "Tüm üyeler gizli!"
+			}
+		}
+	},
+	"kick": {
+		"config": {
+			"description": "Partiden bir oyuncu vuruşu.",
+			"usage": {
+				"query": {
+					"name": "Üye Adı veya Kimlik",
+					"description": "Partinin üyesinin adı veya kimliği, sınır dışı edilecek."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Birden fazla arkadaş buldum:",
+				"member_not_found": "Üye {{query}} bulunamadı!",
+				"success": "Tekme {{name}}!"
+			}
+		}
+	},
+	"kick_all": {
+		"config": {
+			"description": "Partideki tüm oyuncuları tekmeliyor."
+		},
+		"run": {
+			"msg": {
+				"user_kicked": "Tekme {{name}}!",
+				"success": "Tüm üyeleri tekmelemeyi bitirdi!"
+			}
+		}
+	},
+	"leave": {
+		"config": {
+			"description": "Bot partiyi terk ediyor."
+		},
+		"run": {
+			"msg": {
+				"success": "Hoşçakal!"
+			}
+		}
+	},
+	"level": {
+		"config": {
+			"description": "Bot seviyesini ayarlar.",
+			"usage": {
+				"level": {
+					"name": "Seviyesi",
+					"description": "Ayarlanacak seviye."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Seviyeyi {{level}} olarak ayarlayın!"
+			}
+		}
+	},
+	"match": {
+		"config": {
+			"description": "Devleti bir oyun oynamaya ayarlar.",
+			"usage": {
+				"number": {
+					"name": "Oyuncu sayısı",
+					"description": "Oyundaki oyuncu sayısı."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Oynatmaya ayarlanmış!"
+			}
+		}
+	},
+	"party_info": {
+		"config": {
+			"description": "Parti hakkında bilgi gösterir."
+		}
+	},
+	"playlist": {
+		"config": {
+			"description": "Partinin çalma listesini ayarlar.",
+			"usage": {
+				"query": {
+					"name": "Oynatma listesinin adı veya kimliği",
+					"description": "Ayarlanacak çalma listesinin adı veya kimliği."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"error": "Hata Ayarlama Çalma Listesi!",
+				"success": "Çalma listesini {{query}} olarak ayarlayın!"
+			}
+		}
+	},
+	"privacy": {
+		"config": {
+			"description": "Partinin gizliliğini belirler.",
+			"usage": {
+				"privacy": {
+					"name": "Mahremiyet",
+					"options": {
+						"public": "Halk",
+						"private": "Özel"
+					},
+					"description": "Partinin gizliliği."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Parti gizliliğini {{privacy}} olarak ayarlayın!",
+				"error": "Geçersiz gizlilik, kamuya açık veya özel olmalıdır!"
+			}
+		}
+	},
+	"rank": {
+		"config": {
+			"description": "Bot sırasını ayarlar.",
+			"usage": {
+				"rank": {
+					"name": "Rütbe",
+					"description": "Ayarlanacak rütbe."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Sıralamayı {{rank}} olarak ayarlayın!"
+			}
+		}
+	},
+	"ready": {
+		"config": {
+			"description": "Durumu hazır hale getirir."
+		},
+		"run": {
+			"msg": {
+				"warning": "UYARI: Eşleme yapımını başlatmaya çalışıyorsanız, bu komutu kullanmayın! Sadece kendinizi hazırlayın ve otomatik olarak hazırım.",
+				"success": "Hazır!"
+			}
+		}
+	},
+	"say": {
+		"config": {
+			"description": "Parti sohbetine bir mesaj gönderin.",
+			"usage": {
+				"message": {
+					"name": "Mesaj",
+					"description": "Partiye gönderilecek mesaj."
+				}
+			}
+		},
+		"run": {}
+	},
+	"set_custom_key": {
+		"config": {
+			"description": "Özel bir eşleştirme anahtarı ayarlar.",
+			"usage": {
+				"key": {
+					"name": "Özel anahtar",
+					"description": "Ayarlamak için özel eşleştirme anahtarı."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Özel eşleştirme anahtarını ayarlayın!"
+			}
+		}
+	},
+	"show": {
+		"config": {
+			"description": "Partiden gizli bir oyuncuyu gösterir veya argüman belirtmediyseniz size gösterir.",
+			"usage": {
+				"query": {
+					"name": "Üye Adı veya Kimlik",
+					"description": "Partinin üyesinin adı veya kimliği gösterilecek."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Birden fazla arkadaş buldum:",
+				"member_not_found": "Üye {{query}} bulunamadı!",
+				"member_not_at_party": "Partimin bir üyesi değilsin.",
+				"success": "Gösterilen {{name}}!"
+			}
+		}
+	},
+	"show_all": {
+		"config": {
+			"description": "Partideki tüm gizli oyuncuları gösterir."
+		},
+		"run": {
+			"msg": {
+				"success": "Tüm üyeler gösterildi!"
+			}
+		}
+	},
+	"sit_in": {
+		"config": {
+			"description": "Devleti katılmaya ayarlar."
+		},
+		"run": {
+			"msg": {
+				"success": "Oturmak..."
+			}
+		}
+	},
+	"sit_out": {
+		"config": {
+			"description": "Devleti katılmamaya ayarlar."
+		},
+		"run": {
+			"msg": {
+				"success": "Dışarıda oturuyor ..."
+			}
+		}
+	},
+	"unmatch": {
+		"config": {
+			"description": "Devleti bir oyun oynamamaya ayarlar."
+		},
+		"run": {
+			"msg": {
+				"success": "Oynatma durumu kaldırıldı!"
+			}
+		}
+	},
+	"unready": {
+		"config": {
+			"description": "Durumu hazırlamayacak şekilde ayarlar."
+		},
+		"run": {
+			"msg": {
+				"success": "Hazır değil!"
+			}
+		}
+	}
+}

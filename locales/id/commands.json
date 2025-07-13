@@ -1,0 +1,1307 @@
+{
+	"handler": {
+		"errors": {
+			"only_for_party_members": "Perintah ini hanya tersedia untuk anggota partai saya.",
+			"only_for_private_messages": "Perintah ini hanya tersedia dalam pesan pribadi.",
+			"need_party_leader": "Saya harus menjadi pemimpin partai untuk melaksanakan perintah ini!",
+			"only_for_owners": "Perintah ini hanya tersedia untuk pemilik bot.",
+			"only_for_admins": "Perintah ini hanya tersedia untuk administrator bot.",
+			"only_for_whitelist": "Perintah ini hanya tersedia untuk pengguna di daftar putih bot."
+		}
+	},
+	"all_items": {
+		"config": {
+			"description": "Menampilkan semua kosmetik permainan, filter opsional dapat ditambahkan dan Anda dapat berhenti dengan perintah \"stop\".",
+			"usage": {
+				"filter": {
+					"name": "Menyaring",
+					"options": {
+						"outfits": "Pakaian",
+						"backpacks": "Ransel",
+						"emojis": "Emoji",
+						"emotes": "Emotes",
+						"pickaxes": "Pickaxes",
+						"shoes": "Sepatu"
+					},
+					"description": "Filter yang akan diatur dengan menampilkan item."
+				},
+				"random_order": {
+					"name": "Pesanan acak",
+					"description": "Gunakan pesanan acak alih -alih memesan dengan yang terbaru terlebih dahulu.",
+					"options": {
+						"yes": "Ya",
+						"no": "TIDAK"
+					}
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"no_items": "Tidak dapat mengambil item.",
+				"items_already_displaying": "Kosmetik sudah ditampilkan, pertama -tama harus dihentikan dengan perintah \"stop\".",
+				"setting_items": "Mengatur semua item game ... {{filtered}}",
+				"filtered_by": "(difilter oleh {{filter}})",
+				"items_showed": "Saya telah selesai menunjukkan semua item ..."
+			}
+		}
+	},
+	"backpack": {
+		"config": {
+			"description": "Mengatur ransel bot.",
+			"usage": {
+				"query": {
+					"name": "Nama ransel atau id",
+					"description": "Nama atau ID ransel yang akan diatur."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"backpack_not_found": "Backpack {{item}} tidak ditemukan!",
+				"backpack_changed": "Atur ransel ke {{name}}! ({{id}})"
+			}
+		}
+	},
+	"backpack_variants": {
+		"config": {
+			"description": "Menetapkan varian ransel."
+		},
+		"run": {
+			"msg": {
+				"backpack_not_found": "Bot tidak memiliki ransel!",
+				"invalid_backpack": "Ransel tidak valid!",
+				"variants_not_founded": "Ransel ini tidak memiliki varian!",
+				"variants_select": "Kirim varian yang ingin Anda pilih untuk {{type}}",
+				"variants_changed": "Atur varian ransel!"
+			}
+		}
+	},
+	"banner": {
+		"config": {
+			"description": "Mengatur spanduk bot.",
+			"usage": {
+				"query": {
+					"name": "Nama atau ID spanduk",
+					"description": "Nama atau ID dari spanduk untuk ditetapkan."
+				},
+				"color": {
+					"name": "Nama warna atau ID",
+					"description": "Nama atau id warna yang akan diatur."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"banner_not_found": "Banner {{item}} tidak ditemukan!",
+				"color_not_found": "Warna {{item}} tidak ditemukan!",
+				"banner_changed": "Atur spanduk ke {{name}}! ({{id}})"
+			}
+		}
+	},
+	"clear_backpack": {
+		"config": {
+			"description": "Menghapus ransel bot."
+		},
+		"run": {
+			"msg": {
+				"backpack_cleared": "Backpack yang dibersihkan!"
+			}
+		}
+	},
+	"clear_emote": {
+		"config": {
+			"description": "Menghentikan tarian bot."
+		},
+		"run": {
+			"msg": {
+				"emote_cleared": "EMOTE CLEARED!"
+			}
+		}
+	},
+	"clear_shoes": {
+		"config": {
+			"description": "Menghapus sepatu bot."
+		},
+		"run": {
+			"msg": {
+				"shoes_cleared": "Sepatu yang dibersihkan!"
+			}
+		}
+	},
+	"copy": {
+		"config": {
+			"description": "Salin kosmetik pengguna atau salin kosmetik kepada Anda jika tidak menentukan argumen.",
+			"usage": {
+				"filter": {
+					"name": "Menyaring",
+					"options": {
+						"all": "Semua",
+						"outfit": "Pakaian",
+						"backpack": "Ransel",
+						"emoji": "Emoji",
+						"emote": "Emote",
+						"pickaxe": "Beliung",
+						"shoes": "Sepatu"
+					},
+					"description": "Filter untuk diatur saat menyalin kosmetik."
+				},
+				"query": {
+					"name": "Nama Anggota atau ID",
+					"description": "Nama atau ID anggota untuk menyalin kosmetik."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"members_found": "Menemukan banyak anggota:",
+				"member_not_found": "Anggota {{member}} tidak ditemukan!",
+				"member_not_at_party": "Anda bukan anggota partai saya.",
+				"member_copied": "Disalin {{member}}!"
+			}
+		}
+	},
+	"cosmetic": {
+		"config": {
+			"description": "Mengatur kosmetik bot.",
+			"usage": {
+				"query": {
+					"name": "Nama atau ID kosmetik",
+					"description": "Nama atau ID kosmetik untuk diatur."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"cosmetic_not_found": "Cosmetic {{query}} tidak ditemukan!",
+				"cosmetic_changed": "Atur {{type}} ke {{name}}! ({{id}})"
+			}
+		}
+	},
+	"cosmetic_info": {
+		"config": {
+			"description": "Menunjukkan info tentang kosmetik.",
+			"usage": {
+				"query": {
+					"name": "Nama atau ID kosmetik",
+					"description": "Nama atau ID kosmetik untuk diatur."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"cosmetic_not_found": "Cosmetic {{query}} tidak ditemukan!"
+			}
+		}
+	},
+	"emoji": {
+		"config": {
+			"description": "Mengatur emoji bot.",
+			"usage": {
+				"query": {
+					"name": "Nama atau id emoji",
+					"description": "Nama atau ID emoji untuk ditetapkan."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"emoji_not_found": "Emoji {{query}} tidak ditemukan!",
+				"emoji_changed": "Atur emoji ke {{name}}! ({{id}})"
+			}
+		}
+	},
+	"emote": {
+		"config": {
+			"description": "Mengatur emote bot.",
+			"usage": {
+				"query": {
+					"name": "Nama atau id emote",
+					"description": "Nama atau ID emote yang akan ditetapkan."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"emote_not_found": "Emote {{query}} tidak ditemukan!",
+				"emote_changed": "Atur emoji emote ke {{name}}! ({{id}})"
+			}
+		}
+	},
+	"mimic": {
+		"config": {
+			"description": "Melakukan hal yang sama dengan pengguna atau sama seperti Anda jika tidak menentukan argumen. Gunakan \"stop\" untuk menghentikan perintah.",
+			"usage": {
+				"filter": {
+					"name": "Menyaring",
+					"options": {
+						"all": "Semua",
+						"changes": "Perubahan",
+						"outfits": "Pakaian",
+						"backpacks": "Ransel",
+						"emojis": "Emoji",
+						"emotes": "Emotes",
+						"pickaxes": "Pickaxes",
+						"shoes": "Sepatu"
+					},
+					"description": "Filter untuk diatur saat meniru kosmetik."
+				},
+				"query": {
+					"name": "Nama Anggota atau ID",
+					"description": "Nama atau ID anggota untuk meniru kosmetik."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"members_found": "Menemukan banyak anggota:",
+				"member_not_found": "Anggota {{query}} tidak ditemukan!",
+				"member_not_at_party": "Anda bukan anggota partai saya.",
+				"mimic_enabled": "Diaktifkan mimic untuk {{member}} {{filter}}!",
+				"filter": "dengan filter {{filter}}"
+			}
+		}
+	},
+	"new_items": {
+		"config": {
+			"description": "Menampilkan kosmetik terbaru yang ditambahkan ke game, filter opsional dapat ditambahkan dan Anda dapat berhenti dengan perintah \"stop\".",
+			"usage": {
+				"filter": {
+					"name": "Menyaring",
+					"options": {
+						"outfits": "Pakaian",
+						"backpacks": "Ransel",
+						"emojis": "Emoji",
+						"emotes": "Emotes",
+						"pickaxes": "Pickaxes",
+						"shoes": "Sepatu"
+					},
+					"description": "Filter yang akan diatur dengan menampilkan item."
+				},
+				"random_order": {
+					"name": "Pesanan acak",
+					"description": "Gunakan pesanan acak alih -alih memesan dengan yang terbaru terlebih dahulu.",
+					"options": {
+						"yes": "Ya",
+						"no": "TIDAK"
+					}
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"type_error": "Jika Anda menginginkan filter, pastikan hanya valid, hanya pakaian, ransel, emoji, emotes, pickx atau sepatu.",
+				"cosmetic_fetch_error": "Tidak dapat mengambil kosmetik baru -baru ini menambahkan.",
+				"already_showing": "Kosmetik sudah ditampilkan, pertama -tama harus dihentikan dengan perintah \"stop\".",
+				"showing_cosmetics": "Mengatur semua item yang baru ditambahkan ... {{filter}}",
+				"filter": "(difilter oleh {{filter}})",
+				"ended": "Selesai menunjukkan semua item yang baru ditambahkan ..."
+			}
+		}
+	},
+	"outfit": {
+		"config": {
+			"description": "Mengatur pakaian bot.",
+			"usage": {
+				"query": {
+					"name": "Nama pakaian atau id",
+					"description": "Nama atau ID pakaian yang akan ditetapkan."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"outfit_not_found": "Outfit {{query}} tidak ditemukan!",
+				"outfit_changed": "Atur pakaian ke {{name}}! ({{id}})"
+			}
+		}
+	},
+	"outfit_variants": {
+		"config": {
+			"description": "Menetapkan varian pakaian."
+		},
+		"run": {
+			"msg": {
+				"outfit_not_found": "Bot tidak memiliki pakaian!",
+				"invalid_outfit": "Pakaian tidak valid!",
+				"variants_not_found": "Pakaian ini tidak memiliki varian!",
+				"variants_select": "Kirim varian yang ingin Anda pilih untuk {{type}}",
+				"changed": "Atur varian pakaian!"
+			}
+		}
+	},
+	"perfect_timing": {
+		"config": {
+			"description": "Menetapkan kosmetik bot yang disinkronkan.",
+			"usage": {
+				"query": {
+					"name": "Nama atau ID kosmetik",
+					"description": "Nama atau ID kosmetik untuk diatur."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"cosmetic_not_found": "Cosmetic {{query}} tidak ditemukan!",
+				"perfect_timing_success": "Sinkronisasi untuk melakukan waktu yang tepat ...",
+				"perfect_timing_done": "Menyinkronkan {{value}} ke {{name}}! ({{id}})"
+			}
+		}
+	},
+	"pickaxe": {
+		"config": {
+			"description": "Mengatur Pickaxe Bot.",
+			"usage": {
+				"query": {
+					"name": "Nama atau ID Pickaxe",
+					"description": "Nama atau ID dari Pickaxe yang akan ditetapkan."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"pickaxe_not_found": "Pickaxe {{query}} tidak ditemukan!",
+				"pickaxe_changed": "Atur pickaxe ke {{name}}! ({{id}})"
+			}
+		}
+	},
+	"pickaxe_variants": {
+		"config": {
+			"description": "Menetapkan varian Pickaxe."
+		},
+		"run": {
+			"msg": {
+				"pickaxe_not_found": "Bot tidak memiliki pickxe!",
+				"invalid_pickaxe": "Pickxe tidak valid!",
+				"variants_not_found": "Pickaxe ini tidak memiliki varian!",
+				"variants_select": "Kirim varian yang ingin Anda pilih untuk {{type}}",
+				"changed": "Atur varian Pickaxe!"
+			}
+		}
+	},
+	"preset": {
+		"config": {
+			"description": "Menetapkan preset bot. Gunakan \"none\" untuk menghilangkan kosmetik.",
+			"usage": {
+				"outfit": {
+					"name": "ID pakaian",
+					"description": "ID pakaian."
+				},
+				"backpack": {
+					"name": "ID ransel",
+					"description": "ID ransel."
+				},
+				"pickaxe": {
+					"name": "ID Pickaxe",
+					"description": "ID Pickaxe."
+				},
+				"emote": {
+					"name": "ID emote",
+					"description": "ID emote."
+				},
+				"shoes": {
+					"name": "ID sepatu",
+					"description": "ID sepatu."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"preset_changed": "Atur preset!"
+			}
+		}
+	},
+	"shoes": {
+		"config": {
+			"description": "Mengatur sepatu bot.",
+			"usage": {
+				"query": {
+					"name": "Nama sepatu atau id",
+					"description": "Nama atau ID sepatu yang akan diatur."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"shoes_not_found": "Sepatu {{query}} tidak ditemukan!",
+				"shoes_changed": "Atur sepatu ke {{name}}! ({{id}})"
+			}
+		}
+	},
+	"shoe_variants": {
+		"config": {
+			"description": "Mengatur varian sepatu."
+		},
+		"run": {
+			"msg": {
+				"shoes_not_found": "Bot tidak memiliki sepatu!",
+				"invalid_shoes": "Sepatu tidak valid!",
+				"variants_not_found": "Sepatu ini tidak memiliki varian!",
+				"variants_select": "Kirim varian yang ingin Anda pilih untuk {{type}}",
+				"changed": "Atur varian sepatu!"
+			}
+		}
+	},
+	"shop_items": {
+		"config": {
+			"description": "Menampilkan kosmetik dari toko item, filter opsional dapat ditambahkan dan Anda dapat berhenti dengan perintah \"stop\".",
+			"usage": {
+				"filter": {
+					"name": "Menyaring",
+					"options": {
+						"outfits": "Pakaian",
+						"backpacks": "Ransel",
+						"emojis": "Emoji",
+						"emotes": "Emotes",
+						"pickaxes": "Pickaxes",
+						"shoes": "Sepatu"
+					},
+					"description": "Filter yang akan diatur dengan menampilkan item."
+				},
+				"random_order": {
+					"name": "Pesanan acak",
+					"description": "Gunakan pesanan acak alih -alih memesan dengan yang terbaru terlebih dahulu.",
+					"options": {
+						"yes": "Ya",
+						"no": "TIDAK"
+					}
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"invalid_type": "Jika Anda menginginkan filter, pastikan hanya valid, hanya pakaian, ransel, emoji, emotes, pickx atau sepatu.",
+				"fetch_failed": "Tidak dapat mengambil barang -barang toko.",
+				"already_displaying": "Kosmetik sudah ditampilkan, pertama -tama harus dihentikan dengan perintah \"stop\".",
+				"showing_items": "Mengatur semua item di toko ... {{filter}}",
+				"filter": "(difilter oleh {{query}})",
+				"ended": "Saya telah selesai menampilkan semua item di toko ..."
+			}
+		}
+	},
+	"stop": {
+		"config": {
+			"description": "Berhenti operasi yang tertunda."
+		},
+		"run": {
+			"msg": {
+				"stopped_items": "Berhenti menunjukkan barang!",
+				"stopped_mimic": "Berhenti Mimic!",
+				"stopped_emote": "Berhenti emote!",
+				"nothing_to_stop": "Tidak ada yang bisa berhenti!"
+			}
+		}
+	},
+	"accept_all_friends": {
+		"config": {
+			"description": "Menerima semua teman bot yang tertunda."
+		},
+		"run": {
+			"msg": {
+				"accepting_friends": "Menerima semua teman yang tertunda!",
+				"accepted_friends": "Diterima {{count}} Friends!"
+			}
+		}
+	},
+	"accept_friend": {
+		"config": {
+			"description": "Menerima permintaan pertemanan.",
+			"usage": {
+				"query": {
+					"name": "Nama atau ID teman yang tertunda",
+					"description": "Nama atau ID teman yang tertunda untuk menerima."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Menemukan banyak teman:",
+				"friends_not_found": "Teman {{query}} tidak ditemukan!",
+				"self_request": "Permintaan pertemanan yang tertunda adalah milik saya!",
+				"error": "Teman yang tertunda tidak diterima!",
+				"request_accepted": "Teman tertunda {{name}} berhasil diterima!"
+			}
+		}
+	},
+	"add_friend": {
+		"config": {
+			"description": "Kirim permintaan pertemanan ke pengguna atau terima permintaan pertemanan.",
+			"usage": {
+				"query": {
+					"name": "Nama pengguna atau ID",
+					"description": "Nama atau ID pengguna untuk ditambahkan."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Menemukan banyak teman:",
+				"friends_not_found": "Teman {{query}} tidak ditemukan!",
+				"already_friends": "Sudah menjadi teman!",
+				"error": "Tidak dapat menambahkan pengguna!",
+				"request_sent": "Permintaan pertemanan dikirim ke {{name}}"
+			}
+		}
+	},
+	"block_user": {
+		"config": {
+			"description": "Memblokir pengguna.",
+			"usage": {
+				"query": {
+					"name": "Nama pengguna atau ID",
+					"description": "Nama atau ID pengguna untuk memblokir."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_users_found": "Menemukan banyak pengguna:",
+				"user_not_found": "Pengguna {{query}} tidak ditemukan!",
+				"error": "Tidak dapat memblokir {{name}}!",
+				"user_blocked": "Pengguna {{name}} berhasil diblokir!"
+			}
+		}
+	},
+	"decline_all_friends": {
+		"config": {
+			"description": "Menolak semua teman bot yang tertunda."
+		},
+		"run": {
+			"msg": {
+				"declining_friends": "Menolak semua teman yang tertunda!",
+				"declined_friends": "Ditolak {{count}} teman!"
+			}
+		}
+	},
+	"decline_friend": {
+		"config": {
+			"description": "Menolak atau membatalkan permintaan pertemanan.",
+			"usage": {
+				"query": {
+					"name": "Nama atau ID teman yang tertunda",
+					"description": "Nama atau ID teman yang tertunda untuk menolak atau membatalkan."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Menemukan banyak teman:",
+				"friends_not_found": "Teman {{query}} tidak ditemukan!",
+				"error": "Teman yang tertunda tidak dihapus!",
+				"request_sent": "Teman tertunda {{name}} berhasil dihapus!"
+			}
+		}
+	},
+	"friend_count": {
+		"config": {
+			"description": "Menunjukkan jumlah teman bot."
+		},
+		"run": {
+			"msg": {
+				"info": "Saya punya {{friends}} friends, {{pending}} tertunda ({{incoming}} masuk, {{outgoing}} outgoing) dan {{blocked}} diblokir!"
+			}
+		}
+	},
+	"invite": {
+		"config": {
+			"description": "Mengundang teman atau Anda ke pesta.",
+			"usage": {
+				"query": {
+					"name": "Nama atau ID teman",
+					"description": "Nama atau ID teman yang harus diundang."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"alone": "Di sebuah pesta dengan saya, pengguna untuk mengundang diperlukan.",
+				"multiple_friends_found": "Menemukan banyak teman:",
+				"friends_not_found": "Teman {{query}} tidak ditemukan!",
+				"already_on_party": "{{name}} sudah ada di pesta saya!",
+				"invite_error": "Tidak dapat mengirim undangan ke {{name}}!",
+				"invite_sent": "Undangan Dikirim ke {{name}}!"
+			}
+		}
+	},
+	"join": {
+		"config": {
+			"description": "Bergabung dengan pesta Anda atau pesta pengguna.",
+			"usage": {
+				"query": {
+					"name": "Nama atau ID teman",
+					"description": "Nama atau ID teman untuk bergabung."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"invalid_param": "Anda harus menjadi teman saya atau menentukan teman!",
+				"multiple_friends_found": "Menemukan banyak teman:",
+				"friend_not_found": "Teman {{query}} tidak ditemukan!",
+				"already_on_party": "Teman sudah di pesta saya!",
+				"party_error": "{{name}} tidak mengadakan pesta!",
+				"join_request_error": "Tidak dapat mengirim permintaan bergabung ke {{name}}!",
+				"joined": "Bergabung dengan {{name}}!",
+				"join_request_sent": "Bergabunglah dengan permintaan yang dikirim ke {{name}}!"
+			}
+		}
+	},
+	"promote": {
+		"config": {
+			"description": "Mempromosikan anggota atau membuat Anda pemimpin jika Anda tidak menentukan argumen.",
+			"usage": {
+				"query": {
+					"name": "Nama Anggota atau ID",
+					"description": "Nama atau ID dari Partai untuk naik."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Menemukan banyak teman:",
+				"member_not_found": "Anggota {{query}} tidak ditemukan!",
+				"member_not_at_party": "Anda bukan anggota partai saya.",
+				"member_promoted": "Dipromosikan {{name}}!"
+			}
+		}
+	},
+	"remove_all_friends": {
+		"config": {
+			"description": "Menghapus semua teman bot. Admin dan pemilik dikecualikan."
+		},
+		"run": {
+			"msg": {
+				"removing_friends": "Menghapus semua teman!",
+				"removed_friends": "Dihapus {{count}} teman!"
+			}
+		}
+	},
+	"remove_friend": {
+		"config": {
+			"description": "Menghapus teman bot.",
+			"usage": {
+				"query": {
+					"name": "Nama atau ID teman",
+					"description": "Nama atau ID teman untuk dihapus."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Menemukan banyak teman:",
+				"friend_not_found": "Teman {{query}} tidak ditemukan!",
+				"error": "Tidak dapat menghapus {{name}}!",
+				"friend_removed": "Teman {{name}} berhasil dihapus!"
+			}
+		}
+	},
+	"unblock_all_users": {
+		"config": {
+			"description": "Buka blokir semua pengguna bot yang diblokir."
+		},
+		"run": {
+			"msg": {
+				"removing_friends": "Membatalkan blokir semua pengguna yang diblokir!",
+				"removed_friends": "Unblocked {{count}} pengguna yang diblokir!"
+			}
+		}
+	},
+	"unblock_user": {
+		"config": {
+			"description": "Membuka blokir pengguna.",
+			"usage": {
+				"query": {
+					"name": "Nama pengguna atau ID",
+					"description": "Nama atau ID pengguna untuk membuka blokir."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_users_found": "Menemukan banyak pengguna:",
+				"user_not_found": "Pengguna {{query}} tidak ditemukan!",
+				"error": "Tidak dapat membuka blokir {{name}}!",
+				"user_unblocked": "Pengguna {{name}} Unlocked berhasil!"
+			}
+		}
+	},
+	"user_info": {
+		"config": {
+			"description": "Menunjukkan informasi dari pengguna tertentu.",
+			"usage": {
+				"query": {
+					"name": "Nama pengguna atau ID",
+					"description": "Nama atau ID pengguna."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_users_found": "Menemukan banyak pengguna:",
+				"user_not_found": "Pengguna {{query}} tidak ditemukan!"
+			}
+		}
+	},
+	"eval": {
+		"run": {
+			"msg": {
+				"unauthorized_error": "Hanya tnfangel yang memiliki akses ke perintah ini."
+			}
+		}
+	},
+	"help": {
+		"config": {
+			"description": "Menampilkan Panel Bantuan dan Perintah.",
+			"usage": {
+				"query": {
+					"name": "Nama atau id perintah",
+					"description": "Nama atau ID perintah untuk mendapatkan bantuan terperinci."
+				}
+			}
+		}
+	},
+	"message": {
+		"config": {
+			"description": "Mengirim pesan ke pesta.",
+			"usage": {
+				"message": {
+					"name": "Pesan",
+					"description": "Pesan yang akan dikirim ke pesta."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Mengirim pesan ke pesta"
+			}
+		}
+	},
+	"ping": {
+		"config": {
+			"description": "Menunjukkan latensi bot."
+		},
+		"run": {
+			"msg": {
+				"measuring": "Ukur...",
+				"info": "Pong! {{time}} ms"
+			}
+		}
+	},
+	"prev": {
+		"config": {
+			"description": "Mengeksekusi perintah sebelumnya."
+		},
+		"run": {
+			"msg": {
+				"not_found": "Perintah sebelumnya belum dieksekusi!"
+			}
+		}
+	},
+	"restart_bot": {
+		"config": {
+			"description": "Mulai ulang bot saat ini."
+		},
+		"run": {
+			"msg": {
+				"success": "Bot sedang restart sekarang!"
+			}
+		}
+	},
+	"restart_category": {
+		"config": {
+			"description": "Memulai kembali kategori saat ini."
+		},
+		"run": {
+			"msg": {
+				"success": "Kategori ini sedang restart sekarang!"
+			}
+		}
+	},
+	"restart_shard": {
+		"config": {
+			"description": "Mulai ulang pecahan saat ini."
+		},
+		"run": {
+			"msg": {
+				"success": "Shard sedang restart sekarang!",
+				"error": "Maaf, bot ini tidak berjalan di dalam pecahan."
+			}
+		}
+	},
+	"send": {
+		"config": {
+			"description": "Mengirim perintah ke bot tertentu.",
+			"usage": {
+				"bot": {
+					"name": "Bot ID",
+					"description": "ID bot untuk mengirim perintah."
+				},
+				"command": {
+					"name": "Memerintah",
+					"description": "Perintah yang akan dieksekusi di bot."
+				},
+				"args": {
+					"name": "Argumen",
+					"description": "Argumen perintah diperlukan."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "Mengirim perintah ke bot {{user}}"
+			}
+		}
+	},
+	"send_all": {
+		"config": {
+			"description": "Mengirimkan perintah ke semua bot.",
+			"usage": {
+				"command": {
+					"name": "Memerintah",
+					"description": "Perintah yang akan dieksekusi di bot."
+				},
+				"args": {
+					"name": "Argumen",
+					"description": "Argumen perintah diperlukan."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "Mengirim perintah ke semua bot ..."
+			}
+		}
+	},
+	"send_category": {
+		"config": {
+			"description": "Mengirimkan perintah ke kategori bot.",
+			"usage": {
+				"command": {
+					"name": "Memerintah",
+					"description": "Perintah yang akan dieksekusi di bot."
+				},
+				"args": {
+					"name": "Argumen",
+					"description": "Argumen perintah diperlukan."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "Mengirim perintah ke semua bot di beling saya ...",
+				"error": "Maaf, bot ini tidak berjalan di dalam kategori."
+			}
+		}
+	},
+	"send_number": {
+		"config": {
+			"description": "Mengirimkan perintah ke sejumlah bot.",
+			"usage": {
+				"number": {
+					"name": "Jumlah bot",
+					"description": "Jumlah bot untuk mengirim perintah."
+				},
+				"command": {
+					"name": "Memerintah",
+					"description": "Perintah yang akan dieksekusi di bot."
+				},
+				"args": {
+					"name": "Argumen",
+					"description": "Argumen perintah diperlukan."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"count_negative": "Jumlahnya harus lebih besar dari 0!",
+				"sending_command": "Mengirim perintah ke {{number}} bot ..."
+			}
+		}
+	},
+	"send_party": {
+		"config": {
+			"description": "Mengirimkan perintah ke semua bot yang berbagi pihak yang sama.",
+			"usage": {
+				"command": {
+					"name": "Memerintah",
+					"description": "Perintah yang akan dieksekusi di bot."
+				},
+				"args": {
+					"name": "Argumen",
+					"description": "Argumen perintah diperlukan."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "Mengirim perintah ke semua bot di pesta saya ..."
+			}
+		}
+	},
+	"send_shard": {
+		"config": {
+			"description": "Mengirimkan perintah ke pecahan bot.",
+			"usage": {
+				"command": {
+					"name": "Memerintah",
+					"description": "Perintah yang akan dieksekusi di bot."
+				},
+				"args": {
+					"name": "Argumen",
+					"description": "Argumen perintah diperlukan."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "Mengirim perintah ke semua bot di beling saya ..."
+			}
+		}
+	},
+	"set_status": {
+		"config": {
+			"description": "Menetapkan status bot",
+			"usage": {
+				"status": {
+					"name": "Status",
+					"description": "Status baru bot."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Status set berhasil!"
+			}
+		}
+	},
+	"whisper": {
+		"config": {
+			"description": "Mengirim pesan pribadi ke teman.",
+			"usage": {
+				"query": {
+					"name": "Nama atau ID teman",
+					"description": "Nama atau ID teman untuk mengirim pesan pribadi."
+				},
+				"message": {
+					"name": "Pesan",
+					"description": "Pesan untuk dikirim ke teman."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Menemukan banyak teman:",
+				"friend_not_found": "Teman {{query}} tidak ditemukan!",
+				"whisper_sent": "Dikirim ke {{name}}!"
+			}
+		}
+	},
+	"bp_level": {
+		"config": {
+			"description": "Menetapkan level Battle Pass dari bot.",
+			"usage": {
+				"level": {
+					"name": "Tingkat",
+					"description": "Level Battle Pass yang akan ditetapkan."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"bp_level_set": "Setel level pertempuran pass ke {{level}}!"
+			}
+		}
+	},
+	"clear_custom_key": {
+		"config": {
+			"description": "Menghapus kunci perjodohan khusus."
+		},
+		"run": {
+			"msg": {
+				"success": "Membersihkan kunci perjodohan khusus!"
+			}
+		}
+	},
+	"crowns": {
+		"config": {
+			"description": "Mengatur mahkota bot.",
+			"usage": {
+				"crowns": {
+					"name": "Mahkota",
+					"description": "Mahkota untuk ditetapkan."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Atur mahkota ke {{crowns}}!"
+			}
+		}
+	},
+	"hide": {
+		"config": {
+			"description": "Menyembunyikan pemain dari pesta atau menyembunyikan Anda jika Anda tidak menentukan argumen.",
+			"usage": {
+				"query": {
+					"name": "Nama Anggota atau ID",
+					"description": "Nama atau id anggota partai untuk bersembunyi."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Menemukan banyak teman:",
+				"member_not_found": "Anggota {{query}} tidak ditemukan!",
+				"member_not_at_party": "Anda bukan anggota partai saya.",
+				"success": "Tersembunyi {{name}}!"
+			}
+		}
+	},
+	"hide_all": {
+		"config": {
+			"description": "Menyembunyikan semua pemain di pesta."
+		},
+		"run": {
+			"msg": {
+				"success": "Tersembunyi semua anggota!"
+			}
+		}
+	},
+	"kick": {
+		"config": {
+			"description": "Tendang pemain dari pesta.",
+			"usage": {
+				"query": {
+					"name": "Nama Anggota atau ID",
+					"description": "Nama atau id anggota partai untuk menendang."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Menemukan banyak teman:",
+				"member_not_found": "Anggota {{query}} tidak ditemukan!",
+				"success": "Ditendang {{name}}!"
+			}
+		}
+	},
+	"kick_all": {
+		"config": {
+			"description": "Menendang semua pemain di pesta."
+		},
+		"run": {
+			"msg": {
+				"user_kicked": "Ditendang {{name}}!",
+				"success": "Selesai menendang semua anggota!"
+			}
+		}
+	},
+	"leave": {
+		"config": {
+			"description": "Bot meninggalkan pesta."
+		},
+		"run": {
+			"msg": {
+				"success": "Selamat tinggal!"
+			}
+		}
+	},
+	"level": {
+		"config": {
+			"description": "Menetapkan level bot.",
+			"usage": {
+				"level": {
+					"name": "Tingkat",
+					"description": "Level yang akan ditetapkan."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Atur level ke {{level}}!"
+			}
+		}
+	},
+	"match": {
+		"config": {
+			"description": "Menetapkan negara untuk bermain game.",
+			"usage": {
+				"number": {
+					"name": "Jumlah pemain",
+					"description": "Jumlah pemain dalam permainan."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Diatur ke Playing State!"
+			}
+		}
+	},
+	"party_info": {
+		"config": {
+			"description": "Menunjukkan informasi tentang partai."
+		}
+	},
+	"playlist": {
+		"config": {
+			"description": "Menetapkan daftar putar pesta.",
+			"usage": {
+				"query": {
+					"name": "Nama atau ID Daftar Putar",
+					"description": "Nama atau ID dari daftar putar yang akan ditetapkan."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"error": "Kesalahan mengatur daftar putar!",
+				"success": "Atur playlist ke {{query}}!"
+			}
+		}
+	},
+	"privacy": {
+		"config": {
+			"description": "Menetapkan privasi partai.",
+			"usage": {
+				"privacy": {
+					"name": "Pribadi",
+					"options": {
+						"public": "Publik",
+						"private": "Pribadi"
+					},
+					"description": "Privasi partai untuk ditetapkan."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Tetapkan privasi pesta ke {{privacy}}!",
+				"error": "Privasi tidak valid, harus publik atau pribadi!"
+			}
+		}
+	},
+	"rank": {
+		"config": {
+			"description": "Menetapkan peringkat bot.",
+			"usage": {
+				"rank": {
+					"name": "Pangkat",
+					"description": "Peringkat untuk ditetapkan."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Tetapkan peringkat ke {{rank}}!"
+			}
+		}
+	},
+	"ready": {
+		"config": {
+			"description": "Mengatur negara untuk siap."
+		},
+		"run": {
+			"msg": {
+				"warning": "PERINGATAN: Jika Anda mencoba memulai perjodohan, jangan gunakan perintah ini! Cukup tekan sendiri dan saya akan menekan siap secara otomatis.",
+				"success": "Siap!"
+			}
+		}
+	},
+	"say": {
+		"config": {
+			"description": "Kirim pesan ke obrolan pesta.",
+			"usage": {
+				"message": {
+					"name": "Pesan",
+					"description": "Pesan yang akan dikirim ke pesta."
+				}
+			}
+		},
+		"run": {}
+	},
+	"set_custom_key": {
+		"config": {
+			"description": "Menetapkan kunci perjodohan khusus.",
+			"usage": {
+				"key": {
+					"name": "Kunci khusus",
+					"description": "Kunci perjodohan khusus untuk disetel."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Atur Kunci Matchmaking Kustom!"
+			}
+		}
+	},
+	"show": {
+		"config": {
+			"description": "Menunjukkan pemain tersembunyi dari pesta atau menunjukkan kepada Anda jika Anda tidak menentukan argumen.",
+			"usage": {
+				"query": {
+					"name": "Nama Anggota atau ID",
+					"description": "Nama atau ID anggota partai untuk ditampilkan."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Menemukan banyak teman:",
+				"member_not_found": "Anggota {{query}} tidak ditemukan!",
+				"member_not_at_party": "Anda bukan anggota partai saya.",
+				"success": "Ditampilkan {{name}}!"
+			}
+		}
+	},
+	"show_all": {
+		"config": {
+			"description": "Menampilkan semua pemain tersembunyi di pesta."
+		},
+		"run": {
+			"msg": {
+				"success": "Ditampilkan semua anggota!"
+			}
+		}
+	},
+	"sit_in": {
+		"config": {
+			"description": "Mengatur negara untuk berpartisipasi."
+		},
+		"run": {
+			"msg": {
+				"success": "Duduk di ..."
+			}
+		}
+	},
+	"sit_out": {
+		"config": {
+			"description": "Mengatur negara untuk tidak berpartisipasi."
+		},
+		"run": {
+			"msg": {
+				"success": "Duduk di luar ..."
+			}
+		}
+	},
+	"unmatch": {
+		"config": {
+			"description": "Menetapkan negara untuk tidak bermain game."
+		},
+		"run": {
+			"msg": {
+				"success": "Status bermain yang dihapus!"
+			}
+		}
+	},
+	"unready": {
+		"config": {
+			"description": "Mengatur negara untuk tidak siap."
+		},
+		"run": {
+			"msg": {
+				"success": "Belum Siap!"
+			}
+		}
+	}
+}

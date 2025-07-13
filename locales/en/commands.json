@@ -1,0 +1,1307 @@
+{
+	"handler": {
+		"errors": {
+			"only_for_party_members": "This command is only available for members of my party.",
+			"only_for_private_messages": "This command is only available in private messages.",
+			"need_party_leader": "I need to be the party leader to execute this command!",
+			"only_for_owners": "This command is only available for bot owners.",
+			"only_for_admins": "This command is only available for bot administrators.",
+			"only_for_whitelist": "This command is only available for users on the whitelist of the bot."
+		}
+	},
+	"all_items": {
+		"config": {
+			"description": "Shows all the cosmetics of the game, an optional filter can be added and you can stop with the \"stop\" command.",
+			"usage": {
+				"filter": {
+					"name": "Filter",
+					"options": {
+						"outfits": "Outfits",
+						"backpacks": "Backpacks",
+						"emojis": "Emojis",
+						"emotes": "Emotes",
+						"pickaxes": "Pickaxes",
+						"shoes": "Shoes"
+					},
+					"description": "The filter to be set by showing the items."
+				},
+				"random_order": {
+					"name": "Random order",
+					"description": "Use a random order instead of ordering by newest first.",
+					"options": {
+						"yes": "Yes",
+						"no": "No"
+					}
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"no_items": "Unable to fetch the items.",
+				"items_already_displaying": "Cosmetics are already being displayed, it must first be stopped with the \"stop\" command.",
+				"setting_items": "Setting all game items... {{filtered}}",
+				"filtered_by": "(filtered by {{filter}})",
+				"items_showed": "I have finished showing all the items..."
+			}
+		}
+	},
+	"backpack": {
+		"config": {
+			"description": "Sets the bot's backpack.",
+			"usage": {
+				"query": {
+					"name": "Backpack name or ID",
+					"description": "The name or ID of the backpack to be set."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"backpack_not_found": "Backpack {{item}} not found!",
+				"backpack_changed": "Set the backpack to {{name}}! ({{id}})"
+			}
+		}
+	},
+	"backpack_variants": {
+		"config": {
+			"description": "Sets the backpack's variants."
+		},
+		"run": {
+			"msg": {
+				"backpack_not_found": "The bot does not have a backpack!",
+				"invalid_backpack": "Invalid backpack!",
+				"variants_not_founded": "This backpack does not have variants!",
+				"variants_select": "Send the variant you want to select for {{type}}",
+				"variants_changed": "Set the backpack variants!"
+			}
+		}
+	},
+	"banner": {
+		"config": {
+			"description": "Sets the bot's banner.",
+			"usage": {
+				"query": {
+					"name": "Banner name or ID",
+					"description": "The name or ID of the banner to set."
+				},
+				"color": {
+					"name": "Color name or ID",
+					"description": "The name or ID of the color to set."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"banner_not_found": "Banner {{item}} not found!",
+				"color_not_found": "Color {{item}} not found!",
+				"banner_changed": "Set the banner to {{name}}! ({{id}})"
+			}
+		}
+	},
+	"clear_backpack": {
+		"config": {
+			"description": "Removes the backpack of the bot."
+		},
+		"run": {
+			"msg": {
+				"backpack_cleared": "Cleared backpack!"
+			}
+		}
+	},
+	"clear_emote": {
+		"config": {
+			"description": "Stops the bot's dance."
+		},
+		"run": {
+			"msg": {
+				"emote_cleared": "Cleared emote!"
+			}
+		}
+	},
+	"clear_shoes": {
+		"config": {
+			"description": "Removes the shoes of the bot."
+		},
+		"run": {
+			"msg": {
+				"shoes_cleared": "Cleared shoes!"
+			}
+		}
+	},
+	"copy": {
+		"config": {
+			"description": "Copy the cosmetics of a user or copy the cosmetics to you if not specify arguments.",
+			"usage": {
+				"filter": {
+					"name": "Filter",
+					"options": {
+						"all": "All",
+						"outfit": "Outfit",
+						"backpack": "Backpack",
+						"emoji": "Emoji",
+						"emote": "Emote",
+						"pickaxe": "Pickaxe",
+						"shoes": "Shoes"
+					},
+					"description": "The filter to set when copying cosmetics."
+				},
+				"query": {
+					"name": "Member name or ID",
+					"description": "The member's name or ID to copy the cosmetics."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"members_found": "Found multiple members:",
+				"member_not_found": "Member {{member}} not found!",
+				"member_not_at_party": "You are not a member of my party.",
+				"member_copied": "Copied {{member}}!"
+			}
+		}
+	},
+	"cosmetic": {
+		"config": {
+			"description": "Sets the bot's cosmetic.",
+			"usage": {
+				"query": {
+					"name": "Cosmetic name or ID",
+					"description": "The name or ID of the cosmetic to set."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"cosmetic_not_found": "Cosmetic {{query}} not found!",
+				"cosmetic_changed": "Set the {{type}} to {{name}}! ({{id}})"
+			}
+		}
+	},
+	"cosmetic_info": {
+		"config": {
+			"description": "Shows info about a cosmetic.",
+			"usage": {
+				"query": {
+					"name": "Cosmetic name or ID",
+					"description": "The name or ID of the cosmetic to set."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"cosmetic_not_found": "Cosmetic {{query}} not found!"
+			}
+		}
+	},
+	"emoji": {
+		"config": {
+			"description": "Sets the bot's emoji.",
+			"usage": {
+				"query": {
+					"name": "Emoji name or ID",
+					"description": "The name or ID of the emoji to set."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"emoji_not_found": "Emoji {{query}} not found!",
+				"emoji_changed": "Set the emoji to {{name}}! ({{id}})"
+			}
+		}
+	},
+	"emote": {
+		"config": {
+			"description": "Sets the bot's emote.",
+			"usage": {
+				"query": {
+					"name": "Emote name or ID",
+					"description": "The name or ID of the emote to set."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"emote_not_found": "Emote {{query}} not found!",
+				"emote_changed": "Set the emote emoji to {{name}}! ({{id}})"
+			}
+		}
+	},
+	"mimic": {
+		"config": {
+			"description": "Does the same as a user or the same as you if not specify arguments. Use \"stop\" to stop the command.",
+			"usage": {
+				"filter": {
+					"name": "Filter",
+					"options": {
+						"all": "All",
+						"changes": "Changes",
+						"outfits": "Outfits",
+						"backpacks": "Backpacks",
+						"emojis": "Emojis",
+						"emotes": "Emotes",
+						"pickaxes": "Pickaxes",
+						"shoes": "Shoes"
+					},
+					"description": "The filter to set when imitating cosmetics."
+				},
+				"query": {
+					"name": "Member name or ID",
+					"description": "The member's name or ID to imitate cosmetics."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"members_found": "Found multiple members:",
+				"member_not_found": "Member {{query}} not found!",
+				"member_not_at_party": "You are not a member of my party.",
+				"mimic_enabled": "Enabled mimic for {{member}}{{filter}}!",
+				"filter": " with filter {{filter}}"
+			}
+		}
+	},
+	"new_items": {
+		"config": {
+			"description": "Shows the latest cosmetics added to the game, an optional filter can be added and you can stop with the \"stop\" command.",
+			"usage": {
+				"filter": {
+					"name": "Filter",
+					"options": {
+						"outfits": "Outfits",
+						"backpacks": "Backpacks",
+						"emojis": "Emojis",
+						"emotes": "Emotes",
+						"pickaxes": "Pickaxes",
+						"shoes": "Shoes"
+					},
+					"description": "The filter to be set by showing the items."
+				},
+				"random_order": {
+					"name": "Random order",
+					"description": "Use a random order instead of ordering by newest first.",
+					"options": {
+						"yes": "Yes",
+						"no": "No"
+					}
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"type_error": "If you want an filter, make sure is valid, only outfits, backpacks, emojis, emotes, pickaxes or shoes.",
+				"cosmetic_fetch_error": "Unable to fetch recently added cosmetics.",
+				"already_showing": "Cosmetics are already being displayed, it must first be stopped with the \"stop\" command.",
+				"showing_cosmetics": "Setting all the recently added items... {{filter}}",
+				"filter": "(filtered by {{filter}})",
+				"ended": "Finished showing all recently added items..."
+			}
+		}
+	},
+	"outfit": {
+		"config": {
+			"description": "Sets the bot's outfit.",
+			"usage": {
+				"query": {
+					"name": "Outfit name or ID",
+					"description": "The name or ID of the outfit to be set."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"outfit_not_found": "Outfit {{query}} not found!",
+				"outfit_changed": "Set the outfit to {{name}}! ({{id}})"
+			}
+		}
+	},
+	"outfit_variants": {
+		"config": {
+			"description": "Sets the outfit's variants."
+		},
+		"run": {
+			"msg": {
+				"outfit_not_found": "The bot does not have an outfit!",
+				"invalid_outfit": "Invalid outfit!",
+				"variants_not_found": "This outfit does not have variants!",
+				"variants_select": "Send the variant you want to select for {{type}}",
+				"changed": "Set the outfit variants!"
+			}
+		}
+	},
+	"perfect_timing": {
+		"config": {
+			"description": "Sets the bot's cosmetics synchronized.",
+			"usage": {
+				"query": {
+					"name": "Cosmetic name or ID",
+					"description": "The name or ID of the cosmetic to set."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"cosmetic_not_found": "Cosmetic {{query}} not found!",
+				"perfect_timing_success": "Synchronizing to perform a perfect timing...",
+				"perfect_timing_done": "Synchronized the {{value}} to {{name}}! ({{id}})"
+			}
+		}
+	},
+	"pickaxe": {
+		"config": {
+			"description": "Sets the bot's pickaxe.",
+			"usage": {
+				"query": {
+					"name": "Pickaxe name or ID",
+					"description": "The name or ID of the pickaxe to be set."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"pickaxe_not_found": "Pickaxe {{query}} not found!",
+				"pickaxe_changed": "Set the pickaxe to {{name}}! ({{id}})"
+			}
+		}
+	},
+	"pickaxe_variants": {
+		"config": {
+			"description": "Sets pickaxe's variants."
+		},
+		"run": {
+			"msg": {
+				"pickaxe_not_found": "The bot does not have a pickaxe!",
+				"invalid_pickaxe": "Invalid pickaxe!",
+				"variants_not_found": "This pickaxe does not have variants!",
+				"variants_select": "Send the variant you want to select for {{type}}",
+				"changed": "Set the pickaxe variants!"
+			}
+		}
+	},
+	"preset": {
+		"config": {
+			"description": "Sets the bot's preset. Use \"none\" to remove a cosmetic.",
+			"usage": {
+				"outfit": {
+					"name": "Outfit ID",
+					"description": "The ID of the outfit."
+				},
+				"backpack": {
+					"name": "Backpack ID",
+					"description": "The ID of the backpack."
+				},
+				"pickaxe": {
+					"name": "Pickaxe ID",
+					"description": "The ID of the pickaxe."
+				},
+				"emote": {
+					"name": "Emote ID",
+					"description": "The ID of the emote."
+				},
+				"shoes": {
+					"name": "Shoes ID",
+					"description": "The ID of the shoes."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"preset_changed": "Set the preset!"
+			}
+		}
+	},
+	"shoes": {
+		"config": {
+			"description": "Sets the bot's shoes.",
+			"usage": {
+				"query": {
+					"name": "Shoes name or ID",
+					"description": "The name or ID of the shoes to be set."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"shoes_not_found": "Shoes {{query}} not found!",
+				"shoes_changed": "Set the shoes to {{name}}! ({{id}})"
+			}
+		}
+	},
+	"shoe_variants": {
+		"config": {
+			"description": "Sets the shoe variants."
+		},
+		"run": {
+			"msg": {
+				"shoes_not_found": "The bot does not have shoes!",
+				"invalid_shoes": "Invalid shoes!",
+				"variants_not_found": "This shoes does not have variants!",
+				"variants_select": "Send the variant you want to select for {{type}}",
+				"changed": "Set the shoe variants!"
+			}
+		}
+	},
+	"shop_items": {
+		"config": {
+			"description": "Shows the cosmetics from the item shop, an optional filter can be added and you can stop with the \"stop\" command.",
+			"usage": {
+				"filter": {
+					"name": "Filter",
+					"options": {
+						"outfits": "Outfits",
+						"backpacks": "Backpacks",
+						"emojis": "Emojis",
+						"emotes": "Emotes",
+						"pickaxes": "Pickaxes",
+						"shoes": "Shoes"
+					},
+					"description": "The filter to be set by showing the items."
+				},
+				"random_order": {
+					"name": "Random order",
+					"description": "Use a random order instead of ordering by newest first.",
+					"options": {
+						"yes": "Yes",
+						"no": "No"
+					}
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"invalid_type": "If you want an filter, make sure is valid, only outfits, backpacks, emojis, emotes, pickaxes or shoes.",
+				"fetch_failed": "Unable to fetch the shop items.",
+				"already_displaying": "Cosmetics are already being displayed, it must first be stopped with the \"stop\" command.",
+				"showing_items": "Setting all the items in the shop... {{filter}}",
+				"filter": "(filtered by {{query}})",
+				"ended": "I have finished showing all the items in the store..."
+			}
+		}
+	},
+	"stop": {
+		"config": {
+			"description": "Stops pending operations."
+		},
+		"run": {
+			"msg": {
+				"stopped_items": "Stopped showing items!",
+				"stopped_mimic": "Stopped mimic!",
+				"stopped_emote": "Stopped emote!",
+				"nothing_to_stop": "Nothing to stop!"
+			}
+		}
+	},
+	"accept_all_friends": {
+		"config": {
+			"description": "Accepts all the pending friends of the bot."
+		},
+		"run": {
+			"msg": {
+				"accepting_friends": "Accepting all the pending friends!",
+				"accepted_friends": "Accepted {{count}} friends!"
+			}
+		}
+	},
+	"accept_friend": {
+		"config": {
+			"description": "Accept a friend request.",
+			"usage": {
+				"query": {
+					"name": "Pending friend's name or ID",
+					"description": "The name or ID of the friend pending to accept."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Found multiple friends:",
+				"friends_not_found": "Friend {{query}} not found!",
+				"self_request": "The pending friend request is mine!",
+				"error": "Pending friend not accepted!",
+				"request_accepted": "Pending friend {{name}} accepted successfully!"
+			}
+		}
+	},
+	"add_friend": {
+		"config": {
+			"description": "Send a friend request to a user or accept a friend request.",
+			"usage": {
+				"query": {
+					"name": "Username or ID",
+					"description": "The user's name or ID to add."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Found multiple friends:",
+				"friends_not_found": "Friend {{query}} not found!",
+				"already_friends": "Already a friend!",
+				"error": "Cannot add the user!",
+				"request_sent": "Friend request sent to {{name}}"
+			}
+		}
+	},
+	"block_user": {
+		"config": {
+			"description": "Blocks a user.",
+			"usage": {
+				"query": {
+					"name": "Username or ID",
+					"description": "The user's name or ID to block."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_users_found": "Found multiple users:",
+				"user_not_found": "User {{query}} not found!",
+				"error": "Cannot block {{name}}!",
+				"user_blocked": "User {{name}} blocked successfully!"
+			}
+		}
+	},
+	"decline_all_friends": {
+		"config": {
+			"description": "Declines all the pending friends of the bot."
+		},
+		"run": {
+			"msg": {
+				"declining_friends": "Declining all the pending friends!",
+				"declined_friends": "Declined {{count}} friends!"
+			}
+		}
+	},
+	"decline_friend": {
+		"config": {
+			"description": "Reject or abort a friend request.",
+			"usage": {
+				"query": {
+					"name": "Pending friend's name or ID",
+					"description": "The name or ID of the friend pending to reject or abort."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Found multiple friends:",
+				"friends_not_found": "Friend {{query}} not found!",
+				"error": "Pending friend not removed!",
+				"request_sent": "Pending friend {{name}} removed successfully!"
+			}
+		}
+	},
+	"friend_count": {
+		"config": {
+			"description": "Shows the number of friends of the bot."
+		},
+		"run": {
+			"msg": {
+				"info": "I have {{friends}} friends, {{pending}} pending ({{incoming}} incoming, {{outgoing}} outgoing) and {{blocked}} blocked!"
+			}
+		}
+	},
+	"invite": {
+		"config": {
+			"description": "Invites a friend or you to the party.",
+			"usage": {
+				"query": {
+					"name": "Friend's name or ID",
+					"description": "The friend's name or ID to invite."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"alone": "On a party with me, the user to invite is required.",
+				"multiple_friends_found": "Found multiple friends:",
+				"friends_not_found": "Friend {{query}} not found!",
+				"already_on_party": "{{name}} is already in my party!",
+				"invite_error": "Cannot send the invitation to {{name}}!",
+				"invite_sent": "Invitation sent to {{name}}!"
+			}
+		}
+	},
+	"join": {
+		"config": {
+			"description": "Joins your party or some user's party.",
+			"usage": {
+				"query": {
+					"name": "Friend's name or ID",
+					"description": "The friend's name or ID to join."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"invalid_param": "You need to be my friend or specify a friend!",
+				"multiple_friends_found": "Found multiple friends:",
+				"friend_not_found": "Friend {{query}} not found!",
+				"already_on_party": "Friend already in my party!",
+				"party_error": "{{name}} does not have a party!",
+				"join_request_error": "Cannot send the join request to {{name}}!",
+				"joined": "Joined to {{name}}!",
+				"join_request_sent": "Join request sent to {{name}}!"
+			}
+		}
+	},
+	"promote": {
+		"config": {
+			"description": "Promotes a member or makes you leader if you do not specify arguments.",
+			"usage": {
+				"query": {
+					"name": "Member name or ID",
+					"description": "The name or ID of the party to ascend."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Found multiple friends:",
+				"member_not_found": "Member {{query}} not found!",
+				"member_not_at_party": "You are not a member of my party.",
+				"member_promoted": "Promoted {{name}}!"
+			}
+		}
+	},
+	"remove_all_friends": {
+		"config": {
+			"description": "Removes all the friends of the bot. Admins and owners are excluded."
+		},
+		"run": {
+			"msg": {
+				"removing_friends": "Removing all friends!",
+				"removed_friends": "Removed {{count}} friends!"
+			}
+		}
+	},
+	"remove_friend": {
+		"config": {
+			"description": "Removes a bot's friend.",
+			"usage": {
+				"query": {
+					"name": "Friend's name or ID",
+					"description": "The friend's name or ID to remove."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Found multiple friends:",
+				"friend_not_found": "Friend {{query}} not found!",
+				"error": "Cannot remove {{name}}!",
+				"friend_removed": "Friend {{name}} removed successfully!"
+			}
+		}
+	},
+	"unblock_all_users": {
+		"config": {
+			"description": "Unblocks all the blocked users of the bot."
+		},
+		"run": {
+			"msg": {
+				"removing_friends": "Unblocking all blocked users!",
+				"removed_friends": "Unblocked {{count}} blocked users!"
+			}
+		}
+	},
+	"unblock_user": {
+		"config": {
+			"description": "Unblocks a user.",
+			"usage": {
+				"query": {
+					"name": "Username or ID",
+					"description": "The user's name or ID to unblock."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_users_found": "Found multiple users:",
+				"user_not_found": "User {{query}} not found!",
+				"error": "Cannot unblock {{name}}!",
+				"user_unblocked": "User {{name}} unblocked successfully!"
+			}
+		}
+	},
+	"user_info": {
+		"config": {
+			"description": "Shows the information of a specified user.",
+			"usage": {
+				"query": {
+					"name": "Username or ID",
+					"description": "The user's name or ID."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_users_found": "Found multiple users:",
+				"user_not_found": "User {{query}} not found!"
+			}
+		}
+	},
+	"eval": {
+		"run": {
+			"msg": {
+				"unauthorized_error": "Only tnfAngel have access to this command."
+			}
+		}
+	},
+	"help": {
+		"config": {
+			"description": "Shows the help and command panel.",
+			"usage": {
+				"query": {
+					"name": "Name or ID of the command",
+					"description": "The name or ID of the command to get detailed help."
+				}
+			}
+		}
+	},
+	"message": {
+		"config": {
+			"description": "Sends a message to the party.",
+			"usage": {
+				"message": {
+					"name": "Message",
+					"description": "The message to be sent to the party."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Sent a message to the party"
+			}
+		}
+	},
+	"ping": {
+		"config": {
+			"description": "Shows the latency of the bot."
+		},
+		"run": {
+			"msg": {
+				"measuring": "Measuring...",
+				"info": "Pong! {{time}}ms"
+			}
+		}
+	},
+	"prev": {
+		"config": {
+			"description": "Executes the previous command."
+		},
+		"run": {
+			"msg": {
+				"not_found": "A previous command has not been executed!"
+			}
+		}
+	},
+	"restart_bot": {
+		"config": {
+			"description": "Restarts the current bot."
+		},
+		"run": {
+			"msg": {
+				"success": "The bot is restarting now!"
+			}
+		}
+	},
+	"restart_category": {
+		"config": {
+			"description": "Restarts the current category."
+		},
+		"run": {
+			"msg": {
+				"success": "The category is restarting now!"
+			}
+		}
+	},
+	"restart_shard": {
+		"config": {
+			"description": "Restarts the current shard."
+		},
+		"run": {
+			"msg": {
+				"success": "The shard is restarting now!",
+				"error": "Sorry, this bot is no running inside a shard."
+			}
+		}
+	},
+	"send": {
+		"config": {
+			"description": "Sends a command to a specify bot.",
+			"usage": {
+				"bot": {
+					"name": "Bot ID",
+					"description": "The bot ID to send the command."
+				},
+				"command": {
+					"name": "Command",
+					"description": "The command to be executed in the bot."
+				},
+				"args": {
+					"name": "Arguments",
+					"description": "The arguments of the command are required."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "Sending command to bot {{user}}"
+			}
+		}
+	},
+	"send_all": {
+		"config": {
+			"description": "Sends a command to all bots.",
+			"usage": {
+				"command": {
+					"name": "Command",
+					"description": "The command to be executed in the bots."
+				},
+				"args": {
+					"name": "Arguments",
+					"description": "The arguments of the command are required."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "Sending command to all bots..."
+			}
+		}
+	},
+	"send_category": {
+		"config": {
+			"description": "Sends a command to the bot's Category.",
+			"usage": {
+				"command": {
+					"name": "Command",
+					"description": "The command to be executed in the bots."
+				},
+				"args": {
+					"name": "Arguments",
+					"description": "The arguments of the command are required."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "Sending command to all bots in my shard...",
+				"error": "Sorry, this bot is no running inside a category."
+			}
+		}
+	},
+	"send_number": {
+		"config": {
+			"description": "Sends a command to a specify number of bots.",
+			"usage": {
+				"number": {
+					"name": "Number of bots",
+					"description": "The number of bots to send the command."
+				},
+				"command": {
+					"name": "Command",
+					"description": "The command to be executed in the bots."
+				},
+				"args": {
+					"name": "Arguments",
+					"description": "The arguments of the command are required."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"count_negative": "The number must be greater than 0!",
+				"sending_command": "Sending command to {{number}} bots..."
+			}
+		}
+	},
+	"send_party": {
+		"config": {
+			"description": "Sends a command to all the bots that share the same party.",
+			"usage": {
+				"command": {
+					"name": "Command",
+					"description": "The command to be executed in the bots."
+				},
+				"args": {
+					"name": "Arguments",
+					"description": "The arguments of the command are required."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "Sending command to all bots in my party..."
+			}
+		}
+	},
+	"send_shard": {
+		"config": {
+			"description": "Sends a command to the bot's Shard.",
+			"usage": {
+				"command": {
+					"name": "Command",
+					"description": "The command to be executed in the bots."
+				},
+				"args": {
+					"name": "Arguments",
+					"description": "The arguments of the command are required."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sending_command": "Sending command to all bots in my shard..."
+			}
+		}
+	},
+	"set_status": {
+		"config": {
+			"description": "Sets the bot status",
+			"usage": {
+				"status": {
+					"name": "Status",
+					"description": "The new status of the bot."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Status set successfully!"
+			}
+		}
+	},
+	"whisper": {
+		"config": {
+			"description": "Sends a private message to a friend.",
+			"usage": {
+				"query": {
+					"name": "Friend's name or ID",
+					"description": "The friend's name or ID to send the private message."
+				},
+				"message": {
+					"name": "Message",
+					"description": "The message to send to the friend."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Found multiple friends:",
+				"friend_not_found": "Friend {{query}} not found!",
+				"whisper_sent": "Sent to {{name}}!"
+			}
+		}
+	},
+	"bp_level": {
+		"config": {
+			"description": "Sets the battle pass level of the bot.",
+			"usage": {
+				"level": {
+					"name": "Level",
+					"description": "The level of the battle pass to be set."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"bp_level_set": "Set battle pass level to {{level}}!"
+			}
+		}
+	},
+	"clear_custom_key": {
+		"config": {
+			"description": "Clears the custom matchmaking key."
+		},
+		"run": {
+			"msg": {
+				"success": "Cleared the custom matchmaking key!"
+			}
+		}
+	},
+	"crowns": {
+		"config": {
+			"description": "Sets the bot crowns.",
+			"usage": {
+				"crowns": {
+					"name": "Crowns",
+					"description": "The crowns to set."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Set the crowns to {{crowns}}!"
+			}
+		}
+	},
+	"hide": {
+		"config": {
+			"description": "Hides a player from the party or hides you if you don't specify arguments.",
+			"usage": {
+				"query": {
+					"name": "Member name or ID",
+					"description": "The name or ID of the member of the party to hide."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Found multiple friends:",
+				"member_not_found": "Member {{query}} not found!",
+				"member_not_at_party": "You are not a member of my party.",
+				"success": "Hidden {{name}}!"
+			}
+		}
+	},
+	"hide_all": {
+		"config": {
+			"description": "Hides all the players in the party."
+		},
+		"run": {
+			"msg": {
+				"success": "Hidden all members!"
+			}
+		}
+	},
+	"kick": {
+		"config": {
+			"description": "Kick's a player from the party.",
+			"usage": {
+				"query": {
+					"name": "Member name or ID",
+					"description": "The name or ID of the member of the party to kick."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Found multiple friends:",
+				"member_not_found": "Member {{query}} not found!",
+				"success": "Kicked {{name}}!"
+			}
+		}
+	},
+	"kick_all": {
+		"config": {
+			"description": "Kicks all the players in the party."
+		},
+		"run": {
+			"msg": {
+				"user_kicked": "Kicked {{name}}!",
+				"success": "Finished kicking all members!"
+			}
+		}
+	},
+	"leave": {
+		"config": {
+			"description": "The bot leaves the party."
+		},
+		"run": {
+			"msg": {
+				"success": "Bye!"
+			}
+		}
+	},
+	"level": {
+		"config": {
+			"description": "Sets the bot level.",
+			"usage": {
+				"level": {
+					"name": "Level",
+					"description": "The level to be set."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Set level to {{level}}!"
+			}
+		}
+	},
+	"match": {
+		"config": {
+			"description": "Sets the state to playing a game.",
+			"usage": {
+				"number": {
+					"name": "Number of players",
+					"description": "The number of players in the game."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Set to playing state!"
+			}
+		}
+	},
+	"party_info": {
+		"config": {
+			"description": "Shows information about the party."
+		}
+	},
+	"playlist": {
+		"config": {
+			"description": "Sets the party's playlist.",
+			"usage": {
+				"query": {
+					"name": "Name or ID of the playlist",
+					"description": "The name or ID of the playlist to be set."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"error": "Error setting playlist!",
+				"success": "Set the playlist to {{query}}!"
+			}
+		}
+	},
+	"privacy": {
+		"config": {
+			"description": "Sets the privacy of the party.",
+			"usage": {
+				"privacy": {
+					"name": "Privacy",
+					"options": {
+						"public": "Public",
+						"private": "Private"
+					},
+					"description": "The privacy of the party to set."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Set party privacy to {{privacy}}!",
+				"error": "Invalid privacy, must be public or private!"
+			}
+		}
+	},
+	"rank": {
+		"config": {
+			"description": "Sets the bot rank.",
+			"usage": {
+				"rank": {
+					"name": "Rank",
+					"description": "The rank to set."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Set the rank to {{rank}}!"
+			}
+		}
+	},
+	"ready": {
+		"config": {
+			"description": "Sets the state to ready."
+		},
+		"run": {
+			"msg": {
+				"warning": "WARNING: If you're trying to init matchmaking, don't use this command! Just hit ready yourself and I'll hit ready automatically.",
+				"success": "Ready!"
+			}
+		}
+	},
+	"say": {
+		"config": {
+			"description": "Send a message to the party chat.",
+			"usage": {
+				"message": {
+					"name": "Message",
+					"description": "The message to be sent to the party."
+				}
+			}
+		},
+		"run": {}
+	},
+	"set_custom_key": {
+		"config": {
+			"description": "Sets a custom matchmaking key.",
+			"usage": {
+				"key": {
+					"name": "Custom Key",
+					"description": "The custom matchmaking key to set."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"success": "Set custom matchmaking key!"
+			}
+		}
+	},
+	"show": {
+		"config": {
+			"description": "Shows a hidden player from the party or shows you if you do not specify arguments.",
+			"usage": {
+				"query": {
+					"name": "Member name or ID",
+					"description": "The name or ID of the member of the party to show."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"multiple_friends_found": "Found multiple friends:",
+				"member_not_found": "Member {{query}} not found!",
+				"member_not_at_party": "You are not a member of my party.",
+				"success": "Shown {{name}}!"
+			}
+		}
+	},
+	"show_all": {
+		"config": {
+			"description": "Shows all the hidden players in the party."
+		},
+		"run": {
+			"msg": {
+				"success": "Shown all members!"
+			}
+		}
+	},
+	"sit_in": {
+		"config": {
+			"description": "Sets the state to participating."
+		},
+		"run": {
+			"msg": {
+				"success": "Sitting in..."
+			}
+		}
+	},
+	"sit_out": {
+		"config": {
+			"description": "Sets the state to not participating."
+		},
+		"run": {
+			"msg": {
+				"success": "Sitting out..."
+			}
+		}
+	},
+	"unmatch": {
+		"config": {
+			"description": "Sets the state to not playing a game."
+		},
+		"run": {
+			"msg": {
+				"success": "Removed playing state!"
+			}
+		}
+	},
+	"unready": {
+		"config": {
+			"description": "Sets the state to not ready."
+		},
+		"run": {
+			"msg": {
+				"success": "Not ready!"
+			}
+		}
+	}
+}
