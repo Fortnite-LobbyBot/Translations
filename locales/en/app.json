@@ -234,7 +234,6 @@
 		"theme": "Theme",
 		"edit": "Edit",
 		"value": "Value",
-		"environment": "({{env}})",
 		"general": "General",
 		"appearance": "Appearance",
 		"performance": "Performance",
