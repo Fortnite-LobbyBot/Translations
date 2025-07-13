@@ -69,7 +69,11 @@
 		"variants_other": "{{count}} Variants",
 		"friends_zero": "No Friends",
 		"friends_one": "{{count}} Friend",
-		"friends_other": "{{count}} Friends"
+		"friends_other": "{{count}} Friends",
+		"running": "Running",
+		"botsRunning_zero": "{{count}} Running",
+		"botsRunning_one": "{{count}} Running",
+		"botsRunning_other": "{{count}} Running"
 	},
 	"botSortCriteria": {
 		"availableFirst": "Available First",
@@ -784,9 +788,7 @@
 	"botControl": {
 		"title": "Bot control",
 		"feedbackAppreciated": "Feedback is appreciated!",
-		"running": "RUNNING",
 		"botsAutoRunning": "Bots auto-running",
-		"botsRunning": "{{count}} RUNNING",
 		"botsRunningTooltip": "{{count}}/{{total}} bots running",
 		"viewLogs": "View logs",
 		"viewBotLogs": "View bot logs",
