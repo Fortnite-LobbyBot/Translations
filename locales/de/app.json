@@ -1,7 +1,8 @@
 {
-    "languages": {
-        "en": "Englisch",
-        "es": "Spanisch",
+    	"languages": {
+		"en": "Englisch",
+		"en-US": "Englisch (US)",
+		"es": "Spanisch",
         "es-419": "Spanisch (Lateinamerika)",
         "ar": "Arabisch",
         "de": "Deutsch",
