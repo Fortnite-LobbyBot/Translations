@@ -1,8 +1,8 @@
 {
-    	"languages": {
-		"en": "Englisch",
-		"en-US": "Englisch (US)",
-		"es": "Spanisch",
+    "languages": {
+        "en": "Englisch",
+        "en-US": "Englisch (US)",
+        "es": "Spanisch",
         "es-419": "Spanisch (Lateinamerika)",
         "ar": "Arabisch",
         "de": "Deutsch",
@@ -534,7 +534,7 @@
         "setVariants": "Varianten festlegen"
     },
     "cosmeticModal": {
-        "selectCosmetic": "Kosmetik auswählen",
+        "selectCosmetic": "Wählen Sie {{type}}",
         "searchPlaceholder": "Nach {{label}} suchen…",
         "errorBroke": "Beim Laden der Kosmetika ist ein Fehler aufgetreten",
         "showingCosmetics": "Zeige {{start}}-{{end}} von {{total}} {{label}}",
