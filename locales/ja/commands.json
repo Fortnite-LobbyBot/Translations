@@ -1,1307 +1,1306 @@
 {
-	"handler": {
-		"errors": {
-			"only_for_party_members": "このコマンドは、私のパーティーのメンバーのみが利用できます。",
-			"only_for_private_messages": "このコマンドは、プライベートメッセージでのみ使用できます。",
-			"need_party_leader": "このコマンドを実行するには、党首になる必要があります！",
-			"only_for_owners": "このコマンドは、ボット所有者のみが利用できます。",
-			"only_for_admins": "このコマンドは、ボット管理者のみが利用できます。",
-			"only_for_whitelist": "このコマンドは、ボットのホワイトリストのユーザーのみが利用できます。"
-		}
-	},
-	"all_items": {
-		"config": {
-			"description": "ゲームのすべての化粧品を表示し、オプションのフィルターを追加して、「停止」コマンドで停止できます。",
-			"usage": {
-				"filter": {
-					"name": "フィルター",
-					"options": {
-						"outfits": "衣装",
-						"backpacks": "バックパック",
-						"emojis": "絵文字",
-						"emotes": "emotes",
-						"pickaxes": "ピタックス",
-						"shoes": "靴"
-					},
-					"description": "アイテムを表示して設定するフィルター。"
-				},
-				"random_order": {
-					"name": "ランダムな順序",
-					"description": "最新の最初に注文する代わりに、ランダムな注文を使用します。",
-					"options": {
-						"yes": "はい",
-						"no": "いいえ"
-					}
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"no_items": "アイテムを取得できません。",
-				"items_already_displaying": "化粧品はすでに表示されています。最初に「停止」コマンドで停止する必要があります。",
-				"setting_items": "すべてのゲームアイテムの設定... {{filtered}}",
-				"filtered_by": "（{{filter}}でフィルタリング）",
-				"items_showed": "私はすべてのアイテムを見せ終えました..."
-			}
-		}
-	},
-	"backpack": {
-		"config": {
-			"description": "ボットのバックパックを設定します。",
-			"usage": {
-				"query": {
-					"name": "バックパック名またはID",
-					"description": "設定するバックパックの名前またはID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"backpack_not_found": "バックパック{{item}}見つかりません！",
-				"backpack_changed": "バックパックを{{name}}に設定します！ （{{id}}）"
-			}
-		}
-	},
-	"backpack_variants": {
-		"config": {
-			"description": "バックパックのバリエーションを設定します。"
-		},
-		"run": {
-			"msg": {
-				"backpack_not_found": "ボットにはバックパックがありません！",
-				"invalid_backpack": "無効なバックパック！",
-				"variants_not_founded": "このバックパックにはバリエーションがありません！",
-				"variants_select": "{{type}}を選択するバリアントを送信します",
-				"variants_changed": "バックパックバリアントを設定します！"
-			}
-		}
-	},
-	"banner": {
-		"config": {
-			"description": "ボットのバナーを設定します。",
-			"usage": {
-				"query": {
-					"name": "バナー名またはID",
-					"description": "設定するバナーの名前またはID。"
-				},
-				"color": {
-					"name": "カラー名またはID",
-					"description": "設定する色の名前またはID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"banner_not_found": "Banner {{item}}見つかりません！",
-				"color_not_found": "color {{item}}見つかりません！",
-				"banner_changed": "バナーを{{name}}に設定してください！ （{{id}}）"
-			}
-		}
-	},
-	"clear_backpack": {
-		"config": {
-			"description": "ボットのバックパックを削除します。"
-		},
-		"run": {
-			"msg": {
-				"backpack_cleared": "クリアバックパック！"
-			}
-		}
-	},
-	"clear_emote": {
-		"config": {
-			"description": "ボットのダンスを止めます。"
-		},
-		"run": {
-			"msg": {
-				"emote_cleared": "クリアされたエモート！"
-			}
-		}
-	},
-	"clear_shoes": {
-		"config": {
-			"description": "ボットの靴を取り除きます。"
-		},
-		"run": {
-			"msg": {
-				"shoes_cleared": "靴をきれい！"
-			}
-		}
-	},
-	"copy": {
-		"config": {
-			"description": "ユーザーの化粧品をコピーするか、引数を指定していない場合は化粧品をコピーしてください。",
-			"usage": {
-				"filter": {
-					"name": "フィルター",
-					"options": {
-						"all": "全て",
-						"outfit": "衣装",
-						"backpack": "バックパック",
-						"emoji": "絵文字",
-						"emote": "エモート",
-						"pickaxe": "ピカクセ",
-						"shoes": "靴"
-					},
-					"description": "化粧品をコピーするときに設定するフィルター。"
-				},
-				"query": {
-					"name": "メンバー名またはID",
-					"description": "化粧品をコピーするメンバーの名前またはID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"members_found": "複数のメンバーが見つかりました：",
-				"member_not_found": "メンバー{{member}}見つかりません！",
-				"member_not_at_party": "あなたは私のパーティーのメンバーではありません。",
-				"member_copied": "コピー{{member}}！"
-			}
-		}
-	},
-	"cosmetic": {
-		"config": {
-			"description": "ボットの化粧品を設定します。",
-			"usage": {
-				"query": {
-					"name": "化粧品名またはID",
-					"description": "設定する化粧品の名前またはID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"cosmetic_not_found": "Cosmetic {{query}}見つかりません！",
-				"cosmetic_changed": "{{type}}を{{name}}に設定します！ （{{id}}）"
-			}
-		}
-	},
-	"cosmetic_info": {
-		"config": {
-			"description": "化粧品に関する情報を表示します。",
-			"usage": {
-				"query": {
-					"name": "化粧品名またはID",
-					"description": "設定する化粧品の名前またはID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"cosmetic_not_found": "Cosmetic {{query}}見つかりません！"
-			}
-		}
-	},
-	"emoji": {
-		"config": {
-			"description": "ボットの絵文字を設定します。",
-			"usage": {
-				"query": {
-					"name": "絵文字名またはID",
-					"description": "設定する絵文字の名前またはID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"emoji_not_found": "emoji {{query}}見つかりません！",
-				"emoji_changed": "絵文字を{{name}}に設定してください！ （{{id}}）"
-			}
-		}
-	},
-	"emote": {
-		"config": {
-			"description": "ボットのエモートを設定します。",
-			"usage": {
-				"query": {
-					"name": "名前またはidをemoteします",
-					"description": "セットするエモートの名前またはID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"emote_not_found": "emote {{query}}見つかりません！",
-				"emote_changed": "emote emojiを{{name}}に設定してください！ （{{id}}）"
-			}
-		}
-	},
-	"mimic": {
-		"config": {
-			"description": "引数を指定していない場合、ユーザーと同じか、あなたと同じです。 「停止」を使用してコマンドを停止します。",
-			"usage": {
-				"filter": {
-					"name": "フィルター",
-					"options": {
-						"all": "全て",
-						"changes": "変更",
-						"outfits": "衣装",
-						"backpacks": "バックパック",
-						"emojis": "絵文字",
-						"emotes": "emotes",
-						"pickaxes": "ピタックス",
-						"shoes": "靴"
-					},
-					"description": "化粧品を模倣するときに設定するフィルター。"
-				},
-				"query": {
-					"name": "メンバー名またはID",
-					"description": "化粧品を模倣するメンバーの名前またはID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"members_found": "複数のメンバーが見つかりました：",
-				"member_not_found": "メンバー{{query}}見つかりません！",
-				"member_not_at_party": "あなたは私のパーティーのメンバーではありません。",
-				"mimic_enabled": "{{member}} {{filter}}のmimicを有効にしました！",
-				"filter": "フィルター付き{{filter}}"
-			}
-		}
-	},
-	"new_items": {
-		"config": {
-			"description": "ゲームに追加された最新の化粧品を表示します。オプションのフィルターを追加でき、「停止」コマンドで停止できます。",
-			"usage": {
-				"filter": {
-					"name": "フィルター",
-					"options": {
-						"outfits": "衣装",
-						"backpacks": "バックパック",
-						"emojis": "絵文字",
-						"emotes": "emotes",
-						"pickaxes": "ピタックス",
-						"shoes": "靴"
-					},
-					"description": "アイテムを表示して設定するフィルター。"
-				},
-				"random_order": {
-					"name": "ランダムな順序",
-					"description": "最新の最初に注文する代わりに、ランダムな注文を使用します。",
-					"options": {
-						"yes": "はい",
-						"no": "いいえ"
-					}
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"type_error": "フィルターが必要な場合は、有効であることを確認してください。衣装、バックパック、絵文字、emotes、pickaxes、または靴だけです。",
-				"cosmetic_fetch_error": "最近追加された化粧品を取得できません。",
-				"already_showing": "化粧品はすでに表示されています。最初に「停止」コマンドで停止する必要があります。",
-				"showing_cosmetics": "最近追加されたすべてのアイテムをすべて設定します... {{filter}}",
-				"filter": "（{{filter}}でフィルタリング）",
-				"ended": "最近追加されたアイテムをすべて表示し終えました..."
-			}
-		}
-	},
-	"outfit": {
-		"config": {
-			"description": "ボットの衣装を設定します。",
-			"usage": {
-				"query": {
-					"name": "衣装名またはID",
-					"description": "設定する衣装の名前またはID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"outfit_not_found": "outfit {{query}}見つかりません！",
-				"outfit_changed": "服を{{name}}に設定してください！ （{{id}}）"
-			}
-		}
-	},
-	"outfit_variants": {
-		"config": {
-			"description": "衣装のバリエーションを設定します。"
-		},
-		"run": {
-			"msg": {
-				"outfit_not_found": "ボットには服がありません！",
-				"invalid_outfit": "無効な衣装！",
-				"variants_not_found": "この衣装にはバリエーションがありません！",
-				"variants_select": "{{type}}を選択するバリアントを送信します",
-				"changed": "衣装のバリエーションを設定してください！"
-			}
-		}
-	},
-	"perfect_timing": {
-		"config": {
-			"description": "ボットの化粧品を同期します。",
-			"usage": {
-				"query": {
-					"name": "化粧品名またはID",
-					"description": "設定する化粧品の名前またはID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"cosmetic_not_found": "Cosmetic {{query}}見つかりません！",
-				"perfect_timing_success": "完璧なタイミングを実行するために同期する...",
-				"perfect_timing_done": "{{value}}を{{name}}に同期しました！ （{{id}}）"
-			}
-		}
-	},
-	"pickaxe": {
-		"config": {
-			"description": "ボットのピカックスを設定します。",
-			"usage": {
-				"query": {
-					"name": "pickaxe名またはID",
-					"description": "設定するピカクセの名前またはID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"pickaxe_not_found": "pickaxe {{query}}見つかりません！",
-				"pickaxe_changed": "Pickaxeを{{name}}に設定してください！ （{{id}}）"
-			}
-		}
-	},
-	"pickaxe_variants": {
-		"config": {
-			"description": "Pickaxeのバリエーションを設定します。"
-		},
-		"run": {
-			"msg": {
-				"pickaxe_not_found": "ボットにはピタックスがありません！",
-				"invalid_pickaxe": "Invalid Pickaxe！",
-				"variants_not_found": "このピタックスにはバリアントがありません！",
-				"variants_select": "{{type}}を選択するバリアントを送信します",
-				"changed": "Pickaxeバリエーションを設定します！"
-			}
-		}
-	},
-	"preset": {
-		"config": {
-			"description": "ボットのプリセットを設定します。 「なし」を使用して化粧品を削除します。",
-			"usage": {
-				"outfit": {
-					"name": "衣装ID",
-					"description": "衣装のID。"
-				},
-				"backpack": {
-					"name": "バックパックID",
-					"description": "バックパックのID。"
-				},
-				"pickaxe": {
-					"name": "Pickaxe ID",
-					"description": "ピカクセのID。"
-				},
-				"emote": {
-					"name": "Emote ID",
-					"description": "エモートのID。"
-				},
-				"shoes": {
-					"name": "靴ID",
-					"description": "靴のID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"preset_changed": "プリセットを設定してください！"
-			}
-		}
-	},
-	"shoes": {
-		"config": {
-			"description": "ボットの靴をセットします。",
-			"usage": {
-				"query": {
-					"name": "靴の名前またはID",
-					"description": "セットする靴の名前またはID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"shoes_not_found": "靴{{query}}見つかりません！",
-				"shoes_changed": "靴を{{name}}に設定してください！ （{{id}}）"
-			}
-		}
-	},
-	"shoe_variants": {
-		"config": {
-			"description": "靴のバリエーションを設定します。"
-		},
-		"run": {
-			"msg": {
-				"shoes_not_found": "ボットには靴がありません！",
-				"invalid_shoes": "無効な靴！",
-				"variants_not_found": "この靴にはバリエーションがありません！",
-				"variants_select": "{{type}}を選択するバリアントを送信します",
-				"changed": "靴のバリエーションを設定してください！"
-			}
-		}
-	},
-	"shop_items": {
-		"config": {
-			"description": "アイテムショップの化粧品を表示すると、オプションのフィルターを追加でき、「停止」コマンドで停止できます。",
-			"usage": {
-				"filter": {
-					"name": "フィルター",
-					"options": {
-						"outfits": "衣装",
-						"backpacks": "バックパック",
-						"emojis": "絵文字",
-						"emotes": "emotes",
-						"pickaxes": "ピタックス",
-						"shoes": "靴"
-					},
-					"description": "アイテムを表示して設定するフィルター。"
-				},
-				"random_order": {
-					"name": "ランダムな順序",
-					"description": "最新の最初に注文する代わりに、ランダムな注文を使用します。",
-					"options": {
-						"yes": "はい",
-						"no": "いいえ"
-					}
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"invalid_type": "フィルターが必要な場合は、有効であることを確認してください。衣装、バックパック、絵文字、emotes、pickaxes、または靴だけです。",
-				"fetch_failed": "ショップアイテムを取り出すことができません。",
-				"already_displaying": "化粧品はすでに表示されています。最初に「停止」コマンドで停止する必要があります。",
-				"showing_items": "店内のすべてのアイテムを設定します... {{filter}}",
-				"filter": "（{{query}}でフィルタリング）",
-				"ended": "私は店内のすべてのアイテムを見せ終えました..."
-			}
-		}
-	},
-	"stop": {
-		"config": {
-			"description": "保留中の操作を停止します。"
-		},
-		"run": {
-			"msg": {
-				"stopped_items": "アイテムの表示をやめました！",
-				"stopped_mimic": "ミミックを止めました！",
-				"stopped_emote": "エモートを止めました！",
-				"nothing_to_stop": "止めることはありません！"
-			}
-		}
-	},
-	"accept_all_friends": {
-		"config": {
-			"description": "ボットのすべての保留中の友人を受け入れます。"
-		},
-		"run": {
-			"msg": {
-				"accepting_friends": "保留中のすべての友達を受け入れます！",
-				"accepted_friends": "{{count}}友達！"
-			}
-		}
-	},
-	"accept_friend": {
-		"config": {
-			"description": "友達リクエストを受け入れます。",
-			"usage": {
-				"query": {
-					"name": "保留中の友人の名前またはID",
-					"description": "受け入れるまで保留中の友人の名前またはID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "複数の友達を見つけました：",
-				"friends_not_found": "friend {{query}}見つかりません！",
-				"self_request": "保留中の友達リクエストは私のものです！",
-				"error": "保留中の友人は受け入れられません！",
-				"request_accepted": "保留中の友人{{name}}は正常に受け入れられました！"
-			}
-		}
-	},
-	"add_friend": {
-		"config": {
-			"description": "友達リクエストをユーザーに送信するか、友達リクエストを受け入れます。",
-			"usage": {
-				"query": {
-					"name": "ユーザー名またはID",
-					"description": "追加するユーザーの名前またはID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "複数の友達を見つけました：",
-				"friends_not_found": "friend {{query}}見つかりません！",
-				"already_friends": "すでに友達です！",
-				"error": "ユーザーを追加できません！",
-				"request_sent": "{{name}}に送信された友達リクエスト"
-			}
-		}
-	},
-	"block_user": {
-		"config": {
-			"description": "ユーザーをブロックします。",
-			"usage": {
-				"query": {
-					"name": "ユーザー名またはID",
-					"description": "ブロックするユーザーの名前またはID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_users_found": "複数のユーザーが見つかりました：",
-				"user_not_found": "ユーザー{{query}}見つかりません！",
-				"error": "{{name}}をブロックできません！",
-				"user_blocked": "ユーザー{{name}}は正常にブロックされました！"
-			}
-		}
-	},
-	"decline_all_friends": {
-		"config": {
-			"description": "ボットの保留中のすべての友人を辞退します。"
-		},
-		"run": {
-			"msg": {
-				"declining_friends": "保留中のすべての友人を辞退します！",
-				"declined_friends": "{{count}}友達を辞退しました！"
-			}
-		}
-	},
-	"decline_friend": {
-		"config": {
-			"description": "友達リクエストを拒否または中止します。",
-			"usage": {
-				"query": {
-					"name": "保留中の友人の名前またはID",
-					"description": "友人の名前またはIDは、拒否または中絶する保留中の係争中です。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "複数の友達を見つけました：",
-				"friends_not_found": "friend {{query}}見つかりません！",
-				"error": "保留中の友人は削除されませんでした！",
-				"request_sent": "保留中の友人{{name}}は正常に削除されました！"
-			}
-		}
-	},
-	"friend_count": {
-		"config": {
-			"description": "ボットの友達の数を示します。"
-		},
-		"run": {
-			"msg": {
-				"info": "私は{{friends}}友人、{{pending}} pending（{{incoming}}受信、{{outgoing}} outovering）と{{blocked}} blocked！"
-			}
-		}
-	},
-	"invite": {
-		"config": {
-			"description": "友人やあなたをパーティーに招待します。",
-			"usage": {
-				"query": {
-					"name": "友達の名前またはID",
-					"description": "招待する友人の名前またはID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"alone": "私とのパーティーでは、招待するユーザーが必要です。",
-				"multiple_friends_found": "複数の友達を見つけました：",
-				"friends_not_found": "friend {{query}}見つかりません！",
-				"already_on_party": "{{name}}はすでに私のパーティーにあります！",
-				"invite_error": "招待状を{{name}}に送ることはできません！",
-				"invite_sent": "{{name}}に送信された招待状！"
-			}
-		}
-	},
-	"join": {
-		"config": {
-			"description": "パーティーまたはユーザーのパーティーに参加します。",
-			"usage": {
-				"query": {
-					"name": "友達の名前またはID",
-					"description": "参加する友人の名前またはID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"invalid_param": "あなたは私の友達になるか、友達を指定する必要があります！",
-				"multiple_friends_found": "複数の友達を見つけました：",
-				"friend_not_found": "friend {{query}}見つかりません！",
-				"already_on_party": "もう私のパーティーに友達！",
-				"party_error": "{{name}}にはパーティーがありません！",
-				"join_request_error": "参加リクエストを{{name}}に送信できません！",
-				"joined": "{{name}}に参加しました！",
-				"join_request_sent": "{{name}}に送信されたリクエストに参加してください！"
-			}
-		}
-	},
-	"promote": {
-		"config": {
-			"description": "メンバーを宣伝するか、引数を指定しない場合はリーダーになります。",
-			"usage": {
-				"query": {
-					"name": "メンバー名またはID",
-					"description": "上昇する当事者の名前またはID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "複数の友達を見つけました：",
-				"member_not_found": "メンバー{{query}}見つかりません！",
-				"member_not_at_party": "あなたは私のパーティーのメンバーではありません。",
-				"member_promoted": "プロモーション{{name}}！"
-			}
-		}
-	},
-	"remove_all_friends": {
-		"config": {
-			"description": "ボットのすべての友人を削除します。 管理者と所有者は除外されています。"
-		},
-		"run": {
-			"msg": {
-				"removing_friends": "すべての友達を削除してください！",
-				"removed_friends": "{{count}}友達を削除！"
-			}
-		}
-	},
-	"remove_friend": {
-		"config": {
-			"description": "ボットの友達を削除します。",
-			"usage": {
-				"query": {
-					"name": "友達の名前またはID",
-					"description": "削除する友人の名前またはID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "複数の友達を見つけました：",
-				"friend_not_found": "friend {{query}}見つかりません！",
-				"error": "{{name}}を削除できません！",
-				"friend_removed": "friend {{name}}は正常に削除されました！"
-			}
-		}
-	},
-	"unblock_all_users": {
-		"config": {
-			"description": "ボットのすべてのブロックされたユーザーのブロックを解除します。"
-		},
-		"run": {
-			"msg": {
-				"removing_friends": "ブロックされたすべてのユーザーのブロックを解除します！",
-				"removed_friends": "Unblocked {{count}}ブロックされたユーザー！"
-			}
-		}
-	},
-	"unblock_user": {
-		"config": {
-			"description": "ユーザーのブロックを解除します。",
-			"usage": {
-				"query": {
-					"name": "ユーザー名またはID",
-					"description": "ブロックを解除するユーザーの名前またはID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_users_found": "複数のユーザーが見つかりました：",
-				"user_not_found": "ユーザー{{query}}見つかりません！",
-				"error": "ブロックを解除できません{{name}}！",
-				"user_unblocked": "user {{name}} blocked un blocked untergute！"
-			}
-		}
-	},
-	"user_info": {
-		"config": {
-			"description": "指定されたユーザーの情報を表示します。",
-			"usage": {
-				"query": {
-					"name": "ユーザー名またはID",
-					"description": "ユーザーの名前またはID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_users_found": "複数のユーザーが見つかりました：",
-				"user_not_found": "ユーザー{{query}}見つかりません！"
-			}
-		}
-	},
-	"eval": {
-		"run": {
-			"msg": {
-				"unauthorized_error": "このコマンドにアクセスできるのはtnfangelだけです。"
-			}
-		}
-	},
-	"help": {
-		"config": {
-			"description": "ヘルプとコマンドパネルを表示します。",
-			"usage": {
-				"query": {
-					"name": "コマンドの名前またはID",
-					"description": "詳細なヘルプを得るためのコマンドの名前またはID。"
-				}
-			}
-		}
-	},
-	"message": {
-		"config": {
-			"description": "パーティーにメッセージを送信します。",
-			"usage": {
-				"message": {
-					"name": "メッセージ",
-					"description": "パーティーに送信されるメッセージ。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "パーティーにメッセージを送信しました"
-			}
-		}
-	},
-	"ping": {
-		"config": {
-			"description": "ボットの遅延を示します。"
-		},
-		"run": {
-			"msg": {
-				"measuring": "測定...",
-				"info": "ポン！ {{time}} ms"
-			}
-		}
-	},
-	"prev": {
-		"config": {
-			"description": "前のコマンドを実行します。"
-		},
-		"run": {
-			"msg": {
-				"not_found": "以前のコマンドは実行されていません！"
-			}
-		}
-	},
-	"restart_bot": {
-		"config": {
-			"description": "現在のボットを再起動します。"
-		},
-		"run": {
-			"msg": {
-				"success": "ボットは今再起動しています！"
-			}
-		}
-	},
-	"restart_category": {
-		"config": {
-			"description": "現在のカテゴリを再起動します。"
-		},
-		"run": {
-			"msg": {
-				"success": "カテゴリは今再起動しています！"
-			}
-		}
-	},
-	"restart_shard": {
-		"config": {
-			"description": "現在のシャードを再起動します。"
-		},
-		"run": {
-			"msg": {
-				"success": "シャードは今再起動しています！",
-				"error": "申し訳ありませんが、このボットはシャードの中を走っていません。"
-			}
-		}
-	},
-	"send": {
-		"config": {
-			"description": "指定ボットにコマンドを送信します。",
-			"usage": {
-				"bot": {
-					"name": "ボットID",
-					"description": "コマンドを送信するボットID。"
-				},
-				"command": {
-					"name": "指示",
-					"description": "ボットで実行されるコマンド。"
-				},
-				"args": {
-					"name": "議論",
-					"description": "コマンドの引数が必要です。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"sending_command": "bot {{user}}にコマンドを送信"
-			}
-		}
-	},
-	"send_all": {
-		"config": {
-			"description": "すべてのボットにコマンドを送信します。",
-			"usage": {
-				"command": {
-					"name": "指示",
-					"description": "ボットで実行されるコマンド。"
-				},
-				"args": {
-					"name": "議論",
-					"description": "コマンドの引数が必要です。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"sending_command": "すべてのボットにコマンドを送信します..."
-			}
-		}
-	},
-	"send_category": {
-		"config": {
-			"description": "ボットのカテゴリにコマンドを送信します。",
-			"usage": {
-				"command": {
-					"name": "指示",
-					"description": "ボットで実行されるコマンド。"
-				},
-				"args": {
-					"name": "議論",
-					"description": "コマンドの引数が必要です。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"sending_command": "私のシャード内のすべてのボットにコマンドを送信します...",
-				"error": "申し訳ありませんが、このボットはカテゴリ内で実行されていません。"
-			}
-		}
-	},
-	"send_number": {
-		"config": {
-			"description": "指定数のボットにコマンドを送信します。",
-			"usage": {
-				"number": {
-					"name": "ボットの数",
-					"description": "コマンドを送信するボットの数。"
-				},
-				"command": {
-					"name": "指示",
-					"description": "ボットで実行されるコマンド。"
-				},
-				"args": {
-					"name": "議論",
-					"description": "コマンドの引数が必要です。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"count_negative": "数値は0より大きくなければなりません！",
-				"sending_command": "{{number}}ボットにコマンドを送信..."
-			}
-		}
-	},
-	"send_party": {
-		"config": {
-			"description": "同じパーティーを共有するすべてのボットにコマンドを送信します。",
-			"usage": {
-				"command": {
-					"name": "指示",
-					"description": "ボットで実行されるコマンド。"
-				},
-				"args": {
-					"name": "議論",
-					"description": "コマンドの引数が必要です。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"sending_command": "私のパーティーのすべてのボットにコマンドを送信します..."
-			}
-		}
-	},
-	"send_shard": {
-		"config": {
-			"description": "ボットのシャードにコマンドを送信します。",
-			"usage": {
-				"command": {
-					"name": "指示",
-					"description": "ボットで実行されるコマンド。"
-				},
-				"args": {
-					"name": "議論",
-					"description": "コマンドの引数が必要です。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"sending_command": "私のシャード内のすべてのボットにコマンドを送信します..."
-			}
-		}
-	},
-	"set_status": {
-		"config": {
-			"description": "ボットステータスを設定します",
-			"usage": {
-				"status": {
-					"name": "状態",
-					"description": "ボットの新しいステータス。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "ステータスが正常に設定されています！"
-			}
-		}
-	},
-	"whisper": {
-		"config": {
-			"description": "友達にプライベートメッセージを送信します。",
-			"usage": {
-				"query": {
-					"name": "友達の名前またはID",
-					"description": "プライベートメッセージを送信するための友人の名前またはID。"
-				},
-				"message": {
-					"name": "メッセージ",
-					"description": "友達に送るメッセージ。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "複数の友達を見つけました：",
-				"friend_not_found": "friend {{query}}見つかりません！",
-				"whisper_sent": "{{name}}に送信！"
-			}
-		}
-	},
-	"bp_level": {
-		"config": {
-			"description": "ボットのバトルパスレベルを設定します。",
-			"usage": {
-				"level": {
-					"name": "レベル",
-					"description": "設定するバトルパスのレベル。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"bp_level_set": "バトルパスレベルを{{level}}に設定します！"
-			}
-		}
-	},
-	"clear_custom_key": {
-		"config": {
-			"description": "カスタムマッチメイキングキーをクリアします。"
-		},
-		"run": {
-			"msg": {
-				"success": "カスタムマッチメイキングキーをクリアしました！"
-			}
-		}
-	},
-	"crowns": {
-		"config": {
-			"description": "ボットクラウンを設定します。",
-			"usage": {
-				"crowns": {
-					"name": "クラウン",
-					"description": "設定する王冠。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "クラウンを{{crowns}}に設定します！"
-			}
-		}
-	},
-	"hide": {
-		"config": {
-			"description": "議論を指定しない場合は、パーティーからプレーヤーを隠すか、あなたを隠します。",
-			"usage": {
-				"query": {
-					"name": "メンバー名またはID",
-					"description": "非表示にするパーティーのメンバーの名前またはID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "複数の友達を見つけました：",
-				"member_not_found": "メンバー{{query}}見つかりません！",
-				"member_not_at_party": "あなたは私のパーティーのメンバーではありません。",
-				"success": "隠された{{name}}！"
-			}
-		}
-	},
-	"hide_all": {
-		"config": {
-			"description": "パーティーのすべてのプレイヤーを隠します。"
-		},
-		"run": {
-			"msg": {
-				"success": "すべてのメンバーを隠しました！"
-			}
-		}
-	},
-	"kick": {
-		"config": {
-			"description": "キックはパーティーのプレーヤーです。",
-			"usage": {
-				"query": {
-					"name": "メンバー名またはID",
-					"description": "キックする当事者のメンバーの名前またはID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "複数の友達を見つけました：",
-				"member_not_found": "メンバー{{query}}見つかりません！",
-				"success": "kiced {{name}}！"
-			}
-		}
-	},
-	"kick_all": {
-		"config": {
-			"description": "パーティーのすべてのプレイヤーを蹴ります。"
-		},
-		"run": {
-			"msg": {
-				"user_kicked": "kiced {{name}}！",
-				"success": "すべてのメンバーを蹴り終えました！"
-			}
-		}
-	},
-	"leave": {
-		"config": {
-			"description": "ボットはパーティーを去ります。"
-		},
-		"run": {
-			"msg": {
-				"success": "さよなら！"
-			}
-		}
-	},
-	"level": {
-		"config": {
-			"description": "ボットレベルを設定します。",
-			"usage": {
-				"level": {
-					"name": "レベル",
-					"description": "設定するレベル。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "レベルを{{level}}に設定します！"
-			}
-		}
-	},
-	"match": {
-		"config": {
-			"description": "状態をゲームのプレイに設定します。",
-			"usage": {
-				"number": {
-					"name": "プレイヤーの数",
-					"description": "ゲーム内のプレイヤーの数。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "プレイステートに設定！"
-			}
-		}
-	},
-	"party_info": {
-		"config": {
-			"description": "パーティーに関する情報を表示します。"
-		}
-	},
-	"playlist": {
-		"config": {
-			"description": "パーティーのプレイリストを設定します。",
-			"usage": {
-				"query": {
-					"name": "プレイリストの名前またはID",
-					"description": "設定するプレイリストの名前またはID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"error": "プレイリストの設定エラー！",
-				"success": "プレイリストを{{query}}に設定します！"
-			}
-		}
-	},
-	"privacy": {
-		"config": {
-			"description": "パーティーのプライバシーを設定します。",
-			"usage": {
-				"privacy": {
-					"name": "プライバシー",
-					"options": {
-						"public": "公共",
-						"private": "プライベート"
-					},
-					"description": "設定する当事者のプライバシー。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "パーティープライバシーを{{privacy}}に設定します！",
-				"error": "無効なプライバシー、パブリックまたはプライベートでなければなりません！"
-			}
-		}
-	},
-	"rank": {
-		"config": {
-			"description": "ボットランクを設定します。",
-			"usage": {
-				"rank": {
-					"name": "ランク",
-					"description": "設定するランク。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "ランクを{{rank}}に設定します！"
-			}
-		}
-	},
-	"ready": {
-		"config": {
-			"description": "状態を準備するように設定します。"
-		},
-		"run": {
-			"msg": {
-				"warning": "警告：マッチメイキングを開始しようとしている場合は、このコマンドを使用しないでください！ 自分で準備ができているだけで、自動的に準備ができます。",
-				"success": "準備ができて！"
-			}
-		}
-	},
-	"say": {
-		"config": {
-			"description": "パーティーチャットにメッセージを送信します。",
-			"usage": {
-				"message": {
-					"name": "メッセージ",
-					"description": "パーティーに送信されるメッセージ。"
-				}
-			}
-		},
-		"run": {}
-	},
-	"set_custom_key": {
-		"config": {
-			"description": "カスタムマッチメイキングキーを設定します。",
-			"usage": {
-				"key": {
-					"name": "カスタムキー",
-					"description": "設定するカスタムマッチメイキングキー。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "カスタムマッチメイキングキーを設定します！"
-			}
-		}
-	},
-	"show": {
-		"config": {
-			"description": "パーティーから隠されたプレイヤーを表示するか、引数を指定していない場合は表示します。",
-			"usage": {
-				"query": {
-					"name": "メンバー名またはID",
-					"description": "表示する当事者のメンバーの名前またはID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "複数の友達を見つけました：",
-				"member_not_found": "メンバー{{query}}見つかりません！",
-				"member_not_at_party": "あなたは私のパーティーのメンバーではありません。",
-				"success": "表示{{name}}！"
-			}
-		}
-	},
-	"show_all": {
-		"config": {
-			"description": "パーティーのすべての隠されたプレイヤーを表示します。"
-		},
-		"run": {
-			"msg": {
-				"success": "すべてのメンバーを見せました！"
-			}
-		}
-	},
-	"sit_in": {
-		"config": {
-			"description": "州を参加するように設定します。"
-		},
-		"run": {
-			"msg": {
-				"success": "座って..."
-			}
-		}
-	},
-	"sit_out": {
-		"config": {
-			"description": "州を参加しないように設定します。"
-		},
-		"run": {
-			"msg": {
-				"success": "座っている..."
-			}
-		}
-	},
-	"unmatch": {
-		"config": {
-			"description": "状態をゲームをプレイしないように設定します。"
-		},
-		"run": {
-			"msg": {
-				"success": "プレイ状態を削除しました！"
-			}
-		}
-	},
-	"unready": {
-		"config": {
-			"description": "状態を準備ができていないように設定します。"
-		},
-		"run": {
-			"msg": {
-				"success": "準備ができていない！"
-			}
-		}
-	}
+    "handler": {
+        "errors": {
+            "only_for_party_members": "このコマンドは、私のパーティーのメンバーのみが利用できます。",
+            "only_for_private_messages": "このコマンドは、プライベートメッセージでのみ使用できます。",
+            "need_party_leader": "このコマンドを実行するには、党首になる必要があります！",
+            "only_for_owners": "このコマンドは、ボット所有者のみが利用できます。",
+            "only_for_admins": "このコマンドは、ボット管理者のみが利用できます。",
+            "only_for_whitelist": "このコマンドは、ボットのホワイトリストのユーザーのみが利用できます。"
+        }
+    },
+    "all_items": {
+        "config": {
+            "description": "ゲームのすべての化粧品を表示し、オプションのフィルターを追加して、「停止」コマンドで停止できます。",
+            "usage": {
+                "filter": {
+                    "name": "フィルター",
+                    "options": {
+                        "outfits": "衣装",
+                        "backpacks": "バックパック",
+                        "emojis": "絵文字",
+                        "emotes": "emotes",
+                        "pickaxes": "ピタックス",
+                        "shoes": "靴"
+                    },
+                    "description": "アイテムを表示して設定するフィルター。"
+                },
+                "random_order": {
+                    "name": "ランダムな順序",
+                    "description": "最新の最初に注文する代わりに、ランダムな注文を使用します。",
+                    "options": {
+                        "yes": "はい",
+                        "no": "いいえ"
+                    }
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "no_items": "アイテムを取得できません。",
+                "items_already_displaying": "化粧品はすでに表示されています。最初に「停止」コマンドで停止する必要があります。",
+                "setting_items": "すべてのゲームアイテムの設定... {{filtered}}",
+                "filtered_by": "（{{filter}}でフィルタリング）",
+                "items_showed": "私はすべてのアイテムを見せ終えました..."
+            }
+        }
+    },
+    "backpack": {
+        "config": {
+            "description": "ボットのバックパックを設定します。",
+            "usage": {
+                "query": {
+                    "name": "バックパック名またはID",
+                    "description": "設定するバックパックの名前またはID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "backpack_not_found": "バックパック{{item}}見つかりません！",
+                "backpack_changed": "バックパックを{{name}}に設定します！ （{{id}}）"
+            }
+        }
+    },
+    "backpack_variants": {
+        "config": {
+            "description": "バックパックのバリエーションを設定します。"
+        },
+        "run": {
+            "msg": {
+                "backpack_not_found": "ボットにはバックパックがありません！",
+                "invalid_backpack": "無効なバックパック！",
+                "variants_not_founded": "このバックパックにはバリエーションがありません！",
+                "variants_select": "{{type}}を選択するバリアントを送信します",
+                "variants_changed": "バックパックバリアントを設定します！"
+            }
+        }
+    },
+    "banner": {
+        "config": {
+            "description": "ボットのバナーを設定します。",
+            "usage": {
+                "query": {
+                    "name": "バナー名またはID",
+                    "description": "設定するバナーの名前またはID。"
+                },
+                "color": {
+                    "name": "カラー名またはID",
+                    "description": "設定する色の名前またはID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "banner_not_found": "Banner {{item}}見つかりません！",
+                "color_not_found": "color {{item}}見つかりません！",
+                "banner_changed": "バナーを{{name}}に設定してください！ （{{id}}）"
+            }
+        }
+    },
+    "clear_backpack": {
+        "config": {
+            "description": "ボットのバックパックを削除します。"
+        },
+        "run": {
+            "msg": {
+                "backpack_cleared": "クリアバックパック！"
+            }
+        }
+    },
+    "clear_emote": {
+        "config": {
+            "description": "ボットのダンスを止めます。"
+        },
+        "run": {
+            "msg": {
+                "emote_cleared": "クリアされたエモート！"
+            }
+        }
+    },
+    "clear_shoes": {
+        "config": {
+            "description": "ボットの靴を取り除きます。"
+        },
+        "run": {
+            "msg": {
+                "shoes_cleared": "靴をきれい！"
+            }
+        }
+    },
+    "copy": {
+        "config": {
+            "description": "ユーザーの化粧品をコピーするか、引数を指定していない場合は化粧品をコピーしてください。",
+            "usage": {
+                "filter": {
+                    "name": "フィルター",
+                    "options": {
+                        "all": "全て",
+                        "outfit": "衣装",
+                        "backpack": "バックパック",
+                        "emoji": "絵文字",
+                        "emote": "エモート",
+                        "pickaxe": "ピカクセ",
+                        "shoes": "靴"
+                    },
+                    "description": "化粧品をコピーするときに設定するフィルター。"
+                },
+                "query": {
+                    "name": "メンバー名またはID",
+                    "description": "化粧品をコピーするメンバーの名前またはID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "members_found": "複数のメンバーが見つかりました：",
+                "member_not_found": "メンバー{{member}}見つかりません！",
+                "member_not_at_party": "あなたは私のパーティーのメンバーではありません。",
+                "member_copied": "コピー{{member}}！"
+            }
+        }
+    },
+    "cosmetic": {
+        "config": {
+            "description": "ボットの化粧品を設定します。",
+            "usage": {
+                "query": {
+                    "name": "化粧品名またはID",
+                    "description": "設定する化粧品の名前またはID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "cosmetic_not_found": "Cosmetic {{query}}見つかりません！",
+                "cosmetic_changed": "{{type}}を{{name}}に設定します！ （{{id}}）"
+            }
+        }
+    },
+    "cosmetic_info": {
+        "config": {
+            "description": "化粧品に関する情報を表示します。",
+            "usage": {
+                "query": {
+                    "name": "化粧品名またはID",
+                    "description": "設定する化粧品の名前またはID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "cosmetic_not_found": "Cosmetic {{query}}見つかりません！"
+            }
+        }
+    },
+    "emoji": {
+        "config": {
+            "description": "ボットの絵文字を設定します。",
+            "usage": {
+                "query": {
+                    "name": "絵文字名またはID",
+                    "description": "設定する絵文字の名前またはID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "emoji_not_found": "emoji {{query}}見つかりません！",
+                "emoji_changed": "絵文字を{{name}}に設定してください！ （{{id}}）"
+            }
+        }
+    },
+    "emote": {
+        "config": {
+            "description": "ボットのエモートを設定します。",
+            "usage": {
+                "query": {
+                    "name": "名前またはidをemoteします",
+                    "description": "セットするエモートの名前またはID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "emote_not_found": "emote {{query}}見つかりません！",
+                "emote_changed": "emote emojiを{{name}}に設定してください！ （{{id}}）"
+            }
+        }
+    },
+    "mimic": {
+        "config": {
+            "description": "引数を指定していない場合、ユーザーと同じか、あなたと同じです。 「停止」を使用してコマンドを停止します。",
+            "usage": {
+                "filter": {
+                    "name": "フィルター",
+                    "options": {
+                        "all": "全て",
+                        "changes": "変更",
+                        "outfits": "衣装",
+                        "backpacks": "バックパック",
+                        "emojis": "絵文字",
+                        "emotes": "emotes",
+                        "pickaxes": "ピタックス",
+                        "shoes": "靴"
+                    },
+                    "description": "化粧品を模倣するときに設定するフィルター。"
+                },
+                "query": {
+                    "name": "メンバー名またはID",
+                    "description": "化粧品を模倣するメンバーの名前またはID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "members_found": "複数のメンバーが見つかりました：",
+                "member_not_found": "メンバー{{query}}見つかりません！",
+                "member_not_at_party": "あなたは私のパーティーのメンバーではありません。",
+                "mimic_enabled": "{{member}} {{filter}}のmimicを有効にしました！",
+                "filter": " フィルター付き{{filter}}"
+            }
+        }
+    },
+    "new_items": {
+        "config": {
+            "description": "ゲームに追加された最新の化粧品を表示します。オプションのフィルターを追加でき、「停止」コマンドで停止できます。",
+            "usage": {
+                "filter": {
+                    "name": "フィルター",
+                    "options": {
+                        "outfits": "衣装",
+                        "backpacks": "バックパック",
+                        "emojis": "絵文字",
+                        "emotes": "emotes",
+                        "pickaxes": "ピタックス",
+                        "shoes": "靴"
+                    },
+                    "description": "アイテムを表示して設定するフィルター。"
+                },
+                "random_order": {
+                    "name": "ランダムな順序",
+                    "description": "最新の最初に注文する代わりに、ランダムな注文を使用します。",
+                    "options": {
+                        "yes": "はい",
+                        "no": "いいえ"
+                    }
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "type_error": "フィルターが必要な場合は、有効であることを確認してください。衣装、バックパック、絵文字、emotes、pickaxes、または靴だけです。",
+                "cosmetic_fetch_error": "最近追加された化粧品を取得できません。",
+                "already_showing": "化粧品はすでに表示されています。最初に「停止」コマンドで停止する必要があります。",
+                "showing_cosmetics": "最近追加されたすべてのアイテムをすべて設定します... {{filter}}",
+                "filter": "（{{filter}}でフィルタリング）",
+                "ended": "最近追加されたアイテムをすべて表示し終えました..."
+            }
+        }
+    },
+    "outfit": {
+        "config": {
+            "description": "ボットの衣装を設定します。",
+            "usage": {
+                "query": {
+                    "name": "衣装名またはID",
+                    "description": "設定する衣装の名前またはID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "outfit_not_found": "outfit {{query}}見つかりません！",
+                "outfit_changed": "服を{{name}}に設定してください！ （{{id}}）"
+            }
+        }
+    },
+    "outfit_variants": {
+        "config": {
+            "description": "衣装のバリエーションを設定します。"
+        },
+        "run": {
+            "msg": {
+                "outfit_not_found": "ボットには服がありません！",
+                "invalid_outfit": "無効な衣装！",
+                "variants_not_found": "この衣装にはバリエーションがありません！",
+                "variants_select": "{{type}}を選択するバリアントを送信します",
+                "changed": "衣装のバリエーションを設定してください！"
+            }
+        }
+    },
+    "perfect_timing": {
+        "config": {
+            "description": "ボットの化粧品を同期します。",
+            "usage": {
+                "query": {
+                    "name": "化粧品名またはID",
+                    "description": "設定する化粧品の名前またはID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "cosmetic_not_found": "Cosmetic {{query}}見つかりません！",
+                "perfect_timing_success": "完璧なタイミングを実行するために同期する...",
+                "perfect_timing_done": "{{value}}を{{name}}に同期しました！ （{{id}}）"
+            }
+        }
+    },
+    "pickaxe": {
+        "config": {
+            "description": "ボットのピカックスを設定します。",
+            "usage": {
+                "query": {
+                    "name": "pickaxe名またはID",
+                    "description": "設定するピカクセの名前またはID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "pickaxe_not_found": "pickaxe {{query}}見つかりません！",
+                "pickaxe_changed": "Pickaxeを{{name}}に設定してください！ （{{id}}）"
+            }
+        }
+    },
+    "pickaxe_variants": {
+        "config": {
+            "description": "Pickaxeのバリエーションを設定します。"
+        },
+        "run": {
+            "msg": {
+                "pickaxe_not_found": "ボットにはピタックスがありません！",
+                "invalid_pickaxe": "Invalid Pickaxe！",
+                "variants_not_found": "このピタックスにはバリアントがありません！",
+                "variants_select": "{{type}}を選択するバリアントを送信します",
+                "changed": "Pickaxeバリエーションを設定します！"
+            }
+        }
+    },
+    "preset": {
+        "config": {
+            "description": "ボットのプリセットを設定します。 「なし」を使用して化粧品を削除します。",
+            "usage": {
+                "outfit": {
+                    "name": "衣装ID",
+                    "description": "衣装のID。"
+                },
+                "backpack": {
+                    "name": "バックパックID",
+                    "description": "バックパックのID。"
+                },
+                "pickaxe": {
+                    "name": "Pickaxe ID",
+                    "description": "ピカクセのID。"
+                },
+                "emote": {
+                    "name": "Emote ID",
+                    "description": "エモートのID。"
+                },
+                "shoes": {
+                    "name": "靴ID",
+                    "description": "靴のID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "preset_changed": "プリセットを設定してください！"
+            }
+        }
+    },
+    "shoes": {
+        "config": {
+            "description": "ボットの靴をセットします。",
+            "usage": {
+                "query": {
+                    "name": "靴の名前またはID",
+                    "description": "セットする靴の名前またはID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "shoes_not_found": "靴{{query}}見つかりません！",
+                "shoes_changed": "靴を{{name}}に設定してください！ （{{id}}）"
+            }
+        }
+    },
+    "shoe_variants": {
+        "config": {
+            "description": "靴のバリエーションを設定します。"
+        },
+        "run": {
+            "msg": {
+                "shoes_not_found": "ボットには靴がありません！",
+                "invalid_shoes": "無効な靴！",
+                "variants_not_found": "この靴にはバリエーションがありません！",
+                "variants_select": "{{type}}を選択するバリアントを送信します",
+                "changed": "靴のバリエーションを設定してください！"
+            }
+        }
+    },
+    "shop_items": {
+        "config": {
+            "description": "アイテムショップの化粧品を表示すると、オプションのフィルターを追加でき、「停止」コマンドで停止できます。",
+            "usage": {
+                "filter": {
+                    "name": "フィルター",
+                    "options": {
+                        "outfits": "衣装",
+                        "backpacks": "バックパック",
+                        "emojis": "絵文字",
+                        "emotes": "emotes",
+                        "pickaxes": "ピタックス",
+                        "shoes": "靴"
+                    },
+                    "description": "アイテムを表示して設定するフィルター。"
+                },
+                "random_order": {
+                    "name": "ランダムな順序",
+                    "description": "最新の最初に注文する代わりに、ランダムな注文を使用します。",
+                    "options": {
+                        "yes": "はい",
+                        "no": "いいえ"
+                    }
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "invalid_type": "フィルターが必要な場合は、有効であることを確認してください。衣装、バックパック、絵文字、emotes、pickaxes、または靴だけです。",
+                "fetch_failed": "ショップアイテムを取り出すことができません。",
+                "already_displaying": "化粧品はすでに表示されています。最初に「停止」コマンドで停止する必要があります。",
+                "showing_items": "店内のすべてのアイテムを設定します... {{filter}}",
+                "filter": "（{{query}}でフィルタリング）",
+                "ended": "私は店内のすべてのアイテムを見せ終えました..."
+            }
+        }
+    },
+    "stop": {
+        "config": {
+            "description": "保留中の操作を停止します。"
+        },
+        "run": {
+            "msg": {
+                "stopped_items": "アイテムの表示をやめました！",
+                "stopped_mimic": "ミミックを止めました！",
+                "stopped_emote": "エモートを止めました！",
+                "nothing_to_stop": "止めることはありません！"
+            }
+        }
+    },
+    "accept_all_friends": {
+        "config": {
+            "description": "ボットのすべての保留中の友人を受け入れます。"
+        },
+        "run": {
+            "msg": {
+                "accepting_friends": "保留中のすべての友達を受け入れます！",
+                "accepted_friends": "{{count}}友達！"
+            }
+        }
+    },
+    "accept_friend": {
+        "config": {
+            "description": "友達リクエストを受け入れます。",
+            "usage": {
+                "query": {
+                    "name": "保留中の友人の名前またはID",
+                    "description": "受け入れるまで保留中の友人の名前またはID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "複数の友達を見つけました：",
+                "friends_not_found": "friend {{query}}見つかりません！",
+                "self_request": "保留中の友達リクエストは私のものです！",
+                "error": "保留中の友人は受け入れられません！",
+                "request_accepted": "保留中の友人{{name}}は正常に受け入れられました！"
+            }
+        }
+    },
+    "add_friend": {
+        "config": {
+            "description": "友達リクエストをユーザーに送信するか、友達リクエストを受け入れます。",
+            "usage": {
+                "query": {
+                    "name": "ユーザー名またはID",
+                    "description": "追加するユーザーの名前またはID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "複数の友達を見つけました：",
+                "friends_not_found": "friend {{query}}見つかりません！",
+                "already_friends": "すでに友達です！",
+                "error": "ユーザーを追加できません！",
+                "request_sent": "{{name}}に送信された友達リクエスト"
+            }
+        }
+    },
+    "block_user": {
+        "config": {
+            "description": "ユーザーをブロックします。",
+            "usage": {
+                "query": {
+                    "name": "ユーザー名またはID",
+                    "description": "ブロックするユーザーの名前またはID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_users_found": "複数のユーザーが見つかりました：",
+                "user_not_found": "ユーザー{{query}}見つかりません！",
+                "error": "{{name}}をブロックできません！",
+                "user_blocked": "ユーザー{{name}}は正常にブロックされました！"
+            }
+        }
+    },
+    "decline_all_friends": {
+        "config": {
+            "description": "ボットの保留中のすべての友人を辞退します。"
+        },
+        "run": {
+            "msg": {
+                "declining_friends": "保留中のすべての友人を辞退します！",
+                "declined_friends": "{{count}}友達を辞退しました！"
+            }
+        }
+    },
+    "decline_friend": {
+        "config": {
+            "description": "友達リクエストを拒否または中止します。",
+            "usage": {
+                "query": {
+                    "name": "保留中の友人の名前またはID",
+                    "description": "友人の名前またはIDは、拒否または中絶する保留中の係争中です。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "複数の友達を見つけました：",
+                "friends_not_found": "friend {{query}}見つかりません！",
+                "error": "保留中の友人は削除されませんでした！",
+                "request_sent": "保留中の友人{{name}}は正常に削除されました！"
+            }
+        }
+    },
+    "friend_count": {
+        "config": {
+            "description": "ボットの友達の数を示します。"
+        },
+        "run": {
+            "msg": {
+                "info": "私は{{friends}}友人、{{pending}} pending（{{incoming}}受信、{{outgoing}} outovering）と{{blocked}} blocked！"
+            }
+        }
+    },
+    "invite": {
+        "config": {
+            "description": "友人やあなたをパーティーに招待します。",
+            "usage": {
+                "query": {
+                    "name": "友達の名前またはID",
+                    "description": "招待する友人の名前またはID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "alone": "私とのパーティーでは、招待するユーザーが必要です。",
+                "multiple_friends_found": "複数の友達を見つけました：",
+                "friends_not_found": "friend {{query}}見つかりません！",
+                "already_on_party": "{{name}}はすでに私のパーティーにあります！",
+                "invite_error": "招待状を{{name}}に送ることはできません！",
+                "invite_sent": "{{name}}に送信された招待状！"
+            }
+        }
+    },
+    "join": {
+        "config": {
+            "description": "パーティーまたはユーザーのパーティーに参加します。",
+            "usage": {
+                "query": {
+                    "name": "友達の名前またはID",
+                    "description": "参加する友人の名前またはID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "invalid_param": "あなたは私の友達になるか、友達を指定する必要があります！",
+                "multiple_friends_found": "複数の友達を見つけました：",
+                "friend_not_found": "friend {{query}}見つかりません！",
+                "already_on_party": "もう私のパーティーに友達！",
+                "party_error": "{{name}}にはパーティーがありません！",
+                "join_request_error": "参加リクエストを{{name}}に送信できません！",
+                "joined": "{{name}}に参加しました！",
+                "join_request_sent": "{{name}}に送信されたリクエストに参加してください！"
+            }
+        }
+    },
+    "promote": {
+        "config": {
+            "description": "メンバーを宣伝するか、引数を指定しない場合はリーダーになります。",
+            "usage": {
+                "query": {
+                    "name": "メンバー名またはID",
+                    "description": "上昇する当事者の名前またはID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "複数の友達を見つけました：",
+                "member_not_found": "メンバー{{query}}見つかりません！",
+                "member_not_at_party": "あなたは私のパーティーのメンバーではありません。",
+                "member_promoted": "プロモーション{{name}}！"
+            }
+        }
+    },
+    "remove_all_friends": {
+        "config": {
+            "description": "ボットのすべての友人を削除します。 管理者と所有者は除外されています。"
+        },
+        "run": {
+            "msg": {
+                "removing_friends": "すべての友達を削除してください！",
+                "removed_friends": "{{count}}友達を削除！"
+            }
+        }
+    },
+    "remove_friend": {
+        "config": {
+            "description": "ボットの友達を削除します。",
+            "usage": {
+                "query": {
+                    "name": "友達の名前またはID",
+                    "description": "削除する友人の名前またはID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "複数の友達を見つけました：",
+                "friend_not_found": "friend {{query}}見つかりません！",
+                "error": "{{name}}を削除できません！",
+                "friend_removed": "friend {{name}}は正常に削除されました！"
+            }
+        }
+    },
+    "unblock_all_users": {
+        "config": {
+            "description": "ボットのすべてのブロックされたユーザーのブロックを解除します。"
+        },
+        "run": {
+            "msg": {
+                "removing_friends": "ブロックされたすべてのユーザーのブロックを解除します！",
+                "removed_friends": "Unblocked {{count}}ブロックされたユーザー！"
+            }
+        }
+    },
+    "unblock_user": {
+        "config": {
+            "description": "ユーザーのブロックを解除します。",
+            "usage": {
+                "query": {
+                    "name": "ユーザー名またはID",
+                    "description": "ブロックを解除するユーザーの名前またはID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_users_found": "複数のユーザーが見つかりました：",
+                "user_not_found": "ユーザー{{query}}見つかりません！",
+                "error": "ブロックを解除できません{{name}}！",
+                "user_unblocked": "user {{name}} blocked un blocked untergute！"
+            }
+        }
+    },
+    "user_info": {
+        "config": {
+            "description": "指定されたユーザーの情報を表示します。",
+            "usage": {
+                "query": {
+                    "name": "ユーザー名またはID",
+                    "description": "ユーザーの名前またはID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_users_found": "複数のユーザーが見つかりました：",
+                "user_not_found": "ユーザー{{query}}見つかりません！"
+            }
+        }
+    },
+    "eval": {
+        "run": {
+            "msg": {
+                "unauthorized_error": "このコマンドにアクセスできるのはtnfangelだけです。"
+            }
+        }
+    },
+    "help": {
+        "config": {
+            "description": "ヘルプとコマンドパネルを表示します。",
+            "usage": {
+                "query": {
+                    "name": "コマンドの名前またはID",
+                    "description": "詳細なヘルプを得るためのコマンドの名前またはID。"
+                }
+            }
+        }
+    },
+    "message": {
+        "config": {
+            "description": "パーティーにメッセージを送信します。",
+            "usage": {
+                "message": {
+                    "name": "メッセージ",
+                    "description": "パーティーに送信されるメッセージ。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "パーティーにメッセージを送信しました"
+            }
+        }
+    },
+    "ping": {
+        "config": {
+            "description": "ボットの遅延を示します。"
+        },
+        "run": {
+            "msg": {
+                "measuring": "測定...",
+                "info": "ポン！ {{time}} ms"
+            }
+        }
+    },
+    "prev": {
+        "config": {
+            "description": "前のコマンドを実行します。"
+        },
+        "run": {
+            "msg": {
+                "not_found": "以前のコマンドは実行されていません！"
+            }
+        }
+    },
+    "restart_bot": {
+        "config": {
+            "description": "現在のボットを再起動します。"
+        },
+        "run": {
+            "msg": {
+                "success": "ボットは今再起動しています！"
+            }
+        }
+    },
+    "restart_category": {
+        "config": {
+            "description": "現在のカテゴリを再起動します。"
+        },
+        "run": {
+            "msg": {
+                "success": "カテゴリは今再起動しています！"
+            }
+        }
+    },
+    "restart_shard": {
+        "config": {
+            "description": "現在のシャードを再起動します。"
+        },
+        "run": {
+            "msg": {
+                "success": "シャードは今再起動しています！",
+                "error": "申し訳ありませんが、このボットはシャードの中を走っていません。"
+            }
+        }
+    },
+    "send": {
+        "config": {
+            "description": "指定ボットにコマンドを送信します。",
+            "usage": {
+                "bot": {
+                    "name": "ボットID",
+                    "description": "コマンドを送信するボットID。"
+                },
+                "command": {
+                    "name": "指示",
+                    "description": "ボットで実行されるコマンド。"
+                },
+                "args": {
+                    "name": "議論",
+                    "description": "コマンドの引数が必要です。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "sending_command": "bot {{user}}にコマンドを送信"
+            }
+        }
+    },
+    "send_all": {
+        "config": {
+            "description": "すべてのボットにコマンドを送信します。",
+            "usage": {
+                "command": {
+                    "name": "指示",
+                    "description": "ボットで実行されるコマンド。"
+                },
+                "args": {
+                    "name": "議論",
+                    "description": "コマンドの引数が必要です。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "sending_command": "すべてのボットにコマンドを送信します..."
+            }
+        }
+    },
+    "send_category": {
+        "config": {
+            "description": "ボットのカテゴリにコマンドを送信します。",
+            "usage": {
+                "command": {
+                    "name": "指示",
+                    "description": "ボットで実行されるコマンド。"
+                },
+                "args": {
+                    "name": "議論",
+                    "description": "コマンドの引数が必要です。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "sending_command": "私のシャード内のすべてのボットにコマンドを送信します...",
+                "error": "申し訳ありませんが、このボットはカテゴリ内で実行されていません。"
+            }
+        }
+    },
+    "send_number": {
+        "config": {
+            "description": "指定数のボットにコマンドを送信します。",
+            "usage": {
+                "number": {
+                    "name": "ボットの数",
+                    "description": "コマンドを送信するボットの数。"
+                },
+                "command": {
+                    "name": "指示",
+                    "description": "ボットで実行されるコマンド。"
+                },
+                "args": {
+                    "name": "議論",
+                    "description": "コマンドの引数が必要です。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "count_negative": "数値は0より大きくなければなりません！",
+                "sending_command": "{{number}}ボットにコマンドを送信..."
+            }
+        }
+    },
+    "send_party": {
+        "config": {
+            "description": "同じパーティーを共有するすべてのボットにコマンドを送信します。",
+            "usage": {
+                "command": {
+                    "name": "指示",
+                    "description": "ボットで実行されるコマンド。"
+                },
+                "args": {
+                    "name": "議論",
+                    "description": "コマンドの引数が必要です。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "sending_command": "私のパーティーのすべてのボットにコマンドを送信します..."
+            }
+        }
+    },
+    "send_shard": {
+        "config": {
+            "description": "ボットのシャードにコマンドを送信します。",
+            "usage": {
+                "command": {
+                    "name": "指示",
+                    "description": "ボットで実行されるコマンド。"
+                },
+                "args": {
+                    "name": "議論",
+                    "description": "コマンドの引数が必要です。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "sending_command": "私のシャード内のすべてのボットにコマンドを送信します..."
+            }
+        }
+    },
+    "set_status": {
+        "config": {
+            "description": "ボットステータスを設定します",
+            "usage": {
+                "status": {
+                    "name": "状態",
+                    "description": "ボットの新しいステータス。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "ステータスが正常に設定されています！"
+            }
+        }
+    },
+    "whisper": {
+        "config": {
+            "description": "友達にプライベートメッセージを送信します。",
+            "usage": {
+                "query": {
+                    "name": "友達の名前またはID",
+                    "description": "プライベートメッセージを送信するための友人の名前またはID。"
+                },
+                "message": {
+                    "name": "メッセージ",
+                    "description": "友達に送るメッセージ。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "複数の友達を見つけました：",
+                "friend_not_found": "friend {{query}}見つかりません！",
+                "whisper_sent": "{{name}}に送信！"
+            }
+        }
+    },
+    "bp_level": {
+        "config": {
+            "description": "ボットのバトルパスレベルを設定します。",
+            "usage": {
+                "level": {
+                    "name": "レベル",
+                    "description": "設定するバトルパスのレベル。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "bp_level_set": "バトルパスレベルを{{level}}に設定します！"
+            }
+        }
+    },
+    "clear_custom_key": {
+        "config": {
+            "description": "カスタムマッチメイキングキーをクリアします。"
+        },
+        "run": {
+            "msg": {
+                "success": "カスタムマッチメイキングキーをクリアしました！"
+            }
+        }
+    },
+    "crowns": {
+        "config": {
+            "description": "ボットクラウンを設定します。",
+            "usage": {
+                "crowns": {
+                    "name": "クラウン",
+                    "description": "設定する王冠。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "クラウンを{{crowns}}に設定します！"
+            }
+        }
+    },
+    "hide": {
+        "config": {
+            "description": "議論を指定しない場合は、パーティーからプレーヤーを隠すか、あなたを隠します。",
+            "usage": {
+                "query": {
+                    "name": "メンバー名またはID",
+                    "description": "非表示にするパーティーのメンバーの名前またはID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "複数の友達を見つけました：",
+                "member_not_found": "メンバー{{query}}見つかりません！",
+                "member_not_at_party": "あなたは私のパーティーのメンバーではありません。",
+                "success": "隠された{{name}}！"
+            }
+        }
+    },
+    "hide_all": {
+        "config": {
+            "description": "パーティーのすべてのプレイヤーを隠します。"
+        },
+        "run": {
+            "msg": {
+                "success": "すべてのメンバーを隠しました！"
+            }
+        }
+    },
+    "kick": {
+        "config": {
+            "description": "キックはパーティーのプレーヤーです。",
+            "usage": {
+                "query": {
+                    "name": "メンバー名またはID",
+                    "description": "キックする当事者のメンバーの名前またはID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "複数の友達を見つけました：",
+                "member_not_found": "メンバー{{query}}見つかりません！",
+                "success": "kiced {{name}}！"
+            }
+        }
+    },
+    "kick_all": {
+        "config": {
+            "description": "パーティーのすべてのプレイヤーを蹴ります。"
+        },
+        "run": {
+            "msg": {
+                "user_kicked": "kiced {{name}}！",
+                "success": "すべてのメンバーを蹴り終えました！"
+            }
+        }
+    },
+    "leave": {
+        "config": {
+            "description": "ボットはパーティーを去ります。"
+        },
+        "run": {
+            "msg": {
+                "success": "さよなら！"
+            }
+        }
+    },
+    "level": {
+        "config": {
+            "description": "ボットレベルを設定します。",
+            "usage": {
+                "level": {
+                    "name": "レベル",
+                    "description": "設定するレベル。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "レベルを{{level}}に設定します！"
+            }
+        }
+    },
+    "match": {
+        "config": {
+            "description": "状態をゲームのプレイに設定します。",
+            "usage": {
+                "number": {
+                    "name": "プレイヤーの数",
+                    "description": "ゲーム内のプレイヤーの数。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "プレイステートに設定！"
+            }
+        }
+    },
+    "party_info": {
+        "config": {
+            "description": "パーティーに関する情報を表示します。"
+        }
+    },
+    "playlist": {
+        "config": {
+            "description": "パーティーのプレイリストを設定します。",
+            "usage": {
+                "query": {
+                    "name": "プレイリストの名前またはID",
+                    "description": "設定するプレイリストの名前またはID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "error": "プレイリストの設定エラー！",
+                "success": "プレイリストを{{query}}に設定します！"
+            }
+        }
+    },
+    "privacy": {
+        "config": {
+            "description": "パーティーのプライバシーを設定します。",
+            "usage": {
+                "privacy": {
+                    "name": "プライバシー",
+                    "options": {
+                        "public": "公共",
+                        "private": "プライベート"
+                    },
+                    "description": "設定する当事者のプライバシー。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "パーティープライバシーを{{privacy}}に設定します！",
+                "error": "無効なプライバシー、パブリックまたはプライベートでなければなりません！"
+            }
+        }
+    },
+    "rank": {
+        "config": {
+            "description": "ボットランクを設定します。",
+            "usage": {
+                "rank": {
+                    "name": "ランク",
+                    "description": "設定するランク。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "ランクを{{rank}}に設定します！"
+            }
+        }
+    },
+    "ready": {
+        "config": {
+            "description": "状態を準備するように設定します。"
+        },
+        "run": {
+            "msg": {
+                "warning": "警告：マッチメイキングを開始しようとしている場合は、このコマンドを使用しないでください！ 自分で準備ができているだけで、自動的に準備ができます。",
+                "success": "準備ができて！"
+            }
+        }
+    },
+    "say": {
+        "config": {
+            "description": "パーティーチャットにメッセージを送信します。",
+            "usage": {
+                "message": {
+                    "name": "メッセージ",
+                    "description": "パーティーに送信されるメッセージ。"
+                }
+            }
+        }
+    },
+    "set_custom_key": {
+        "config": {
+            "description": "カスタムマッチメイキングキーを設定します。",
+            "usage": {
+                "key": {
+                    "name": "カスタムキー",
+                    "description": "設定するカスタムマッチメイキングキー。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "カスタムマッチメイキングキーを設定します！"
+            }
+        }
+    },
+    "show": {
+        "config": {
+            "description": "パーティーから隠されたプレイヤーを表示するか、引数を指定していない場合は表示します。",
+            "usage": {
+                "query": {
+                    "name": "メンバー名またはID",
+                    "description": "表示する当事者のメンバーの名前またはID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "複数の友達を見つけました：",
+                "member_not_found": "メンバー{{query}}見つかりません！",
+                "member_not_at_party": "あなたは私のパーティーのメンバーではありません。",
+                "success": "表示{{name}}！"
+            }
+        }
+    },
+    "show_all": {
+        "config": {
+            "description": "パーティーのすべての隠されたプレイヤーを表示します。"
+        },
+        "run": {
+            "msg": {
+                "success": "すべてのメンバーを見せました！"
+            }
+        }
+    },
+    "sit_in": {
+        "config": {
+            "description": "州を参加するように設定します。"
+        },
+        "run": {
+            "msg": {
+                "success": "座って..."
+            }
+        }
+    },
+    "sit_out": {
+        "config": {
+            "description": "州を参加しないように設定します。"
+        },
+        "run": {
+            "msg": {
+                "success": "座っている..."
+            }
+        }
+    },
+    "unmatch": {
+        "config": {
+            "description": "状態をゲームをプレイしないように設定します。"
+        },
+        "run": {
+            "msg": {
+                "success": "プレイ状態を削除しました！"
+            }
+        }
+    },
+    "unready": {
+        "config": {
+            "description": "状態を準備ができていないように設定します。"
+        },
+        "run": {
+            "msg": {
+                "success": "準備ができていない！"
+            }
+        }
+    }
 }
