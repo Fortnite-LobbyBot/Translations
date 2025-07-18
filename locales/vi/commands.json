@@ -1,1307 +1,1306 @@
 {
-	"handler": {
-		"errors": {
-			"only_for_party_members": "Lệnh này chỉ có sẵn cho các thành viên trong nhóm của tôi.",
-			"only_for_private_messages": "Lệnh này chỉ có sẵn trong các tin nhắn riêng tư.",
-			"need_party_leader": "Tôi cần phải là người lãnh đạo đảng để thực hiện lệnh này!",
-			"only_for_owners": "Lệnh này chỉ có sẵn cho chủ sở hữu bot.",
-			"only_for_admins": "Lệnh này chỉ có sẵn cho quản trị viên bot.",
-			"only_for_whitelist": "Lệnh này chỉ có sẵn cho người dùng trên danh sách trắng của bot."
-		}
-	},
-	"all_items": {
-		"config": {
-			"description": "Hiển thị tất cả các mỹ phẩm của trò chơi, một bộ lọc tùy chọn có thể được thêm vào và bạn có thể dừng lại với lệnh \"stop\".",
-			"usage": {
-				"filter": {
-					"name": "Lọc",
-					"options": {
-						"outfits": "Trang phục",
-						"backpacks": "Ba lô",
-						"emojis": "Biểu tượng cảm xúc",
-						"emotes": "Cảm xúc",
-						"pickaxes": "Pickaxes",
-						"shoes": "Đôi giày"
-					},
-					"description": "Bộ lọc được đặt bằng cách hiển thị các mục."
-				},
-				"random_order": {
-					"name": "Thứ tự ngẫu nhiên",
-					"description": "Sử dụng một đơn đặt hàng ngẫu nhiên thay vì đặt hàng theo mới nhất trước.",
-					"options": {
-						"yes": "Đúng",
-						"no": "KHÔNG"
-					}
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"no_items": "Không thể lấy các mặt hàng.",
-				"items_already_displaying": "Mỹ phẩm đã được hiển thị, trước tiên nó phải được dừng lại với lệnh \"stop\".",
-				"setting_items": "Đặt tất cả các mục trò chơi ... {{filtered}}",
-				"filtered_by": "(Được lọc bởi {{filter}})",
-				"items_showed": "Tôi đã hoàn thành hiển thị tất cả các mặt hàng ..."
-			}
-		}
-	},
-	"backpack": {
-		"config": {
-			"description": "Đặt ba lô của bot.",
-			"usage": {
-				"query": {
-					"name": "Tên ba lô hoặc ID",
-					"description": "Tên hoặc ID của ba lô sẽ được đặt."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"backpack_not_found": "Ba lô {{item}} Không tìm thấy!",
-				"backpack_changed": "Đặt ba lô thành {{name}}! ({{id}})"
-			}
-		}
-	},
-	"backpack_variants": {
-		"config": {
-			"description": "Đặt các biến thể của ba lô."
-		},
-		"run": {
-			"msg": {
-				"backpack_not_found": "Bot không có ba lô!",
-				"invalid_backpack": "Ba lô không hợp lệ!",
-				"variants_not_founded": "Ba lô này không có biến thể!",
-				"variants_select": "Gửi biến thể bạn muốn chọn cho {{type}}",
-				"variants_changed": "Đặt các biến thể ba lô!"
-			}
-		}
-	},
-	"banner": {
-		"config": {
-			"description": "Đặt biểu ngữ của bot.",
-			"usage": {
-				"query": {
-					"name": "Tên biểu ngữ hoặc ID",
-					"description": "Tên hoặc ID của biểu ngữ để đặt."
-				},
-				"color": {
-					"name": "Tên màu hoặc ID",
-					"description": "Tên hoặc id của màu để đặt."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"banner_not_found": "Banner {{item}} Không tìm thấy!",
-				"color_not_found": "Màu {{item}} không tìm thấy!",
-				"banner_changed": "Đặt biểu ngữ thành {{name}}! ({{id}})"
-			}
-		}
-	},
-	"clear_backpack": {
-		"config": {
-			"description": "Loại bỏ ba lô của bot."
-		},
-		"run": {
-			"msg": {
-				"backpack_cleared": "Backpack đã xóa!"
-			}
-		}
-	},
-	"clear_emote": {
-		"config": {
-			"description": "Ngừng điệu nhảy của bot."
-		},
-		"run": {
-			"msg": {
-				"emote_cleared": "Đã xóa Emote!"
-			}
-		}
-	},
-	"clear_shoes": {
-		"config": {
-			"description": "Loại bỏ đôi giày của bot."
-		},
-		"run": {
-			"msg": {
-				"shoes_cleared": "Xóa giày!"
-			}
-		}
-	},
-	"copy": {
-		"config": {
-			"description": "Sao chép mỹ phẩm của người dùng hoặc sao chép mỹ phẩm cho bạn nếu không chỉ định các đối số.",
-			"usage": {
-				"filter": {
-					"name": "Lọc",
-					"options": {
-						"all": "Tất cả",
-						"outfit": "Trang phục",
-						"backpack": "Balo",
-						"emoji": "Biểu tượng cảm xúc",
-						"emote": "Emote",
-						"pickaxe": "Pickaxe",
-						"shoes": "Đôi giày"
-					},
-					"description": "Bộ lọc để đặt khi sao chép mỹ phẩm."
-				},
-				"query": {
-					"name": "Tên thành viên hoặc ID",
-					"description": "Tên hoặc ID của thành viên để sao chép mỹ phẩm."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"members_found": "Tìm thấy nhiều thành viên:",
-				"member_not_found": "Thành viên {{member}} Không tìm thấy!",
-				"member_not_at_party": "Bạn không phải là thành viên trong nhóm của tôi.",
-				"member_copied": "Đã sao chép {{member}}!"
-			}
-		}
-	},
-	"cosmetic": {
-		"config": {
-			"description": "Đặt mỹ phẩm của bot.",
-			"usage": {
-				"query": {
-					"name": "Tên hoặc ID mỹ phẩm",
-					"description": "Tên hoặc id của mỹ phẩm để đặt."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"cosmetic_not_found": "Mỹ phẩm {{query}} không tìm thấy!",
-				"cosmetic_changed": "Đặt {{type}} thành {{name}}! ({{id}})"
-			}
-		}
-	},
-	"cosmetic_info": {
-		"config": {
-			"description": "Hiển thị thông tin về một mỹ phẩm.",
-			"usage": {
-				"query": {
-					"name": "Tên hoặc ID mỹ phẩm",
-					"description": "Tên hoặc id của mỹ phẩm để đặt."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"cosmetic_not_found": "Mỹ phẩm {{query}} không tìm thấy!"
-			}
-		}
-	},
-	"emoji": {
-		"config": {
-			"description": "Đặt biểu tượng cảm xúc của bot.",
-			"usage": {
-				"query": {
-					"name": "Tên hoặc ID biểu tượng cảm xúc",
-					"description": "Tên hoặc ID của biểu tượng cảm xúc để đặt."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"emoji_not_found": "Emoji {{query}} Không tìm thấy!",
-				"emoji_changed": "Đặt biểu tượng cảm xúc thành {{name}}! ({{id}})"
-			}
-		}
-	},
-	"emote": {
-		"config": {
-			"description": "Đặt emote của bot.",
-			"usage": {
-				"query": {
-					"name": "Tên hoặc ID emote",
-					"description": "Tên hoặc id của emote để đặt."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"emote_not_found": "Emote {{query}} Không tìm thấy!",
-				"emote_changed": "Đặt Emoji Emote thành {{name}}! ({{id}})"
-			}
-		}
-	},
-	"mimic": {
-		"config": {
-			"description": "Giống như người dùng hoặc giống như bạn nếu không chỉ định các đối số. Sử dụng \"stop\" để dừng lệnh.",
-			"usage": {
-				"filter": {
-					"name": "Lọc",
-					"options": {
-						"all": "Tất cả",
-						"changes": "Thay đổi",
-						"outfits": "Trang phục",
-						"backpacks": "Ba lô",
-						"emojis": "Biểu tượng cảm xúc",
-						"emotes": "Cảm xúc",
-						"pickaxes": "Pickaxes",
-						"shoes": "Đôi giày"
-					},
-					"description": "Bộ lọc để đặt khi bắt chước mỹ phẩm."
-				},
-				"query": {
-					"name": "Tên thành viên hoặc ID",
-					"description": "Tên hoặc ID của thành viên để bắt chước mỹ phẩm."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"members_found": "Tìm thấy nhiều thành viên:",
-				"member_not_found": "Thành viên {{query}} không tìm thấy!",
-				"member_not_at_party": "Bạn không phải là thành viên trong nhóm của tôi.",
-				"mimic_enabled": "Đã bật bắt chước cho {{member}} {{filter}}!",
-				"filter": "với bộ lọc {{filter}}"
-			}
-		}
-	},
-	"new_items": {
-		"config": {
-			"description": "Hiển thị các mỹ phẩm mới nhất được thêm vào trò chơi, một bộ lọc tùy chọn có thể được thêm vào và bạn có thể dừng lại với lệnh \"stop\".",
-			"usage": {
-				"filter": {
-					"name": "Lọc",
-					"options": {
-						"outfits": "Trang phục",
-						"backpacks": "Ba lô",
-						"emojis": "Biểu tượng cảm xúc",
-						"emotes": "Cảm xúc",
-						"pickaxes": "Pickaxes",
-						"shoes": "Đôi giày"
-					},
-					"description": "Bộ lọc được đặt bằng cách hiển thị các mục."
-				},
-				"random_order": {
-					"name": "Thứ tự ngẫu nhiên",
-					"description": "Sử dụng một đơn đặt hàng ngẫu nhiên thay vì đặt hàng theo mới nhất trước.",
-					"options": {
-						"yes": "Đúng",
-						"no": "KHÔNG"
-					}
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"type_error": "Nếu bạn muốn có một bộ lọc, hãy đảm bảo là hợp lệ, chỉ trang phục, ba lô, biểu tượng cảm xúc, emote, pickaxes hoặc giày.",
-				"cosmetic_fetch_error": "Không thể tìm nạp gần đây thêm mỹ phẩm.",
-				"already_showing": "Mỹ phẩm đã được hiển thị, trước tiên nó phải được dừng lại với lệnh \"stop\".",
-				"showing_cosmetics": "Đặt tất cả các mục được thêm gần đây ... {{filter}}",
-				"filter": "(Được lọc bởi {{filter}})",
-				"ended": "Hoàn thành hiển thị tất cả các mục được thêm gần đây ..."
-			}
-		}
-	},
-	"outfit": {
-		"config": {
-			"description": "Đặt trang phục của bot.",
-			"usage": {
-				"query": {
-					"name": "Tên hoặc ID trang phục",
-					"description": "Tên hoặc ID của trang phục sẽ được đặt."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"outfit_not_found": "Trang phục {{query}} Không tìm thấy!",
-				"outfit_changed": "Đặt trang phục thành {{name}}! ({{id}})"
-			}
-		}
-	},
-	"outfit_variants": {
-		"config": {
-			"description": "Đặt các biến thể của trang phục."
-		},
-		"run": {
-			"msg": {
-				"outfit_not_found": "Bot không có trang phục!",
-				"invalid_outfit": "Trang phục không hợp lệ!",
-				"variants_not_found": "Trang phục này không có biến thể!",
-				"variants_select": "Gửi biến thể bạn muốn chọn cho {{type}}",
-				"changed": "Đặt các biến thể trang phục!"
-			}
-		}
-	},
-	"perfect_timing": {
-		"config": {
-			"description": "Đặt mỹ phẩm của bot đồng bộ hóa.",
-			"usage": {
-				"query": {
-					"name": "Tên hoặc ID mỹ phẩm",
-					"description": "Tên hoặc id của mỹ phẩm để đặt."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"cosmetic_not_found": "Mỹ phẩm {{query}} không tìm thấy!",
-				"perfect_timing_success": "Đồng bộ hóa để thực hiện một thời gian hoàn hảo ...",
-				"perfect_timing_done": "Đồng bộ hóa {{value}} thành {{name}}! ({{id}})"
-			}
-		}
-	},
-	"pickaxe": {
-		"config": {
-			"description": "Đặt pickaxe của bot.",
-			"usage": {
-				"query": {
-					"name": "Tên hoặc ID Pickaxe",
-					"description": "Tên hoặc ID của bộ thu được được đặt."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"pickaxe_not_found": "Pickaxe {{query}} Không tìm thấy!",
-				"pickaxe_changed": "Đặt pickaxe thành {{name}}! ({{id}})"
-			}
-		}
-	},
-	"pickaxe_variants": {
-		"config": {
-			"description": "Đặt biến thể của Pickaxe."
-		},
-		"run": {
-			"msg": {
-				"pickaxe_not_found": "Bot không có pickaxe!",
-				"invalid_pickaxe": "Pickaxe không hợp lệ!",
-				"variants_not_found": "Pickaxe này không có biến thể!",
-				"variants_select": "Gửi biến thể bạn muốn chọn cho {{type}}",
-				"changed": "Đặt các biến thể Pickaxe!"
-			}
-		}
-	},
-	"preset": {
-		"config": {
-			"description": "Đặt cài đặt trước của bot. Sử dụng \"none\" để loại bỏ mỹ phẩm.",
-			"usage": {
-				"outfit": {
-					"name": "ID trang phục",
-					"description": "ID của trang phục."
-				},
-				"backpack": {
-					"name": "ID ba lô",
-					"description": "ID của ba lô."
-				},
-				"pickaxe": {
-					"name": "ID Pickaxe",
-					"description": "ID của pickaxe."
-				},
-				"emote": {
-					"name": "ID emote",
-					"description": "ID của emote."
-				},
-				"shoes": {
-					"name": "ID giày",
-					"description": "ID của đôi giày."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"preset_changed": "Đặt cài đặt trước!"
-			}
-		}
-	},
-	"shoes": {
-		"config": {
-			"description": "Đặt giày của bot.",
-			"usage": {
-				"query": {
-					"name": "Tên hoặc ID giày",
-					"description": "Tên hoặc ID của đôi giày sẽ được đặt."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"shoes_not_found": "Giày {{query}} Không tìm thấy!",
-				"shoes_changed": "Đặt giày thành {{name}}! ({{id}})"
-			}
-		}
-	},
-	"shoe_variants": {
-		"config": {
-			"description": "Đặt các biến thể giày."
-		},
-		"run": {
-			"msg": {
-				"shoes_not_found": "Bot không có giày!",
-				"invalid_shoes": "Giày không hợp lệ!",
-				"variants_not_found": "Đôi giày này không có biến thể!",
-				"variants_select": "Gửi biến thể bạn muốn chọn cho {{type}}",
-				"changed": "Đặt các biến thể giày!"
-			}
-		}
-	},
-	"shop_items": {
-		"config": {
-			"description": "Hiển thị mỹ phẩm từ cửa hàng vật phẩm, một bộ lọc tùy chọn có thể được thêm vào và bạn có thể dừng lại với lệnh \"stop\".",
-			"usage": {
-				"filter": {
-					"name": "Lọc",
-					"options": {
-						"outfits": "Trang phục",
-						"backpacks": "Ba lô",
-						"emojis": "Biểu tượng cảm xúc",
-						"emotes": "Cảm xúc",
-						"pickaxes": "Pickaxes",
-						"shoes": "Đôi giày"
-					},
-					"description": "Bộ lọc được đặt bằng cách hiển thị các mục."
-				},
-				"random_order": {
-					"name": "Thứ tự ngẫu nhiên",
-					"description": "Sử dụng một đơn đặt hàng ngẫu nhiên thay vì đặt hàng theo mới nhất trước.",
-					"options": {
-						"yes": "Đúng",
-						"no": "KHÔNG"
-					}
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"invalid_type": "Nếu bạn muốn có một bộ lọc, hãy đảm bảo là hợp lệ, chỉ trang phục, ba lô, biểu tượng cảm xúc, emote, pickaxes hoặc giày.",
-				"fetch_failed": "Không thể lấy các mặt hàng cửa hàng.",
-				"already_displaying": "Mỹ phẩm đã được hiển thị, trước tiên nó phải được dừng lại với lệnh \"stop\".",
-				"showing_items": "Đặt tất cả các mặt hàng trong cửa hàng ... {{filter}}",
-				"filter": "(Được lọc bởi {{query}})",
-				"ended": "Tôi đã hoàn thành hiển thị tất cả các mặt hàng trong cửa hàng ..."
-			}
-		}
-	},
-	"stop": {
-		"config": {
-			"description": "Ngừng hoạt động đang chờ xử lý."
-		},
-		"run": {
-			"msg": {
-				"stopped_items": "Ngừng hiển thị các mặt hàng!",
-				"stopped_mimic": "Dừng bắt chước!",
-				"stopped_emote": "Đã dừng lại!",
-				"nothing_to_stop": "Không có gì để dừng lại!"
-			}
-		}
-	},
-	"accept_all_friends": {
-		"config": {
-			"description": "Chấp nhận tất cả những người bạn đang chờ xử lý của bot."
-		},
-		"run": {
-			"msg": {
-				"accepting_friends": "Chấp nhận tất cả những người bạn đang chờ xử lý!",
-				"accepted_friends": "Được chấp nhận {{count}} bạn bè!"
-			}
-		}
-	},
-	"accept_friend": {
-		"config": {
-			"description": "Chấp nhận một yêu cầu kết bạn.",
-			"usage": {
-				"query": {
-					"name": "Tên bạn bè đang chờ xử lý hoặc ID",
-					"description": "Tên hoặc ID của người bạn đang chờ chấp nhận."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "Tìm thấy nhiều người bạn:",
-				"friends_not_found": "Bạn {{query}} không tìm thấy!",
-				"self_request": "Yêu cầu kết bạn đang chờ xử lý là của tôi!",
-				"error": "Bạn bè đang chờ xử lý không được chấp nhận!",
-				"request_accepted": "Bạn bè đang chờ xử lý {{name}} được chấp nhận thành công!"
-			}
-		}
-	},
-	"add_friend": {
-		"config": {
-			"description": "Gửi yêu cầu kết bạn cho người dùng hoặc chấp nhận yêu cầu kết bạn.",
-			"usage": {
-				"query": {
-					"name": "Tên người dùng hoặc ID",
-					"description": "Tên hoặc ID của người dùng để thêm."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "Tìm thấy nhiều người bạn:",
-				"friends_not_found": "Bạn {{query}} không tìm thấy!",
-				"already_friends": "Đã là một người bạn!",
-				"error": "Không thể thêm người dùng!",
-				"request_sent": "Yêu cầu kết bạn được gửi đến {{name}}"
-			}
-		}
-	},
-	"block_user": {
-		"config": {
-			"description": "Chặn người dùng.",
-			"usage": {
-				"query": {
-					"name": "Tên người dùng hoặc ID",
-					"description": "Tên hoặc ID của người dùng để chặn."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_users_found": "Tìm thấy nhiều người dùng:",
-				"user_not_found": "Người dùng {{query}} không tìm thấy!",
-				"error": "Không thể chặn {{name}}!",
-				"user_blocked": "Người dùng {{name}} bị chặn thành công!"
-			}
-		}
-	},
-	"decline_all_friends": {
-		"config": {
-			"description": "Từ chối tất cả những người bạn đang chờ xử lý của bot."
-		},
-		"run": {
-			"msg": {
-				"declining_friends": "Từ chối tất cả những người bạn đang chờ xử lý!",
-				"declined_friends": "Từ chối {{count}} bạn bè!"
-			}
-		}
-	},
-	"decline_friend": {
-		"config": {
-			"description": "Từ chối hoặc hủy bỏ một yêu cầu kết bạn.",
-			"usage": {
-				"query": {
-					"name": "Tên bạn bè đang chờ xử lý hoặc ID",
-					"description": "Tên hoặc ID của người bạn đang chờ từ chối hoặc hủy bỏ."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "Tìm thấy nhiều người bạn:",
-				"friends_not_found": "Bạn {{query}} không tìm thấy!",
-				"error": "Bạn bè đang chờ xử lý không được gỡ bỏ!",
-				"request_sent": "Bạn bè đang chờ xử lý {{name}} đã bị xóa thành công!"
-			}
-		}
-	},
-	"friend_count": {
-		"config": {
-			"description": "Hiển thị số lượng bạn bè của bot."
-		},
-		"run": {
-			"msg": {
-				"info": "Tôi có {{friends}} bạn bè, {{pending}}"
-			}
-		}
-	},
-	"invite": {
-		"config": {
-			"description": "Mời một người bạn hoặc bạn đến bữa tiệc.",
-			"usage": {
-				"query": {
-					"name": "Tên hoặc ID bạn bè",
-					"description": "Tên hoặc ID của người bạn để mời."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"alone": "Trong một bữa tiệc với tôi, người dùng để mời là bắt buộc.",
-				"multiple_friends_found": "Tìm thấy nhiều người bạn:",
-				"friends_not_found": "Bạn {{query}} không tìm thấy!",
-				"already_on_party": "{{name}} đã có trong bữa tiệc của tôi!",
-				"invite_error": "Không thể gửi lời mời đến {{name}}!",
-				"invite_sent": "Lời mời được gửi đến {{name}}!"
-			}
-		}
-	},
-	"join": {
-		"config": {
-			"description": "Tham gia bữa tiệc của bạn hoặc một số bữa tiệc của người dùng.",
-			"usage": {
-				"query": {
-					"name": "Tên hoặc ID bạn bè",
-					"description": "Tên hoặc ID của người bạn để tham gia."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"invalid_param": "Bạn cần phải là bạn của tôi hoặc chỉ định một người bạn!",
-				"multiple_friends_found": "Tìm thấy nhiều người bạn:",
-				"friend_not_found": "Bạn {{query}} không tìm thấy!",
-				"already_on_party": "Bạn đã ở trong bữa tiệc của tôi!",
-				"party_error": "{{name}} không có một bữa tiệc!",
-				"join_request_error": "Không thể gửi yêu cầu tham gia đến {{name}}!",
-				"joined": "Đã tham gia vào {{name}}!",
-				"join_request_sent": "Tham gia yêu cầu được gửi đến {{name}}!"
-			}
-		}
-	},
-	"promote": {
-		"config": {
-			"description": "Thúc đẩy thành viên hoặc khiến bạn lãnh đạo nếu bạn không chỉ định các đối số.",
-			"usage": {
-				"query": {
-					"name": "Tên thành viên hoặc ID",
-					"description": "Tên hoặc id của bên để thăng thiên."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "Tìm thấy nhiều người bạn:",
-				"member_not_found": "Thành viên {{query}} không tìm thấy!",
-				"member_not_at_party": "Bạn không phải là thành viên trong nhóm của tôi.",
-				"member_promoted": "Được thăng chức {{name}}!"
-			}
-		}
-	},
-	"remove_all_friends": {
-		"config": {
-			"description": "Loại bỏ tất cả những người bạn của bot. Quản trị viên và chủ sở hữu bị loại trừ."
-		},
-		"run": {
-			"msg": {
-				"removing_friends": "Loại bỏ tất cả bạn bè!",
-				"removed_friends": "Đã xóa {{count}} bạn bè!"
-			}
-		}
-	},
-	"remove_friend": {
-		"config": {
-			"description": "Loại bỏ bạn của một bot.",
-			"usage": {
-				"query": {
-					"name": "Tên hoặc ID bạn bè",
-					"description": "Tên hoặc ID của người bạn để xóa."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "Tìm thấy nhiều người bạn:",
-				"friend_not_found": "Bạn {{query}} không tìm thấy!",
-				"error": "Không thể xóa {{name}}!",
-				"friend_removed": "Bạn {{name}} đã xóa thành công!"
-			}
-		}
-	},
-	"unblock_all_users": {
-		"config": {
-			"description": "Chụp tất cả những người dùng bị chặn của bot."
-		},
-		"run": {
-			"msg": {
-				"removing_friends": "Bỏ chặn tất cả người dùng bị chặn!",
-				"removed_friends": "Bỏ chặn {{count}} Người dùng bị chặn!"
-			}
-		}
-	},
-	"unblock_user": {
-		"config": {
-			"description": "Bỏ chặn một người dùng.",
-			"usage": {
-				"query": {
-					"name": "Tên người dùng hoặc ID",
-					"description": "Tên hoặc ID của người dùng để bỏ chặn."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_users_found": "Tìm thấy nhiều người dùng:",
-				"user_not_found": "Người dùng {{query}} không tìm thấy!",
-				"error": "Không thể bỏ chặn {{name}}!",
-				"user_unblocked": "Người dùng {{name}} bỏ chặn thành công!"
-			}
-		}
-	},
-	"user_info": {
-		"config": {
-			"description": "Hiển thị thông tin của một người dùng được chỉ định.",
-			"usage": {
-				"query": {
-					"name": "Tên người dùng hoặc ID",
-					"description": "Tên hoặc ID của người dùng."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_users_found": "Tìm thấy nhiều người dùng:",
-				"user_not_found": "Người dùng {{query}} không tìm thấy!"
-			}
-		}
-	},
-	"eval": {
-		"run": {
-			"msg": {
-				"unauthorized_error": "Chỉ TNFangel có quyền truy cập vào lệnh này."
-			}
-		}
-	},
-	"help": {
-		"config": {
-			"description": "Hiển thị bảng trợ giúp và bảng lệnh.",
-			"usage": {
-				"query": {
-					"name": "Tên hoặc ID của lệnh",
-					"description": "Tên hoặc ID của lệnh để nhận trợ giúp chi tiết."
-				}
-			}
-		}
-	},
-	"message": {
-		"config": {
-			"description": "Gửi một tin nhắn cho bữa tiệc.",
-			"usage": {
-				"message": {
-					"name": "Tin nhắn",
-					"description": "Thông điệp sẽ được gửi đến bữa tiệc."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "Đã gửi tin nhắn cho bữa tiệc"
-			}
-		}
-	},
-	"ping": {
-		"config": {
-			"description": "Cho thấy độ trễ của bot."
-		},
-		"run": {
-			"msg": {
-				"measuring": "Đo lường ...",
-				"info": "Pong! {{time}} MS"
-			}
-		}
-	},
-	"prev": {
-		"config": {
-			"description": "Thực thi lệnh trước đó."
-		},
-		"run": {
-			"msg": {
-				"not_found": "Một lệnh trước đó đã không được thực thi!"
-			}
-		}
-	},
-	"restart_bot": {
-		"config": {
-			"description": "Khởi động lại bot hiện tại."
-		},
-		"run": {
-			"msg": {
-				"success": "Bot đang khởi động lại ngay bây giờ!"
-			}
-		}
-	},
-	"restart_category": {
-		"config": {
-			"description": "Khởi động lại danh mục hiện tại."
-		},
-		"run": {
-			"msg": {
-				"success": "Các thể loại đang khởi động lại ngay bây giờ!"
-			}
-		}
-	},
-	"restart_shard": {
-		"config": {
-			"description": "Khởi động lại Shard hiện tại."
-		},
-		"run": {
-			"msg": {
-				"success": "Shard đang khởi động lại ngay bây giờ!",
-				"error": "Xin lỗi, bot này không chạy bên trong một mảnh vỡ."
-			}
-		}
-	},
-	"send": {
-		"config": {
-			"description": "Gửi một lệnh đến một chỉ định bot.",
-			"usage": {
-				"bot": {
-					"name": "ID bot",
-					"description": "ID bot để gửi lệnh."
-				},
-				"command": {
-					"name": "Yêu cầu",
-					"description": "Lệnh sẽ được thực thi trong bot."
-				},
-				"args": {
-					"name": "Lập luận",
-					"description": "Các đối số của lệnh được yêu cầu."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"sending_command": "Gửi lệnh đến bot {{user}}"
-			}
-		}
-	},
-	"send_all": {
-		"config": {
-			"description": "Gửi một lệnh cho tất cả các bot.",
-			"usage": {
-				"command": {
-					"name": "Yêu cầu",
-					"description": "Lệnh sẽ được thực thi trong bot."
-				},
-				"args": {
-					"name": "Lập luận",
-					"description": "Các đối số của lệnh được yêu cầu."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"sending_command": "Gửi lệnh đến tất cả các bot ..."
-			}
-		}
-	},
-	"send_category": {
-		"config": {
-			"description": "Gửi lệnh đến danh mục của bot.",
-			"usage": {
-				"command": {
-					"name": "Yêu cầu",
-					"description": "Lệnh sẽ được thực thi trong bot."
-				},
-				"args": {
-					"name": "Lập luận",
-					"description": "Các đối số của lệnh được yêu cầu."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"sending_command": "Gửi lệnh đến tất cả các bot trong mảnh vỡ của tôi ...",
-				"error": "Xin lỗi, bot này không chạy bên trong một danh mục."
-			}
-		}
-	},
-	"send_number": {
-		"config": {
-			"description": "Gửi một lệnh đến một số lượng bot chỉ định.",
-			"usage": {
-				"number": {
-					"name": "Số lượng bot",
-					"description": "Số lượng bot để gửi lệnh."
-				},
-				"command": {
-					"name": "Yêu cầu",
-					"description": "Lệnh sẽ được thực thi trong bot."
-				},
-				"args": {
-					"name": "Lập luận",
-					"description": "Các đối số của lệnh được yêu cầu."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"count_negative": "Số phải lớn hơn 0!",
-				"sending_command": "Gửi lệnh đến {{number}} bots ..."
-			}
-		}
-	},
-	"send_party": {
-		"config": {
-			"description": "Gửi một lệnh cho tất cả các bot có cùng một bên.",
-			"usage": {
-				"command": {
-					"name": "Yêu cầu",
-					"description": "Lệnh sẽ được thực thi trong bot."
-				},
-				"args": {
-					"name": "Lập luận",
-					"description": "Các đối số của lệnh được yêu cầu."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"sending_command": "Gửi lệnh cho tất cả các bot trong bữa tiệc của tôi ..."
-			}
-		}
-	},
-	"send_shard": {
-		"config": {
-			"description": "Gửi lệnh đến mảnh vỡ của bot.",
-			"usage": {
-				"command": {
-					"name": "Yêu cầu",
-					"description": "Lệnh sẽ được thực thi trong bot."
-				},
-				"args": {
-					"name": "Lập luận",
-					"description": "Các đối số của lệnh được yêu cầu."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"sending_command": "Gửi lệnh đến tất cả các bot trong mảnh vỡ của tôi ..."
-			}
-		}
-	},
-	"set_status": {
-		"config": {
-			"description": "Đặt trạng thái bot",
-			"usage": {
-				"status": {
-					"name": "Trạng thái",
-					"description": "Tình trạng mới của bot."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "Trạng thái đặt thành công!"
-			}
-		}
-	},
-	"whisper": {
-		"config": {
-			"description": "Gửi tin nhắn riêng cho một người bạn.",
-			"usage": {
-				"query": {
-					"name": "Tên hoặc ID bạn bè",
-					"description": "Tên hoặc ID của người bạn để gửi tin nhắn riêng tư."
-				},
-				"message": {
-					"name": "Tin nhắn",
-					"description": "Tin nhắn để gửi cho người bạn."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "Tìm thấy nhiều người bạn:",
-				"friend_not_found": "Bạn {{query}} không tìm thấy!",
-				"whisper_sent": "Đã gửi đến {{name}}!"
-			}
-		}
-	},
-	"bp_level": {
-		"config": {
-			"description": "Đặt cấp độ Battle Pass của bot.",
-			"usage": {
-				"level": {
-					"name": "Mức độ",
-					"description": "Mức độ của trận chiến được thiết lập."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"bp_level_set": "Đặt cấp độ Battle Pass thành {{level}}!"
-			}
-		}
-	},
-	"clear_custom_key": {
-		"config": {
-			"description": "Xóa khóa mai mối tùy chỉnh."
-		},
-		"run": {
-			"msg": {
-				"success": "Xóa khóa mai mối tùy chỉnh!"
-			}
-		}
-	},
-	"crowns": {
-		"config": {
-			"description": "Đặt vương miện bot.",
-			"usage": {
-				"crowns": {
-					"name": "Vương miện",
-					"description": "Các vương miện để thiết lập."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "Đặt vương miện thành {{crowns}}!"
-			}
-		}
-	},
-	"hide": {
-		"config": {
-			"description": "Ẩn một người chơi khỏi bữa tiệc hoặc che giấu bạn nếu bạn không chỉ định các đối số.",
-			"usage": {
-				"query": {
-					"name": "Tên thành viên hoặc ID",
-					"description": "Tên hoặc ID của thành viên của bên để ẩn."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "Tìm thấy nhiều người bạn:",
-				"member_not_found": "Thành viên {{query}} không tìm thấy!",
-				"member_not_at_party": "Bạn không phải là thành viên trong nhóm của tôi.",
-				"success": "Ẩn {{name}}!"
-			}
-		}
-	},
-	"hide_all": {
-		"config": {
-			"description": "Che giấu tất cả các cầu thủ trong bữa tiệc."
-		},
-		"run": {
-			"msg": {
-				"success": "Ẩn tất cả các thành viên!"
-			}
-		}
-	},
-	"kick": {
-		"config": {
-			"description": "Kick là một người chơi từ bữa tiệc.",
-			"usage": {
-				"query": {
-					"name": "Tên thành viên hoặc ID",
-					"description": "Tên hoặc ID của thành viên của đảng để đá."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "Tìm thấy nhiều người bạn:",
-				"member_not_found": "Thành viên {{query}} không tìm thấy!",
-				"success": "Đá {{name}}!"
-			}
-		}
-	},
-	"kick_all": {
-		"config": {
-			"description": "Đá tất cả các cầu thủ trong bữa tiệc."
-		},
-		"run": {
-			"msg": {
-				"user_kicked": "Đá {{name}}!",
-				"success": "Hoàn thành đá tất cả các thành viên!"
-			}
-		}
-	},
-	"leave": {
-		"config": {
-			"description": "Bot rời khỏi bữa tiệc."
-		},
-		"run": {
-			"msg": {
-				"success": "Tạm biệt!"
-			}
-		}
-	},
-	"level": {
-		"config": {
-			"description": "Đặt cấp độ bot.",
-			"usage": {
-				"level": {
-					"name": "Mức độ",
-					"description": "Mức độ được thiết lập."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "Đặt cấp độ thành {{level}}!"
-			}
-		}
-	},
-	"match": {
-		"config": {
-			"description": "Đặt nhà nước để chơi một trò chơi.",
-			"usage": {
-				"number": {
-					"name": "Số lượng người chơi",
-					"description": "Số lượng người chơi trong trò chơi."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "Đặt để chơi trạng thái!"
-			}
-		}
-	},
-	"party_info": {
-		"config": {
-			"description": "Hiển thị thông tin về bữa tiệc."
-		}
-	},
-	"playlist": {
-		"config": {
-			"description": "Đặt danh sách phát của bữa tiệc.",
-			"usage": {
-				"query": {
-					"name": "Tên hoặc ID của danh sách phát",
-					"description": "Tên hoặc ID của danh sách phát được đặt."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"error": "Cài đặt lỗi danh sách phát!",
-				"success": "Đặt danh sách phát thành {{query}}!"
-			}
-		}
-	},
-	"privacy": {
-		"config": {
-			"description": "Đặt sự riêng tư của bên.",
-			"usage": {
-				"privacy": {
-					"name": "Sự riêng tư",
-					"options": {
-						"public": "Công cộng",
-						"private": "Riêng tư"
-					},
-					"description": "Sự riêng tư của bên để thiết lập."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "Đặt quyền riêng tư của bên thành {{privacy}}!",
-				"error": "Quyền riêng tư không hợp lệ, phải công khai hoặc riêng tư!"
-			}
-		}
-	},
-	"rank": {
-		"config": {
-			"description": "Đặt thứ hạng bot.",
-			"usage": {
-				"rank": {
-					"name": "Thứ hạng",
-					"description": "Thứ hạng để thiết lập."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "Đặt thứ hạng thành {{rank}}!"
-			}
-		}
-	},
-	"ready": {
-		"config": {
-			"description": "Đặt trạng thái để sẵn sàng."
-		},
-		"run": {
-			"msg": {
-				"warning": "CẢNH BÁO: Nếu bạn đang cố gắng bắt đầu mai mối, đừng sử dụng lệnh này! Chỉ cần tự mình sẵn sàng và tôi sẽ tự động đánh sẵn.",
-				"success": "Sẵn sàng!"
-			}
-		}
-	},
-	"say": {
-		"config": {
-			"description": "Gửi tin nhắn cho cuộc trò chuyện bên.",
-			"usage": {
-				"message": {
-					"name": "Tin nhắn",
-					"description": "Thông điệp sẽ được gửi đến bữa tiệc."
-				}
-			}
-		},
-		"run": {}
-	},
-	"set_custom_key": {
-		"config": {
-			"description": "Đặt khóa mai mối tùy chỉnh.",
-			"usage": {
-				"key": {
-					"name": "Khóa tùy chỉnh",
-					"description": "Khóa mai mối tùy chỉnh để đặt."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "Đặt khóa mai mối tùy chỉnh!"
-			}
-		}
-	},
-	"show": {
-		"config": {
-			"description": "Hiển thị một người chơi ẩn từ bữa tiệc hoặc hiển thị cho bạn nếu bạn không chỉ định các đối số.",
-			"usage": {
-				"query": {
-					"name": "Tên thành viên hoặc ID",
-					"description": "Tên hoặc ID của thành viên của bên để hiển thị."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "Tìm thấy nhiều người bạn:",
-				"member_not_found": "Thành viên {{query}} không tìm thấy!",
-				"member_not_at_party": "Bạn không phải là thành viên trong nhóm của tôi.",
-				"success": "Hiển thị {{name}}!"
-			}
-		}
-	},
-	"show_all": {
-		"config": {
-			"description": "Cho thấy tất cả các cầu thủ ẩn trong bữa tiệc."
-		},
-		"run": {
-			"msg": {
-				"success": "Hiển thị tất cả các thành viên!"
-			}
-		}
-	},
-	"sit_in": {
-		"config": {
-			"description": "Đặt nhà nước để tham gia."
-		},
-		"run": {
-			"msg": {
-				"success": "Ngồi trong ..."
-			}
-		}
-	},
-	"sit_out": {
-		"config": {
-			"description": "Đặt trạng thái không tham gia."
-		},
-		"run": {
-			"msg": {
-				"success": "Ngồi ra ngoài ..."
-			}
-		}
-	},
-	"unmatch": {
-		"config": {
-			"description": "Đặt nhà nước để không chơi một trò chơi."
-		},
-		"run": {
-			"msg": {
-				"success": "Đã loại bỏ trạng thái chơi!"
-			}
-		}
-	},
-	"unready": {
-		"config": {
-			"description": "Đặt trạng thái thành chưa sẵn sàng."
-		},
-		"run": {
-			"msg": {
-				"success": "Chưa sẵn sàng!"
-			}
-		}
-	}
+    "handler": {
+        "errors": {
+            "only_for_party_members": "Lệnh này chỉ có sẵn cho các thành viên trong nhóm của tôi.",
+            "only_for_private_messages": "Lệnh này chỉ có sẵn trong các tin nhắn riêng tư.",
+            "need_party_leader": "Tôi cần phải là người lãnh đạo đảng để thực hiện lệnh này!",
+            "only_for_owners": "Lệnh này chỉ có sẵn cho chủ sở hữu bot.",
+            "only_for_admins": "Lệnh này chỉ có sẵn cho quản trị viên bot.",
+            "only_for_whitelist": "Lệnh này chỉ có sẵn cho người dùng trên danh sách trắng của bot."
+        }
+    },
+    "all_items": {
+        "config": {
+            "description": "Hiển thị tất cả các mỹ phẩm của trò chơi, một bộ lọc tùy chọn có thể được thêm vào và bạn có thể dừng lại với lệnh \"stop\".",
+            "usage": {
+                "filter": {
+                    "name": "Lọc",
+                    "options": {
+                        "outfits": "Trang phục",
+                        "backpacks": "Ba lô",
+                        "emojis": "Biểu tượng cảm xúc",
+                        "emotes": "Cảm xúc",
+                        "pickaxes": "Pickaxes",
+                        "shoes": "Đôi giày"
+                    },
+                    "description": "Bộ lọc được đặt bằng cách hiển thị các mục."
+                },
+                "random_order": {
+                    "name": "Thứ tự ngẫu nhiên",
+                    "description": "Sử dụng một đơn đặt hàng ngẫu nhiên thay vì đặt hàng theo mới nhất trước.",
+                    "options": {
+                        "yes": "Đúng",
+                        "no": "KHÔNG"
+                    }
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "no_items": "Không thể lấy các mặt hàng.",
+                "items_already_displaying": "Mỹ phẩm đã được hiển thị, trước tiên nó phải được dừng lại với lệnh \"stop\".",
+                "setting_items": "Đặt tất cả các mục trò chơi ... {{filtered}}",
+                "filtered_by": "(Được lọc bởi {{filter}})",
+                "items_showed": "Tôi đã hoàn thành hiển thị tất cả các mặt hàng ..."
+            }
+        }
+    },
+    "backpack": {
+        "config": {
+            "description": "Đặt ba lô của bot.",
+            "usage": {
+                "query": {
+                    "name": "Tên ba lô hoặc ID",
+                    "description": "Tên hoặc ID của ba lô sẽ được đặt."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "backpack_not_found": "Ba lô {{item}} Không tìm thấy!",
+                "backpack_changed": "Đặt ba lô thành {{name}}! ({{id}})"
+            }
+        }
+    },
+    "backpack_variants": {
+        "config": {
+            "description": "Đặt các biến thể của ba lô."
+        },
+        "run": {
+            "msg": {
+                "backpack_not_found": "Bot không có ba lô!",
+                "invalid_backpack": "Ba lô không hợp lệ!",
+                "variants_not_founded": "Ba lô này không có biến thể!",
+                "variants_select": "Gửi biến thể bạn muốn chọn cho {{type}}",
+                "variants_changed": "Đặt các biến thể ba lô!"
+            }
+        }
+    },
+    "banner": {
+        "config": {
+            "description": "Đặt biểu ngữ của bot.",
+            "usage": {
+                "query": {
+                    "name": "Tên biểu ngữ hoặc ID",
+                    "description": "Tên hoặc ID của biểu ngữ để đặt."
+                },
+                "color": {
+                    "name": "Tên màu hoặc ID",
+                    "description": "Tên hoặc id của màu để đặt."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "banner_not_found": "Banner {{item}} Không tìm thấy!",
+                "color_not_found": "Màu {{item}} không tìm thấy!",
+                "banner_changed": "Đặt biểu ngữ thành {{name}}! ({{id}})"
+            }
+        }
+    },
+    "clear_backpack": {
+        "config": {
+            "description": "Loại bỏ ba lô của bot."
+        },
+        "run": {
+            "msg": {
+                "backpack_cleared": "Backpack đã xóa!"
+            }
+        }
+    },
+    "clear_emote": {
+        "config": {
+            "description": "Ngừng điệu nhảy của bot."
+        },
+        "run": {
+            "msg": {
+                "emote_cleared": "Đã xóa Emote!"
+            }
+        }
+    },
+    "clear_shoes": {
+        "config": {
+            "description": "Loại bỏ đôi giày của bot."
+        },
+        "run": {
+            "msg": {
+                "shoes_cleared": "Xóa giày!"
+            }
+        }
+    },
+    "copy": {
+        "config": {
+            "description": "Sao chép mỹ phẩm của người dùng hoặc sao chép mỹ phẩm cho bạn nếu không chỉ định các đối số.",
+            "usage": {
+                "filter": {
+                    "name": "Lọc",
+                    "options": {
+                        "all": "Tất cả",
+                        "outfit": "Trang phục",
+                        "backpack": "Balo",
+                        "emoji": "Biểu tượng cảm xúc",
+                        "emote": "Emote",
+                        "pickaxe": "Pickaxe",
+                        "shoes": "Đôi giày"
+                    },
+                    "description": "Bộ lọc để đặt khi sao chép mỹ phẩm."
+                },
+                "query": {
+                    "name": "Tên thành viên hoặc ID",
+                    "description": "Tên hoặc ID của thành viên để sao chép mỹ phẩm."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "members_found": "Tìm thấy nhiều thành viên:",
+                "member_not_found": "Thành viên {{member}} Không tìm thấy!",
+                "member_not_at_party": "Bạn không phải là thành viên trong nhóm của tôi.",
+                "member_copied": "Đã sao chép {{member}}!"
+            }
+        }
+    },
+    "cosmetic": {
+        "config": {
+            "description": "Đặt mỹ phẩm của bot.",
+            "usage": {
+                "query": {
+                    "name": "Tên hoặc ID mỹ phẩm",
+                    "description": "Tên hoặc id của mỹ phẩm để đặt."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "cosmetic_not_found": "Mỹ phẩm {{query}} không tìm thấy!",
+                "cosmetic_changed": "Đặt {{type}} thành {{name}}! ({{id}})"
+            }
+        }
+    },
+    "cosmetic_info": {
+        "config": {
+            "description": "Hiển thị thông tin về một mỹ phẩm.",
+            "usage": {
+                "query": {
+                    "name": "Tên hoặc ID mỹ phẩm",
+                    "description": "Tên hoặc id của mỹ phẩm để đặt."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "cosmetic_not_found": "Mỹ phẩm {{query}} không tìm thấy!"
+            }
+        }
+    },
+    "emoji": {
+        "config": {
+            "description": "Đặt biểu tượng cảm xúc của bot.",
+            "usage": {
+                "query": {
+                    "name": "Tên hoặc ID biểu tượng cảm xúc",
+                    "description": "Tên hoặc ID của biểu tượng cảm xúc để đặt."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "emoji_not_found": "Emoji {{query}} Không tìm thấy!",
+                "emoji_changed": "Đặt biểu tượng cảm xúc thành {{name}}! ({{id}})"
+            }
+        }
+    },
+    "emote": {
+        "config": {
+            "description": "Đặt emote của bot.",
+            "usage": {
+                "query": {
+                    "name": "Tên hoặc ID emote",
+                    "description": "Tên hoặc id của emote để đặt."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "emote_not_found": "Emote {{query}} Không tìm thấy!",
+                "emote_changed": "Đặt Emoji Emote thành {{name}}! ({{id}})"
+            }
+        }
+    },
+    "mimic": {
+        "config": {
+            "description": "Giống như người dùng hoặc giống như bạn nếu không chỉ định các đối số. Sử dụng \"stop\" để dừng lệnh.",
+            "usage": {
+                "filter": {
+                    "name": "Lọc",
+                    "options": {
+                        "all": "Tất cả",
+                        "changes": "Thay đổi",
+                        "outfits": "Trang phục",
+                        "backpacks": "Ba lô",
+                        "emojis": "Biểu tượng cảm xúc",
+                        "emotes": "Cảm xúc",
+                        "pickaxes": "Pickaxes",
+                        "shoes": "Đôi giày"
+                    },
+                    "description": "Bộ lọc để đặt khi bắt chước mỹ phẩm."
+                },
+                "query": {
+                    "name": "Tên thành viên hoặc ID",
+                    "description": "Tên hoặc ID của thành viên để bắt chước mỹ phẩm."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "members_found": "Tìm thấy nhiều thành viên:",
+                "member_not_found": "Thành viên {{query}} không tìm thấy!",
+                "member_not_at_party": "Bạn không phải là thành viên trong nhóm của tôi.",
+                "mimic_enabled": "Đã bật bắt chước cho {{member}} {{filter}}!",
+                "filter": "với bộ lọc {{filter}}"
+            }
+        }
+    },
+    "new_items": {
+        "config": {
+            "description": "Hiển thị các mỹ phẩm mới nhất được thêm vào trò chơi, một bộ lọc tùy chọn có thể được thêm vào và bạn có thể dừng lại với lệnh \"stop\".",
+            "usage": {
+                "filter": {
+                    "name": "Lọc",
+                    "options": {
+                        "outfits": "Trang phục",
+                        "backpacks": "Ba lô",
+                        "emojis": "Biểu tượng cảm xúc",
+                        "emotes": "Cảm xúc",
+                        "pickaxes": "Pickaxes",
+                        "shoes": "Đôi giày"
+                    },
+                    "description": "Bộ lọc được đặt bằng cách hiển thị các mục."
+                },
+                "random_order": {
+                    "name": "Thứ tự ngẫu nhiên",
+                    "description": "Sử dụng một đơn đặt hàng ngẫu nhiên thay vì đặt hàng theo mới nhất trước.",
+                    "options": {
+                        "yes": "Đúng",
+                        "no": "KHÔNG"
+                    }
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "type_error": "Nếu bạn muốn có một bộ lọc, hãy đảm bảo là hợp lệ, chỉ trang phục, ba lô, biểu tượng cảm xúc, emote, pickaxes hoặc giày.",
+                "cosmetic_fetch_error": "Không thể tìm nạp gần đây thêm mỹ phẩm.",
+                "already_showing": "Mỹ phẩm đã được hiển thị, trước tiên nó phải được dừng lại với lệnh \"stop\".",
+                "showing_cosmetics": "Đặt tất cả các mục được thêm gần đây ... {{filter}}",
+                "filter": "(Được lọc bởi {{filter}})",
+                "ended": "Hoàn thành hiển thị tất cả các mục được thêm gần đây ..."
+            }
+        }
+    },
+    "outfit": {
+        "config": {
+            "description": "Đặt trang phục của bot.",
+            "usage": {
+                "query": {
+                    "name": "Tên hoặc ID trang phục",
+                    "description": "Tên hoặc ID của trang phục sẽ được đặt."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "outfit_not_found": "Trang phục {{query}} Không tìm thấy!",
+                "outfit_changed": "Đặt trang phục thành {{name}}! ({{id}})"
+            }
+        }
+    },
+    "outfit_variants": {
+        "config": {
+            "description": "Đặt các biến thể của trang phục."
+        },
+        "run": {
+            "msg": {
+                "outfit_not_found": "Bot không có trang phục!",
+                "invalid_outfit": "Trang phục không hợp lệ!",
+                "variants_not_found": "Trang phục này không có biến thể!",
+                "variants_select": "Gửi biến thể bạn muốn chọn cho {{type}}",
+                "changed": "Đặt các biến thể trang phục!"
+            }
+        }
+    },
+    "perfect_timing": {
+        "config": {
+            "description": "Đặt mỹ phẩm của bot đồng bộ hóa.",
+            "usage": {
+                "query": {
+                    "name": "Tên hoặc ID mỹ phẩm",
+                    "description": "Tên hoặc id của mỹ phẩm để đặt."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "cosmetic_not_found": "Mỹ phẩm {{query}} không tìm thấy!",
+                "perfect_timing_success": "Đồng bộ hóa để thực hiện một thời gian hoàn hảo ...",
+                "perfect_timing_done": "Đồng bộ hóa {{value}} thành {{name}}! ({{id}})"
+            }
+        }
+    },
+    "pickaxe": {
+        "config": {
+            "description": "Đặt pickaxe của bot.",
+            "usage": {
+                "query": {
+                    "name": "Tên hoặc ID Pickaxe",
+                    "description": "Tên hoặc ID của bộ thu được được đặt."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "pickaxe_not_found": "Pickaxe {{query}} Không tìm thấy!",
+                "pickaxe_changed": "Đặt pickaxe thành {{name}}! ({{id}})"
+            }
+        }
+    },
+    "pickaxe_variants": {
+        "config": {
+            "description": "Đặt biến thể của Pickaxe."
+        },
+        "run": {
+            "msg": {
+                "pickaxe_not_found": "Bot không có pickaxe!",
+                "invalid_pickaxe": "Pickaxe không hợp lệ!",
+                "variants_not_found": "Pickaxe này không có biến thể!",
+                "variants_select": "Gửi biến thể bạn muốn chọn cho {{type}}",
+                "changed": "Đặt các biến thể Pickaxe!"
+            }
+        }
+    },
+    "preset": {
+        "config": {
+            "description": "Đặt cài đặt trước của bot. Sử dụng \"none\" để loại bỏ mỹ phẩm.",
+            "usage": {
+                "outfit": {
+                    "name": "ID trang phục",
+                    "description": "ID của trang phục."
+                },
+                "backpack": {
+                    "name": "ID ba lô",
+                    "description": "ID của ba lô."
+                },
+                "pickaxe": {
+                    "name": "ID Pickaxe",
+                    "description": "ID của pickaxe."
+                },
+                "emote": {
+                    "name": "ID emote",
+                    "description": "ID của emote."
+                },
+                "shoes": {
+                    "name": "ID giày",
+                    "description": "ID của đôi giày."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "preset_changed": "Đặt cài đặt trước!"
+            }
+        }
+    },
+    "shoes": {
+        "config": {
+            "description": "Đặt giày của bot.",
+            "usage": {
+                "query": {
+                    "name": "Tên hoặc ID giày",
+                    "description": "Tên hoặc ID của đôi giày sẽ được đặt."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "shoes_not_found": "Giày {{query}} Không tìm thấy!",
+                "shoes_changed": "Đặt giày thành {{name}}! ({{id}})"
+            }
+        }
+    },
+    "shoe_variants": {
+        "config": {
+            "description": "Đặt các biến thể giày."
+        },
+        "run": {
+            "msg": {
+                "shoes_not_found": "Bot không có giày!",
+                "invalid_shoes": "Giày không hợp lệ!",
+                "variants_not_found": "Đôi giày này không có biến thể!",
+                "variants_select": "Gửi biến thể bạn muốn chọn cho {{type}}",
+                "changed": "Đặt các biến thể giày!"
+            }
+        }
+    },
+    "shop_items": {
+        "config": {
+            "description": "Hiển thị mỹ phẩm từ cửa hàng vật phẩm, một bộ lọc tùy chọn có thể được thêm vào và bạn có thể dừng lại với lệnh \"stop\".",
+            "usage": {
+                "filter": {
+                    "name": "Lọc",
+                    "options": {
+                        "outfits": "Trang phục",
+                        "backpacks": "Ba lô",
+                        "emojis": "Biểu tượng cảm xúc",
+                        "emotes": "Cảm xúc",
+                        "pickaxes": "Pickaxes",
+                        "shoes": "Đôi giày"
+                    },
+                    "description": "Bộ lọc được đặt bằng cách hiển thị các mục."
+                },
+                "random_order": {
+                    "name": "Thứ tự ngẫu nhiên",
+                    "description": "Sử dụng một đơn đặt hàng ngẫu nhiên thay vì đặt hàng theo mới nhất trước.",
+                    "options": {
+                        "yes": "Đúng",
+                        "no": "KHÔNG"
+                    }
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "invalid_type": "Nếu bạn muốn có một bộ lọc, hãy đảm bảo là hợp lệ, chỉ trang phục, ba lô, biểu tượng cảm xúc, emote, pickaxes hoặc giày.",
+                "fetch_failed": "Không thể lấy các mặt hàng cửa hàng.",
+                "already_displaying": "Mỹ phẩm đã được hiển thị, trước tiên nó phải được dừng lại với lệnh \"stop\".",
+                "showing_items": "Đặt tất cả các mặt hàng trong cửa hàng ... {{filter}}",
+                "filter": "(Được lọc bởi {{query}})",
+                "ended": "Tôi đã hoàn thành hiển thị tất cả các mặt hàng trong cửa hàng ..."
+            }
+        }
+    },
+    "stop": {
+        "config": {
+            "description": "Ngừng hoạt động đang chờ xử lý."
+        },
+        "run": {
+            "msg": {
+                "stopped_items": "Ngừng hiển thị các mặt hàng!",
+                "stopped_mimic": "Dừng bắt chước!",
+                "stopped_emote": "Đã dừng lại!",
+                "nothing_to_stop": "Không có gì để dừng lại!"
+            }
+        }
+    },
+    "accept_all_friends": {
+        "config": {
+            "description": "Chấp nhận tất cả những người bạn đang chờ xử lý của bot."
+        },
+        "run": {
+            "msg": {
+                "accepting_friends": "Chấp nhận tất cả những người bạn đang chờ xử lý!",
+                "accepted_friends": "Được chấp nhận {{count}} bạn bè!"
+            }
+        }
+    },
+    "accept_friend": {
+        "config": {
+            "description": "Chấp nhận một yêu cầu kết bạn.",
+            "usage": {
+                "query": {
+                    "name": "Tên bạn bè đang chờ xử lý hoặc ID",
+                    "description": "Tên hoặc ID của người bạn đang chờ chấp nhận."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "Tìm thấy nhiều người bạn:",
+                "friends_not_found": "Bạn {{query}} không tìm thấy!",
+                "self_request": "Yêu cầu kết bạn đang chờ xử lý là của tôi!",
+                "error": "Bạn bè đang chờ xử lý không được chấp nhận!",
+                "request_accepted": "Bạn bè đang chờ xử lý {{name}} được chấp nhận thành công!"
+            }
+        }
+    },
+    "add_friend": {
+        "config": {
+            "description": "Gửi yêu cầu kết bạn cho người dùng hoặc chấp nhận yêu cầu kết bạn.",
+            "usage": {
+                "query": {
+                    "name": "Tên người dùng hoặc ID",
+                    "description": "Tên hoặc ID của người dùng để thêm."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "Tìm thấy nhiều người bạn:",
+                "friends_not_found": "Bạn {{query}} không tìm thấy!",
+                "already_friends": "Đã là một người bạn!",
+                "error": "Không thể thêm người dùng!",
+                "request_sent": "Yêu cầu kết bạn được gửi đến {{name}}"
+            }
+        }
+    },
+    "block_user": {
+        "config": {
+            "description": "Chặn người dùng.",
+            "usage": {
+                "query": {
+                    "name": "Tên người dùng hoặc ID",
+                    "description": "Tên hoặc ID của người dùng để chặn."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_users_found": "Tìm thấy nhiều người dùng:",
+                "user_not_found": "Người dùng {{query}} không tìm thấy!",
+                "error": "Không thể chặn {{name}}!",
+                "user_blocked": "Người dùng {{name}} bị chặn thành công!"
+            }
+        }
+    },
+    "decline_all_friends": {
+        "config": {
+            "description": "Từ chối tất cả những người bạn đang chờ xử lý của bot."
+        },
+        "run": {
+            "msg": {
+                "declining_friends": "Từ chối tất cả những người bạn đang chờ xử lý!",
+                "declined_friends": "Từ chối {{count}} bạn bè!"
+            }
+        }
+    },
+    "decline_friend": {
+        "config": {
+            "description": "Từ chối hoặc hủy bỏ một yêu cầu kết bạn.",
+            "usage": {
+                "query": {
+                    "name": "Tên bạn bè đang chờ xử lý hoặc ID",
+                    "description": "Tên hoặc ID của người bạn đang chờ từ chối hoặc hủy bỏ."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "Tìm thấy nhiều người bạn:",
+                "friends_not_found": "Bạn {{query}} không tìm thấy!",
+                "error": "Bạn bè đang chờ xử lý không được gỡ bỏ!",
+                "request_sent": "Bạn bè đang chờ xử lý {{name}} đã bị xóa thành công!"
+            }
+        }
+    },
+    "friend_count": {
+        "config": {
+            "description": "Hiển thị số lượng bạn bè của bot."
+        },
+        "run": {
+            "msg": {
+                "info": "Tôi có {{friends}} bạn bè, {{pending}}"
+            }
+        }
+    },
+    "invite": {
+        "config": {
+            "description": "Mời một người bạn hoặc bạn đến bữa tiệc.",
+            "usage": {
+                "query": {
+                    "name": "Tên hoặc ID bạn bè",
+                    "description": "Tên hoặc ID của người bạn để mời."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "alone": "Trong một bữa tiệc với tôi, người dùng để mời là bắt buộc.",
+                "multiple_friends_found": "Tìm thấy nhiều người bạn:",
+                "friends_not_found": "Bạn {{query}} không tìm thấy!",
+                "already_on_party": "{{name}} đã có trong bữa tiệc của tôi!",
+                "invite_error": "Không thể gửi lời mời đến {{name}}!",
+                "invite_sent": "Lời mời được gửi đến {{name}}!"
+            }
+        }
+    },
+    "join": {
+        "config": {
+            "description": "Tham gia bữa tiệc của bạn hoặc một số bữa tiệc của người dùng.",
+            "usage": {
+                "query": {
+                    "name": "Tên hoặc ID bạn bè",
+                    "description": "Tên hoặc ID của người bạn để tham gia."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "invalid_param": "Bạn cần phải là bạn của tôi hoặc chỉ định một người bạn!",
+                "multiple_friends_found": "Tìm thấy nhiều người bạn:",
+                "friend_not_found": "Bạn {{query}} không tìm thấy!",
+                "already_on_party": "Bạn đã ở trong bữa tiệc của tôi!",
+                "party_error": "{{name}} không có một bữa tiệc!",
+                "join_request_error": "Không thể gửi yêu cầu tham gia đến {{name}}!",
+                "joined": "Đã tham gia vào {{name}}!",
+                "join_request_sent": "Tham gia yêu cầu được gửi đến {{name}}!"
+            }
+        }
+    },
+    "promote": {
+        "config": {
+            "description": "Thúc đẩy thành viên hoặc khiến bạn lãnh đạo nếu bạn không chỉ định các đối số.",
+            "usage": {
+                "query": {
+                    "name": "Tên thành viên hoặc ID",
+                    "description": "Tên hoặc id của bên để thăng thiên."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "Tìm thấy nhiều người bạn:",
+                "member_not_found": "Thành viên {{query}} không tìm thấy!",
+                "member_not_at_party": "Bạn không phải là thành viên trong nhóm của tôi.",
+                "member_promoted": "Được thăng chức {{name}}!"
+            }
+        }
+    },
+    "remove_all_friends": {
+        "config": {
+            "description": "Loại bỏ tất cả những người bạn của bot. Quản trị viên và chủ sở hữu bị loại trừ."
+        },
+        "run": {
+            "msg": {
+                "removing_friends": "Loại bỏ tất cả bạn bè!",
+                "removed_friends": "Đã xóa {{count}} bạn bè!"
+            }
+        }
+    },
+    "remove_friend": {
+        "config": {
+            "description": "Loại bỏ bạn của một bot.",
+            "usage": {
+                "query": {
+                    "name": "Tên hoặc ID bạn bè",
+                    "description": "Tên hoặc ID của người bạn để xóa."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "Tìm thấy nhiều người bạn:",
+                "friend_not_found": "Bạn {{query}} không tìm thấy!",
+                "error": "Không thể xóa {{name}}!",
+                "friend_removed": "Bạn {{name}} đã xóa thành công!"
+            }
+        }
+    },
+    "unblock_all_users": {
+        "config": {
+            "description": "Chụp tất cả những người dùng bị chặn của bot."
+        },
+        "run": {
+            "msg": {
+                "removing_friends": "Bỏ chặn tất cả người dùng bị chặn!",
+                "removed_friends": "Bỏ chặn {{count}} Người dùng bị chặn!"
+            }
+        }
+    },
+    "unblock_user": {
+        "config": {
+            "description": "Bỏ chặn một người dùng.",
+            "usage": {
+                "query": {
+                    "name": "Tên người dùng hoặc ID",
+                    "description": "Tên hoặc ID của người dùng để bỏ chặn."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_users_found": "Tìm thấy nhiều người dùng:",
+                "user_not_found": "Người dùng {{query}} không tìm thấy!",
+                "error": "Không thể bỏ chặn {{name}}!",
+                "user_unblocked": "Người dùng {{name}} bỏ chặn thành công!"
+            }
+        }
+    },
+    "user_info": {
+        "config": {
+            "description": "Hiển thị thông tin của một người dùng được chỉ định.",
+            "usage": {
+                "query": {
+                    "name": "Tên người dùng hoặc ID",
+                    "description": "Tên hoặc ID của người dùng."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_users_found": "Tìm thấy nhiều người dùng:",
+                "user_not_found": "Người dùng {{query}} không tìm thấy!"
+            }
+        }
+    },
+    "eval": {
+        "run": {
+            "msg": {
+                "unauthorized_error": "Chỉ TNFangel có quyền truy cập vào lệnh này."
+            }
+        }
+    },
+    "help": {
+        "config": {
+            "description": "Hiển thị bảng trợ giúp và bảng lệnh.",
+            "usage": {
+                "query": {
+                    "name": "Tên hoặc ID của lệnh",
+                    "description": "Tên hoặc ID của lệnh để nhận trợ giúp chi tiết."
+                }
+            }
+        }
+    },
+    "message": {
+        "config": {
+            "description": "Gửi một tin nhắn cho bữa tiệc.",
+            "usage": {
+                "message": {
+                    "name": "Tin nhắn",
+                    "description": "Thông điệp sẽ được gửi đến bữa tiệc."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "Đã gửi tin nhắn cho bữa tiệc"
+            }
+        }
+    },
+    "ping": {
+        "config": {
+            "description": "Cho thấy độ trễ của bot."
+        },
+        "run": {
+            "msg": {
+                "measuring": "Đo lường ...",
+                "info": "Pong! {{time}} MS"
+            }
+        }
+    },
+    "prev": {
+        "config": {
+            "description": "Thực thi lệnh trước đó."
+        },
+        "run": {
+            "msg": {
+                "not_found": "Một lệnh trước đó đã không được thực thi!"
+            }
+        }
+    },
+    "restart_bot": {
+        "config": {
+            "description": "Khởi động lại bot hiện tại."
+        },
+        "run": {
+            "msg": {
+                "success": "Bot đang khởi động lại ngay bây giờ!"
+            }
+        }
+    },
+    "restart_category": {
+        "config": {
+            "description": "Khởi động lại danh mục hiện tại."
+        },
+        "run": {
+            "msg": {
+                "success": "Các thể loại đang khởi động lại ngay bây giờ!"
+            }
+        }
+    },
+    "restart_shard": {
+        "config": {
+            "description": "Khởi động lại Shard hiện tại."
+        },
+        "run": {
+            "msg": {
+                "success": "Shard đang khởi động lại ngay bây giờ!",
+                "error": "Xin lỗi, bot này không chạy bên trong một mảnh vỡ."
+            }
+        }
+    },
+    "send": {
+        "config": {
+            "description": "Gửi một lệnh đến một chỉ định bot.",
+            "usage": {
+                "bot": {
+                    "name": "ID bot",
+                    "description": "ID bot để gửi lệnh."
+                },
+                "command": {
+                    "name": "Yêu cầu",
+                    "description": "Lệnh sẽ được thực thi trong bot."
+                },
+                "args": {
+                    "name": "Lập luận",
+                    "description": "Các đối số của lệnh được yêu cầu."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "sending_command": "Gửi lệnh đến bot {{user}}"
+            }
+        }
+    },
+    "send_all": {
+        "config": {
+            "description": "Gửi một lệnh cho tất cả các bot.",
+            "usage": {
+                "command": {
+                    "name": "Yêu cầu",
+                    "description": "Lệnh sẽ được thực thi trong bot."
+                },
+                "args": {
+                    "name": "Lập luận",
+                    "description": "Các đối số của lệnh được yêu cầu."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "sending_command": "Gửi lệnh đến tất cả các bot ..."
+            }
+        }
+    },
+    "send_category": {
+        "config": {
+            "description": "Gửi lệnh đến danh mục của bot.",
+            "usage": {
+                "command": {
+                    "name": "Yêu cầu",
+                    "description": "Lệnh sẽ được thực thi trong bot."
+                },
+                "args": {
+                    "name": "Lập luận",
+                    "description": "Các đối số của lệnh được yêu cầu."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "sending_command": "Gửi lệnh đến tất cả các bot trong mảnh vỡ của tôi ...",
+                "error": "Xin lỗi, bot này không chạy bên trong một danh mục."
+            }
+        }
+    },
+    "send_number": {
+        "config": {
+            "description": "Gửi một lệnh đến một số lượng bot chỉ định.",
+            "usage": {
+                "number": {
+                    "name": "Số lượng bot",
+                    "description": "Số lượng bot để gửi lệnh."
+                },
+                "command": {
+                    "name": "Yêu cầu",
+                    "description": "Lệnh sẽ được thực thi trong bot."
+                },
+                "args": {
+                    "name": "Lập luận",
+                    "description": "Các đối số của lệnh được yêu cầu."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "count_negative": "Số phải lớn hơn 0!",
+                "sending_command": "Gửi lệnh đến {{number}} bots ..."
+            }
+        }
+    },
+    "send_party": {
+        "config": {
+            "description": "Gửi một lệnh cho tất cả các bot có cùng một bên.",
+            "usage": {
+                "command": {
+                    "name": "Yêu cầu",
+                    "description": "Lệnh sẽ được thực thi trong bot."
+                },
+                "args": {
+                    "name": "Lập luận",
+                    "description": "Các đối số của lệnh được yêu cầu."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "sending_command": "Gửi lệnh cho tất cả các bot trong bữa tiệc của tôi ..."
+            }
+        }
+    },
+    "send_shard": {
+        "config": {
+            "description": "Gửi lệnh đến mảnh vỡ của bot.",
+            "usage": {
+                "command": {
+                    "name": "Yêu cầu",
+                    "description": "Lệnh sẽ được thực thi trong bot."
+                },
+                "args": {
+                    "name": "Lập luận",
+                    "description": "Các đối số của lệnh được yêu cầu."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "sending_command": "Gửi lệnh đến tất cả các bot trong mảnh vỡ của tôi ..."
+            }
+        }
+    },
+    "set_status": {
+        "config": {
+            "description": "Đặt trạng thái bot",
+            "usage": {
+                "status": {
+                    "name": "Trạng thái",
+                    "description": "Tình trạng mới của bot."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "Trạng thái đặt thành công!"
+            }
+        }
+    },
+    "whisper": {
+        "config": {
+            "description": "Gửi tin nhắn riêng cho một người bạn.",
+            "usage": {
+                "query": {
+                    "name": "Tên hoặc ID bạn bè",
+                    "description": "Tên hoặc ID của người bạn để gửi tin nhắn riêng tư."
+                },
+                "message": {
+                    "name": "Tin nhắn",
+                    "description": "Tin nhắn để gửi cho người bạn."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "Tìm thấy nhiều người bạn:",
+                "friend_not_found": "Bạn {{query}} không tìm thấy!",
+                "whisper_sent": "Đã gửi đến {{name}}!"
+            }
+        }
+    },
+    "bp_level": {
+        "config": {
+            "description": "Đặt cấp độ Battle Pass của bot.",
+            "usage": {
+                "level": {
+                    "name": "Mức độ",
+                    "description": "Mức độ của trận chiến được thiết lập."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "bp_level_set": "Đặt cấp độ Battle Pass thành {{level}}!"
+            }
+        }
+    },
+    "clear_custom_key": {
+        "config": {
+            "description": "Xóa khóa mai mối tùy chỉnh."
+        },
+        "run": {
+            "msg": {
+                "success": "Xóa khóa mai mối tùy chỉnh!"
+            }
+        }
+    },
+    "crowns": {
+        "config": {
+            "description": "Đặt vương miện bot.",
+            "usage": {
+                "crowns": {
+                    "name": "Vương miện",
+                    "description": "Các vương miện để thiết lập."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "Đặt vương miện thành {{crowns}}!"
+            }
+        }
+    },
+    "hide": {
+        "config": {
+            "description": "Ẩn một người chơi khỏi bữa tiệc hoặc che giấu bạn nếu bạn không chỉ định các đối số.",
+            "usage": {
+                "query": {
+                    "name": "Tên thành viên hoặc ID",
+                    "description": "Tên hoặc ID của thành viên của bên để ẩn."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "Tìm thấy nhiều người bạn:",
+                "member_not_found": "Thành viên {{query}} không tìm thấy!",
+                "member_not_at_party": "Bạn không phải là thành viên trong nhóm của tôi.",
+                "success": "Ẩn {{name}}!"
+            }
+        }
+    },
+    "hide_all": {
+        "config": {
+            "description": "Che giấu tất cả các cầu thủ trong bữa tiệc."
+        },
+        "run": {
+            "msg": {
+                "success": "Ẩn tất cả các thành viên!"
+            }
+        }
+    },
+    "kick": {
+        "config": {
+            "description": "Kick là một người chơi từ bữa tiệc.",
+            "usage": {
+                "query": {
+                    "name": "Tên thành viên hoặc ID",
+                    "description": "Tên hoặc ID của thành viên của đảng để đá."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "Tìm thấy nhiều người bạn:",
+                "member_not_found": "Thành viên {{query}} không tìm thấy!",
+                "success": "Đá {{name}}!"
+            }
+        }
+    },
+    "kick_all": {
+        "config": {
+            "description": "Đá tất cả các cầu thủ trong bữa tiệc."
+        },
+        "run": {
+            "msg": {
+                "user_kicked": "Đá {{name}}!",
+                "success": "Hoàn thành đá tất cả các thành viên!"
+            }
+        }
+    },
+    "leave": {
+        "config": {
+            "description": "Bot rời khỏi bữa tiệc."
+        },
+        "run": {
+            "msg": {
+                "success": "Tạm biệt!"
+            }
+        }
+    },
+    "level": {
+        "config": {
+            "description": "Đặt cấp độ bot.",
+            "usage": {
+                "level": {
+                    "name": "Mức độ",
+                    "description": "Mức độ được thiết lập."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "Đặt cấp độ thành {{level}}!"
+            }
+        }
+    },
+    "match": {
+        "config": {
+            "description": "Đặt nhà nước để chơi một trò chơi.",
+            "usage": {
+                "number": {
+                    "name": "Số lượng người chơi",
+                    "description": "Số lượng người chơi trong trò chơi."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "Đặt để chơi trạng thái!"
+            }
+        }
+    },
+    "party_info": {
+        "config": {
+            "description": "Hiển thị thông tin về bữa tiệc."
+        }
+    },
+    "playlist": {
+        "config": {
+            "description": "Đặt danh sách phát của bữa tiệc.",
+            "usage": {
+                "query": {
+                    "name": "Tên hoặc ID của danh sách phát",
+                    "description": "Tên hoặc ID của danh sách phát được đặt."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "error": "Cài đặt lỗi danh sách phát!",
+                "success": "Đặt danh sách phát thành {{query}}!"
+            }
+        }
+    },
+    "privacy": {
+        "config": {
+            "description": "Đặt sự riêng tư của bên.",
+            "usage": {
+                "privacy": {
+                    "name": "Sự riêng tư",
+                    "options": {
+                        "public": "Công cộng",
+                        "private": "Riêng tư"
+                    },
+                    "description": "Sự riêng tư của bên để thiết lập."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "Đặt quyền riêng tư của bên thành {{privacy}}!",
+                "error": "Quyền riêng tư không hợp lệ, phải công khai hoặc riêng tư!"
+            }
+        }
+    },
+    "rank": {
+        "config": {
+            "description": "Đặt thứ hạng bot.",
+            "usage": {
+                "rank": {
+                    "name": "Thứ hạng",
+                    "description": "Thứ hạng để thiết lập."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "Đặt thứ hạng thành {{rank}}!"
+            }
+        }
+    },
+    "ready": {
+        "config": {
+            "description": "Đặt trạng thái để sẵn sàng."
+        },
+        "run": {
+            "msg": {
+                "warning": "CẢNH BÁO: Nếu bạn đang cố gắng bắt đầu mai mối, đừng sử dụng lệnh này! Chỉ cần tự mình sẵn sàng và tôi sẽ tự động đánh sẵn.",
+                "success": "Sẵn sàng!"
+            }
+        }
+    },
+    "say": {
+        "config": {
+            "description": "Gửi tin nhắn cho cuộc trò chuyện bên.",
+            "usage": {
+                "message": {
+                    "name": "Tin nhắn",
+                    "description": "Thông điệp sẽ được gửi đến bữa tiệc."
+                }
+            }
+        }
+    },
+    "set_custom_key": {
+        "config": {
+            "description": "Đặt khóa mai mối tùy chỉnh.",
+            "usage": {
+                "key": {
+                    "name": "Khóa tùy chỉnh",
+                    "description": "Khóa mai mối tùy chỉnh để đặt."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "Đặt khóa mai mối tùy chỉnh!"
+            }
+        }
+    },
+    "show": {
+        "config": {
+            "description": "Hiển thị một người chơi ẩn từ bữa tiệc hoặc hiển thị cho bạn nếu bạn không chỉ định các đối số.",
+            "usage": {
+                "query": {
+                    "name": "Tên thành viên hoặc ID",
+                    "description": "Tên hoặc ID của thành viên của bên để hiển thị."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "Tìm thấy nhiều người bạn:",
+                "member_not_found": "Thành viên {{query}} không tìm thấy!",
+                "member_not_at_party": "Bạn không phải là thành viên trong nhóm của tôi.",
+                "success": "Hiển thị {{name}}!"
+            }
+        }
+    },
+    "show_all": {
+        "config": {
+            "description": "Cho thấy tất cả các cầu thủ ẩn trong bữa tiệc."
+        },
+        "run": {
+            "msg": {
+                "success": "Hiển thị tất cả các thành viên!"
+            }
+        }
+    },
+    "sit_in": {
+        "config": {
+            "description": "Đặt nhà nước để tham gia."
+        },
+        "run": {
+            "msg": {
+                "success": "Ngồi trong ..."
+            }
+        }
+    },
+    "sit_out": {
+        "config": {
+            "description": "Đặt trạng thái không tham gia."
+        },
+        "run": {
+            "msg": {
+                "success": "Ngồi ra ngoài ..."
+            }
+        }
+    },
+    "unmatch": {
+        "config": {
+            "description": "Đặt nhà nước để không chơi một trò chơi."
+        },
+        "run": {
+            "msg": {
+                "success": "Đã loại bỏ trạng thái chơi!"
+            }
+        }
+    },
+    "unready": {
+        "config": {
+            "description": "Đặt trạng thái thành chưa sẵn sàng."
+        },
+        "run": {
+            "msg": {
+                "success": "Chưa sẵn sàng!"
+            }
+        }
+    }
 }
