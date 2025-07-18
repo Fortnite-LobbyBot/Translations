@@ -1,1307 +1,1306 @@
 {
-	"handler": {
-		"errors": {
-			"only_for_party_members": "이 명령은 내 파티원에게만 사용할 수 있습니다.",
-			"only_for_private_messages": "이 명령은 개인 메시지로만 사용할 수 있습니다.",
-			"need_party_leader": "이 명령을 실행하려면 파티 리더가되어야합니다!",
-			"only_for_owners": "이 명령은 봇 소유자에게만 사용할 수 있습니다.",
-			"only_for_admins": "이 명령은 봇 관리자에게만 사용할 수 있습니다.",
-			"only_for_whitelist": "이 명령은 봇의 화이트리스트에있는 사용자 만 사용할 수 있습니다."
-		}
-	},
-	"all_items": {
-		"config": {
-			"description": "게임의 모든 화장품을 보여주고 옵션 필터를 추가 할 수 있으며 \"stop\"명령으로 중지 할 수 있습니다.",
-			"usage": {
-				"filter": {
-					"name": "필터",
-					"options": {
-						"outfits": "의상",
-						"backpacks": "배낭",
-						"emojis": "이모티콘",
-						"emotes": "감정",
-						"pickaxes": "곡예물",
-						"shoes": "신발"
-					},
-					"description": "항목을 보여줌으로써 필터를 설정할 수 있습니다."
-				},
-				"random_order": {
-					"name": "임의 순서",
-					"description": "최신 먼저 주문하는 대신 임의 순서를 사용하십시오.",
-					"options": {
-						"yes": "예",
-						"no": "아니요"
-					}
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"no_items": "항목을 가져올 수 없습니다.",
-				"items_already_displaying": "화장품이 이미 표시되고 있으며 먼저 \"stop\"명령으로 중지해야합니다.",
-				"setting_items": "모든 게임 항목 설정 ... {{filtered}}",
-				"filtered_by": "({{filter}}에 의해 필터링)",
-				"items_showed": "나는 모든 아이템을 보여 주었다 ..."
-			}
-		}
-	},
-	"backpack": {
-		"config": {
-			"description": "봇의 배낭을 설정합니다.",
-			"usage": {
-				"query": {
-					"name": "배낭 이름 또는 ID",
-					"description": "배낭의 이름 또는 ID를 설정할 수 있습니다."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"backpack_not_found": "배낭 {{item}}을 찾을 수 없습니다!",
-				"backpack_changed": "배낭을 {{name}}으로 설정하십시오! ({{id}})"
-			}
-		}
-	},
-	"backpack_variants": {
-		"config": {
-			"description": "백팩의 변형을 설정합니다."
-		},
-		"run": {
-			"msg": {
-				"backpack_not_found": "봇에는 배낭이 없습니다!",
-				"invalid_backpack": "잘못된 배낭!",
-				"variants_not_founded": "이 배낭에는 변형이 없습니다!",
-				"variants_select": "{{type}}에 대해 선택하려는 변형을 보내십시오.",
-				"variants_changed": "배낭 변형을 설정하십시오!"
-			}
-		}
-	},
-	"banner": {
-		"config": {
-			"description": "봇의 배너를 설정합니다.",
-			"usage": {
-				"query": {
-					"name": "배너 이름 또는 ID",
-					"description": "배너의 이름 또는 ID를 설정합니다."
-				},
-				"color": {
-					"name": "색상 또는 ID",
-					"description": "설정할 색상의 이름 또는 ID."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"banner_not_found": "배너 {{item}}을 찾을 수 없습니다!",
-				"color_not_found": "색상 {{item}}을 찾을 수 없습니다!",
-				"banner_changed": "배너를 {{name}}으로 설정하십시오! ({{id}})"
-			}
-		}
-	},
-	"clear_backpack": {
-		"config": {
-			"description": "봇의 배낭을 제거합니다."
-		},
-		"run": {
-			"msg": {
-				"backpack_cleared": "배낭 청소!"
-			}
-		}
-	},
-	"clear_emote": {
-		"config": {
-			"description": "봇의 춤을 멈 춥니 다."
-		},
-		"run": {
-			"msg": {
-				"emote_cleared": "감정을 정리했습니다!"
-			}
-		}
-	},
-	"clear_shoes": {
-		"config": {
-			"description": "봇의 신발을 제거합니다."
-		},
-		"run": {
-			"msg": {
-				"shoes_cleared": "청소 된 신발!"
-			}
-		}
-	},
-	"copy": {
-		"config": {
-			"description": "인수를 지정하지 않으면 사용자의 화장품을 복사하거나 화장품을 귀하에게 복사하십시오.",
-			"usage": {
-				"filter": {
-					"name": "필터",
-					"options": {
-						"all": "모두",
-						"outfit": "차림새",
-						"backpack": "배낭",
-						"emoji": "이모티콘",
-						"emote": "감정",
-						"pickaxe": "곡괭이",
-						"shoes": "신발"
-					},
-					"description": "화장품을 복사 할 때 설정할 필터."
-				},
-				"query": {
-					"name": "회원 이름 또는 ID",
-					"description": "화장품을 복사하는 멤버의 이름 또는 ID."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"members_found": "발견 된 여러 회원 :",
-				"member_not_found": "회원 {{member}}를 찾을 수 없습니다!",
-				"member_not_at_party": "당신은 내 파티의 일원이 아닙니다.",
-				"member_copied": "복사 {{member}}!"
-			}
-		}
-	},
-	"cosmetic": {
-		"config": {
-			"description": "봇의 화장품을 설정합니다.",
-			"usage": {
-				"query": {
-					"name": "미용사 이름 또는 ID",
-					"description": "설정할 미용사의 이름 또는 ID."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"cosmetic_not_found": "화장품 {{query}}를 찾을 수 없습니다!",
-				"cosmetic_changed": "{{type}}을 {{name}}으로 설정하십시오! ({{id}})"
-			}
-		}
-	},
-	"cosmetic_info": {
-		"config": {
-			"description": "미용에 대한 정보를 보여줍니다.",
-			"usage": {
-				"query": {
-					"name": "미용사 이름 또는 ID",
-					"description": "설정할 미용사의 이름 또는 ID."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"cosmetic_not_found": "화장품 {{query}}를 찾을 수 없습니다!"
-			}
-		}
-	},
-	"emoji": {
-		"config": {
-			"description": "봇의 이모티콘을 설정합니다.",
-			"usage": {
-				"query": {
-					"name": "이모티콘 이름 또는 ID",
-					"description": "설정할 이모티콘의 이름 또는 ID."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"emoji_not_found": "이모티콘 {{query}}를 찾을 수 없습니다!",
-				"emoji_changed": "이모티콘을 {{name}}으로 설정하십시오! ({{id}})"
-			}
-		}
-	},
-	"emote": {
-		"config": {
-			"description": "봇의 감정을 설정합니다.",
-			"usage": {
-				"query": {
-					"name": "이름 또는 ID를 감정으로합니다",
-					"description": "설정할 감정 감정의 이름 또는 ID."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"emote_not_found": "감정 {{query}}를 찾을 수 없습니다!",
-				"emote_changed": "에모지를 {{name}}로 설정하십시오! ({{id}})"
-			}
-		}
-	},
-	"mimic": {
-		"config": {
-			"description": "인수를 지정하지 않은 경우 사용자와 동일하거나 귀하와 동일합니다. \"stop\"를 사용하여 명령을 중지하십시오.",
-			"usage": {
-				"filter": {
-					"name": "필터",
-					"options": {
-						"all": "모두",
-						"changes": "변화",
-						"outfits": "의상",
-						"backpacks": "배낭",
-						"emojis": "이모티콘",
-						"emotes": "감정",
-						"pickaxes": "곡예물",
-						"shoes": "신발"
-					},
-					"description": "화장품을 모방 할 때 설정하는 필터."
-				},
-				"query": {
-					"name": "회원 이름 또는 ID",
-					"description": "화장품을 모방하기위한 회원의 이름 또는 ID."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"members_found": "발견 된 여러 회원 :",
-				"member_not_found": "멤버 {{query}}를 찾을 수 없습니다!",
-				"member_not_at_party": "당신은 내 파티의 일원이 아닙니다.",
-				"mimic_enabled": "{{member}} {{filter}}에 대한 mimic enabled!",
-				"filter": "필터 {{filter}}"
-			}
-		}
-	},
-	"new_items": {
-		"config": {
-			"description": "게임에 추가 된 최신 화장품을 보여 주면 옵션 필터를 추가 할 수 있으며 \"stop\"명령으로 중지 할 수 있습니다.",
-			"usage": {
-				"filter": {
-					"name": "필터",
-					"options": {
-						"outfits": "의상",
-						"backpacks": "배낭",
-						"emojis": "이모티콘",
-						"emotes": "감정",
-						"pickaxes": "곡예물",
-						"shoes": "신발"
-					},
-					"description": "항목을 보여줌으로써 필터를 설정할 수 있습니다."
-				},
-				"random_order": {
-					"name": "임의 순서",
-					"description": "최신 먼저 주문하는 대신 임의 순서를 사용하십시오.",
-					"options": {
-						"yes": "예",
-						"no": "아니요"
-					}
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"type_error": "필터를 원한다면 의상, 배낭, 이모티콘, 감정, 곡예 또는 신발 만 유효한지 확인하십시오.",
-				"cosmetic_fetch_error": "최근에 추가 된 화장품을 가져올 수 없습니다.",
-				"already_showing": "화장품이 이미 표시되고 있으며 먼저 \"stop\"명령으로 중지해야합니다.",
-				"showing_cosmetics": "최근에 추가 된 모든 항목 설정 ... {{filter}}",
-				"filter": "({{filter}}에 의해 필터링)",
-				"ended": "최근에 추가 된 모든 아이템을 보여주었습니다 ..."
-			}
-		}
-	},
-	"outfit": {
-		"config": {
-			"description": "봇의 복장을 설정합니다.",
-			"usage": {
-				"query": {
-					"name": "의상 이름 또는 ID",
-					"description": "설정할 복장의 이름 또는 ID."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"outfit_not_found": "의상 {{query}}를 찾을 수 없습니다!",
-				"outfit_changed": "의상을 {{name}}으로 설정하십시오! ({{id}})"
-			}
-		}
-	},
-	"outfit_variants": {
-		"config": {
-			"description": "의상의 변형을 설정합니다."
-		},
-		"run": {
-			"msg": {
-				"outfit_not_found": "봇에는 의상이 없습니다!",
-				"invalid_outfit": "잘못된 복장!",
-				"variants_not_found": "이 복장에는 변형이 없습니다!",
-				"variants_select": "{{type}}에 대해 선택하려는 변형을 보내십시오.",
-				"changed": "의상 변형을 설정하십시오!"
-			}
-		}
-	},
-	"perfect_timing": {
-		"config": {
-			"description": "봇의 화장품을 동기화합니다.",
-			"usage": {
-				"query": {
-					"name": "미용사 이름 또는 ID",
-					"description": "설정할 미용사의 이름 또는 ID."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"cosmetic_not_found": "화장품 {{query}}를 찾을 수 없습니다!",
-				"perfect_timing_success": "완벽한 타이밍을 수행하기 위해 동기화 ...",
-				"perfect_timing_done": "{{value}}를 {{name}}과 동기화했습니다! ({{id}})"
-			}
-		}
-	},
-	"pickaxe": {
-		"config": {
-			"description": "봇의 곡예물을 설정합니다.",
-			"usage": {
-				"query": {
-					"name": "삭제 이름 또는 ID",
-					"description": "예비 삭스의 이름 또는 ID를 설정합니다."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"pickaxe_not_found": "PICKAXE {{query}}를 찾을 수 없습니다!",
-				"pickaxe_changed": "PICKAXE를 {{name}}으로 설정하십시오! ({{id}})"
-			}
-		}
-	},
-	"pickaxe_variants": {
-		"config": {
-			"description": "Pickaxe의 변형을 설정합니다."
-		},
-		"run": {
-			"msg": {
-				"pickaxe_not_found": "봇에는 곡예가 없습니다!",
-				"invalid_pickaxe": "잘못된 곡예물!",
-				"variants_not_found": "이 곡물은 변형이 없습니다!",
-				"variants_select": "{{type}}에 대해 선택하려는 변형을 보내십시오.",
-				"changed": "Pickaxe 변형을 설정하십시오!"
-			}
-		}
-	},
-	"preset": {
-		"config": {
-			"description": "봇의 사전 설정을 설정합니다. \"none\"을 사용하여 화장품을 제거하십시오.",
-			"usage": {
-				"outfit": {
-					"name": "복장 ID",
-					"description": "복장의 신분."
-				},
-				"backpack": {
-					"name": "배낭 ID",
-					"description": "배낭의 ID."
-				},
-				"pickaxe": {
-					"name": "PICKAXE ID",
-					"description": "PICKAXE의 ID."
-				},
-				"emote": {
-					"name": "Emote ID",
-					"description": "감정의 ID."
-				},
-				"shoes": {
-					"name": "신발 ID",
-					"description": "신발의 ID."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"preset_changed": "사전 설정을 설정하십시오!"
-			}
-		}
-	},
-	"shoes": {
-		"config": {
-			"description": "봇의 신발을 설정합니다.",
-			"usage": {
-				"query": {
-					"name": "신발 이름 또는 ID",
-					"description": "신발의 이름이나 신분증을 설정합니다."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"shoes_not_found": "신발 {{query}}를 찾을 수 없습니다!",
-				"shoes_changed": "신발을 {{name}}으로 설정하십시오! ({{id}})"
-			}
-		}
-	},
-	"shoe_variants": {
-		"config": {
-			"description": "신발 변형을 설정합니다."
-		},
-		"run": {
-			"msg": {
-				"shoes_not_found": "봇에는 신발이 없습니다!",
-				"invalid_shoes": "잘못된 신발!",
-				"variants_not_found": "이 신발에는 변형이 없습니다!",
-				"variants_select": "{{type}}에 대해 선택하려는 변형을 보내십시오.",
-				"changed": "신발 변형을 설정하십시오!"
-			}
-		}
-	},
-	"shop_items": {
-		"config": {
-			"description": "품목 상점에서 화장품을 표시하면 옵션 필터를 추가 할 수 있으며 \"stop\"명령으로 중지 할 수 있습니다.",
-			"usage": {
-				"filter": {
-					"name": "필터",
-					"options": {
-						"outfits": "의상",
-						"backpacks": "배낭",
-						"emojis": "이모티콘",
-						"emotes": "감정",
-						"pickaxes": "곡예물",
-						"shoes": "신발"
-					},
-					"description": "항목을 보여줌으로써 필터를 설정할 수 있습니다."
-				},
-				"random_order": {
-					"name": "임의 순서",
-					"description": "최신 먼저 주문하는 대신 임의 순서를 사용하십시오.",
-					"options": {
-						"yes": "예",
-						"no": "아니요"
-					}
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"invalid_type": "필터를 원한다면 의상, 배낭, 이모티콘, 감정, 곡예 또는 신발 만 유효한지 확인하십시오.",
-				"fetch_failed": "상점 품목을 가져올 수 없습니다.",
-				"already_displaying": "화장품이 이미 표시되고 있으며 먼저 \"stop\"명령으로 중지해야합니다.",
-				"showing_items": "상점에서 모든 항목 설정 ... {{filter}}",
-				"filter": "({{query}}에 의해 필터링)",
-				"ended": "나는 가게의 모든 아이템을 보여 주었다 ..."
-			}
-		}
-	},
-	"stop": {
-		"config": {
-			"description": "보류중인 운영을 중지합니다."
-		},
-		"run": {
-			"msg": {
-				"stopped_items": "아이템 표시가 중단되었습니다!",
-				"stopped_mimic": "MIMIC 중지!",
-				"stopped_emote": "감정을 멈췄다!",
-				"nothing_to_stop": "중지 할 것이 없습니다!"
-			}
-		}
-	},
-	"accept_all_friends": {
-		"config": {
-			"description": "보류중인 봇의 모든 친구를 받아들입니다."
-		},
-		"run": {
-			"msg": {
-				"accepting_friends": "보류중인 친구들을 모두 받아들입니다!",
-				"accepted_friends": "받아 들여 {{count}} 친구!"
-			}
-		}
-	},
-	"accept_friend": {
-		"config": {
-			"description": "친구 요청을 수락하십시오.",
-			"usage": {
-				"query": {
-					"name": "보류중인 친구의 이름 또는 ID",
-					"description": "친구의 이름이나 신분증이 수락 할 때 보류 중입니다."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "여러 친구를 찾았습니다.",
-				"friends_not_found": "친구 {{query}}를 찾을 수 없습니다!",
-				"self_request": "보류중인 친구 요청은 내 것입니다!",
-				"error": "보류중인 친구가 받아 들여지지 않았습니다!",
-				"request_accepted": "보류중인 친구 {{name}}가 성공적으로 받아 들여졌습니다!"
-			}
-		}
-	},
-	"add_friend": {
-		"config": {
-			"description": "친구 요청을 사용자에게 보내거나 친구 요청을 수락하십시오.",
-			"usage": {
-				"query": {
-					"name": "사용자 이름 또는 ID",
-					"description": "추가 할 사용자 이름 또는 ID."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "여러 친구를 찾았습니다.",
-				"friends_not_found": "친구 {{query}}를 찾을 수 없습니다!",
-				"already_friends": "이미 친구!",
-				"error": "사용자를 추가 할 수 없습니다!",
-				"request_sent": "{{name}}로 전송 된 친구 요청"
-			}
-		}
-	},
-	"block_user": {
-		"config": {
-			"description": "사용자를 차단합니다.",
-			"usage": {
-				"query": {
-					"name": "사용자 이름 또는 ID",
-					"description": "사용자의 이름 또는 ID를 차단할 것입니다."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_users_found": "발견 된 여러 사용자 :",
-				"user_not_found": "사용자 {{query}}를 찾을 수 없습니다!",
-				"error": "{{name}}을 차단할 수 없습니다!",
-				"user_blocked": "사용자 {{name}}가 성공적으로 차단되었습니다!"
-			}
-		}
-	},
-	"decline_all_friends": {
-		"config": {
-			"description": "보류중인 봇의 모든 친구를 거절합니다."
-		},
-		"run": {
-			"msg": {
-				"declining_friends": "보류중인 모든 친구들을 거절합니다!",
-				"declined_friends": "{{count}} 친구가 거절되었습니다!"
-			}
-		}
-	},
-	"decline_friend": {
-		"config": {
-			"description": "친구 요청을 거부하거나 중단합니다.",
-			"usage": {
-				"query": {
-					"name": "보류중인 친구의 이름 또는 ID",
-					"description": "친구의 이름이나 신분증은 거절하거나 중단하기 위해 기다려야합니다."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "여러 친구를 찾았습니다.",
-				"friends_not_found": "친구 {{query}}를 찾을 수 없습니다!",
-				"error": "보류중인 친구가 제거되지 않았습니다!",
-				"request_sent": "보류중인 친구 {{name}}가 성공적으로 제거되었습니다!"
-			}
-		}
-	},
-	"friend_count": {
-		"config": {
-			"description": "봇의 친구 수를 보여줍니다."
-		},
-		"run": {
-			"msg": {
-				"info": "나는 {{friends}} friends, {{pending}} 보류중인 ({{incoming}} incoming, {{outgoing}} 외향) 및 {{blocked}}가 차단되었습니다!"
-			}
-		}
-	},
-	"invite": {
-		"config": {
-			"description": "친구 나 당신을 파티에 초대합니다.",
-			"usage": {
-				"query": {
-					"name": "친구의 이름 또는 ID",
-					"description": "친구의 이름이나 초대 할 ID."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"alone": "나와 함께 파티에 초대 할 사용자가 필요합니다.",
-				"multiple_friends_found": "여러 친구를 찾았습니다.",
-				"friends_not_found": "친구 {{query}}를 찾을 수 없습니다!",
-				"already_on_party": "{{name}}은 이미 내 파티에 있습니다!",
-				"invite_error": "초대장을 {{name}}에 보낼 수 없습니다!",
-				"invite_sent": "{{name}}로 전송 된 초대!"
-			}
-		}
-	},
-	"join": {
-		"config": {
-			"description": "파티 또는 일부 사용자 파티에 합류합니다.",
-			"usage": {
-				"query": {
-					"name": "친구의 이름 또는 ID",
-					"description": "가입 할 친구의 이름 또는 ID."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"invalid_param": "당신은 내 친구가되거나 친구를 지정해야합니다!",
-				"multiple_friends_found": "여러 친구를 찾았습니다.",
-				"friend_not_found": "친구 {{query}}를 찾을 수 없습니다!",
-				"already_on_party": "이미 내 파티에있는 친구!",
-				"party_error": "{{name}}은 파티가 없습니다!",
-				"join_request_error": "가입 요청을 {{name}}에 보낼 수 없습니다!",
-				"joined": "{{name}}에 가입했습니다!",
-				"join_request_sent": "{{name}}에 보낸 요청에 가입!"
-			}
-		}
-	},
-	"promote": {
-		"config": {
-			"description": "인수를 지정하지 않으면 회원을 홍보하거나 리더로 만듭니다.",
-			"usage": {
-				"query": {
-					"name": "회원 이름 또는 ID",
-					"description": "상승하기 위해 파티의 이름이나 신분증."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "여러 친구를 찾았습니다.",
-				"member_not_found": "멤버 {{query}}를 찾을 수 없습니다!",
-				"member_not_at_party": "당신은 내 파티의 일원이 아닙니다.",
-				"member_promoted": "승진 {{name}}!"
-			}
-		}
-	},
-	"remove_all_friends": {
-		"config": {
-			"description": "봇의 모든 친구를 제거합니다. 관리자와 소유자는 제외됩니다."
-		},
-		"run": {
-			"msg": {
-				"removing_friends": "모든 친구를 제거하십시오!",
-				"removed_friends": "{{count}} 친구를 제거했습니다!"
-			}
-		}
-	},
-	"remove_friend": {
-		"config": {
-			"description": "봇의 친구를 제거합니다.",
-			"usage": {
-				"query": {
-					"name": "친구의 이름 또는 ID",
-					"description": "친구의 이름이나 ID를 제거 할 ID."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "여러 친구를 찾았습니다.",
-				"friend_not_found": "친구 {{query}}를 찾을 수 없습니다!",
-				"error": "{{name}}을 제거 할 수 없습니다!",
-				"friend_removed": "친구 {{name}}가 성공적으로 제거되었습니다!"
-			}
-		}
-	},
-	"unblock_all_users": {
-		"config": {
-			"description": "봇의 모든 차단 된 사용자를 차단 해제합니다."
-		},
-		"run": {
-			"msg": {
-				"removing_friends": "차단 된 모든 사용자를 차단 해제!",
-				"removed_friends": "차단되지 않은 {{count}} 차단 된 사용자!"
-			}
-		}
-	},
-	"unblock_user": {
-		"config": {
-			"description": "사용자를 차단 해제합니다.",
-			"usage": {
-				"query": {
-					"name": "사용자 이름 또는 ID",
-					"description": "사용자 이름 또는 ID가 차단 해제됩니다."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_users_found": "발견 된 여러 사용자 :",
-				"user_not_found": "사용자 {{query}}를 찾을 수 없습니다!",
-				"error": "{{name}}을 차단 해제 할 수 없습니다!",
-				"user_unblocked": "사용자 {{name}} 성공적으로 차단되지 않았습니다!"
-			}
-		}
-	},
-	"user_info": {
-		"config": {
-			"description": "지정된 사용자의 정보를 보여줍니다.",
-			"usage": {
-				"query": {
-					"name": "사용자 이름 또는 ID",
-					"description": "사용자의 이름 또는 ID."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_users_found": "발견 된 여러 사용자 :",
-				"user_not_found": "사용자 {{query}}를 찾을 수 없습니다!"
-			}
-		}
-	},
-	"eval": {
-		"run": {
-			"msg": {
-				"unauthorized_error": "Tnfangel 만이이 명령에 액세스 할 수 있습니다."
-			}
-		}
-	},
-	"help": {
-		"config": {
-			"description": "도움말 및 명령 패널을 보여줍니다.",
-			"usage": {
-				"query": {
-					"name": "명령의 이름 또는 ID",
-					"description": "상세한 도움을 얻으려면 명령의 이름 또는 ID입니다."
-				}
-			}
-		}
-	},
-	"message": {
-		"config": {
-			"description": "파티에 메시지를 보냅니다.",
-			"usage": {
-				"message": {
-					"name": "메시지",
-					"description": "파티에 보낼 메시지."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "파티에 메시지를 보냈습니다"
-			}
-		}
-	},
-	"ping": {
-		"config": {
-			"description": "봇의 대기 시간을 보여줍니다."
-		},
-		"run": {
-			"msg": {
-				"measuring": "자질...",
-				"info": "멍청이! {{time}} MS"
-			}
-		}
-	},
-	"prev": {
-		"config": {
-			"description": "이전 명령을 실행합니다."
-		},
-		"run": {
-			"msg": {
-				"not_found": "이전 명령이 실행되지 않았습니다!"
-			}
-		}
-	},
-	"restart_bot": {
-		"config": {
-			"description": "현재 봇을 다시 시작합니다."
-		},
-		"run": {
-			"msg": {
-				"success": "봇이 지금 다시 시작 중입니다!"
-			}
-		}
-	},
-	"restart_category": {
-		"config": {
-			"description": "현재 범주를 다시 시작합니다."
-		},
-		"run": {
-			"msg": {
-				"success": "카테고리가 지금 다시 시작되고 있습니다!"
-			}
-		}
-	},
-	"restart_shard": {
-		"config": {
-			"description": "현재 샤드를 다시 시작합니다."
-		},
-		"run": {
-			"msg": {
-				"success": "샤드가 지금 다시 시작되고 있습니다!",
-				"error": "죄송합니다.이 봇은 샤드 안에서 달리지 않습니다."
-			}
-		}
-	},
-	"send": {
-		"config": {
-			"description": "지정 봇에 명령을 보냅니다.",
-			"usage": {
-				"bot": {
-					"name": "봇 ID",
-					"description": "봇 ID는 명령을 보냅니다."
-				},
-				"command": {
-					"name": "명령",
-					"description": "봇에서 실행되는 명령."
-				},
-				"args": {
-					"name": "논쟁",
-					"description": "명령의 인수가 필요합니다."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"sending_command": "bot {{user}}에 명령 보내기"
-			}
-		}
-	},
-	"send_all": {
-		"config": {
-			"description": "모든 봇에 명령을 보냅니다.",
-			"usage": {
-				"command": {
-					"name": "명령",
-					"description": "봇에서 실행되는 명령."
-				},
-				"args": {
-					"name": "논쟁",
-					"description": "명령의 인수가 필요합니다."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"sending_command": "모든 봇에게 명령을 보내는 ..."
-			}
-		}
-	},
-	"send_category": {
-		"config": {
-			"description": "봇 카테고리에 명령을 보냅니다.",
-			"usage": {
-				"command": {
-					"name": "명령",
-					"description": "봇에서 실행되는 명령."
-				},
-				"args": {
-					"name": "논쟁",
-					"description": "명령의 인수가 필요합니다."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"sending_command": "내 샤드의 모든 봇에 명령을 보내는 ...",
-				"error": "죄송합니다.이 봇은 카테고리 내에서 실행되지 않습니다."
-			}
-		}
-	},
-	"send_number": {
-		"config": {
-			"description": "지정된 봇 수로 명령을 보냅니다.",
-			"usage": {
-				"number": {
-					"name": "봇 수",
-					"description": "명령을 보낼 봇 수."
-				},
-				"command": {
-					"name": "명령",
-					"description": "봇에서 실행되는 명령."
-				},
-				"args": {
-					"name": "논쟁",
-					"description": "명령의 인수가 필요합니다."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"count_negative": "숫자는 0보다 커야합니다!",
-				"sending_command": "{{number}} 봇으로 명령을 보내기 ..."
-			}
-		}
-	},
-	"send_party": {
-		"config": {
-			"description": "같은 파티를 공유하는 모든 봇에게 명령을 보냅니다.",
-			"usage": {
-				"command": {
-					"name": "명령",
-					"description": "봇에서 실행되는 명령."
-				},
-				"args": {
-					"name": "논쟁",
-					"description": "명령의 인수가 필요합니다."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"sending_command": "내 파티의 모든 봇에 명령을 보내는 ..."
-			}
-		}
-	},
-	"send_shard": {
-		"config": {
-			"description": "봇의 샤드에 명령을 보냅니다.",
-			"usage": {
-				"command": {
-					"name": "명령",
-					"description": "봇에서 실행되는 명령."
-				},
-				"args": {
-					"name": "논쟁",
-					"description": "명령의 인수가 필요합니다."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"sending_command": "내 샤드의 모든 봇에 명령을 보내는 ..."
-			}
-		}
-	},
-	"set_status": {
-		"config": {
-			"description": "봇 상태를 설정합니다",
-			"usage": {
-				"status": {
-					"name": "상태",
-					"description": "봇의 새로운 상태."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "상태 세트가 성공적으로 세트!"
-			}
-		}
-	},
-	"whisper": {
-		"config": {
-			"description": "친구에게 개인 메시지를 보냅니다.",
-			"usage": {
-				"query": {
-					"name": "친구의 이름 또는 ID",
-					"description": "친구의 이름이나 ID가 개인 메시지를 보냅니다."
-				},
-				"message": {
-					"name": "메시지",
-					"description": "친구에게 보내는 메시지."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "여러 친구를 찾았습니다.",
-				"friend_not_found": "친구 {{query}}를 찾을 수 없습니다!",
-				"whisper_sent": "{{name}}으로 보냈습니다!"
-			}
-		}
-	},
-	"bp_level": {
-		"config": {
-			"description": "봇의 전투 패스 레벨을 설정합니다.",
-			"usage": {
-				"level": {
-					"name": "수준",
-					"description": "전투 패스의 레벨이 설정됩니다."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"bp_level_set": "전투 패스 레벨을 {{level}}으로 설정하십시오!"
-			}
-		}
-	},
-	"clear_custom_key": {
-		"config": {
-			"description": "사용자 정의 매치 메이킹 키를 지 웁니다."
-		},
-		"run": {
-			"msg": {
-				"success": "사용자 정의 매치 메이킹 키를 지 웠습니다!"
-			}
-		}
-	},
-	"crowns": {
-		"config": {
-			"description": "봇 크라운을 설정합니다.",
-			"usage": {
-				"crowns": {
-					"name": "크라운",
-					"description": "세트 할 왕관."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "크라운을 {{crowns}}로 설정하십시오!"
-			}
-		}
-	},
-	"hide": {
-		"config": {
-			"description": "인수를 지정하지 않으면 파티에서 플레이어를 숨기거나 숨기십시오.",
-			"usage": {
-				"query": {
-					"name": "회원 이름 또는 ID",
-					"description": "숨길 파티 멤버의 이름 또는 ID."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "여러 친구를 찾았습니다.",
-				"member_not_found": "멤버 {{query}}를 찾을 수 없습니다!",
-				"member_not_at_party": "당신은 내 파티의 일원이 아닙니다.",
-				"success": "숨겨진 {{name}}!"
-			}
-		}
-	},
-	"hide_all": {
-		"config": {
-			"description": "파티의 모든 플레이어를 숨 깁니다."
-		},
-		"run": {
-			"msg": {
-				"success": "모든 회원을 숨겼습니다!"
-			}
-		}
-	},
-	"kick": {
-		"config": {
-			"description": "킥은 파티에서 선수입니다.",
-			"usage": {
-				"query": {
-					"name": "회원 이름 또는 ID",
-					"description": "파티 멤버의 이름 또는 신분증을 차기."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "여러 친구를 찾았습니다.",
-				"member_not_found": "멤버 {{query}}를 찾을 수 없습니다!",
-				"success": "차기 {{name}}!"
-			}
-		}
-	},
-	"kick_all": {
-		"config": {
-			"description": "파티에서 모든 선수를 차는다."
-		},
-		"run": {
-			"msg": {
-				"user_kicked": "차기 {{name}}!",
-				"success": "모든 멤버를 걷어차 게되었습니다!"
-			}
-		}
-	},
-	"leave": {
-		"config": {
-			"description": "봇은 파티를 떠납니다."
-		},
-		"run": {
-			"msg": {
-				"success": "안녕!"
-			}
-		}
-	},
-	"level": {
-		"config": {
-			"description": "봇 수준을 설정합니다.",
-			"usage": {
-				"level": {
-					"name": "수준",
-					"description": "설정할 레벨."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "레벨을 {{level}}으로 설정하십시오!"
-			}
-		}
-	},
-	"match": {
-		"config": {
-			"description": "상태가 게임을하도록 설정합니다.",
-			"usage": {
-				"number": {
-					"name": "플레이어 수",
-					"description": "게임에서 플레이어의 수."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "연주 상태로 설정!"
-			}
-		}
-	},
-	"party_info": {
-		"config": {
-			"description": "파티에 대한 정보를 보여줍니다."
-		}
-	},
-	"playlist": {
-		"config": {
-			"description": "파티의 재생 목록을 설정합니다.",
-			"usage": {
-				"query": {
-					"name": "재생 목록의 이름 또는 ID",
-					"description": "재생 목록의 이름 또는 ID를 설정할 수 있습니다."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"error": "오류 설정 재생 목록!",
-				"success": "재생 목록을 {{query}}로 설정하십시오!"
-			}
-		}
-	},
-	"privacy": {
-		"config": {
-			"description": "파티의 개인 정보를 설정합니다.",
-			"usage": {
-				"privacy": {
-					"name": "은둔",
-					"options": {
-						"public": "공공의",
-						"private": "사적인"
-					},
-					"description": "정당의 프라이버시."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "당사자 개인 정보를 {{privacy}}로 설정하십시오!",
-				"error": "유효하지 않은 개인 정보는 공개적이거나 사적이어야합니다!"
-			}
-		}
-	},
-	"rank": {
-		"config": {
-			"description": "봇 순위를 설정합니다.",
-			"usage": {
-				"rank": {
-					"name": "계급",
-					"description": "설정 할 순위."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "순위를 {{rank}}로 설정하십시오!"
-			}
-		}
-	},
-	"ready": {
-		"config": {
-			"description": "상태가 준비되도록 설정합니다."
-		},
-		"run": {
-			"msg": {
-				"warning": "경고 : 매치 메이킹을 시작하려는 경우이 명령을 사용하지 마십시오! 그냥 준비하면 스스로 준비하면 자동으로 준비를 할 것입니다.",
-				"success": "준비가 된!"
-			}
-		}
-	},
-	"say": {
-		"config": {
-			"description": "파티 채팅에 메시지를 보냅니다.",
-			"usage": {
-				"message": {
-					"name": "메시지",
-					"description": "파티에 보낼 메시지."
-				}
-			}
-		},
-		"run": {}
-	},
-	"set_custom_key": {
-		"config": {
-			"description": "사용자 정의 매치 메이킹 키를 설정합니다.",
-			"usage": {
-				"key": {
-					"name": "사용자 정의 키",
-					"description": "설정할 사용자 정의 매치 메이킹 키."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "사용자 정의 매치 메이킹 키를 설정하십시오!"
-			}
-		}
-	},
-	"show": {
-		"config": {
-			"description": "파티에서 숨겨진 플레이어를 표시하거나 인수를 지정하지 않으면 표시합니다.",
-			"usage": {
-				"query": {
-					"name": "회원 이름 또는 ID",
-					"description": "파티 멤버의 이름 또는 신분증을 보여줍니다."
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "여러 친구를 찾았습니다.",
-				"member_not_found": "멤버 {{query}}를 찾을 수 없습니다!",
-				"member_not_at_party": "당신은 내 파티의 일원이 아닙니다.",
-				"success": "{{name}} 표시!"
-			}
-		}
-	},
-	"show_all": {
-		"config": {
-			"description": "파티에 숨겨진 모든 선수들을 보여줍니다."
-		},
-		"run": {
-			"msg": {
-				"success": "모든 회원을 보여주십시오!"
-			}
-		}
-	},
-	"sit_in": {
-		"config": {
-			"description": "주정부가 참여하도록 설정합니다."
-		},
-		"run": {
-			"msg": {
-				"success": "앉아 ..."
-			}
-		}
-	},
-	"sit_out": {
-		"config": {
-			"description": "주정부가 참여하지 않도록 설정합니다."
-		},
-		"run": {
-			"msg": {
-				"success": "앉아 ..."
-			}
-		}
-	},
-	"unmatch": {
-		"config": {
-			"description": "상태가 게임을하지 않도록 설정합니다."
-		},
-		"run": {
-			"msg": {
-				"success": "연주 상태를 제거했습니다!"
-			}
-		}
-	},
-	"unready": {
-		"config": {
-			"description": "상태가 준비되지 않도록 설정합니다."
-		},
-		"run": {
-			"msg": {
-				"success": "준비되지 않았습니다!"
-			}
-		}
-	}
+    "handler": {
+        "errors": {
+            "only_for_party_members": "이 명령은 내 파티원에게만 사용할 수 있습니다.",
+            "only_for_private_messages": "이 명령은 개인 메시지로만 사용할 수 있습니다.",
+            "need_party_leader": "이 명령을 실행하려면 파티 리더가되어야합니다!",
+            "only_for_owners": "이 명령은 봇 소유자에게만 사용할 수 있습니다.",
+            "only_for_admins": "이 명령은 봇 관리자에게만 사용할 수 있습니다.",
+            "only_for_whitelist": "이 명령은 봇의 화이트리스트에있는 사용자 만 사용할 수 있습니다."
+        }
+    },
+    "all_items": {
+        "config": {
+            "description": "게임의 모든 화장품을 보여주고 옵션 필터를 추가 할 수 있으며 \"stop\"명령으로 중지 할 수 있습니다.",
+            "usage": {
+                "filter": {
+                    "name": "필터",
+                    "options": {
+                        "outfits": "의상",
+                        "backpacks": "배낭",
+                        "emojis": "이모티콘",
+                        "emotes": "감정",
+                        "pickaxes": "곡예물",
+                        "shoes": "신발"
+                    },
+                    "description": "항목을 보여줌으로써 필터를 설정할 수 있습니다."
+                },
+                "random_order": {
+                    "name": "임의 순서",
+                    "description": "최신 먼저 주문하는 대신 임의 순서를 사용하십시오.",
+                    "options": {
+                        "yes": "예",
+                        "no": "아니요"
+                    }
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "no_items": "항목을 가져올 수 없습니다.",
+                "items_already_displaying": "화장품이 이미 표시되고 있으며 먼저 \"stop\"명령으로 중지해야합니다.",
+                "setting_items": "모든 게임 항목 설정 ... {{filtered}}",
+                "filtered_by": "({{filter}}에 의해 필터링)",
+                "items_showed": "나는 모든 아이템을 보여 주었다 ..."
+            }
+        }
+    },
+    "backpack": {
+        "config": {
+            "description": "봇의 배낭을 설정합니다.",
+            "usage": {
+                "query": {
+                    "name": "배낭 이름 또는 ID",
+                    "description": "배낭의 이름 또는 ID를 설정할 수 있습니다."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "backpack_not_found": "배낭 {{item}}을 찾을 수 없습니다!",
+                "backpack_changed": "배낭을 {{name}}으로 설정하십시오! ({{id}})"
+            }
+        }
+    },
+    "backpack_variants": {
+        "config": {
+            "description": "백팩의 변형을 설정합니다."
+        },
+        "run": {
+            "msg": {
+                "backpack_not_found": "봇에는 배낭이 없습니다!",
+                "invalid_backpack": "잘못된 배낭!",
+                "variants_not_founded": "이 배낭에는 변형이 없습니다!",
+                "variants_select": "{{type}}에 대해 선택하려는 변형을 보내십시오.",
+                "variants_changed": "배낭 변형을 설정하십시오!"
+            }
+        }
+    },
+    "banner": {
+        "config": {
+            "description": "봇의 배너를 설정합니다.",
+            "usage": {
+                "query": {
+                    "name": "배너 이름 또는 ID",
+                    "description": "배너의 이름 또는 ID를 설정합니다."
+                },
+                "color": {
+                    "name": "색상 또는 ID",
+                    "description": "설정할 색상의 이름 또는 ID."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "banner_not_found": "배너 {{item}}을 찾을 수 없습니다!",
+                "color_not_found": "색상 {{item}}을 찾을 수 없습니다!",
+                "banner_changed": "배너를 {{name}}으로 설정하십시오! ({{id}})"
+            }
+        }
+    },
+    "clear_backpack": {
+        "config": {
+            "description": "봇의 배낭을 제거합니다."
+        },
+        "run": {
+            "msg": {
+                "backpack_cleared": "배낭 청소!"
+            }
+        }
+    },
+    "clear_emote": {
+        "config": {
+            "description": "봇의 춤을 멈 춥니 다."
+        },
+        "run": {
+            "msg": {
+                "emote_cleared": "감정을 정리했습니다!"
+            }
+        }
+    },
+    "clear_shoes": {
+        "config": {
+            "description": "봇의 신발을 제거합니다."
+        },
+        "run": {
+            "msg": {
+                "shoes_cleared": "청소 된 신발!"
+            }
+        }
+    },
+    "copy": {
+        "config": {
+            "description": "인수를 지정하지 않으면 사용자의 화장품을 복사하거나 화장품을 귀하에게 복사하십시오.",
+            "usage": {
+                "filter": {
+                    "name": "필터",
+                    "options": {
+                        "all": "모두",
+                        "outfit": "차림새",
+                        "backpack": "배낭",
+                        "emoji": "이모티콘",
+                        "emote": "감정",
+                        "pickaxe": "곡괭이",
+                        "shoes": "신발"
+                    },
+                    "description": "화장품을 복사 할 때 설정할 필터."
+                },
+                "query": {
+                    "name": "회원 이름 또는 ID",
+                    "description": "화장품을 복사하는 멤버의 이름 또는 ID."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "members_found": "발견 된 여러 회원 :",
+                "member_not_found": "회원 {{member}}를 찾을 수 없습니다!",
+                "member_not_at_party": "당신은 내 파티의 일원이 아닙니다.",
+                "member_copied": "복사 {{member}}!"
+            }
+        }
+    },
+    "cosmetic": {
+        "config": {
+            "description": "봇의 화장품을 설정합니다.",
+            "usage": {
+                "query": {
+                    "name": "미용사 이름 또는 ID",
+                    "description": "설정할 미용사의 이름 또는 ID."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "cosmetic_not_found": "화장품 {{query}}를 찾을 수 없습니다!",
+                "cosmetic_changed": "{{type}}을 {{name}}으로 설정하십시오! ({{id}})"
+            }
+        }
+    },
+    "cosmetic_info": {
+        "config": {
+            "description": "미용에 대한 정보를 보여줍니다.",
+            "usage": {
+                "query": {
+                    "name": "미용사 이름 또는 ID",
+                    "description": "설정할 미용사의 이름 또는 ID."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "cosmetic_not_found": "화장품 {{query}}를 찾을 수 없습니다!"
+            }
+        }
+    },
+    "emoji": {
+        "config": {
+            "description": "봇의 이모티콘을 설정합니다.",
+            "usage": {
+                "query": {
+                    "name": "이모티콘 이름 또는 ID",
+                    "description": "설정할 이모티콘의 이름 또는 ID."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "emoji_not_found": "이모티콘 {{query}}를 찾을 수 없습니다!",
+                "emoji_changed": "이모티콘을 {{name}}으로 설정하십시오! ({{id}})"
+            }
+        }
+    },
+    "emote": {
+        "config": {
+            "description": "봇의 감정을 설정합니다.",
+            "usage": {
+                "query": {
+                    "name": "이름 또는 ID를 감정으로합니다",
+                    "description": "설정할 감정 감정의 이름 또는 ID."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "emote_not_found": "감정 {{query}}를 찾을 수 없습니다!",
+                "emote_changed": "에모지를 {{name}}로 설정하십시오! ({{id}})"
+            }
+        }
+    },
+    "mimic": {
+        "config": {
+            "description": "인수를 지정하지 않은 경우 사용자와 동일하거나 귀하와 동일합니다. \"stop\"를 사용하여 명령을 중지하십시오.",
+            "usage": {
+                "filter": {
+                    "name": "필터",
+                    "options": {
+                        "all": "모두",
+                        "changes": "변화",
+                        "outfits": "의상",
+                        "backpacks": "배낭",
+                        "emojis": "이모티콘",
+                        "emotes": "감정",
+                        "pickaxes": "곡예물",
+                        "shoes": "신발"
+                    },
+                    "description": "화장품을 모방 할 때 설정하는 필터."
+                },
+                "query": {
+                    "name": "회원 이름 또는 ID",
+                    "description": "화장품을 모방하기위한 회원의 이름 또는 ID."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "members_found": "발견 된 여러 회원 :",
+                "member_not_found": "멤버 {{query}}를 찾을 수 없습니다!",
+                "member_not_at_party": "당신은 내 파티의 일원이 아닙니다.",
+                "mimic_enabled": "{{member}} {{filter}}에 대한 mimic enabled!",
+                "filter": "필터 {{filter}}"
+            }
+        }
+    },
+    "new_items": {
+        "config": {
+            "description": "게임에 추가 된 최신 화장품을 보여 주면 옵션 필터를 추가 할 수 있으며 \"stop\"명령으로 중지 할 수 있습니다.",
+            "usage": {
+                "filter": {
+                    "name": "필터",
+                    "options": {
+                        "outfits": "의상",
+                        "backpacks": "배낭",
+                        "emojis": "이모티콘",
+                        "emotes": "감정",
+                        "pickaxes": "곡예물",
+                        "shoes": "신발"
+                    },
+                    "description": "항목을 보여줌으로써 필터를 설정할 수 있습니다."
+                },
+                "random_order": {
+                    "name": "임의 순서",
+                    "description": "최신 먼저 주문하는 대신 임의 순서를 사용하십시오.",
+                    "options": {
+                        "yes": "예",
+                        "no": "아니요"
+                    }
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "type_error": "필터를 원한다면 의상, 배낭, 이모티콘, 감정, 곡예 또는 신발 만 유효한지 확인하십시오.",
+                "cosmetic_fetch_error": "최근에 추가 된 화장품을 가져올 수 없습니다.",
+                "already_showing": "화장품이 이미 표시되고 있으며 먼저 \"stop\"명령으로 중지해야합니다.",
+                "showing_cosmetics": "최근에 추가 된 모든 항목 설정 ... {{filter}}",
+                "filter": "({{filter}}에 의해 필터링)",
+                "ended": "최근에 추가 된 모든 아이템을 보여주었습니다 ..."
+            }
+        }
+    },
+    "outfit": {
+        "config": {
+            "description": "봇의 복장을 설정합니다.",
+            "usage": {
+                "query": {
+                    "name": "의상 이름 또는 ID",
+                    "description": "설정할 복장의 이름 또는 ID."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "outfit_not_found": "의상 {{query}}를 찾을 수 없습니다!",
+                "outfit_changed": "의상을 {{name}}으로 설정하십시오! ({{id}})"
+            }
+        }
+    },
+    "outfit_variants": {
+        "config": {
+            "description": "의상의 변형을 설정합니다."
+        },
+        "run": {
+            "msg": {
+                "outfit_not_found": "봇에는 의상이 없습니다!",
+                "invalid_outfit": "잘못된 복장!",
+                "variants_not_found": "이 복장에는 변형이 없습니다!",
+                "variants_select": "{{type}}에 대해 선택하려는 변형을 보내십시오.",
+                "changed": "의상 변형을 설정하십시오!"
+            }
+        }
+    },
+    "perfect_timing": {
+        "config": {
+            "description": "봇의 화장품을 동기화합니다.",
+            "usage": {
+                "query": {
+                    "name": "미용사 이름 또는 ID",
+                    "description": "설정할 미용사의 이름 또는 ID."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "cosmetic_not_found": "화장품 {{query}}를 찾을 수 없습니다!",
+                "perfect_timing_success": "완벽한 타이밍을 수행하기 위해 동기화 ...",
+                "perfect_timing_done": "{{value}}를 {{name}}과 동기화했습니다! ({{id}})"
+            }
+        }
+    },
+    "pickaxe": {
+        "config": {
+            "description": "봇의 곡예물을 설정합니다.",
+            "usage": {
+                "query": {
+                    "name": "삭제 이름 또는 ID",
+                    "description": "예비 삭스의 이름 또는 ID를 설정합니다."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "pickaxe_not_found": "PICKAXE {{query}}를 찾을 수 없습니다!",
+                "pickaxe_changed": "PICKAXE를 {{name}}으로 설정하십시오! ({{id}})"
+            }
+        }
+    },
+    "pickaxe_variants": {
+        "config": {
+            "description": "Pickaxe의 변형을 설정합니다."
+        },
+        "run": {
+            "msg": {
+                "pickaxe_not_found": "봇에는 곡예가 없습니다!",
+                "invalid_pickaxe": "잘못된 곡예물!",
+                "variants_not_found": "이 곡물은 변형이 없습니다!",
+                "variants_select": "{{type}}에 대해 선택하려는 변형을 보내십시오.",
+                "changed": "Pickaxe 변형을 설정하십시오!"
+            }
+        }
+    },
+    "preset": {
+        "config": {
+            "description": "봇의 사전 설정을 설정합니다. \"none\"을 사용하여 화장품을 제거하십시오.",
+            "usage": {
+                "outfit": {
+                    "name": "복장 ID",
+                    "description": "복장의 신분."
+                },
+                "backpack": {
+                    "name": "배낭 ID",
+                    "description": "배낭의 ID."
+                },
+                "pickaxe": {
+                    "name": "PICKAXE ID",
+                    "description": "PICKAXE의 ID."
+                },
+                "emote": {
+                    "name": "Emote ID",
+                    "description": "감정의 ID."
+                },
+                "shoes": {
+                    "name": "신발 ID",
+                    "description": "신발의 ID."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "preset_changed": "사전 설정을 설정하십시오!"
+            }
+        }
+    },
+    "shoes": {
+        "config": {
+            "description": "봇의 신발을 설정합니다.",
+            "usage": {
+                "query": {
+                    "name": "신발 이름 또는 ID",
+                    "description": "신발의 이름이나 신분증을 설정합니다."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "shoes_not_found": "신발 {{query}}를 찾을 수 없습니다!",
+                "shoes_changed": "신발을 {{name}}으로 설정하십시오! ({{id}})"
+            }
+        }
+    },
+    "shoe_variants": {
+        "config": {
+            "description": "신발 변형을 설정합니다."
+        },
+        "run": {
+            "msg": {
+                "shoes_not_found": "봇에는 신발이 없습니다!",
+                "invalid_shoes": "잘못된 신발!",
+                "variants_not_found": "이 신발에는 변형이 없습니다!",
+                "variants_select": "{{type}}에 대해 선택하려는 변형을 보내십시오.",
+                "changed": "신발 변형을 설정하십시오!"
+            }
+        }
+    },
+    "shop_items": {
+        "config": {
+            "description": "품목 상점에서 화장품을 표시하면 옵션 필터를 추가 할 수 있으며 \"stop\"명령으로 중지 할 수 있습니다.",
+            "usage": {
+                "filter": {
+                    "name": "필터",
+                    "options": {
+                        "outfits": "의상",
+                        "backpacks": "배낭",
+                        "emojis": "이모티콘",
+                        "emotes": "감정",
+                        "pickaxes": "곡예물",
+                        "shoes": "신발"
+                    },
+                    "description": "항목을 보여줌으로써 필터를 설정할 수 있습니다."
+                },
+                "random_order": {
+                    "name": "임의 순서",
+                    "description": "최신 먼저 주문하는 대신 임의 순서를 사용하십시오.",
+                    "options": {
+                        "yes": "예",
+                        "no": "아니요"
+                    }
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "invalid_type": "필터를 원한다면 의상, 배낭, 이모티콘, 감정, 곡예 또는 신발 만 유효한지 확인하십시오.",
+                "fetch_failed": "상점 품목을 가져올 수 없습니다.",
+                "already_displaying": "화장품이 이미 표시되고 있으며 먼저 \"stop\"명령으로 중지해야합니다.",
+                "showing_items": "상점에서 모든 항목 설정 ... {{filter}}",
+                "filter": "({{query}}에 의해 필터링)",
+                "ended": "나는 가게의 모든 아이템을 보여 주었다 ..."
+            }
+        }
+    },
+    "stop": {
+        "config": {
+            "description": "보류중인 운영을 중지합니다."
+        },
+        "run": {
+            "msg": {
+                "stopped_items": "아이템 표시가 중단되었습니다!",
+                "stopped_mimic": "MIMIC 중지!",
+                "stopped_emote": "감정을 멈췄다!",
+                "nothing_to_stop": "중지 할 것이 없습니다!"
+            }
+        }
+    },
+    "accept_all_friends": {
+        "config": {
+            "description": "보류중인 봇의 모든 친구를 받아들입니다."
+        },
+        "run": {
+            "msg": {
+                "accepting_friends": "보류중인 친구들을 모두 받아들입니다!",
+                "accepted_friends": "받아 들여 {{count}} 친구!"
+            }
+        }
+    },
+    "accept_friend": {
+        "config": {
+            "description": "친구 요청을 수락하십시오.",
+            "usage": {
+                "query": {
+                    "name": "보류중인 친구의 이름 또는 ID",
+                    "description": "친구의 이름이나 신분증이 수락 할 때 보류 중입니다."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "여러 친구를 찾았습니다.",
+                "friends_not_found": "친구 {{query}}를 찾을 수 없습니다!",
+                "self_request": "보류중인 친구 요청은 내 것입니다!",
+                "error": "보류중인 친구가 받아 들여지지 않았습니다!",
+                "request_accepted": "보류중인 친구 {{name}}가 성공적으로 받아 들여졌습니다!"
+            }
+        }
+    },
+    "add_friend": {
+        "config": {
+            "description": "친구 요청을 사용자에게 보내거나 친구 요청을 수락하십시오.",
+            "usage": {
+                "query": {
+                    "name": "사용자 이름 또는 ID",
+                    "description": "추가 할 사용자 이름 또는 ID."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "여러 친구를 찾았습니다.",
+                "friends_not_found": "친구 {{query}}를 찾을 수 없습니다!",
+                "already_friends": "이미 친구!",
+                "error": "사용자를 추가 할 수 없습니다!",
+                "request_sent": "{{name}}로 전송 된 친구 요청"
+            }
+        }
+    },
+    "block_user": {
+        "config": {
+            "description": "사용자를 차단합니다.",
+            "usage": {
+                "query": {
+                    "name": "사용자 이름 또는 ID",
+                    "description": "사용자의 이름 또는 ID를 차단할 것입니다."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_users_found": "발견 된 여러 사용자 :",
+                "user_not_found": "사용자 {{query}}를 찾을 수 없습니다!",
+                "error": "{{name}}을 차단할 수 없습니다!",
+                "user_blocked": "사용자 {{name}}가 성공적으로 차단되었습니다!"
+            }
+        }
+    },
+    "decline_all_friends": {
+        "config": {
+            "description": "보류중인 봇의 모든 친구를 거절합니다."
+        },
+        "run": {
+            "msg": {
+                "declining_friends": "보류중인 모든 친구들을 거절합니다!",
+                "declined_friends": "{{count}} 친구가 거절되었습니다!"
+            }
+        }
+    },
+    "decline_friend": {
+        "config": {
+            "description": "친구 요청을 거부하거나 중단합니다.",
+            "usage": {
+                "query": {
+                    "name": "보류중인 친구의 이름 또는 ID",
+                    "description": "친구의 이름이나 신분증은 거절하거나 중단하기 위해 기다려야합니다."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "여러 친구를 찾았습니다.",
+                "friends_not_found": "친구 {{query}}를 찾을 수 없습니다!",
+                "error": "보류중인 친구가 제거되지 않았습니다!",
+                "request_sent": "보류중인 친구 {{name}}가 성공적으로 제거되었습니다!"
+            }
+        }
+    },
+    "friend_count": {
+        "config": {
+            "description": "봇의 친구 수를 보여줍니다."
+        },
+        "run": {
+            "msg": {
+                "info": "나는 {{friends}} friends, {{pending}} 보류중인 ({{incoming}} incoming, {{outgoing}} 외향) 및 {{blocked}}가 차단되었습니다!"
+            }
+        }
+    },
+    "invite": {
+        "config": {
+            "description": "친구 나 당신을 파티에 초대합니다.",
+            "usage": {
+                "query": {
+                    "name": "친구의 이름 또는 ID",
+                    "description": "친구의 이름이나 초대 할 ID."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "alone": "나와 함께 파티에 초대 할 사용자가 필요합니다.",
+                "multiple_friends_found": "여러 친구를 찾았습니다.",
+                "friends_not_found": "친구 {{query}}를 찾을 수 없습니다!",
+                "already_on_party": "{{name}}은 이미 내 파티에 있습니다!",
+                "invite_error": "초대장을 {{name}}에 보낼 수 없습니다!",
+                "invite_sent": "{{name}}로 전송 된 초대!"
+            }
+        }
+    },
+    "join": {
+        "config": {
+            "description": "파티 또는 일부 사용자 파티에 합류합니다.",
+            "usage": {
+                "query": {
+                    "name": "친구의 이름 또는 ID",
+                    "description": "가입 할 친구의 이름 또는 ID."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "invalid_param": "당신은 내 친구가되거나 친구를 지정해야합니다!",
+                "multiple_friends_found": "여러 친구를 찾았습니다.",
+                "friend_not_found": "친구 {{query}}를 찾을 수 없습니다!",
+                "already_on_party": "이미 내 파티에있는 친구!",
+                "party_error": "{{name}}은 파티가 없습니다!",
+                "join_request_error": "가입 요청을 {{name}}에 보낼 수 없습니다!",
+                "joined": "{{name}}에 가입했습니다!",
+                "join_request_sent": "{{name}}에 보낸 요청에 가입!"
+            }
+        }
+    },
+    "promote": {
+        "config": {
+            "description": "인수를 지정하지 않으면 회원을 홍보하거나 리더로 만듭니다.",
+            "usage": {
+                "query": {
+                    "name": "회원 이름 또는 ID",
+                    "description": "상승하기 위해 파티의 이름이나 신분증."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "여러 친구를 찾았습니다.",
+                "member_not_found": "멤버 {{query}}를 찾을 수 없습니다!",
+                "member_not_at_party": "당신은 내 파티의 일원이 아닙니다.",
+                "member_promoted": "승진 {{name}}!"
+            }
+        }
+    },
+    "remove_all_friends": {
+        "config": {
+            "description": "봇의 모든 친구를 제거합니다. 관리자와 소유자는 제외됩니다."
+        },
+        "run": {
+            "msg": {
+                "removing_friends": "모든 친구를 제거하십시오!",
+                "removed_friends": "{{count}} 친구를 제거했습니다!"
+            }
+        }
+    },
+    "remove_friend": {
+        "config": {
+            "description": "봇의 친구를 제거합니다.",
+            "usage": {
+                "query": {
+                    "name": "친구의 이름 또는 ID",
+                    "description": "친구의 이름이나 ID를 제거 할 ID."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "여러 친구를 찾았습니다.",
+                "friend_not_found": "친구 {{query}}를 찾을 수 없습니다!",
+                "error": "{{name}}을 제거 할 수 없습니다!",
+                "friend_removed": "친구 {{name}}가 성공적으로 제거되었습니다!"
+            }
+        }
+    },
+    "unblock_all_users": {
+        "config": {
+            "description": "봇의 모든 차단 된 사용자를 차단 해제합니다."
+        },
+        "run": {
+            "msg": {
+                "removing_friends": "차단 된 모든 사용자를 차단 해제!",
+                "removed_friends": "차단되지 않은 {{count}} 차단 된 사용자!"
+            }
+        }
+    },
+    "unblock_user": {
+        "config": {
+            "description": "사용자를 차단 해제합니다.",
+            "usage": {
+                "query": {
+                    "name": "사용자 이름 또는 ID",
+                    "description": "사용자 이름 또는 ID가 차단 해제됩니다."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_users_found": "발견 된 여러 사용자 :",
+                "user_not_found": "사용자 {{query}}를 찾을 수 없습니다!",
+                "error": "{{name}}을 차단 해제 할 수 없습니다!",
+                "user_unblocked": "사용자 {{name}} 성공적으로 차단되지 않았습니다!"
+            }
+        }
+    },
+    "user_info": {
+        "config": {
+            "description": "지정된 사용자의 정보를 보여줍니다.",
+            "usage": {
+                "query": {
+                    "name": "사용자 이름 또는 ID",
+                    "description": "사용자의 이름 또는 ID."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_users_found": "발견 된 여러 사용자 :",
+                "user_not_found": "사용자 {{query}}를 찾을 수 없습니다!"
+            }
+        }
+    },
+    "eval": {
+        "run": {
+            "msg": {
+                "unauthorized_error": "Tnfangel 만이이 명령에 액세스 할 수 있습니다."
+            }
+        }
+    },
+    "help": {
+        "config": {
+            "description": "도움말 및 명령 패널을 보여줍니다.",
+            "usage": {
+                "query": {
+                    "name": "명령의 이름 또는 ID",
+                    "description": "상세한 도움을 얻으려면 명령의 이름 또는 ID입니다."
+                }
+            }
+        }
+    },
+    "message": {
+        "config": {
+            "description": "파티에 메시지를 보냅니다.",
+            "usage": {
+                "message": {
+                    "name": "메시지",
+                    "description": "파티에 보낼 메시지."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "파티에 메시지를 보냈습니다"
+            }
+        }
+    },
+    "ping": {
+        "config": {
+            "description": "봇의 대기 시간을 보여줍니다."
+        },
+        "run": {
+            "msg": {
+                "measuring": "자질...",
+                "info": "멍청이! {{time}} MS"
+            }
+        }
+    },
+    "prev": {
+        "config": {
+            "description": "이전 명령을 실행합니다."
+        },
+        "run": {
+            "msg": {
+                "not_found": "이전 명령이 실행되지 않았습니다!"
+            }
+        }
+    },
+    "restart_bot": {
+        "config": {
+            "description": "현재 봇을 다시 시작합니다."
+        },
+        "run": {
+            "msg": {
+                "success": "봇이 지금 다시 시작 중입니다!"
+            }
+        }
+    },
+    "restart_category": {
+        "config": {
+            "description": "현재 범주를 다시 시작합니다."
+        },
+        "run": {
+            "msg": {
+                "success": "카테고리가 지금 다시 시작되고 있습니다!"
+            }
+        }
+    },
+    "restart_shard": {
+        "config": {
+            "description": "현재 샤드를 다시 시작합니다."
+        },
+        "run": {
+            "msg": {
+                "success": "샤드가 지금 다시 시작되고 있습니다!",
+                "error": "죄송합니다.이 봇은 샤드 안에서 달리지 않습니다."
+            }
+        }
+    },
+    "send": {
+        "config": {
+            "description": "지정 봇에 명령을 보냅니다.",
+            "usage": {
+                "bot": {
+                    "name": "봇 ID",
+                    "description": "봇 ID는 명령을 보냅니다."
+                },
+                "command": {
+                    "name": "명령",
+                    "description": "봇에서 실행되는 명령."
+                },
+                "args": {
+                    "name": "논쟁",
+                    "description": "명령의 인수가 필요합니다."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "sending_command": "bot {{user}}에 명령 보내기"
+            }
+        }
+    },
+    "send_all": {
+        "config": {
+            "description": "모든 봇에 명령을 보냅니다.",
+            "usage": {
+                "command": {
+                    "name": "명령",
+                    "description": "봇에서 실행되는 명령."
+                },
+                "args": {
+                    "name": "논쟁",
+                    "description": "명령의 인수가 필요합니다."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "sending_command": "모든 봇에게 명령을 보내는 ..."
+            }
+        }
+    },
+    "send_category": {
+        "config": {
+            "description": "봇 카테고리에 명령을 보냅니다.",
+            "usage": {
+                "command": {
+                    "name": "명령",
+                    "description": "봇에서 실행되는 명령."
+                },
+                "args": {
+                    "name": "논쟁",
+                    "description": "명령의 인수가 필요합니다."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "sending_command": "내 샤드의 모든 봇에 명령을 보내는 ...",
+                "error": "죄송합니다.이 봇은 카테고리 내에서 실행되지 않습니다."
+            }
+        }
+    },
+    "send_number": {
+        "config": {
+            "description": "지정된 봇 수로 명령을 보냅니다.",
+            "usage": {
+                "number": {
+                    "name": "봇 수",
+                    "description": "명령을 보낼 봇 수."
+                },
+                "command": {
+                    "name": "명령",
+                    "description": "봇에서 실행되는 명령."
+                },
+                "args": {
+                    "name": "논쟁",
+                    "description": "명령의 인수가 필요합니다."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "count_negative": "숫자는 0보다 커야합니다!",
+                "sending_command": "{{number}} 봇으로 명령을 보내기 ..."
+            }
+        }
+    },
+    "send_party": {
+        "config": {
+            "description": "같은 파티를 공유하는 모든 봇에게 명령을 보냅니다.",
+            "usage": {
+                "command": {
+                    "name": "명령",
+                    "description": "봇에서 실행되는 명령."
+                },
+                "args": {
+                    "name": "논쟁",
+                    "description": "명령의 인수가 필요합니다."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "sending_command": "내 파티의 모든 봇에 명령을 보내는 ..."
+            }
+        }
+    },
+    "send_shard": {
+        "config": {
+            "description": "봇의 샤드에 명령을 보냅니다.",
+            "usage": {
+                "command": {
+                    "name": "명령",
+                    "description": "봇에서 실행되는 명령."
+                },
+                "args": {
+                    "name": "논쟁",
+                    "description": "명령의 인수가 필요합니다."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "sending_command": "내 샤드의 모든 봇에 명령을 보내는 ..."
+            }
+        }
+    },
+    "set_status": {
+        "config": {
+            "description": "봇 상태를 설정합니다",
+            "usage": {
+                "status": {
+                    "name": "상태",
+                    "description": "봇의 새로운 상태."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "상태 세트가 성공적으로 세트!"
+            }
+        }
+    },
+    "whisper": {
+        "config": {
+            "description": "친구에게 개인 메시지를 보냅니다.",
+            "usage": {
+                "query": {
+                    "name": "친구의 이름 또는 ID",
+                    "description": "친구의 이름이나 ID가 개인 메시지를 보냅니다."
+                },
+                "message": {
+                    "name": "메시지",
+                    "description": "친구에게 보내는 메시지."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "여러 친구를 찾았습니다.",
+                "friend_not_found": "친구 {{query}}를 찾을 수 없습니다!",
+                "whisper_sent": "{{name}}으로 보냈습니다!"
+            }
+        }
+    },
+    "bp_level": {
+        "config": {
+            "description": "봇의 전투 패스 레벨을 설정합니다.",
+            "usage": {
+                "level": {
+                    "name": "수준",
+                    "description": "전투 패스의 레벨이 설정됩니다."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "bp_level_set": "전투 패스 레벨을 {{level}}으로 설정하십시오!"
+            }
+        }
+    },
+    "clear_custom_key": {
+        "config": {
+            "description": "사용자 정의 매치 메이킹 키를 지 웁니다."
+        },
+        "run": {
+            "msg": {
+                "success": "사용자 정의 매치 메이킹 키를 지 웠습니다!"
+            }
+        }
+    },
+    "crowns": {
+        "config": {
+            "description": "봇 크라운을 설정합니다.",
+            "usage": {
+                "crowns": {
+                    "name": "크라운",
+                    "description": "세트 할 왕관."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "크라운을 {{crowns}}로 설정하십시오!"
+            }
+        }
+    },
+    "hide": {
+        "config": {
+            "description": "인수를 지정하지 않으면 파티에서 플레이어를 숨기거나 숨기십시오.",
+            "usage": {
+                "query": {
+                    "name": "회원 이름 또는 ID",
+                    "description": "숨길 파티 멤버의 이름 또는 ID."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "여러 친구를 찾았습니다.",
+                "member_not_found": "멤버 {{query}}를 찾을 수 없습니다!",
+                "member_not_at_party": "당신은 내 파티의 일원이 아닙니다.",
+                "success": "숨겨진 {{name}}!"
+            }
+        }
+    },
+    "hide_all": {
+        "config": {
+            "description": "파티의 모든 플레이어를 숨 깁니다."
+        },
+        "run": {
+            "msg": {
+                "success": "모든 회원을 숨겼습니다!"
+            }
+        }
+    },
+    "kick": {
+        "config": {
+            "description": "킥은 파티에서 선수입니다.",
+            "usage": {
+                "query": {
+                    "name": "회원 이름 또는 ID",
+                    "description": "파티 멤버의 이름 또는 신분증을 차기."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "여러 친구를 찾았습니다.",
+                "member_not_found": "멤버 {{query}}를 찾을 수 없습니다!",
+                "success": "차기 {{name}}!"
+            }
+        }
+    },
+    "kick_all": {
+        "config": {
+            "description": "파티에서 모든 선수를 차는다."
+        },
+        "run": {
+            "msg": {
+                "user_kicked": "차기 {{name}}!",
+                "success": "모든 멤버를 걷어차 게되었습니다!"
+            }
+        }
+    },
+    "leave": {
+        "config": {
+            "description": "봇은 파티를 떠납니다."
+        },
+        "run": {
+            "msg": {
+                "success": "안녕!"
+            }
+        }
+    },
+    "level": {
+        "config": {
+            "description": "봇 수준을 설정합니다.",
+            "usage": {
+                "level": {
+                    "name": "수준",
+                    "description": "설정할 레벨."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "레벨을 {{level}}으로 설정하십시오!"
+            }
+        }
+    },
+    "match": {
+        "config": {
+            "description": "상태가 게임을하도록 설정합니다.",
+            "usage": {
+                "number": {
+                    "name": "플레이어 수",
+                    "description": "게임에서 플레이어의 수."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "연주 상태로 설정!"
+            }
+        }
+    },
+    "party_info": {
+        "config": {
+            "description": "파티에 대한 정보를 보여줍니다."
+        }
+    },
+    "playlist": {
+        "config": {
+            "description": "파티의 재생 목록을 설정합니다.",
+            "usage": {
+                "query": {
+                    "name": "재생 목록의 이름 또는 ID",
+                    "description": "재생 목록의 이름 또는 ID를 설정할 수 있습니다."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "error": "오류 설정 재생 목록!",
+                "success": "재생 목록을 {{query}}로 설정하십시오!"
+            }
+        }
+    },
+    "privacy": {
+        "config": {
+            "description": "파티의 개인 정보를 설정합니다.",
+            "usage": {
+                "privacy": {
+                    "name": "은둔",
+                    "options": {
+                        "public": "공공의",
+                        "private": "사적인"
+                    },
+                    "description": "정당의 프라이버시."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "당사자 개인 정보를 {{privacy}}로 설정하십시오!",
+                "error": "유효하지 않은 개인 정보는 공개적이거나 사적이어야합니다!"
+            }
+        }
+    },
+    "rank": {
+        "config": {
+            "description": "봇 순위를 설정합니다.",
+            "usage": {
+                "rank": {
+                    "name": "계급",
+                    "description": "설정 할 순위."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "순위를 {{rank}}로 설정하십시오!"
+            }
+        }
+    },
+    "ready": {
+        "config": {
+            "description": "상태가 준비되도록 설정합니다."
+        },
+        "run": {
+            "msg": {
+                "warning": "경고 : 매치 메이킹을 시작하려는 경우이 명령을 사용하지 마십시오! 그냥 준비하면 스스로 준비하면 자동으로 준비를 할 것입니다.",
+                "success": "준비가 된!"
+            }
+        }
+    },
+    "say": {
+        "config": {
+            "description": "파티 채팅에 메시지를 보냅니다.",
+            "usage": {
+                "message": {
+                    "name": "메시지",
+                    "description": "파티에 보낼 메시지."
+                }
+            }
+        }
+    },
+    "set_custom_key": {
+        "config": {
+            "description": "사용자 정의 매치 메이킹 키를 설정합니다.",
+            "usage": {
+                "key": {
+                    "name": "사용자 정의 키",
+                    "description": "설정할 사용자 정의 매치 메이킹 키."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "사용자 정의 매치 메이킹 키를 설정하십시오!"
+            }
+        }
+    },
+    "show": {
+        "config": {
+            "description": "파티에서 숨겨진 플레이어를 표시하거나 인수를 지정하지 않으면 표시합니다.",
+            "usage": {
+                "query": {
+                    "name": "회원 이름 또는 ID",
+                    "description": "파티 멤버의 이름 또는 신분증을 보여줍니다."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "여러 친구를 찾았습니다.",
+                "member_not_found": "멤버 {{query}}를 찾을 수 없습니다!",
+                "member_not_at_party": "당신은 내 파티의 일원이 아닙니다.",
+                "success": "{{name}} 표시!"
+            }
+        }
+    },
+    "show_all": {
+        "config": {
+            "description": "파티에 숨겨진 모든 선수들을 보여줍니다."
+        },
+        "run": {
+            "msg": {
+                "success": "모든 회원을 보여주십시오!"
+            }
+        }
+    },
+    "sit_in": {
+        "config": {
+            "description": "주정부가 참여하도록 설정합니다."
+        },
+        "run": {
+            "msg": {
+                "success": "앉아 ..."
+            }
+        }
+    },
+    "sit_out": {
+        "config": {
+            "description": "주정부가 참여하지 않도록 설정합니다."
+        },
+        "run": {
+            "msg": {
+                "success": "앉아 ..."
+            }
+        }
+    },
+    "unmatch": {
+        "config": {
+            "description": "상태가 게임을하지 않도록 설정합니다."
+        },
+        "run": {
+            "msg": {
+                "success": "연주 상태를 제거했습니다!"
+            }
+        }
+    },
+    "unready": {
+        "config": {
+            "description": "상태가 준비되지 않도록 설정합니다."
+        },
+        "run": {
+            "msg": {
+                "success": "준비되지 않았습니다!"
+            }
+        }
+    }
 }
