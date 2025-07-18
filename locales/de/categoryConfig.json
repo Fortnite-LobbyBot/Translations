@@ -15,7 +15,11 @@
 			"privacy": {
 				"name": "Gruppen-Privatsphäre",
 				"itemDenomination": "Privatsphäre",
-				"description": "Standard-Privatsphäre für die Gruppe, z. B. öffentlich oder privat."
+				"description": "Standard-Privatsphäre für die Gruppe, z. B. öffentlich oder privat.",
+				"selectOptions": {
+					"private": "Privat",
+					"public": "Öffentlich"
+				}
 			},
 			"prefixes": {
 				"name": "Präfixe",

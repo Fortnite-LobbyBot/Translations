@@ -15,7 +15,11 @@
 			"privacy": {
 				"name": "Prywatność grupy",
 				"itemDenomination": "prywatność",
-				"description": "Domyślne ustawienie prywatności grupy, np. publiczna lub prywatna."
+				"description": "Domyślne ustawienie prywatności grupy, np. publiczna lub prywatna.",
+				"selectOptions": {
+					"private": "Prywatny",
+					"public": "Publiczny"
+				}
 			},
 			"prefixes": {
 				"name": "Prefiksy",

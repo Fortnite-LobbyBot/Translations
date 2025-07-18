@@ -15,7 +15,11 @@
 			"privacy": {
 				"name": "خصوصية المجموعة",
 				"itemDenomination": "الخصوصية",
-				"description": "إعداد الخصوصية الافتراضي للمجموعة، مثل عام أو خاص."
+				"description": "إعداد الخصوصية الافتراضي للمجموعة، مثل عام أو خاص.",
+				"selectOptions": {
+					"private": "خاص",
+					"public": "عام"
+				}
 			},
 			"prefixes": {
 				"name": "البادئات",

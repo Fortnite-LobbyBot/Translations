@@ -15,7 +15,11 @@
 			"privacy": {
 				"name": "Confidentialité du groupe",
 				"itemDenomination": "confidentialité",
-				"description": "Paramètre de confidentialité par défaut du groupe, comme public ou privé."
+				"description": "Paramètre de confidentialité par défaut du groupe, comme public ou privé.",
+				"selectOptions": {
+					"private": "Privé",
+					"public": "Public"
+				}
 			},
 			"prefixes": {
 				"name": "Préfixes",

@@ -15,7 +15,11 @@
 			"privacy": {
 				"name": "Party Privacy",
 				"itemDenomination": "privacy",
-				"description": "Default privacy setting for the party, such as public or private."
+				"description": "Default privacy setting for the party, such as public or private.",
+				"selectOptions": {
+					"private": "Private",
+					"public": "Public"
+				}
 			},
 			"prefixes": {
 				"name": "Prefixes",

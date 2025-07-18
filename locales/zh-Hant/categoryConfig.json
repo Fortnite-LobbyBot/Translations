@@ -15,7 +15,11 @@
 			"privacy": {
 				"name": "組隊隱私",
 				"itemDenomination": "隱私",
-				"description": "組隊的預設隱私設定，如公開或私密。"
+				"description": "組隊的預設隱私設定，如公開或私密。",
+				"selectOptions": {
+					"private": "私人",
+					"public": "公開"
+				}
 			},
 			"prefixes": {
 				"name": "前綴",

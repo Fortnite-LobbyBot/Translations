@@ -15,7 +15,11 @@
 			"privacy": {
 				"name": "パーティプライバシー",
 				"itemDenomination": "プライバシー",
-				"description": "パーティのデフォルトプライバシー設定（公開または非公開など）。"
+				"description": "パーティのデフォルトプライバシー設定（公開または非公開など）。",
+				"selectOptions": {
+					"private": "非公開",
+					"public": "公開"
+				}
 			},
 			"prefixes": {
 				"name": "プレフィックス",

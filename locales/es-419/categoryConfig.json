@@ -15,7 +15,11 @@
 			"privacy": {
 				"name": "Privacidad de Grupo",
 				"itemDenomination": "privacidad",
-				"description": "Configuración de privacidad predeterminada para el grupo, como público o privado."
+				"description": "Configuración de privacidad predeterminada para el grupo, como público o privado.",
+				"selectOptions": {
+					"private": "Privado",
+					"public": "Público"
+				}
 			},
 			"prefixes": {
 				"name": "Prefijos",

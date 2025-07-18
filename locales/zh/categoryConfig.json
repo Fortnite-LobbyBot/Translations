@@ -15,7 +15,11 @@
 			"privacy": {
 				"name": "组队隐私",
 				"itemDenomination": "隐私",
-				"description": "组队的默认隐私设置，如公开或私密。"
+				"description": "组队的默认隐私设置，如公开或私密。",
+				"selectOptions": {
+					"private": "私密",
+					"public": "公开"
+				}
 			},
 			"prefixes": {
 				"name": "前缀",

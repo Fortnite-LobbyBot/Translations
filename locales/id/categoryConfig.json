@@ -15,7 +15,11 @@
 			"privacy": {
 				"name": "Privasi Grup",
 				"itemDenomination": "privasi",
-				"description": "Pengaturan privasi grup default, seperti publik atau privat."
+				"description": "Pengaturan privasi grup default, seperti publik atau privat.",
+				"selectOptions": {
+					"private": "Pribadi",
+					"public": "Publik"
+				}
 			},
 			"prefixes": {
 				"name": "Prefix",

@@ -15,7 +15,11 @@
 			"privacy": {
 				"name": "Quyền riêng tư nhóm",
 				"itemDenomination": "quyền riêng tư",
-				"description": "Thiết lập quyền riêng tư mặc định cho nhóm, như công khai hoặc riêng tư."
+				"description": "Thiết lập quyền riêng tư mặc định cho nhóm, như công khai hoặc riêng tư.",
+				"selectOptions": {
+					"private": "Riêng tư",
+					"public": "Công khai"
+				}
 			},
 			"prefixes": {
 				"name": "Tiền tố",

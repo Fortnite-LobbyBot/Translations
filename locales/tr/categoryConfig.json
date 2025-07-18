@@ -15,7 +15,11 @@
 			"privacy": {
 				"name": "Grup Gizliliği",
 				"itemDenomination": "gizlilik",
-				"description": "Grup için varsayılan gizlilik ayarı, örneğin herkese açık veya özel."
+				"description": "Grup için varsayılan gizlilik ayarı, örneğin herkese açık veya özel.",
+				"selectOptions": {
+					"private": "Özel",
+					"public": "Genel"
+				}
 			},
 			"prefixes": {
 				"name": "Önekler",
