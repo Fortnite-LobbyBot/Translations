@@ -1,17 +1,17 @@
 {
 	"handler": {
 		"errors": {
-			"only_for_party_members": "This command is only available for members of my party.",
+			"only_for_party_members": "This command is only available to members of my party.",
 			"only_for_private_messages": "This command is only available in private messages.",
 			"need_party_leader": "I need to be the party leader to execute this command!",
-			"only_for_owners": "This command is only available for bot owners.",
-			"only_for_admins": "This command is only available for bot administrators.",
-			"only_for_whitelist": "This command is only available for users on the whitelist of the bot."
+			"only_for_owners": "This command is only available to bot owners.",
+			"only_for_admins": "This command is only available to bot administrators.",
+			"only_for_whitelist": "This command is only available to users on the bot's whitelist."
 		}
 	},
 	"all_items": {
 		"config": {
-			"description": "Shows all the cosmetics of the game, an optional filter can be added and you can stop with the \"stop\" command.",
+			"description": "Displays all in-game cosmetics. You can add an optional filter and stop with the \"stop\" command.",
 			"usage": {
 				"filter": {
 					"name": "Filter",
@@ -23,11 +23,11 @@
 						"pickaxes": "Pickaxes",
 						"shoes": "Shoes"
 					},
-					"description": "The filter to be set by showing the items."
+					"description": "The filter to apply when showing items."
 				},
 				"random_order": {
 					"name": "Random order",
-					"description": "Use a random order instead of ordering by newest first.",
+					"description": "Show items in a random order instead of by newest first.",
 					"options": {
 						"yes": "Yes",
 						"no": "No"
@@ -37,11 +37,11 @@
 		},
 		"run": {
 			"msg": {
-				"no_items": "Unable to fetch the items.",
-				"items_already_displaying": "Cosmetics are already being displayed, it must first be stopped with the \"stop\" command.",
-				"setting_items": "Setting all game items... {{filtered}}",
+				"no_items": "Unable to fetch items.",
+				"items_already_displaying": "Cosmetics are already being displayed. Please stop them first with the \"stop\" command.",
+				"setting_items": "Displaying all game items... {{filtered}}",
 				"filtered_by": "(filtered by {{filter}})",
-				"items_showed": "I have finished showing all the items..."
+				"items_showed": "Finished displaying all items."
 			}
 		}
 	},
@@ -51,7 +51,7 @@
 			"usage": {
 				"query": {
 					"name": "Backpack name or ID",
-					"description": "The name or ID of the backpack to be set."
+					"description": "The name or ID of the backpack to set."
 				}
 			}
 		},
@@ -70,9 +70,9 @@
 			"msg": {
 				"backpack_not_found": "The bot does not have a backpack!",
 				"invalid_backpack": "Invalid backpack!",
-				"variants_not_founded": "This backpack does not have variants!",
-				"variants_select": "Send the variant you want to select for {{type}}",
-				"variants_changed": "Set the backpack variants!"
+				"variants_not_found": "This backpack does not have variants!",
+				"variants_select": "Send the variant you want to select for {{type}}.",
+				"variants_changed": "Backpack variants set!"
 			}
 		}
 	},
@@ -94,17 +94,17 @@
 			"msg": {
 				"banner_not_found": "Banner {{item}} not found!",
 				"color_not_found": "Color {{item}} not found!",
-				"banner_changed": "Set the banner to {{name}}! ({{id}})"
+				"banner_changed": "Banner set to {{name}}! ({{id}})"
 			}
 		}
 	},
 	"clear_backpack": {
 		"config": {
-			"description": "Removes the backpack of the bot."
+			"description": "Removes the bot's backpack."
 		},
 		"run": {
 			"msg": {
-				"backpack_cleared": "Cleared backpack!"
+				"backpack_cleared": "Backpack cleared!"
 			}
 		}
 	},
@@ -114,17 +114,17 @@
 		},
 		"run": {
 			"msg": {
-				"emote_cleared": "Cleared emote!"
+				"emote_cleared": "Emote cleared!"
 			}
 		}
 	},
 	"clear_shoes": {
 		"config": {
-			"description": "Removes the shoes of the bot."
+			"description": "Removes the bot's shoes."
 		},
 		"run": {
 			"msg": {
-				"shoes_cleared": "Cleared shoes!"
+				"shoes_cleared": "Shoes cleared!"
 			}
 		}
 	},

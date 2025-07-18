@@ -1,0 +1,350 @@
+{
+	"general": {
+		"name": "通用設定",
+		"settings": {
+			"searchLangs": {
+				"name": "外觀搜尋語言",
+				"itemDenomination": "語言",
+				"description": "可用於搜尋外觀的語言。"
+			},
+			"platform": {
+				"name": "平台圖示",
+				"itemDenomination": "平台圖示",
+				"description": "選擇機器人的平台圖示（如PC、主機）。"
+			},
+			"privacy": {
+				"name": "組隊隱私",
+				"itemDenomination": "隱私",
+				"description": "組隊的預設隱私設定，如公開或私密。"
+			},
+			"prefixes": {
+				"name": "前綴",
+				"itemDenomination": "前綴",
+				"description": "允許觸發指令的前綴。"
+			},
+			"statusText": {
+				"name": "狀態訊息",
+				"itemDenomination": "狀態訊息",
+				"description": "機器人可顯示的自訂狀態訊息。",
+				"variables": {
+					"party_size": {
+						"name": "組隊人數",
+						"description": "目前組隊成員數量。"
+					},
+					"party_max_size": {
+						"name": "最大組隊人數",
+						"description": "允許的最大組隊成員數。"
+					},
+					"busy_status": {
+						"name": "忙碌狀態",
+						"description": "顯示機器人目前是否忙碌。"
+					},
+					"mms_status": {
+						"name": "配對狀態",
+						"description": "目前配對狀態。"
+					},
+					"friends_count": {
+						"name": "好友數量",
+						"description": "機器人擁有的好友總數。"
+					},
+					"pending_friends_count": {
+						"name": "待處理好友數",
+						"description": "待處理的好友請求數量。"
+					},
+					"blocked_users_count": {
+						"name": "已封鎖用戶數",
+						"description": "被機器人封鎖的用戶數量。"
+					}
+				}
+			},
+			"statusInterval": {
+				"name": "狀態訊息間隔",
+				"itemDenomination": "間隔（秒）",
+				"description": "狀態訊息切換的頻率，單位秒。"
+			},
+			"level": {
+				"name": "等級",
+				"itemDenomination": "等級",
+				"description": "機器人的外觀等級。"
+			},
+			"bpLevel": {
+				"name": "戰令等級",
+				"itemDenomination": "戰令等級",
+				"description": "機器人的外觀戰令等級。"
+			}
+		}
+	},
+	"userManagement": {
+		"name": "用戶管理",
+		"settings": {
+			"extraOwners": {
+				"name": "額外擁有者",
+				"itemDenomination": "擁有者",
+				"description": "擁有全部指令權限的其他用戶。"
+			},
+			"admins": {
+				"name": "管理員",
+				"itemDenomination": "管理員",
+				"description": "有受限指令權限的用戶。"
+			},
+			"whitelistUsers": {
+				"name": "白名單用戶",
+				"itemDenomination": "白名單用戶",
+				"description": "可執行部分受限指令的用戶。"
+			},
+			"blacklistUsers": {
+				"name": "黑名單用戶",
+				"itemDenomination": "黑名單用戶",
+				"description": "被限制或禁止使用機器人的用戶。"
+			},
+			"excludedAutoAddFriends": {
+				"name": "排除自動加好友",
+				"itemDenomination": "排除好友",
+				"description": "不會被自動加為好友的用戶。"
+			},
+			"otherBots": {
+				"name": "其他機器人",
+				"itemDenomination": "機器人",
+				"description": "你不擁有且想忽略的機器人。"
+			}
+		}
+	},
+	"limitsAndBehavior": {
+		"name": "限制與行為",
+		"settings": {
+			"inviteTimeout": {
+				"name": "邀請逾時",
+				"itemDenomination": "逾時（秒）",
+				"description": "機器人可再次被邀請前的冷卻時間，單位秒。"
+			},
+			"maxBotsPerLobby": {
+				"name": "每組最大機器人數",
+				"itemDenomination": "每組最大機器人數",
+				"description": "單一組隊允許的最大機器人數量。"
+			},
+			"maxBotsPerLobbyWithOwner": {
+				"name": "擁有者在場最大機器人數",
+				"itemDenomination": "每組最大機器人數",
+				"description": "擁有者在場時單組允許的最大機器人數量。"
+			},
+			"maxBotsPerLobbyWithAdmin": {
+				"name": "管理員在場最大機器人數",
+				"itemDenomination": "每組最大機器人數",
+				"description": "管理員在場時單組允許的最大機器人數量。"
+			},
+			"maxBotsPerLobbyWithWhitelistUser": {
+				"name": "白名單用戶在場最大機器人數",
+				"itemDenomination": "白名單用戶最大機器人數",
+				"description": "白名單用戶在場時單組允許的最大機器人數量。"
+			},
+			"allowMatchmaking": {
+				"name": "允許配對",
+				"itemDenomination": "允許配對",
+				"description": "啟用或停用與機器人配對。"
+			},
+			"leaveAfterMatchmaking": {
+				"name": "配對後離開",
+				"itemDenomination": "配對後離開",
+				"description": "配對開始後機器人離開組隊。"
+			},
+			"disableMatchmakingChecks": {
+				"name": "停用配對檢查",
+				"itemDenomination": "停用配對檢查",
+				"description": "移除配對冷卻限制（每小時最多5場）。"
+			},
+			"disablePlaylistChecks": {
+				"name": "停用模式檢查",
+				"itemDenomination": "停用模式檢查",
+				"description": "允許機器人參與除排位外的任意模式，其他模式不保證有機器人房間。"
+			},
+			"disableJoinMessages": {
+				"name": "停用加入訊息",
+				"itemDenomination": "停用加入訊息",
+				"description": "關閉加入組隊時的訊息。"
+			},
+			"disableAutomaticMessages": {
+				"name": "停用自動訊息",
+				"itemDenomination": "停用自動訊息",
+				"description": "關閉所有自動訊息。"
+			},
+			"acceptFriendRequests": {
+				"name": "自動接受好友請求",
+				"itemDenomination": "自動接受好友請求",
+				"description": "自動接受收到的好友請求。"
+			},
+			"sendFriendRequestOnJoinParty": {
+				"name": "加入組隊時加好友",
+				"itemDenomination": "加好友",
+				"description": "機器人加入組隊時向所有成員發送好友請求。"
+			},
+			"sendFriendRequestOnMemberJoinParty": {
+				"name": "成員加入時加好友",
+				"itemDenomination": "加成員好友",
+				"description": "新成員加入組隊時發送好友請求。"
+			},
+			"runCommandsWithoutPrefix": {
+				"name": "無前綴執行指令",
+				"itemDenomination": "執行指令",
+				"description": "允許不加前綴直接執行指令。"
+			},
+			"setCosmeticsWithoutCommands": {
+				"name": "無指令設置外觀",
+				"itemDenomination": "設置外觀",
+				"description": "在組隊聊天中直接輸入外觀名稱即可設置，無需指令。"
+			},
+			"setCosmeticsWithPrefix": {
+				"name": "前綴設置外觀",
+				"itemDenomination": "設置外觀",
+				"description": "使用前綴設置外觀，如 !floss。"
+			},
+			"acceptInvites": {
+				"name": "自動接受邀請",
+				"itemDenomination": "自動接受邀請",
+				"description": "自動接受組隊邀請和加入請求。"
+			}
+		}
+	},
+	"triggers": {
+		"name": "觸發與操作"
+	},
+	"commandRestrictions": {
+		"name": "指令限制",
+		"settings": {
+			"onlyOwnerCommands": {
+				"name": "僅擁有者指令",
+				"itemDenomination": "指令",
+				"description": "僅機器人擁有者可用的指令。"
+			},
+			"onlyAdminCommands": {
+				"name": "僅管理員指令",
+				"itemDenomination": "指令",
+				"description": "僅管理員或擁有者可用的指令。"
+			},
+			"onlyWhitelistUsersCommands": {
+				"name": "僅白名單用戶指令",
+				"itemDenomination": "指令",
+				"description": "僅白名單用戶、管理員或擁有者可用的指令。"
+			},
+			"onlyFriendsCommands": {
+				"name": "僅好友指令",
+				"itemDenomination": "指令",
+				"description": "僅機器人好友可用的指令。"
+			},
+			"onlyPartyMembersCommands": {
+				"name": "僅組隊成員指令",
+				"itemDenomination": "指令",
+				"description": "僅目前組隊成員可用的指令。"
+			},
+			"onlyWhisperCommands": {
+				"name": "僅私訊指令",
+				"itemDenomination": "指令",
+				"description": "必須通過私訊發送的指令。"
+			}
+		}
+	},
+	"cosmetics": {
+		"name": "外觀自訂",
+		"settings": {
+			"startOutfit": {
+				"name": "初始服裝",
+				"itemDenomination": "服裝",
+				"description": "機器人啟動時的預設服裝。"
+			},
+			"startBackpack": {
+				"name": "初始背包",
+				"itemDenomination": "背包",
+				"description": "機器人啟動時的預設背包。"
+			},
+			"startPickaxe": {
+				"name": "初始鎬子",
+				"itemDenomination": "鎬子",
+				"description": "機器人啟動時的預設鎬子。"
+			},
+			"startShoes": {
+				"name": "初始鞋子",
+				"itemDenomination": "鞋子",
+				"description": "機器人啟動時的預設鞋子。"
+			},
+			"startBanner": {
+				"name": "初始旗幟",
+				"itemDenomination": "旗幟",
+				"description": "機器人啟動時的預設旗幟。"
+			},
+			"startBannerColor": {
+				"name": "初始旗幟顏色",
+				"itemDenomination": "旗幟顏色",
+				"description": "機器人啟動時的預設旗幟顏色。"
+			},
+			"joinOutfit": {
+				"name": "加入服裝",
+				"itemDenomination": "服裝",
+				"description": "加入組隊時穿戴的服裝。"
+			},
+			"joinBackpack": {
+				"name": "加入背包",
+				"itemDenomination": "背包",
+				"description": "加入組隊時穿戴的背包。"
+			},
+			"joinPickaxe": {
+				"name": "加入鎬子",
+				"itemDenomination": "鎬子",
+				"description": "加入組隊時使用的鎬子。"
+			},
+			"joinEmote": {
+				"name": "加入表情",
+				"itemDenomination": "表情",
+				"description": "加入組隊時表演的表情。"
+			},
+			"joinShoes": {
+				"name": "加入鞋子",
+				"itemDenomination": "鞋子",
+				"description": "加入組隊時穿戴的鞋子。"
+			},
+			"joinBanner": {
+				"name": "加入旗幟",
+				"itemDenomination": "旗幟",
+				"description": "加入組隊時設定的旗幟。"
+			},
+			"joinBannerColor": {
+				"name": "加入旗幟顏色",
+				"itemDenomination": "旗幟顏色",
+				"description": "加入組隊時設定的旗幟顏色。"
+			},
+			"memberJoinOutfit": {
+				"name": "成員加入服裝",
+				"itemDenomination": "服裝",
+				"description": "成員加入組隊時設定的服裝。"
+			},
+			"memberJoinBackpack": {
+				"name": "成員加入背包",
+				"itemDenomination": "背包",
+				"description": "成員加入組隊時設定的背包。"
+			},
+			"memberJoinPickaxe": {
+				"name": "成員加入鎬子",
+				"itemDenomination": "鎬子",
+				"description": "成員加入組隊時設定的鎬子。"
+			},
+			"memberJoinEmote": {
+				"name": "成員加入表情",
+				"itemDenomination": "表情",
+				"description": "成員加入組隊時設定的表情。"
+			},
+			"memberJoinShoes": {
+				"name": "成員加入鞋子",
+				"itemDenomination": "鞋子",
+				"description": "成員加入組隊時設定的鞋子。"
+			},
+			"memberJoinBanner": {
+				"name": "成員加入旗幟",
+				"itemDenomination": "旗幟",
+				"description": "成員加入組隊時設定的旗幟。"
+			},
+			"memberJoinBannerColor": {
+				"name": "成員加入旗幟顏色",
+				"itemDenomination": "旗幟顏色",
+				"description": "成員加入組隊時設定的旗幟顏色。"
+			}
+		}
+	}
+} 

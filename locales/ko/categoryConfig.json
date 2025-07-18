@@ -1,0 +1,350 @@
+{
+	"general": {
+		"name": "일반 설정",
+		"settings": {
+			"searchLangs": {
+				"name": "코스메틱 검색 언어",
+				"itemDenomination": "언어",
+				"description": "코스메틱 검색에 사용할 수 있는 언어입니다."
+			},
+			"platform": {
+				"name": "플랫폼 아이콘",
+				"itemDenomination": "플랫폼 아이콘",
+				"description": "봇의 플랫폼 아이콘을 선택하세요 (예: PC, 콘솔)."
+			},
+			"privacy": {
+				"name": "파티 공개 설정",
+				"itemDenomination": "공개 설정",
+				"description": "파티의 기본 공개 설정(공개 또는 비공개 등)."
+			},
+			"prefixes": {
+				"name": "접두사",
+				"itemDenomination": "접두사",
+				"description": "명령어를 실행할 수 있는 허용된 접두사입니다."
+			},
+			"statusText": {
+				"name": "상태 메시지",
+				"itemDenomination": "상태 메시지",
+				"description": "봇이 표시할 수 있는 사용자 지정 상태 메시지입니다.",
+				"variables": {
+					"party_size": {
+						"name": "파티 인원수",
+						"description": "현재 파티 멤버 수입니다."
+					},
+					"party_max_size": {
+						"name": "최대 파티 인원수",
+						"description": "허용된 최대 파티 멤버 수입니다."
+					},
+					"busy_status": {
+						"name": "바쁨 상태",
+						"description": "봇이 현재 바쁜지 표시합니다."
+					},
+					"mms_status": {
+						"name": "매치메이킹 상태",
+						"description": "현재 매치메이킹 상태입니다."
+					},
+					"friends_count": {
+						"name": "친구 수",
+						"description": "봇의 전체 친구 수입니다."
+					},
+					"pending_friends_count": {
+						"name": "보류 중인 친구 수",
+						"description": "보류 중인 친구 요청 수입니다."
+					},
+					"blocked_users_count": {
+						"name": "차단된 사용자 수",
+						"description": "봇이 차단한 사용자 수입니다."
+					}
+				}
+			},
+			"statusInterval": {
+				"name": "상태 메시지 간격",
+				"itemDenomination": "간격(초)",
+				"description": "상태 메시지가 변경되는 빈도(초 단위)입니다."
+			},
+			"level": {
+				"name": "레벨",
+				"itemDenomination": "레벨",
+				"description": "봇의 코스메틱 레벨입니다."
+			},
+			"bpLevel": {
+				"name": "배틀패스 레벨",
+				"itemDenomination": "배틀패스 레벨",
+				"description": "봇의 코스메틱 배틀패스 레벨입니다."
+			}
+		}
+	},
+	"userManagement": {
+		"name": "사용자 관리",
+		"settings": {
+			"extraOwners": {
+				"name": "추가 소유자",
+				"itemDenomination": "소유자",
+				"description": "명령어에 전체 접근 권한이 있는 추가 사용자입니다."
+			},
+			"admins": {
+				"name": "관리자",
+				"itemDenomination": "관리자",
+				"description": "제한된 명령어를 위한 관리자 권한 사용자입니다."
+			},
+			"whitelistUsers": {
+				"name": "화이트리스트 사용자",
+				"itemDenomination": "화이트리스트 사용자",
+				"description": "특정 제한 명령어를 실행할 수 있는 사용자입니다."
+			},
+			"blacklistUsers": {
+				"name": "블랙리스트 사용자",
+				"itemDenomination": "블랙리스트 사용자",
+				"description": "봇 사용이 제한되거나 금지된 사용자입니다."
+			},
+			"excludedAutoAddFriends": {
+				"name": "자동 친구 추가 제외자",
+				"itemDenomination": "제외 친구",
+				"description": "자동으로 친구 추가되지 않는 사용자입니다."
+			},
+			"otherBots": {
+				"name": "다른 봇",
+				"itemDenomination": "봇",
+				"description": "소유하지 않은 무시할 봇입니다."
+			}
+		}
+	},
+	"limitsAndBehavior": {
+		"name": "제한 및 동작",
+		"settings": {
+			"inviteTimeout": {
+				"name": "초대 대기 시간",
+				"itemDenomination": "대기 시간(초)",
+				"description": "다시 초대할 수 있기까지의 쿨다운 기간(초 단위)입니다."
+			},
+			"maxBotsPerLobby": {
+				"name": "파티당 최대 봇 수",
+				"itemDenomination": "파티당 최대 봇 수",
+				"description": "한 파티에 허용되는 최대 봇 수입니다."
+			},
+			"maxBotsPerLobbyWithOwner": {
+				"name": "소유자 있을 때 최대 봇 수",
+				"itemDenomination": "파티당 최대 봇 수",
+				"description": "소유자가 있을 때 허용되는 최대 봇 수입니다."
+			},
+			"maxBotsPerLobbyWithAdmin": {
+				"name": "관리자 있을 때 최대 봇 수",
+				"itemDenomination": "파티당 최대 봇 수",
+				"description": "관리자가 있을 때 허용되는 최대 봇 수입니다."
+			},
+			"maxBotsPerLobbyWithWhitelistUser": {
+				"name": "화이트리스트 사용자 있을 때 최대 봇 수",
+				"itemDenomination": "화이트리스트 사용자 최대 봇 수",
+				"description": "화이트리스트 사용자가 있을 때 허용되는 최대 봇 수입니다."
+			},
+			"allowMatchmaking": {
+				"name": "매치메이킹 허용",
+				"itemDenomination": "매치메이킹 허용",
+				"description": "봇과의 매치메이킹을 활성화 또는 비활성화합니다."
+			},
+			"leaveAfterMatchmaking": {
+				"name": "매치메이킹 후 나가기",
+				"itemDenomination": "매치메이킹 후 나가기",
+				"description": "매치메이킹 시작 후 봇이 파티를 나갑니다."
+			},
+			"disableMatchmakingChecks": {
+				"name": "매치메이킹 체크 비활성화",
+				"itemDenomination": "매치메이킹 체크 비활성화",
+				"description": "매치메이킹 쿨다운 제한 해제(최대 1시간에 5회)."
+			},
+			"disablePlaylistChecks": {
+				"name": "게임 모드 체크 비활성화",
+				"itemDenomination": "게임 모드 체크 비활성화",
+				"description": "봇이 랭크를 제외한 모든 모드에서 플레이할 수 있습니다. 다른 모드에서의 봇 로비는 보장되지 않습니다."
+			},
+			"disableJoinMessages": {
+				"name": "참가 메시지 비활성화",
+				"itemDenomination": "참가 메시지 비활성화",
+				"description": "파티 참가 시 메시지를 비활성화합니다."
+			},
+			"disableAutomaticMessages": {
+				"name": "자동 메시지 비활성화",
+				"itemDenomination": "자동 메시지 비활성화",
+				"description": "모든 자동 메시지를 비활성화합니다."
+			},
+			"acceptFriendRequests": {
+				"name": "친구 요청 자동 수락",
+				"itemDenomination": "친구 요청 수락",
+				"description": "수신된 친구 요청을 자동으로 수락합니다."
+			},
+			"sendFriendRequestOnJoinParty": {
+				"name": "참가 시 친구 요청 보내기",
+				"itemDenomination": "친구 요청 보내기",
+				"description": "봇이 파티에 참가할 때 모든 멤버에게 친구 요청을 보냅니다."
+			},
+			"sendFriendRequestOnMemberJoinParty": {
+				"name": "새 멤버 참가 시 친구 요청 보내기",
+				"itemDenomination": "새 멤버 친구 요청 보내기",
+				"description": "새 멤버가 파티에 참가할 때 친구 요청을 보냅니다."
+			},
+			"runCommandsWithoutPrefix": {
+				"name": "접두사 없이 명령 실행",
+				"itemDenomination": "명령 실행",
+				"description": "접두사 없이 명령을 실행할 수 있도록 허용합니다."
+			},
+			"setCosmeticsWithoutCommands": {
+				"name": "명령 없이 코스메틱 설정",
+				"itemDenomination": "코스메틱 설정",
+				"description": "파티 채팅에 이름만 입력하여 코스메틱을 설정할 수 있습니다."
+			},
+			"setCosmeticsWithPrefix": {
+				"name": "접두사로 코스메틱 설정",
+				"itemDenomination": "코스메틱 설정",
+				"description": "!floss와 같은 접두사로 코스메틱을 설정합니다."
+			},
+			"acceptInvites": {
+				"name": "초대 자동 수락",
+				"itemDenomination": "초대 수락",
+				"description": "파티 초대 및 참가 요청을 자동으로 수락합니다."
+			}
+		}
+	},
+	"triggers": {
+		"name": "트리거 및 동작"
+	},
+	"commandRestrictions": {
+		"name": "명령 제한",
+		"settings": {
+			"onlyOwnerCommands": {
+				"name": "소유자 전용 명령",
+				"itemDenomination": "명령",
+				"description": "봇 소유자만 사용할 수 있는 명령입니다."
+			},
+			"onlyAdminCommands": {
+				"name": "관리자 전용 명령",
+				"itemDenomination": "명령",
+				"description": "관리자 또는 소유자만 사용할 수 있는 명령입니다."
+			},
+			"onlyWhitelistUsersCommands": {
+				"name": "화이트리스트 사용자 전용 명령",
+				"itemDenomination": "명령",
+				"description": "화이트리스트 사용자, 관리자 또는 소유자만 사용할 수 있는 명령입니다."
+			},
+			"onlyFriendsCommands": {
+				"name": "친구 전용 명령",
+				"itemDenomination": "명령",
+				"description": "봇의 친구만 사용할 수 있는 명령입니다."
+			},
+			"onlyPartyMembersCommands": {
+				"name": "파티 멤버 전용 명령",
+				"itemDenomination": "명령",
+				"description": "현재 파티 멤버만 사용할 수 있는 명령입니다."
+			},
+			"onlyWhisperCommands": {
+				"name": "DM 전용 명령",
+				"itemDenomination": "명령",
+				"description": "DM으로만 보낼 수 있는 명령입니다."
+			}
+		}
+	},
+	"cosmetics": {
+		"name": "코스메틱 커스터마이즈",
+		"settings": {
+			"startOutfit": {
+				"name": "시작 아웃핏",
+				"itemDenomination": "아웃핏",
+				"description": "봇 시작 시 기본 아웃핏입니다."
+			},
+			"startBackpack": {
+				"name": "시작 백팩",
+				"itemDenomination": "백팩",
+				"description": "봇 시작 시 기본 백팩입니다."
+			},
+			"startPickaxe": {
+				"name": "시작 곡괭이",
+				"itemDenomination": "곡괭이",
+				"description": "봇 시작 시 기본 곡괭이입니다."
+			},
+			"startShoes": {
+				"name": "시작 신발",
+				"itemDenomination": "신발",
+				"description": "봇 시작 시 기본 신발입니다."
+			},
+			"startBanner": {
+				"name": "시작 배너",
+				"itemDenomination": "배너",
+				"description": "봇 시작 시 기본 배너입니다."
+			},
+			"startBannerColor": {
+				"name": "시작 배너 색상",
+				"itemDenomination": "배너 색상",
+				"description": "봇 시작 시 기본 배너 색상입니다."
+			},
+			"joinOutfit": {
+				"name": "참가 아웃핏",
+				"itemDenomination": "아웃핏",
+				"description": "파티 참가 시 착용할 아웃핏입니다."
+			},
+			"joinBackpack": {
+				"name": "참가 백팩",
+				"itemDenomination": "백팩",
+				"description": "파티 참가 시 착용할 백팩입니다."
+			},
+			"joinPickaxe": {
+				"name": "참가 곡괭이",
+				"itemDenomination": "곡괭이",
+				"description": "파티 참가 시 사용할 곡괭이입니다."
+			},
+			"joinEmote": {
+				"name": "참가 이모트",
+				"itemDenomination": "이모트",
+				"description": "파티 참가 시 사용할 이모트입니다."
+			},
+			"joinShoes": {
+				"name": "참가 신발",
+				"itemDenomination": "신발",
+				"description": "파티 참가 시 착용할 신발입니다."
+			},
+			"joinBanner": {
+				"name": "참가 배너",
+				"itemDenomination": "배너",
+				"description": "파티 참가 시 설정할 배너입니다."
+			},
+			"joinBannerColor": {
+				"name": "참가 배너 색상",
+				"itemDenomination": "배너 색상",
+				"description": "파티 참가 시 설정할 배너 색상입니다."
+			},
+			"memberJoinOutfit": {
+				"name": "멤버 참가 시 아웃핏",
+				"itemDenomination": "아웃핏",
+				"description": "멤버가 참가할 때 설정할 아웃핏입니다."
+			},
+			"memberJoinBackpack": {
+				"name": "멤버 참가 시 백팩",
+				"itemDenomination": "백팩",
+				"description": "멤버가 참가할 때 설정할 백팩입니다."
+			},
+			"memberJoinPickaxe": {
+				"name": "멤버 참가 시 곡괭이",
+				"itemDenomination": "곡괭이",
+				"description": "멤버가 참가할 때 설정할 곡괭이입니다."
+			},
+			"memberJoinEmote": {
+				"name": "멤버 참가 시 이모트",
+				"itemDenomination": "이모트",
+				"description": "멤버가 참가할 때 설정할 이모트입니다."
+			},
+			"memberJoinShoes": {
+				"name": "멤버 참가 시 신발",
+				"itemDenomination": "신발",
+				"description": "멤버가 참가할 때 설정할 신발입니다."
+			},
+			"memberJoinBanner": {
+				"name": "멤버 참가 시 배너",
+				"itemDenomination": "배너",
+				"description": "멤버가 참가할 때 설정할 배너입니다."
+			},
+			"memberJoinBannerColor": {
+				"name": "멤버 참가 시 배너 색상",
+				"itemDenomination": "배너 색상",
+				"description": "멤버가 참가할 때 설정할 배너 색상입니다."
+			}
+		}
+	}
+}

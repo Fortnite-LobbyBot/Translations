@@ -1,0 +1,350 @@
+{
+	"general": {
+		"name": "الإعدادات العامة",
+		"settings": {
+			"searchLangs": {
+				"name": "لغة البحث عن العناصم التجميلية",
+				"itemDenomination": "اللغة",
+				"description": "اللغات التي يمكنك استخدامها للبحث عن العناصم التجميلية."
+			},
+			"platform": {
+				"name": "أيقونة المنصة",
+				"itemDenomination": "أيقونة المنصة",
+				"description": "اختر أيقونة المنصة للبوت (مثل الكمبيوتر، الكونسول)."
+			},
+			"privacy": {
+				"name": "خصوصية المجموعة",
+				"itemDenomination": "الخصوصية",
+				"description": "إعداد الخصوصية الافتراضي للمجموعة، مثل عام أو خاص."
+			},
+			"prefixes": {
+				"name": "البادئات",
+				"itemDenomination": "بادئة",
+				"description": "البادئات المسموح بها لتفعيل الأوامر."
+			},
+			"statusText": {
+				"name": "رسالة الحالة",
+				"itemDenomination": "رسالة الحالة",
+				"description": "رسائل الحالة المخصصة التي يمكن للبوت عرضها.",
+				"variables": {
+					"party_size": {
+						"name": "حجم المجموعة",
+						"description": "عدد أعضاء المجموعة الحالي."
+					},
+					"party_max_size": {
+						"name": "الحد الأقصى للمجموعة",
+						"description": "الحد الأقصى المسموح به لأعضاء المجموعة."
+					},
+					"busy_status": {
+						"name": "حالة الانشغال",
+						"description": "يظهر إذا كان البوت مشغولاً حالياً."
+					},
+					"mms_status": {
+						"name": "حالة البحث عن مباراة",
+						"description": "حالة البحث عن مباراة الحالية."
+					},
+					"friends_count": {
+						"name": "عدد الأصدقاء",
+						"description": "إجمالي عدد الأصدقاء لدى البوت."
+					},
+					"pending_friends_count": {
+						"name": "عدد طلبات الصداقة المعلقة",
+						"description": "عدد طلبات الصداقة المعلقة."
+					},
+					"blocked_users_count": {
+						"name": "عدد المستخدمين المحظورين",
+						"description": "عدد المستخدمين الذين تم حظرهم من قبل البوت."
+					}
+				}
+			},
+			"statusInterval": {
+				"name": "فاصل رسائل الحالة",
+				"itemDenomination": "الفاصل (ثواني)",
+				"description": "عدد مرات تغيير رسالة الحالة، بالثواني."
+			},
+			"level": {
+				"name": "المستوى",
+				"itemDenomination": "المستوى",
+				"description": "مستوى البوت التجميلي."
+			},
+			"bpLevel": {
+				"name": "مستوى بطاقة المعركة",
+				"itemDenomination": "مستوى بطاقة المعركة",
+				"description": "مستوى بطاقة المعركة التجميلية للبوت."
+			}
+		}
+	},
+	"userManagement": {
+		"name": "إدارة المستخدمين",
+		"settings": {
+			"extraOwners": {
+				"name": "مالكون إضافيون",
+				"itemDenomination": "مالك",
+				"description": "مستخدمون إضافيون لديهم وصول كامل للأوامر."
+			},
+			"admins": {
+				"name": "المسؤولون",
+				"itemDenomination": "مسؤول",
+				"description": "مستخدمون لديهم صلاحيات المسؤول للأوامر المقيدة."
+			},
+			"whitelistUsers": {
+				"name": "المستخدمون المسموح بهم",
+				"itemDenomination": "مستخدم مسموح",
+				"description": "مستخدمون مسموح لهم بتنفيذ أوامر معينة مقيدة."
+			},
+			"blacklistUsers": {
+				"name": "المستخدمون المحظورون",
+				"itemDenomination": "مستخدم محظور",
+				"description": "مستخدمون مقيدون أو ممنوعون من استخدام البوت."
+			},
+			"excludedAutoAddFriends": {
+				"name": "مستبعدون من الإضافة التلقائية للأصدقاء",
+				"itemDenomination": "صديق مستبعد",
+				"description": "مستخدمون مستبعدون من الإضافة التلقائية كأصدقاء."
+			},
+			"otherBots": {
+				"name": "بوتات أخرى",
+				"itemDenomination": "بوت",
+				"description": "بوتات لا تملكها وتريد تجاهلها."
+			}
+		}
+	},
+	"limitsAndBehavior": {
+		"name": "الحدود والسلوك",
+		"settings": {
+			"inviteTimeout": {
+				"name": "مهلة الدعوة",
+				"itemDenomination": "مهلة (ثواني)",
+				"description": "فترة التهدئة قبل إعادة دعوة البوت، بالثواني."
+			},
+			"maxBotsPerLobby": {
+				"name": "الحد الأقصى للبوتات في المجموعة",
+				"itemDenomination": "أقصى بوتات في المجموعة",
+				"description": "الحد الأقصى لعدد البوتات المسموح بها في مجموعة واحدة."
+			},
+			"maxBotsPerLobbyWithOwner": {
+				"name": "الحد الأقصى للبوتات مع المالك",
+				"itemDenomination": "أقصى بوتات في المجموعة",
+				"description": "الحد الأقصى للبوتات عند وجود مالك في المجموعة."
+			},
+			"maxBotsPerLobbyWithAdmin": {
+				"name": "الحد الأقصى للبوتات مع المسؤول",
+				"itemDenomination": "أقصى بوتات في المجموعة",
+				"description": "الحد الأقصى للبوتات عند وجود مسؤول في المجموعة."
+			},
+			"maxBotsPerLobbyWithWhitelistUser": {
+				"name": "الحد الأقصى للبوتات مع مستخدم مسموح",
+				"itemDenomination": "أقصى بوتات مع مستخدم مسموح",
+				"description": "الحد الأقصى للبوتات عند وجود مستخدم مسموح في المجموعة."
+			},
+			"allowMatchmaking": {
+				"name": "السماح بالمطابقة",
+				"itemDenomination": "السماح بالمطابقة",
+				"description": "تمكين أو تعطيل المطابقة مع البوت."
+			},
+			"leaveAfterMatchmaking": {
+				"name": "المغادرة بعد المطابقة",
+				"itemDenomination": "المغادرة بعد المطابقة",
+				"description": "يغادر البوت المجموعة بعد بدء المطابقة."
+			},
+			"disableMatchmakingChecks": {
+				"name": "تعطيل فحوصات المطابقة",
+				"itemDenomination": "تعطيل فحوصات المطابقة",
+				"description": "إزالة حد التهدئة للمطابقة (5 مباريات كحد أقصى في الساعة)."
+			},
+			"disablePlaylistChecks": {
+				"name": "تعطيل فحوصات أوضاع اللعب",
+				"itemDenomination": "تعطيل فحوصات أوضاع اللعب",
+				"description": "السماح للبوت بلعب أي وضع باستثناء المصنف. لا يتم ضمان لُوبي البوت في الأوضاع الأخرى."
+			},
+			"disableJoinMessages": {
+				"name": "تعطيل رسائل الانضمام",
+				"itemDenomination": "تعطيل رسالة الانضمام",
+				"description": "إيقاف الرسائل عند الانضمام إلى مجموعة."
+			},
+			"disableAutomaticMessages": {
+				"name": "تعطيل الرسائل التلقائية",
+				"itemDenomination": "تعطيل الرسائل التلقائية",
+				"description": "إيقاف جميع الرسائل التلقائية."
+			},
+			"acceptFriendRequests": {
+				"name": "قبول طلبات الصداقة",
+				"itemDenomination": "قبول طلبات الصداقة",
+				"description": "قبول طلبات الصداقة الواردة تلقائياً."
+			},
+			"sendFriendRequestOnJoinParty": {
+				"name": "إرسال طلب صداقة عند الانضمام",
+				"itemDenomination": "إرسال طلب صداقة",
+				"description": "إرسال طلبات صداقة لجميع أعضاء المجموعة عند انضمام البوت."
+			},
+			"sendFriendRequestOnMemberJoinParty": {
+				"name": "إرسال طلب صداقة عند انضمام عضو",
+				"itemDenomination": "إرسال طلب صداقة لعضو",
+				"description": "إرسال طلب صداقة للأعضاء الجدد عند انضمامهم للمجموعة."
+			},
+			"runCommandsWithoutPrefix": {
+				"name": "تشغيل الأوامر بدون بادئة",
+				"itemDenomination": "تشغيل الأوامر",
+				"description": "السماح بتشغيل الأوامر بدون بادئة."
+			},
+			"setCosmeticsWithoutCommands": {
+				"name": "تعيين العناصر التجميلية بدون أوامر",
+				"itemDenomination": "تعيين العناصر التجميلية",
+				"description": "تعيين العناصر التجميلية فقط بكتابة اسمها في دردشة المجموعة، بدون أمر."
+			},
+			"setCosmeticsWithPrefix": {
+				"name": "تعيين العناصر التجميلية مع بادئة",
+				"itemDenomination": "تعيين العناصر التجميلية",
+				"description": "تعيين العناصر التجميلية باستخدام بادئة، مثل !floss."
+			},
+			"acceptInvites": {
+				"name": "قبول الدعوات",
+				"itemDenomination": "قبول الدعوات",
+				"description": "قبول الدعوات وطلبات الانضمام تلقائياً."
+			}
+		}
+	},
+	"triggers": {
+		"name": "المحفزات والإجراءات"
+	},
+	"commandRestrictions": {
+		"name": "قيود الأوامر",
+		"settings": {
+			"onlyOwnerCommands": {
+				"name": "أوامر المالك فقط",
+				"itemDenomination": "أمر",
+				"description": "أوامر يمكن للمالكين فقط استخدامها."
+			},
+			"onlyAdminCommands": {
+				"name": "أوامر المسؤول فقط",
+				"itemDenomination": "أمر",
+				"description": "أوامر يمكن للمسؤولين أو المالكين فقط استخدامها."
+			},
+			"onlyWhitelistUsersCommands": {
+				"name": "أوامر المستخدمين المسموح بهم",
+				"itemDenomination": "أمر",
+				"description": "أوامر للمستخدمين المسموح بهم أو المسؤولين أو المالكين فقط."
+			},
+			"onlyFriendsCommands": {
+				"name": "أوامر الأصدقاء فقط",
+				"itemDenomination": "أمر",
+				"description": "أوامر متاحة فقط لأصدقاء البوت."
+			},
+			"onlyPartyMembersCommands": {
+				"name": "أوامر أعضاء المجموعة فقط",
+				"itemDenomination": "أمر",
+				"description": "أوامر متاحة فقط لأعضاء المجموعة الحاليين."
+			},
+			"onlyWhisperCommands": {
+				"name": "أوامر الرسائل الخاصة فقط",
+				"itemDenomination": "أمر",
+				"description": "أوامر يجب إرسالها عبر رسالة خاصة/DM."
+			}
+		}
+	},
+	"cosmetics": {
+		"name": "تخصيص العناصر التجميلية",
+		"settings": {
+			"startOutfit": {
+				"name": "الزي عند البدء",
+				"itemDenomination": "زي",
+				"description": "الزي الافتراضي عند بدء البوت."
+			},
+			"startBackpack": {
+				"name": "الحقيبة عند البدء",
+				"itemDenomination": "حقيبة",
+				"description": "الحقيبة الافتراضية عند بدء البوت."
+			},
+			"startPickaxe": {
+				"name": "الفأس عند البدء",
+				"itemDenomination": "فأس",
+				"description": "الفأس الافتراضي عند بدء البوت."
+			},
+			"startShoes": {
+				"name": "الحذاء عند البدء",
+				"itemDenomination": "حذاء",
+				"description": "الحذاء الافتراضي عند بدء البوت."
+			},
+			"startBanner": {
+				"name": "الشعار عند البدء",
+				"itemDenomination": "شعار",
+				"description": "الشعار الافتراضي عند بدء البوت."
+			},
+			"startBannerColor": {
+				"name": "لون الشعار عند البدء",
+				"itemDenomination": "لون الشعار",
+				"description": "لون الشعار الافتراضي عند بدء البوت."
+			},
+			"joinOutfit": {
+				"name": "الزي عند الانضمام",
+				"itemDenomination": "زي",
+				"description": "الزي عند الانضمام إلى مجموعة."
+			},
+			"joinBackpack": {
+				"name": "الحقيبة عند الانضمام",
+				"itemDenomination": "حقيبة",
+				"description": "الحقيبة عند الانضمام إلى مجموعة."
+			},
+			"joinPickaxe": {
+				"name": "الفأس عند الانضمام",
+				"itemDenomination": "فأس",
+				"description": "الفأس عند الانضمام إلى مجموعة."
+			},
+			"joinEmote": {
+				"name": "الإيماءة عند الانضمام",
+				"itemDenomination": "إيماءة",
+				"description": "الإيماءة عند الانضمام إلى مجموعة."
+			},
+			"joinShoes": {
+				"name": "الحذاء عند الانضمام",
+				"itemDenomination": "حذاء",
+				"description": "الحذاء عند الانضمام إلى مجموعة."
+			},
+			"joinBanner": {
+				"name": "الشعار عند الانضمام",
+				"itemDenomination": "شعار",
+				"description": "الشعار عند الانضمام إلى مجموعة."
+			},
+			"joinBannerColor": {
+				"name": "لون الشعار عند الانضمام",
+				"itemDenomination": "لون الشعار",
+				"description": "لون الشعار عند الانضمام إلى مجموعة."
+			},
+			"memberJoinOutfit": {
+				"name": "الزي عند انضمام عضو",
+				"itemDenomination": "زي",
+				"description": "الزي عند انضمام عضو إلى المجموعة."
+			},
+			"memberJoinBackpack": {
+				"name": "الحقيبة عند انضمام عضو",
+				"itemDenomination": "حقيبة",
+				"description": "الحقيبة عند انضمام عضو إلى المجموعة."
+			},
+			"memberJoinPickaxe": {
+				"name": "الفأس عند انضمام عضو",
+				"itemDenomination": "فأس",
+				"description": "الفأس عند انضمام عضو إلى المجموعة."
+			},
+			"memberJoinEmote": {
+				"name": "الإيماءة عند انضمام عضو",
+				"itemDenomination": "إيماءة",
+				"description": "الإيماءة عند انضمام عضو إلى المجموعة."
+			},
+			"memberJoinShoes": {
+				"name": "الحذاء عند انضمام عضو",
+				"itemDenomination": "حذاء",
+				"description": "الحذاء عند انضمام عضو إلى المجموعة."
+			},
+			"memberJoinBanner": {
+				"name": "الشعار عند انضمام عضو",
+				"itemDenomination": "شعار",
+				"description": "الشعار عند انضمام عضو إلى المجموعة."
+			},
+			"memberJoinBannerColor": {
+				"name": "لون الشعار عند انضمام عضو",
+				"itemDenomination": "لون الشعار",
+				"description": "لون الشعار عند انضمام عضو إلى المجموعة."
+			}
+		}
+	}
+}

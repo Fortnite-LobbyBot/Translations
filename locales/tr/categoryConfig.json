@@ -1,0 +1,350 @@
+{
+	"general": {
+		"name": "Genel Ayarlar",
+		"settings": {
+			"searchLangs": {
+				"name": "Kozmetik Arama Dili",
+				"itemDenomination": "dil",
+				"description": "Kozmetik aramak için kullanabileceğiniz diller."
+			},
+			"platform": {
+				"name": "Platform Simgesi",
+				"itemDenomination": "platform simgesi",
+				"description": "Bot için platform simgesini seçin (ör. PC, konsol)."
+			},
+			"privacy": {
+				"name": "Grup Gizliliği",
+				"itemDenomination": "gizlilik",
+				"description": "Grup için varsayılan gizlilik ayarı, örneğin herkese açık veya özel."
+			},
+			"prefixes": {
+				"name": "Önekler",
+				"itemDenomination": "önek",
+				"description": "Komutları tetiklemek için izin verilen önekler."
+			},
+			"statusText": {
+				"name": "Durum Mesajı",
+				"itemDenomination": "durum mesajı",
+				"description": "Botun gösterebileceği özel durum mesajları.",
+				"variables": {
+					"party_size": {
+						"name": "Grup Boyutu",
+						"description": "Grubun mevcut üye sayısı."
+					},
+					"party_max_size": {
+						"name": "Maksimum Grup Boyutu",
+						"description": "İzin verilen maksimum üye sayısı."
+					},
+					"busy_status": {
+						"name": "Meşgul Durumu",
+						"description": "Botun şu anda meşgul olup olmadığını gösterir."
+					},
+					"mms_status": {
+						"name": "Eşleştirme Durumu",
+						"description": "Mevcut eşleştirme durumu."
+					},
+					"friends_count": {
+						"name": "Arkadaş Sayısı",
+						"description": "Botun sahip olduğu toplam arkadaş sayısı."
+					},
+					"pending_friends_count": {
+						"name": "Bekleyen Arkadaşlık İstekleri",
+						"description": "Bekleyen arkadaşlık isteklerinin sayısı."
+					},
+					"blocked_users_count": {
+						"name": "Engellenen Kullanıcılar",
+						"description": "Bot tarafından engellenen kullanıcı sayısı."
+					}
+				}
+			},
+			"statusInterval": {
+				"name": "Durum Mesajı Aralığı",
+				"itemDenomination": "aralık (saniye)",
+				"description": "Durum mesajının ne sıklıkta değişeceği, saniye cinsinden."
+			},
+			"level": {
+				"name": "Seviye",
+				"itemDenomination": "seviye",
+				"description": "Botun kozmetik seviyesi."
+			},
+			"bpLevel": {
+				"name": "Battle Pass Seviyesi",
+				"itemDenomination": "battle pass seviyesi",
+				"description": "Botun kozmetik battle pass seviyesi."
+			}
+		}
+	},
+	"userManagement": {
+		"name": "Kullanıcı Yönetimi",
+		"settings": {
+			"extraOwners": {
+				"name": "Ek Sahipler",
+				"itemDenomination": "sahip",
+				"description": "Komutlara tam erişimi olan ek kullanıcılar."
+			},
+			"admins": {
+				"name": "Yöneticiler",
+				"itemDenomination": "yönetici",
+				"description": "Kısıtlı komutlar için yönetici ayrıcalıklarına sahip kullanıcılar."
+			},
+			"whitelistUsers": {
+				"name": "Beyaz Listeli Kullanıcılar",
+				"itemDenomination": "beyaz listeli kullanıcı",
+				"description": "Belirli kısıtlı komutları çalıştırabilen kullanıcılar."
+			},
+			"blacklistUsers": {
+				"name": "Kara Listeli Kullanıcılar",
+				"itemDenomination": "kara listeli kullanıcı",
+				"description": "Botu kullanması kısıtlanan veya engellenen kullanıcılar."
+			},
+			"excludedAutoAddFriends": {
+				"name": "Otomatik Arkadaş Eklemeden Hariçler",
+				"itemDenomination": "hariç arkadaş",
+				"description": "Otomatik olarak arkadaş eklenmeyecek kullanıcılar."
+			},
+			"otherBots": {
+				"name": "Diğer Botlar",
+				"itemDenomination": "bot",
+				"description": "Sahip olmadığınız ve yoksaymak istediğiniz botlar."
+			}
+		}
+	},
+	"limitsAndBehavior": {
+		"name": "Sınırlar ve Davranış",
+		"settings": {
+			"inviteTimeout": {
+				"name": "Davet Zaman Aşımı",
+				"itemDenomination": "zaman aşımı (saniye)",
+				"description": "Botun tekrar davet edilebilmesi için bekleme süresi, saniye cinsinden."
+			},
+			"maxBotsPerLobby": {
+				"name": "Grup Başına Maks Bot",
+				"itemDenomination": "grup başına maks bot",
+				"description": "Bir grupta izin verilen maksimum bot sayısı."
+			},
+			"maxBotsPerLobbyWithOwner": {
+				"name": "Sahip Varken Maks Bot",
+				"itemDenomination": "grup başına maks bot",
+				"description": "Bir sahip varken izin verilen maksimum bot sayısı."
+			},
+			"maxBotsPerLobbyWithAdmin": {
+				"name": "Yönetici Varken Maks Bot",
+				"itemDenomination": "grup başına maks bot",
+				"description": "Bir yönetici varken izin verilen maksimum bot sayısı."
+			},
+			"maxBotsPerLobbyWithWhitelistUser": {
+				"name": "Beyaz Listeli Kullanıcı Varken Maks Bot",
+				"itemDenomination": "beyaz listeli kullanıcı ile maks bot",
+				"description": "Bir beyaz listeli kullanıcı varken izin verilen maksimum bot sayısı."
+			},
+			"allowMatchmaking": {
+				"name": "Eşleştirmeye İzin Ver",
+				"itemDenomination": "eşleştirmeye izin ver",
+				"description": "Bot ile eşleştirmeyi etkinleştir veya devre dışı bırak."
+			},
+			"leaveAfterMatchmaking": {
+				"name": "Eşleştirmeden Sonra Ayrıl",
+				"itemDenomination": "eşleştirmeden sonra ayrıl",
+				"description": "Bot eşleştirme başladıktan sonra gruptan ayrılır."
+			},
+			"disableMatchmakingChecks": {
+				"name": "Eşleştirme Kontrollerini Devre Dışı Bırak",
+				"itemDenomination": "eşleştirme kontrollerini devre dışı bırak",
+				"description": "Eşleştirme bekleme sınırını kaldır (saatte en fazla 5 maç)."
+			},
+			"disablePlaylistChecks": {
+				"name": "Oyun Modu Kontrollerini Devre Dışı Bırak",
+				"itemDenomination": "oyun modu kontrollerini devre dışı bırak",
+				"description": "Botun dereceli hariç tüm modlarda oynamasına izin ver. Diğer modlarda bot lobisi garanti edilmez."
+			},
+			"disableJoinMessages": {
+				"name": "Katılım Mesajlarını Devre Dışı Bırak",
+				"itemDenomination": "katılım mesajını devre dışı bırak",
+				"description": "Gruba katılırken mesajları devre dışı bırak."
+			},
+			"disableAutomaticMessages": {
+				"name": "Otomatik Mesajları Devre Dışı Bırak",
+				"itemDenomination": "otomatik mesajı devre dışı bırak",
+				"description": "Tüm otomatik mesajları devre dışı bırak."
+			},
+			"acceptFriendRequests": {
+				"name": "Arkadaşlık İsteklerini Kabul Et",
+				"itemDenomination": "arkadaşlık isteklerini kabul et",
+				"description": "Gelen arkadaşlık isteklerini otomatik olarak kabul et."
+			},
+			"sendFriendRequestOnJoinParty": {
+				"name": "Katılınca Arkadaşlık İsteği Gönder",
+				"itemDenomination": "arkadaşlık isteği gönder",
+				"description": "Bot gruba katıldığında tüm üyelere arkadaşlık isteği gönder."
+			},
+			"sendFriendRequestOnMemberJoinParty": {
+				"name": "Yeni Üye Katılınca Arkadaşlık İsteği Gönder",
+				"itemDenomination": "yeni üyeye arkadaşlık isteği gönder",
+				"description": "Yeni üyeler gruba katıldığında arkadaşlık isteği gönder."
+			},
+			"runCommandsWithoutPrefix": {
+				"name": "Öneksiz Komutları Çalıştır",
+				"itemDenomination": "komutları çalıştır",
+				"description": "Komutların önek olmadan çalıştırılmasına izin ver."
+			},
+			"setCosmeticsWithoutCommands": {
+				"name": "Komutsuz Kozmetik Ayarla",
+				"itemDenomination": "kozmetik ayarla",
+				"description": "Sadece grup sohbetine adını yazarak kozmetik ayarla, komut gerekmez."
+			},
+			"setCosmeticsWithPrefix": {
+				"name": "Önek ile Kozmetik Ayarla",
+				"itemDenomination": "kozmetik ayarla",
+				"description": "Önek kullanarak kozmetik ayarla, örn. !floss."
+			},
+			"acceptInvites": {
+				"name": "Davetleri Kabul Et",
+				"itemDenomination": "davetleri kabul et",
+				"description": "Davetleri ve gruba katılma isteklerini otomatik olarak kabul et."
+			}
+		}
+	},
+	"triggers": {
+		"name": "Tetikleyiciler ve Eylemler"
+	},
+	"commandRestrictions": {
+		"name": "Komut Kısıtlamaları",
+		"settings": {
+			"onlyOwnerCommands": {
+				"name": "Sadece Sahip Komutları",
+				"itemDenomination": "komut",
+				"description": "Sadece bot sahiplerinin kullanabileceği komutlar."
+			},
+			"onlyAdminCommands": {
+				"name": "Sadece Yönetici Komutları",
+				"itemDenomination": "komut",
+				"description": "Sadece yöneticilerin veya sahiplerin kullanabileceği komutlar."
+			},
+			"onlyWhitelistUsersCommands": {
+				"name": "Beyaz Listeli Kullanıcı Komutları",
+				"itemDenomination": "komut",
+				"description": "Sadece beyaz listeli kullanıcılar, yöneticiler veya sahipler için komutlar."
+			},
+			"onlyFriendsCommands": {
+				"name": "Sadece Arkadaş Komutları",
+				"itemDenomination": "komut",
+				"description": "Sadece botun arkadaşlarının kullanabileceği komutlar."
+			},
+			"onlyPartyMembersCommands": {
+				"name": "Sadece Grup Üyesi Komutları",
+				"itemDenomination": "komut",
+				"description": "Sadece mevcut grup üyelerinin kullanabileceği komutlar."
+			},
+			"onlyWhisperCommands": {
+				"name": "Sadece DM Komutları",
+				"itemDenomination": "komut",
+				"description": "Sadece DM ile gönderilmesi gereken komutlar."
+			}
+		}
+	},
+	"cosmetics": {
+		"name": "Kozmetik Özelleştirme",
+		"settings": {
+			"startOutfit": {
+				"name": "Başlangıç Kıyafeti",
+				"itemDenomination": "kıyafet",
+				"description": "Bot başlatıldığında varsayılan kıyafet."
+			},
+			"startBackpack": {
+				"name": "Başlangıç Sırt Çantası",
+				"itemDenomination": "sırt çantası",
+				"description": "Bot başlatıldığında varsayılan sırt çantası."
+			},
+			"startPickaxe": {
+				"name": "Başlangıç Kazması",
+				"itemDenomination": "kazma",
+				"description": "Bot başlatıldığında varsayılan kazma."
+			},
+			"startShoes": {
+				"name": "Başlangıç Ayakkabısı",
+				"itemDenomination": "ayakkabı",
+				"description": "Bot başlatıldığında varsayılan ayakkabı."
+			},
+			"startBanner": {
+				"name": "Başlangıç Afişi",
+				"itemDenomination": "afiş",
+				"description": "Bot başlatıldığında varsayılan afiş."
+			},
+			"startBannerColor": {
+				"name": "Başlangıç Afiş Rengi",
+				"itemDenomination": "afiş rengi",
+				"description": "Bot başlatıldığında varsayılan afiş rengi."
+			},
+			"joinOutfit": {
+				"name": "Katılınca Kıyafet",
+				"itemDenomination": "kıyafet",
+				"description": "Gruba katılınca giyilecek kıyafet."
+			},
+			"joinBackpack": {
+				"name": "Katılınca Sırt Çantası",
+				"itemDenomination": "sırt çantası",
+				"description": "Gruba katılınca takılacak sırt çantası."
+			},
+			"joinPickaxe": {
+				"name": "Katılınca Kazma",
+				"itemDenomination": "kazma",
+				"description": "Gruba katılınca kullanılacak kazma."
+			},
+			"joinEmote": {
+				"name": "Katılınca Emote",
+				"itemDenomination": "emote",
+				"description": "Gruba katılınca yapılacak emote."
+			},
+			"joinShoes": {
+				"name": "Katılınca Ayakkabı",
+				"itemDenomination": "ayakkabı",
+				"description": "Gruba katılınca giyilecek ayakkabı."
+			},
+			"joinBanner": {
+				"name": "Katılınca Afiş",
+				"itemDenomination": "afiş",
+				"description": "Gruba katılınca ayarlanacak afiş."
+			},
+			"joinBannerColor": {
+				"name": "Katılınca Afiş Rengi",
+				"itemDenomination": "afiş rengi",
+				"description": "Gruba katılınca ayarlanacak afiş rengi."
+			},
+			"memberJoinOutfit": {
+				"name": "Üye Katılınca Kıyafet",
+				"itemDenomination": "kıyafet",
+				"description": "Bir üye katılınca ayarlanacak kıyafet."
+			},
+			"memberJoinBackpack": {
+				"name": "Üye Katılınca Sırt Çantası",
+				"itemDenomination": "sırt çantası",
+				"description": "Bir üye katılınca ayarlanacak sırt çantası."
+			},
+			"memberJoinPickaxe": {
+				"name": "Üye Katılınca Kazma",
+				"itemDenomination": "kazma",
+				"description": "Bir üye katılınca ayarlanacak kazma."
+			},
+			"memberJoinEmote": {
+				"name": "Üye Katılınca Emote",
+				"itemDenomination": "emote",
+				"description": "Bir üye katılınca ayarlanacak emote."
+			},
+			"memberJoinShoes": {
+				"name": "Üye Katılınca Ayakkabı",
+				"itemDenomination": "ayakkabı",
+				"description": "Bir üye katılınca ayarlanacak ayakkabı."
+			},
+			"memberJoinBanner": {
+				"name": "Üye Katılınca Afiş",
+				"itemDenomination": "afiş",
+				"description": "Bir üye katılınca ayarlanacak afiş."
+			},
+			"memberJoinBannerColor": {
+				"name": "Üye Katılınca Afiş Rengi",
+				"itemDenomination": "afiş rengi",
+				"description": "Bir üye katılınca ayarlanacak afiş rengi."
+			}
+		}
+	}
+}

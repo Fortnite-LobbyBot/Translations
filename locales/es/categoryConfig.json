@@ -1,0 +1,350 @@
+{
+	"general": {
+		"name": "Configuración General",
+		"settings": {
+			"searchLangs": {
+				"name": "Idioma de Búsqueda de Cosméticos",
+				"itemDenomination": "idioma",
+				"description": "Idiomas que puedes usar para buscar cosméticos."
+			},
+			"platform": {
+				"name": "Icono de Plataforma",
+				"itemDenomination": "icono de plataforma",
+				"description": "Selecciona el icono de plataforma para el bot (por ejemplo, PC, consola)."
+			},
+			"privacy": {
+				"name": "Privacidad de Grupo",
+				"itemDenomination": "privacidad",
+				"description": "Configuración de privacidad predeterminada para el grupo, como público o privado."
+			},
+			"prefixes": {
+				"name": "Prefijos",
+				"itemDenomination": "prefijo",
+				"description": "Prefijos permitidos para activar comandos."
+			},
+			"statusText": {
+				"name": "Mensaje de Estado",
+				"itemDenomination": "mensaje de estado",
+				"description": "Mensajes de estado personalizados que el bot puede mostrar.",
+				"variables": {
+					"party_size": {
+						"name": "Tamaño del Grupo",
+						"description": "Número actual de miembros en el grupo."
+					},
+					"party_max_size": {
+						"name": "Tamaño Máximo del Grupo",
+						"description": "Máximo de miembros permitidos en el grupo."
+					},
+					"busy_status": {
+						"name": "Estado Ocupado",
+						"description": "Muestra si el bot está ocupado."
+					},
+					"mms_status": {
+						"name": "Estado de Emparejamiento",
+						"description": "Estado actual del emparejamiento."
+					},
+					"friends_count": {
+						"name": "Cantidad de Amigos",
+						"description": "Número total de amigos que tiene el bot."
+					},
+					"pending_friends_count": {
+						"name": "Solicitudes de Amistad Pendientes",
+						"description": "Número de solicitudes de amistad pendientes."
+					},
+					"blocked_users_count": {
+						"name": "Usuarios Bloqueados",
+						"description": "Cantidad de usuarios bloqueados por el bot."
+					}
+				}
+			},
+			"statusInterval": {
+				"name": "Intervalo de Mensaje de Estado",
+				"itemDenomination": "intervalo (segundos)",
+				"description": "Con qué frecuencia cambia el mensaje de estado, en segundos."
+			},
+			"level": {
+				"name": "Nivel",
+				"itemDenomination": "nivel",
+				"description": "Nivel cosmético del bot."
+			},
+			"bpLevel": {
+				"name": "Nivel de Pase de Batalla",
+				"itemDenomination": "nivel de pase de batalla",
+				"description": "Nivel de pase de batalla cosmético del bot."
+			}
+		}
+	},
+	"userManagement": {
+		"name": "Gestión de Usuarios",
+		"settings": {
+			"extraOwners": {
+				"name": "Propietarios Adicionales",
+				"itemDenomination": "propietario",
+				"description": "Usuarios adicionales con acceso total a los comandos."
+			},
+			"admins": {
+				"name": "Administradores",
+				"itemDenomination": "administrador",
+				"description": "Usuarios con privilegios de administrador para comandos restringidos."
+			},
+			"whitelistUsers": {
+				"name": "Usuarios en Lista Blanca",
+				"itemDenomination": "usuario en lista blanca",
+				"description": "Usuarios permitidos para ejecutar ciertos comandos restringidos."
+			},
+			"blacklistUsers": {
+				"name": "Usuarios en Lista Negra",
+				"itemDenomination": "usuario en lista negra",
+				"description": "Usuarios restringidos o bloqueados de usar el bot."
+			},
+			"excludedAutoAddFriends": {
+				"name": "Excluidos de Auto Agregar Amigos",
+				"itemDenomination": "amigo excluido",
+				"description": "Usuarios excluidos de ser agregados automáticamente como amigos."
+			},
+			"otherBots": {
+				"name": "Otros Bots",
+				"itemDenomination": "bot",
+				"description": "Bots que no posees y quieres ignorar."
+			}
+		}
+	},
+	"limitsAndBehavior": {
+		"name": "Límites y Comportamiento",
+		"settings": {
+			"inviteTimeout": {
+				"name": "Tiempo de Espera de Invitación",
+				"itemDenomination": "espera (segundos)",
+				"description": "Periodo de enfriamiento antes de poder invitar de nuevo al bot, en segundos."
+			},
+			"maxBotsPerLobby": {
+				"name": "Máximo de Bots por Grupo",
+				"itemDenomination": "máx bots por grupo",
+				"description": "Cantidad máxima de bots permitidos en un solo grupo."
+			},
+			"maxBotsPerLobbyWithOwner": {
+				"name": "Máximo de Bots por Grupo con Propietario",
+				"itemDenomination": "máx bots por grupo",
+				"description": "Máximo de bots permitidos en un grupo cuando hay un propietario presente."
+			},
+			"maxBotsPerLobbyWithAdmin": {
+				"name": "Máximo de Bots por Grupo con Administrador",
+				"itemDenomination": "máx bots por grupo",
+				"description": "Máximo de bots permitidos en un grupo cuando hay un administrador presente."
+			},
+			"maxBotsPerLobbyWithWhitelistUser": {
+				"name": "Máximo de Bots por Grupo con Usuario en Lista Blanca",
+				"itemDenomination": "máx bots con usuario en lista blanca",
+				"description": "Máximo de bots permitidos en un grupo cuando hay un usuario en lista blanca presente."
+			},
+			"allowMatchmaking": {
+				"name": "Permitir Emparejamiento",
+				"itemDenomination": "permitir emparejamiento",
+				"description": "Habilitar o deshabilitar el emparejamiento con el bot."
+			},
+			"leaveAfterMatchmaking": {
+				"name": "Salir Después de Emparejar",
+				"itemDenomination": "salir después de emparejar",
+				"description": "El bot sale del grupo después de iniciar el emparejamiento."
+			},
+			"disableMatchmakingChecks": {
+				"name": "Desactivar Comprobaciones de Emparejamiento",
+				"itemDenomination": "desactivar comprobaciones de emparejamiento",
+				"description": "Quitar el límite de enfriamiento de emparejamiento (máx 5 partidas por hora)."
+			},
+			"disablePlaylistChecks": {
+				"name": "Desactivar Comprobaciones de Modo de Juego",
+				"itemDenomination": "desactivar comprobaciones de modo de juego",
+				"description": "Permitir que el bot juegue cualquier modo excepto clasificado. No se garantizan lobbies de bots en otros modos."
+			},
+			"disableJoinMessages": {
+				"name": "Desactivar Mensajes de Unión",
+				"itemDenomination": "desactivar mensaje de unión",
+				"description": "Desactivar mensajes al unirse a un grupo."
+			},
+			"disableAutomaticMessages": {
+				"name": "Desactivar Mensajes Automáticos",
+				"itemDenomination": "desactivar mensaje automático",
+				"description": "Desactivar todos los mensajes automáticos."
+			},
+			"acceptFriendRequests": {
+				"name": "Aceptar Solicitudes de Amistad",
+				"itemDenomination": "aceptar solicitudes de amistad",
+				"description": "Aceptar automáticamente las solicitudes de amistad entrantes."
+			},
+			"sendFriendRequestOnJoinParty": {
+				"name": "Enviar Solicitud de Amistad al Unirse al Grupo",
+				"itemDenomination": "enviar solicitud de amistad",
+				"description": "Enviar solicitudes de amistad a todos los miembros del grupo cuando el bot se una."
+			},
+			"sendFriendRequestOnMemberJoinParty": {
+				"name": "Enviar Solicitud de Amistad al Unirse un Miembro",
+				"itemDenomination": "enviar solicitud de miembro",
+				"description": "Enviar una solicitud de amistad a los nuevos miembros cuando se unan al grupo."
+			},
+			"runCommandsWithoutPrefix": {
+				"name": "Ejecutar Comandos sin Prefijo",
+				"itemDenomination": "ejecutar comandos",
+				"description": "Permitir ejecutar comandos sin prefijo."
+			},
+			"setCosmeticsWithoutCommands": {
+				"name": "Establecer Cosméticos sin Comandos",
+				"itemDenomination": "establecer cosméticos",
+				"description": "Establecer cosméticos solo escribiendo su nombre en el chat del grupo, sin comando."
+			},
+			"setCosmeticsWithPrefix": {
+				"name": "Establecer Cosméticos con Prefijo",
+				"itemDenomination": "establecer cosméticos",
+				"description": "Establecer cosméticos usando un prefijo, como !floss."
+			},
+			"acceptInvites": {
+				"name": "Aceptar Invitaciones",
+				"itemDenomination": "aceptar invitaciones",
+				"description": "Aceptar automáticamente invitaciones y solicitudes para unirse al grupo."
+			}
+		}
+	},
+	"triggers": {
+		"name": "Disparadores y Acciones"
+	},
+	"commandRestrictions": {
+		"name": "Restricciones de Comandos",
+		"settings": {
+			"onlyOwnerCommands": {
+				"name": "Comandos Solo para Propietario",
+				"itemDenomination": "comando",
+				"description": "Comandos que solo los propietarios del bot pueden usar."
+			},
+			"onlyAdminCommands": {
+				"name": "Comandos Solo para Administrador",
+				"itemDenomination": "comando",
+				"description": "Comandos que solo los administradores o propietarios pueden usar."
+			},
+			"onlyWhitelistUsersCommands": {
+				"name": "Comandos para Usuarios en Lista Blanca",
+				"itemDenomination": "comando",
+				"description": "Comandos solo para usuarios en lista blanca, administradores o propietarios."
+			},
+			"onlyFriendsCommands": {
+				"name": "Comandos Solo para Amigos",
+				"itemDenomination": "comando",
+				"description": "Comandos solo disponibles para los amigos del bot."
+			},
+			"onlyPartyMembersCommands": {
+				"name": "Comandos Solo para Miembros del Grupo",
+				"itemDenomination": "comando",
+				"description": "Comandos solo disponibles para los miembros actuales del grupo."
+			},
+			"onlyWhisperCommands": {
+				"name": "Comandos Solo por DM",
+				"itemDenomination": "comando",
+				"description": "Comandos que deben enviarse por mensaje directo/DM."
+			}
+		}
+	},
+	"cosmetics": {
+		"name": "Personalización de Cosméticos",
+		"settings": {
+			"startOutfit": {
+				"name": "Apariencia Inicial",
+				"itemDenomination": "apariencia",
+				"description": "Apariencia(s) predeterminada(s) al iniciar el bot."
+			},
+			"startBackpack": {
+				"name": "Mochila Inicial",
+				"itemDenomination": "mochila",
+				"description": "Mochila(s) predeterminada(s) al iniciar el bot."
+			},
+			"startPickaxe": {
+				"name": "Pico Inicial",
+				"itemDenomination": "pico",
+				"description": "Pico(s) predeterminado(s) al iniciar el bot."
+			},
+			"startShoes": {
+				"name": "Zapatos Iniciales",
+				"itemDenomination": "zapatos",
+				"description": "Zapatos predeterminados al iniciar el bot."
+			},
+			"startBanner": {
+				"name": "Banner Inicial",
+				"itemDenomination": "banner",
+				"description": "Banner(s) predeterminado(s) al iniciar el bot."
+			},
+			"startBannerColor": {
+				"name": "Color de Banner Inicial",
+				"itemDenomination": "color de banner",
+				"description": "Color(es) de banner predeterminado(s) al iniciar el bot."
+			},
+			"joinOutfit": {
+				"name": "Apariencia al Unirse",
+				"itemDenomination": "apariencia",
+				"description": "Apariencia(s) al unirse a un grupo."
+			},
+			"joinBackpack": {
+				"name": "Mochila al Unirse",
+				"itemDenomination": "mochila",
+				"description": "Mochila(s) al unirse a un grupo."
+			},
+			"joinPickaxe": {
+				"name": "Pico al Unirse",
+				"itemDenomination": "pico",
+				"description": "Pico(s) al unirse a un grupo."
+			},
+			"joinEmote": {
+				"name": "Gesto al Unirse",
+				"itemDenomination": "gesto",
+				"description": "Gesto(s) al unirse a un grupo."
+			},
+			"joinShoes": {
+				"name": "Zapatos al Unirse",
+				"itemDenomination": "zapatos",
+				"description": "Zapatos al unirse a un grupo."
+			},
+			"joinBanner": {
+				"name": "Banner al Unirse",
+				"itemDenomination": "banner",
+				"description": "Banner(s) al unirse a un grupo."
+			},
+			"joinBannerColor": {
+				"name": "Color de Banner al Unirse",
+				"itemDenomination": "color de banner",
+				"description": "Color(es) de banner al unirse a un grupo."
+			},
+			"memberJoinOutfit": {
+				"name": "Apariencia al Unirse un Miembro",
+				"itemDenomination": "apariencia",
+				"description": "Apariencia(s) al unirse un miembro al grupo."
+			},
+			"memberJoinBackpack": {
+				"name": "Mochila al Unirse un Miembro",
+				"itemDenomination": "mochila",
+				"description": "Mochila(s) al unirse un miembro al grupo."
+			},
+			"memberJoinPickaxe": {
+				"name": "Pico al Unirse un Miembro",
+				"itemDenomination": "pico",
+				"description": "Pico(s) al unirse un miembro al grupo."
+			},
+			"memberJoinEmote": {
+				"name": "Gesto al Unirse un Miembro",
+				"itemDenomination": "gesto",
+				"description": "Gesto(s) al unirse un miembro al grupo."
+			},
+			"memberJoinShoes": {
+				"name": "Zapatos al Unirse un Miembro",
+				"itemDenomination": "zapatos",
+				"description": "Zapatos al unirse un miembro al grupo."
+			},
+			"memberJoinBanner": {
+				"name": "Banner al Unirse un Miembro",
+				"itemDenomination": "banner",
+				"description": "Banner(s) al unirse un miembro al grupo."
+			},
+			"memberJoinBannerColor": {
+				"name": "Color de Banner al Unirse un Miembro",
+				"itemDenomination": "color de banner",
+				"description": "Color(es) de banner al unirse un miembro al grupo."
+			}
+		}
+	}
+} 

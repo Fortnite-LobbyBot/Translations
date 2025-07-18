@@ -1,0 +1,350 @@
+{
+	"general": {
+		"name": "Pengaturan Umum",
+		"settings": {
+			"searchLangs": {
+				"name": "Bahasa Pencarian Kosmetik",
+				"itemDenomination": "bahasa",
+				"description": "Bahasa yang dapat digunakan untuk mencari kosmetik."
+			},
+			"platform": {
+				"name": "Ikon Platform",
+				"itemDenomination": "ikon platform",
+				"description": "Pilih ikon platform untuk bot (misal, PC, konsol)."
+			},
+			"privacy": {
+				"name": "Privasi Grup",
+				"itemDenomination": "privasi",
+				"description": "Pengaturan privasi grup default, seperti publik atau privat."
+			},
+			"prefixes": {
+				"name": "Prefix",
+				"itemDenomination": "prefix",
+				"description": "Prefix yang diizinkan untuk memicu perintah."
+			},
+			"statusText": {
+				"name": "Pesan Status",
+				"itemDenomination": "pesan status",
+				"description": "Pesan status khusus yang dapat ditampilkan bot.",
+				"variables": {
+					"party_size": {
+						"name": "Ukuran Grup",
+						"description": "Jumlah anggota grup saat ini."
+					},
+					"party_max_size": {
+						"name": "Ukuran Maks Grup",
+						"description": "Jumlah maksimum anggota grup."
+					},
+					"busy_status": {
+						"name": "Status Sibuk",
+						"description": "Menunjukkan jika bot sedang sibuk."
+					},
+					"mms_status": {
+						"name": "Status Matchmaking",
+						"description": "Status matchmaking saat ini."
+					},
+					"friends_count": {
+						"name": "Jumlah Teman",
+						"description": "Jumlah total teman yang dimiliki bot."
+					},
+					"pending_friends_count": {
+						"name": "Permintaan Teman Tertunda",
+						"description": "Jumlah permintaan teman yang tertunda."
+					},
+					"blocked_users_count": {
+						"name": "Pengguna Diblokir",
+						"description": "Jumlah pengguna yang diblokir oleh bot."
+					}
+				}
+			},
+			"statusInterval": {
+				"name": "Interval Pesan Status",
+				"itemDenomination": "interval (detik)",
+				"description": "Seberapa sering pesan status berubah, dalam detik."
+			},
+			"level": {
+				"name": "Level",
+				"itemDenomination": "level",
+				"description": "Level kosmetik bot."
+			},
+			"bpLevel": {
+				"name": "Level Battle Pass",
+				"itemDenomination": "level battle pass",
+				"description": "Level battle pass kosmetik bot."
+			}
+		}
+	},
+	"userManagement": {
+		"name": "Manajemen Pengguna",
+		"settings": {
+			"extraOwners": {
+				"name": "Pemilik Tambahan",
+				"itemDenomination": "pemilik",
+				"description": "Pengguna tambahan yang memiliki akses penuh ke perintah."
+			},
+			"admins": {
+				"name": "Admin",
+				"itemDenomination": "admin",
+				"description": "Pengguna dengan hak admin untuk perintah terbatas."
+			},
+			"whitelistUsers": {
+				"name": "Pengguna Whitelist",
+				"itemDenomination": "pengguna whitelist",
+				"description": "Pengguna yang diizinkan menjalankan perintah terbatas tertentu."
+			},
+			"blacklistUsers": {
+				"name": "Pengguna Blacklist",
+				"itemDenomination": "pengguna blacklist",
+				"description": "Pengguna yang dibatasi atau dilarang menggunakan bot."
+			},
+			"excludedAutoAddFriends": {
+				"name": "Dikecualikan dari Auto Tambah Teman",
+				"itemDenomination": "teman dikecualikan",
+				"description": "Pengguna yang dikecualikan dari penambahan teman otomatis."
+			},
+			"otherBots": {
+				"name": "Bot Lainnya",
+				"itemDenomination": "bot",
+				"description": "Bot yang tidak kamu miliki dan ingin diabaikan."
+			}
+		}
+	},
+	"limitsAndBehavior": {
+		"name": "Batas & Perilaku",
+		"settings": {
+			"inviteTimeout": {
+				"name": "Waktu Tunggu Undangan",
+				"itemDenomination": "waktu tunggu (detik)",
+				"description": "Periode cooldown sebelum bot dapat diundang lagi, dalam detik."
+			},
+			"maxBotsPerLobby": {
+				"name": "Maks Bot per Grup",
+				"itemDenomination": "maks bot per grup",
+				"description": "Jumlah maksimum bot yang diizinkan dalam satu grup."
+			},
+			"maxBotsPerLobbyWithOwner": {
+				"name": "Maks Bot dengan Pemilik",
+				"itemDenomination": "maks bot per grup",
+				"description": "Maksimum bot jika ada pemilik di grup."
+			},
+			"maxBotsPerLobbyWithAdmin": {
+				"name": "Maks Bot dengan Admin",
+				"itemDenomination": "maks bot per grup",
+				"description": "Maksimum bot jika ada admin di grup."
+			},
+			"maxBotsPerLobbyWithWhitelistUser": {
+				"name": "Maks Bot dengan Pengguna Whitelist",
+				"itemDenomination": "maks bot dengan pengguna whitelist",
+				"description": "Maksimum bot jika ada pengguna whitelist di grup."
+			},
+			"allowMatchmaking": {
+				"name": "Izinkan Matchmaking",
+				"itemDenomination": "izinkan matchmaking",
+				"description": "Aktifkan atau nonaktifkan matchmaking dengan bot."
+			},
+			"leaveAfterMatchmaking": {
+				"name": "Keluar Setelah Matchmaking",
+				"itemDenomination": "keluar setelah matchmaking",
+				"description": "Bot keluar dari grup setelah matchmaking dimulai."
+			},
+			"disableMatchmakingChecks": {
+				"name": "Nonaktifkan Cek Matchmaking",
+				"itemDenomination": "nonaktifkan cek matchmaking",
+				"description": "Hapus batas cooldown matchmaking (maks 5 pertandingan per jam)."
+			},
+			"disablePlaylistChecks": {
+				"name": "Nonaktifkan Cek Mode Permainan",
+				"itemDenomination": "nonaktifkan cek mode permainan",
+				"description": "Izinkan bot bermain mode apa saja kecuali ranked. Lobby bot tidak dijamin di mode lain."
+			},
+			"disableJoinMessages": {
+				"name": "Nonaktifkan Pesan Gabung",
+				"itemDenomination": "nonaktifkan pesan gabung",
+				"description": "Matikan pesan saat bergabung ke grup."
+			},
+			"disableAutomaticMessages": {
+				"name": "Nonaktifkan Pesan Otomatis",
+				"itemDenomination": "nonaktifkan pesan otomatis",
+				"description": "Matikan semua pesan otomatis."
+			},
+			"acceptFriendRequests": {
+				"name": "Terima Permintaan Teman",
+				"itemDenomination": "terima permintaan teman",
+				"description": "Otomatis menerima permintaan teman masuk."
+			},
+			"sendFriendRequestOnJoinParty": {
+				"name": "Kirim Permintaan Teman Saat Gabung Grup",
+				"itemDenomination": "kirim permintaan teman",
+				"description": "Kirim permintaan teman ke semua anggota grup saat bot bergabung."
+			},
+			"sendFriendRequestOnMemberJoinParty": {
+				"name": "Kirim Permintaan Teman Saat Anggota Gabung",
+				"itemDenomination": "kirim permintaan ke anggota",
+				"description": "Kirim permintaan teman ke anggota baru saat mereka bergabung ke grup."
+			},
+			"runCommandsWithoutPrefix": {
+				"name": "Jalankan Perintah Tanpa Prefix",
+				"itemDenomination": "jalankan perintah",
+				"description": "Izinkan menjalankan perintah tanpa prefix."
+			},
+			"setCosmeticsWithoutCommands": {
+				"name": "Atur Kosmetik Tanpa Perintah",
+				"itemDenomination": "atur kosmetik",
+				"description": "Atur kosmetik hanya dengan mengetik namanya di chat grup, tanpa perintah."
+			},
+			"setCosmeticsWithPrefix": {
+				"name": "Atur Kosmetik Dengan Prefix",
+				"itemDenomination": "atur kosmetik",
+				"description": "Atur kosmetik menggunakan prefix, seperti !floss."
+			},
+			"acceptInvites": {
+				"name": "Terima Undangan",
+				"itemDenomination": "terima undangan",
+				"description": "Otomatis menerima undangan dan permintaan gabung grup."
+			}
+		}
+	},
+	"triggers": {
+		"name": "Pemicu dan Aksi"
+	},
+	"commandRestrictions": {
+		"name": "Pembatasan Perintah",
+		"settings": {
+			"onlyOwnerCommands": {
+				"name": "Perintah Khusus Pemilik",
+				"itemDenomination": "perintah",
+				"description": "Perintah yang hanya bisa digunakan pemilik bot."
+			},
+			"onlyAdminCommands": {
+				"name": "Perintah Khusus Admin",
+				"itemDenomination": "perintah",
+				"description": "Perintah yang hanya bisa digunakan admin atau pemilik."
+			},
+			"onlyWhitelistUsersCommands": {
+				"name": "Perintah Pengguna Whitelist",
+				"itemDenomination": "perintah",
+				"description": "Perintah hanya untuk pengguna whitelist, admin, atau pemilik."
+			},
+			"onlyFriendsCommands": {
+				"name": "Perintah Khusus Teman",
+				"itemDenomination": "perintah",
+				"description": "Perintah hanya tersedia untuk teman bot."
+			},
+			"onlyPartyMembersCommands": {
+				"name": "Perintah Khusus Anggota Grup",
+				"itemDenomination": "perintah",
+				"description": "Perintah hanya tersedia untuk anggota grup saat ini."
+			},
+			"onlyWhisperCommands": {
+				"name": "Perintah Khusus DM",
+				"itemDenomination": "perintah",
+				"description": "Perintah yang harus dikirim melalui pesan langsung/DM."
+			}
+		}
+	},
+	"cosmetics": {
+		"name": "Kustomisasi Kosmetik",
+		"settings": {
+			"startOutfit": {
+				"name": "Outfit Awal",
+				"itemDenomination": "outfit",
+				"description": "Outfit default saat bot mulai."
+			},
+			"startBackpack": {
+				"name": "Backpack Awal",
+				"itemDenomination": "backpack",
+				"description": "Backpack default saat bot mulai."
+			},
+			"startPickaxe": {
+				"name": "Pickaxe Awal",
+				"itemDenomination": "pickaxe",
+				"description": "Pickaxe default saat bot mulai."
+			},
+			"startShoes": {
+				"name": "Sepatu Awal",
+				"itemDenomination": "sepatu",
+				"description": "Sepatu default saat bot mulai."
+			},
+			"startBanner": {
+				"name": "Banner Awal",
+				"itemDenomination": "banner",
+				"description": "Banner default saat bot mulai."
+			},
+			"startBannerColor": {
+				"name": "Warna Banner Awal",
+				"itemDenomination": "warna banner",
+				"description": "Warna banner default saat bot mulai."
+			},
+			"joinOutfit": {
+				"name": "Outfit Saat Gabung",
+				"itemDenomination": "outfit",
+				"description": "Outfit saat bergabung ke grup."
+			},
+			"joinBackpack": {
+				"name": "Backpack Saat Gabung",
+				"itemDenomination": "backpack",
+				"description": "Backpack saat bergabung ke grup."
+			},
+			"joinPickaxe": {
+				"name": "Pickaxe Saat Gabung",
+				"itemDenomination": "pickaxe",
+				"description": "Pickaxe saat bergabung ke grup."
+			},
+			"joinEmote": {
+				"name": "Emote Saat Gabung",
+				"itemDenomination": "emote",
+				"description": "Emote saat bergabung ke grup."
+			},
+			"joinShoes": {
+				"name": "Sepatu Saat Gabung",
+				"itemDenomination": "sepatu",
+				"description": "Sepatu saat bergabung ke grup."
+			},
+			"joinBanner": {
+				"name": "Banner Saat Gabung",
+				"itemDenomination": "banner",
+				"description": "Banner saat bergabung ke grup."
+			},
+			"joinBannerColor": {
+				"name": "Warna Banner Saat Gabung",
+				"itemDenomination": "warna banner",
+				"description": "Warna banner saat bergabung ke grup."
+			},
+			"memberJoinOutfit": {
+				"name": "Outfit Saat Anggota Gabung",
+				"itemDenomination": "outfit",
+				"description": "Outfit saat anggota bergabung ke grup."
+			},
+			"memberJoinBackpack": {
+				"name": "Backpack Saat Anggota Gabung",
+				"itemDenomination": "backpack",
+				"description": "Backpack saat anggota bergabung ke grup."
+			},
+			"memberJoinPickaxe": {
+				"name": "Pickaxe Saat Anggota Gabung",
+				"itemDenomination": "pickaxe",
+				"description": "Pickaxe saat anggota bergabung ke grup."
+			},
+			"memberJoinEmote": {
+				"name": "Emote Saat Anggota Gabung",
+				"itemDenomination": "emote",
+				"description": "Emote saat anggota bergabung ke grup."
+			},
+			"memberJoinShoes": {
+				"name": "Sepatu Saat Anggota Gabung",
+				"itemDenomination": "sepatu",
+				"description": "Sepatu saat anggota bergabung ke grup."
+			},
+			"memberJoinBanner": {
+				"name": "Banner Saat Anggota Gabung",
+				"itemDenomination": "banner",
+				"description": "Banner saat anggota bergabung ke grup."
+			},
+			"memberJoinBannerColor": {
+				"name": "Warna Banner Saat Anggota Gabung",
+				"itemDenomination": "warna banner",
+				"description": "Warna banner saat anggota bergabung ke grup."
+			}
+		}
+	}
+}

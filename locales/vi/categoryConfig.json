@@ -1,0 +1,350 @@
+{
+	"general": {
+		"name": "Cài đặt chung",
+		"settings": {
+			"searchLangs": {
+				"name": "Ngôn ngữ tìm kiếm vật phẩm",
+				"itemDenomination": "ngôn ngữ",
+				"description": "Các ngôn ngữ bạn có thể dùng để tìm kiếm vật phẩm."
+			},
+			"platform": {
+				"name": "Biểu tượng nền tảng",
+				"itemDenomination": "biểu tượng nền tảng",
+				"description": "Chọn biểu tượng nền tảng cho bot (ví dụ: PC, console)."
+			},
+			"privacy": {
+				"name": "Quyền riêng tư nhóm",
+				"itemDenomination": "quyền riêng tư",
+				"description": "Thiết lập quyền riêng tư mặc định cho nhóm, như công khai hoặc riêng tư."
+			},
+			"prefixes": {
+				"name": "Tiền tố",
+				"itemDenomination": "tiền tố",
+				"description": "Các tiền tố được phép để kích hoạt lệnh."
+			},
+			"statusText": {
+				"name": "Tin nhắn trạng thái",
+				"itemDenomination": "tin nhắn trạng thái",
+				"description": "Các tin nhắn trạng thái tùy chỉnh mà bot có thể hiển thị.",
+				"variables": {
+					"party_size": {
+						"name": "Số lượng thành viên nhóm",
+						"description": "Số thành viên hiện tại trong nhóm."
+					},
+					"party_max_size": {
+						"name": "Số lượng thành viên tối đa",
+						"description": "Số thành viên tối đa được phép trong nhóm."
+					},
+					"busy_status": {
+						"name": "Trạng thái bận",
+						"description": "Hiển thị nếu bot đang bận."
+					},
+					"mms_status": {
+						"name": "Trạng thái ghép trận",
+						"description": "Trạng thái ghép trận hiện tại."
+					},
+					"friends_count": {
+						"name": "Số lượng bạn bè",
+						"description": "Tổng số bạn bè của bot."
+					},
+					"pending_friends_count": {
+						"name": "Yêu cầu kết bạn đang chờ",
+						"description": "Số lượng yêu cầu kết bạn đang chờ."
+					},
+					"blocked_users_count": {
+						"name": "Người dùng bị chặn",
+						"description": "Số lượng người dùng bị bot chặn."
+					}
+				}
+			},
+			"statusInterval": {
+				"name": "Khoảng thời gian trạng thái",
+				"itemDenomination": "khoảng (giây)",
+				"description": "Tần suất thay đổi tin nhắn trạng thái, tính bằng giây."
+			},
+			"level": {
+				"name": "Cấp độ",
+				"itemDenomination": "cấp độ",
+				"description": "Cấp độ vật phẩm của bot."
+			},
+			"bpLevel": {
+				"name": "Cấp độ Battle Pass",
+				"itemDenomination": "cấp độ battle pass",
+				"description": "Cấp độ battle pass vật phẩm của bot."
+			}
+		}
+	},
+	"userManagement": {
+		"name": "Quản lý người dùng",
+		"settings": {
+			"extraOwners": {
+				"name": "Chủ sở hữu bổ sung",
+				"itemDenomination": "chủ sở hữu",
+				"description": "Người dùng bổ sung có quyền truy cập đầy đủ vào lệnh."
+			},
+			"admins": {
+				"name": "Quản trị viên",
+				"itemDenomination": "quản trị viên",
+				"description": "Người dùng có quyền quản trị cho các lệnh hạn chế."
+			},
+			"whitelistUsers": {
+				"name": "Người dùng trong danh sách trắng",
+				"itemDenomination": "người dùng danh sách trắng",
+				"description": "Người dùng được phép thực hiện một số lệnh hạn chế."
+			},
+			"blacklistUsers": {
+				"name": "Người dùng trong danh sách đen",
+				"itemDenomination": "người dùng danh sách đen",
+				"description": "Người dùng bị hạn chế hoặc bị chặn sử dụng bot."
+			},
+			"excludedAutoAddFriends": {
+				"name": "Loại trừ khỏi tự động thêm bạn",
+				"itemDenomination": "bạn bị loại trừ",
+				"description": "Người dùng bị loại trừ khỏi việc tự động thêm bạn."
+			},
+			"otherBots": {
+				"name": "Bot khác",
+				"itemDenomination": "bot",
+				"description": "Bot mà bạn không sở hữu và muốn bỏ qua."
+			}
+		}
+	},
+	"limitsAndBehavior": {
+		"name": "Giới hạn và Hành vi",
+		"settings": {
+			"inviteTimeout": {
+				"name": "Thời gian chờ mời",
+				"itemDenomination": "thời gian chờ (giây)",
+				"description": "Khoảng thời gian chờ trước khi có thể mời lại bot, tính bằng giây."
+			},
+			"maxBotsPerLobby": {
+				"name": "Số bot tối đa mỗi nhóm",
+				"itemDenomination": "số bot tối đa mỗi nhóm",
+				"description": "Số lượng bot tối đa được phép trong một nhóm."
+			},
+			"maxBotsPerLobbyWithOwner": {
+				"name": "Số bot tối đa khi có chủ sở hữu",
+				"itemDenomination": "số bot tối đa mỗi nhóm",
+				"description": "Số bot tối đa khi có chủ sở hữu trong nhóm."
+			},
+			"maxBotsPerLobbyWithAdmin": {
+				"name": "Số bot tối đa khi có quản trị viên",
+				"itemDenomination": "số bot tối đa mỗi nhóm",
+				"description": "Số bot tối đa khi có quản trị viên trong nhóm."
+			},
+			"maxBotsPerLobbyWithWhitelistUser": {
+				"name": "Số bot tối đa khi có người dùng danh sách trắng",
+				"itemDenomination": "số bot tối đa với người dùng danh sách trắng",
+				"description": "Số bot tối đa khi có người dùng danh sách trắng trong nhóm."
+			},
+			"allowMatchmaking": {
+				"name": "Cho phép ghép trận",
+				"itemDenomination": "cho phép ghép trận",
+				"description": "Bật hoặc tắt ghép trận với bot."
+			},
+			"leaveAfterMatchmaking": {
+				"name": "Rời sau khi ghép trận",
+				"itemDenomination": "rời sau khi ghép trận",
+				"description": "Bot sẽ rời nhóm sau khi bắt đầu ghép trận."
+			},
+			"disableMatchmakingChecks": {
+				"name": "Tắt kiểm tra ghép trận",
+				"itemDenomination": "tắt kiểm tra ghép trận",
+				"description": "Bỏ giới hạn chờ ghép trận (tối đa 5 trận mỗi giờ)."
+			},
+			"disablePlaylistChecks": {
+				"name": "Tắt kiểm tra chế độ chơi",
+				"itemDenomination": "tắt kiểm tra chế độ chơi",
+				"description": "Cho phép bot chơi mọi chế độ trừ xếp hạng. Không đảm bảo có lobby bot ở các chế độ khác."
+			},
+			"disableJoinMessages": {
+				"name": "Tắt tin nhắn khi tham gia",
+				"itemDenomination": "tắt tin nhắn khi tham gia",
+				"description": "Tắt tin nhắn khi tham gia nhóm."
+			},
+			"disableAutomaticMessages": {
+				"name": "Tắt tin nhắn tự động",
+				"itemDenomination": "tắt tin nhắn tự động",
+				"description": "Tắt tất cả tin nhắn tự động."
+			},
+			"acceptFriendRequests": {
+				"name": "Chấp nhận lời mời kết bạn",
+				"itemDenomination": "chấp nhận lời mời kết bạn",
+				"description": "Tự động chấp nhận lời mời kết bạn đến."
+			},
+			"sendFriendRequestOnJoinParty": {
+				"name": "Gửi lời mời kết bạn khi tham gia",
+				"itemDenomination": "gửi lời mời kết bạn",
+				"description": "Gửi lời mời kết bạn cho tất cả thành viên nhóm khi bot tham gia."
+			},
+			"sendFriendRequestOnMemberJoinParty": {
+				"name": "Gửi lời mời kết bạn cho thành viên mới",
+				"itemDenomination": "gửi lời mời cho thành viên mới",
+				"description": "Gửi lời mời kết bạn cho thành viên mới khi họ tham gia nhóm."
+			},
+			"runCommandsWithoutPrefix": {
+				"name": "Chạy lệnh không cần tiền tố",
+				"itemDenomination": "chạy lệnh",
+				"description": "Cho phép chạy lệnh không cần tiền tố."
+			},
+			"setCosmeticsWithoutCommands": {
+				"name": "Đặt vật phẩm không cần lệnh",
+				"itemDenomination": "đặt vật phẩm",
+				"description": "Đặt vật phẩm chỉ bằng cách nhập tên vào chat nhóm, không cần lệnh."
+			},
+			"setCosmeticsWithPrefix": {
+				"name": "Đặt vật phẩm với tiền tố",
+				"itemDenomination": "đặt vật phẩm",
+				"description": "Đặt vật phẩm bằng tiền tố, ví dụ !floss."
+			},
+			"acceptInvites": {
+				"name": "Chấp nhận lời mời",
+				"itemDenomination": "chấp nhận lời mời",
+				"description": "Tự động chấp nhận lời mời và yêu cầu tham gia nhóm."
+			}
+		}
+	},
+	"triggers": {
+		"name": "Kích hoạt và Hành động"
+	},
+	"commandRestrictions": {
+		"name": "Giới hạn lệnh",
+		"settings": {
+			"onlyOwnerCommands": {
+				"name": "Lệnh chỉ dành cho chủ sở hữu",
+				"itemDenomination": "lệnh",
+				"description": "Lệnh chỉ chủ sở hữu bot mới dùng được."
+			},
+			"onlyAdminCommands": {
+				"name": "Lệnh chỉ dành cho quản trị viên",
+				"itemDenomination": "lệnh",
+				"description": "Lệnh chỉ quản trị viên hoặc chủ sở hữu mới dùng được."
+			},
+			"onlyWhitelistUsersCommands": {
+				"name": "Lệnh cho người dùng danh sách trắng",
+				"itemDenomination": "lệnh",
+				"description": "Lệnh chỉ cho người dùng danh sách trắng, quản trị viên hoặc chủ sở hữu."
+			},
+			"onlyFriendsCommands": {
+				"name": "Lệnh chỉ dành cho bạn bè",
+				"itemDenomination": "lệnh",
+				"description": "Lệnh chỉ dành cho bạn bè của bot."
+			},
+			"onlyPartyMembersCommands": {
+				"name": "Lệnh chỉ dành cho thành viên nhóm",
+				"itemDenomination": "lệnh",
+				"description": "Lệnh chỉ dành cho thành viên nhóm hiện tại."
+			},
+			"onlyWhisperCommands": {
+				"name": "Lệnh chỉ qua DM",
+				"itemDenomination": "lệnh",
+				"description": "Lệnh phải gửi qua tin nhắn trực tiếp/DM."
+			}
+		}
+	},
+	"cosmetics": {
+		"name": "Tùy chỉnh vật phẩm",
+		"settings": {
+			"startOutfit": {
+				"name": "Trang phục khởi động",
+				"itemDenomination": "trang phục",
+				"description": "Trang phục mặc định khi bot khởi động."
+			},
+			"startBackpack": {
+				"name": "Ba lô khởi động",
+				"itemDenomination": "ba lô",
+				"description": "Ba lô mặc định khi bot khởi động."
+			},
+			"startPickaxe": {
+				"name": "Cuốc khởi động",
+				"itemDenomination": "cuốc",
+				"description": "Cuốc mặc định khi bot khởi động."
+			},
+			"startShoes": {
+				"name": "Giày khởi động",
+				"itemDenomination": "giày",
+				"description": "Giày mặc định khi bot khởi động."
+			},
+			"startBanner": {
+				"name": "Biểu ngữ khởi động",
+				"itemDenomination": "biểu ngữ",
+				"description": "Biểu ngữ mặc định khi bot khởi động."
+			},
+			"startBannerColor": {
+				"name": "Màu biểu ngữ khởi động",
+				"itemDenomination": "màu biểu ngữ",
+				"description": "Màu biểu ngữ mặc định khi bot khởi động."
+			},
+			"joinOutfit": {
+				"name": "Trang phục khi tham gia",
+				"itemDenomination": "trang phục",
+				"description": "Trang phục khi tham gia nhóm."
+			},
+			"joinBackpack": {
+				"name": "Ba lô khi tham gia",
+				"itemDenomination": "ba lô",
+				"description": "Ba lô khi tham gia nhóm."
+			},
+			"joinPickaxe": {
+				"name": "Cuốc khi tham gia",
+				"itemDenomination": "cuốc",
+				"description": "Cuốc khi tham gia nhóm."
+			},
+			"joinEmote": {
+				"name": "Emote khi tham gia",
+				"itemDenomination": "emote",
+				"description": "Emote khi tham gia nhóm."
+			},
+			"joinShoes": {
+				"name": "Giày khi tham gia",
+				"itemDenomination": "giày",
+				"description": "Giày khi tham gia nhóm."
+			},
+			"joinBanner": {
+				"name": "Biểu ngữ khi tham gia",
+				"itemDenomination": "biểu ngữ",
+				"description": "Biểu ngữ khi tham gia nhóm."
+			},
+			"joinBannerColor": {
+				"name": "Màu biểu ngữ khi tham gia",
+				"itemDenomination": "màu biểu ngữ",
+				"description": "Màu biểu ngữ khi tham gia nhóm."
+			},
+			"memberJoinOutfit": {
+				"name": "Trang phục khi thành viên mới tham gia",
+				"itemDenomination": "trang phục",
+				"description": "Trang phục khi thành viên mới tham gia nhóm."
+			},
+			"memberJoinBackpack": {
+				"name": "Ba lô khi thành viên mới tham gia",
+				"itemDenomination": "ba lô",
+				"description": "Ba lô khi thành viên mới tham gia nhóm."
+			},
+			"memberJoinPickaxe": {
+				"name": "Cuốc khi thành viên mới tham gia",
+				"itemDenomination": "cuốc",
+				"description": "Cuốc khi thành viên mới tham gia nhóm."
+			},
+			"memberJoinEmote": {
+				"name": "Emote khi thành viên mới tham gia",
+				"itemDenomination": "emote",
+				"description": "Emote khi thành viên mới tham gia nhóm."
+			},
+			"memberJoinShoes": {
+				"name": "Giày khi thành viên mới tham gia",
+				"itemDenomination": "giày",
+				"description": "Giày khi thành viên mới tham gia nhóm."
+			},
+			"memberJoinBanner": {
+				"name": "Biểu ngữ khi thành viên mới tham gia",
+				"itemDenomination": "biểu ngữ",
+				"description": "Biểu ngữ khi thành viên mới tham gia nhóm."
+			},
+			"memberJoinBannerColor": {
+				"name": "Màu biểu ngữ khi thành viên mới tham gia",
+				"itemDenomination": "màu biểu ngữ",
+				"description": "Màu biểu ngữ khi thành viên mới tham gia nhóm."
+			}
+		}
+	}
+}

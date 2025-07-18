@@ -1,0 +1,350 @@
+{
+	"general": {
+		"name": "一般設定",
+		"settings": {
+			"searchLangs": {
+				"name": "コスメ検索言語",
+				"itemDenomination": "言語",
+				"description": "コスメの検索に使用できる言語です。"
+			},
+			"platform": {
+				"name": "プラットフォームアイコン",
+				"itemDenomination": "プラットフォームアイコン",
+				"description": "ボットのプラットフォームアイコンを選択します（例：PC、コンソール）。"
+			},
+			"privacy": {
+				"name": "パーティプライバシー",
+				"itemDenomination": "プライバシー",
+				"description": "パーティのデフォルトプライバシー設定（公開または非公開など）。"
+			},
+			"prefixes": {
+				"name": "プレフィックス",
+				"itemDenomination": "プレフィックス",
+				"description": "コマンドをトリガーするための許可されたプレフィックス。"
+			},
+			"statusText": {
+				"name": "ステータスメッセージ",
+				"itemDenomination": "ステータスメッセージ",
+				"description": "ボットが表示できるカスタムステータスメッセージ。",
+				"variables": {
+					"party_size": {
+						"name": "パーティ人数",
+						"description": "現在のパーティメンバー数。"
+					},
+					"party_max_size": {
+						"name": "パーティ最大人数",
+						"description": "許可されている最大パーティメンバー数。"
+					},
+					"busy_status": {
+						"name": "ビジーステータス",
+						"description": "ボットが現在ビジーかどうかを表示します。"
+					},
+					"mms_status": {
+						"name": "マッチメイキングステータス",
+						"description": "現在のマッチメイキング状況。"
+					},
+					"friends_count": {
+						"name": "フレンド数",
+						"description": "ボットの総フレンド数。"
+					},
+					"pending_friends_count": {
+						"name": "保留中のフレンド数",
+						"description": "保留中のフレンドリクエスト数。"
+					},
+					"blocked_users_count": {
+						"name": "ブロックユーザー数",
+						"description": "ボットがブロックしたユーザー数。"
+					}
+				}
+			},
+			"statusInterval": {
+				"name": "ステータスメッセージ間隔",
+				"itemDenomination": "間隔（秒）",
+				"description": "ステータスメッセージが変更される頻度（秒単位）。"
+			},
+			"level": {
+				"name": "レベル",
+				"itemDenomination": "レベル",
+				"description": "ボットのコスメレベル。"
+			},
+			"bpLevel": {
+				"name": "バトルパスレベル",
+				"itemDenomination": "バトルパスレベル",
+				"description": "ボットのコスメバトルパスレベル。"
+			}
+		}
+	},
+	"userManagement": {
+		"name": "ユーザー管理",
+		"settings": {
+			"extraOwners": {
+				"name": "追加オーナー",
+				"itemDenomination": "オーナー",
+				"description": "コマンドにフルアクセスできる追加ユーザー。"
+			},
+			"admins": {
+				"name": "管理者",
+				"itemDenomination": "管理者",
+				"description": "制限コマンド用の管理者権限を持つユーザー。"
+			},
+			"whitelistUsers": {
+				"name": "ホワイトリストユーザー",
+				"itemDenomination": "ホワイトリストユーザー",
+				"description": "特定の制限コマンドを実行できるユーザー。"
+			},
+			"blacklistUsers": {
+				"name": "ブラックリストユーザー",
+				"itemDenomination": "ブラックリストユーザー",
+				"description": "ボットの利用を制限または禁止されたユーザー。"
+			},
+			"excludedAutoAddFriends": {
+				"name": "自動フレンド追加除外者",
+				"itemDenomination": "除外フレンド",
+				"description": "自動的にフレンド追加されないユーザー。"
+			},
+			"otherBots": {
+				"name": "他のボット",
+				"itemDenomination": "ボット",
+				"description": "所有していない無視したいボット。"
+			}
+		}
+	},
+	"limitsAndBehavior": {
+		"name": "制限と動作",
+		"settings": {
+			"inviteTimeout": {
+				"name": "招待タイムアウト",
+				"itemDenomination": "タイムアウト（秒）",
+				"description": "再招待できるまでのクールダウン期間（秒単位）。"
+			},
+			"maxBotsPerLobby": {
+				"name": "グループあたりの最大ボット数",
+				"itemDenomination": "最大ボット数",
+				"description": "1つのグループに許可される最大ボット数。"
+			},
+			"maxBotsPerLobbyWithOwner": {
+				"name": "オーナー参加時の最大ボット数",
+				"itemDenomination": "最大ボット数",
+				"description": "オーナーがいる場合の最大ボット数。"
+			},
+			"maxBotsPerLobbyWithAdmin": {
+				"name": "管理者参加時の最大ボット数",
+				"itemDenomination": "最大ボット数",
+				"description": "管理者がいる場合の最大ボット数。"
+			},
+			"maxBotsPerLobbyWithWhitelistUser": {
+				"name": "ホワイトリストユーザー参加時の最大ボット数",
+				"itemDenomination": "ホワイトリストユーザー最大ボット数",
+				"description": "ホワイトリストユーザーがいる場合の最大ボット数。"
+			},
+			"allowMatchmaking": {
+				"name": "マッチメイキング許可",
+				"itemDenomination": "マッチメイキング許可",
+				"description": "ボットとのマッチメイキングを有効または無効にします。"
+			},
+			"leaveAfterMatchmaking": {
+				"name": "マッチメイキング後に退出",
+				"itemDenomination": "マッチメイキング後に退出",
+				"description": "マッチメイキング開始後にボットがグループを退出します。"
+			},
+			"disableMatchmakingChecks": {
+				"name": "マッチメイキングチェック無効化",
+				"itemDenomination": "マッチメイキングチェック無効化",
+				"description": "マッチメイキングのクールダウン制限を解除（1時間あたり最大5回）。"
+			},
+			"disablePlaylistChecks": {
+				"name": "ゲームモードチェック無効化",
+				"itemDenomination": "ゲームモードチェック無効化",
+				"description": "ボットがランク以外のすべてのモードでプレイ可能にします。他モードでのボットロビーは保証されません。"
+			},
+			"disableJoinMessages": {
+				"name": "参加メッセージ無効化",
+				"itemDenomination": "参加メッセージ無効化",
+				"description": "グループ参加時のメッセージを無効にします。"
+			},
+			"disableAutomaticMessages": {
+				"name": "自動メッセージ無効化",
+				"itemDenomination": "自動メッセージ無効化",
+				"description": "すべての自動メッセージを無効にします。"
+			},
+			"acceptFriendRequests": {
+				"name": "フレンドリクエスト自動承認",
+				"itemDenomination": "フレンドリクエスト承認",
+				"description": "受信したフレンドリクエストを自動で承認します。"
+			},
+			"sendFriendRequestOnJoinParty": {
+				"name": "参加時にフレンド申請送信",
+				"itemDenomination": "フレンド申請送信",
+				"description": "ボットがグループに参加した際、全メンバーにフレンド申請を送信します。"
+			},
+			"sendFriendRequestOnMemberJoinParty": {
+				"name": "新メンバー参加時にフレンド申請送信",
+				"itemDenomination": "新メンバーフレンド申請送信",
+				"description": "新しいメンバーがグループに参加した際にフレンド申請を送信します。"
+			},
+			"runCommandsWithoutPrefix": {
+				"name": "プレフィックスなしでコマンド実行",
+				"itemDenomination": "コマンド実行",
+				"description": "プレフィックスなしでコマンドを実行できるようにします。"
+			},
+			"setCosmeticsWithoutCommands": {
+				"name": "コマンドなしでコスメ設定",
+				"itemDenomination": "コスメ設定",
+				"description": "グループチャットで名前を入力するだけでコスメを設定できます。"
+			},
+			"setCosmeticsWithPrefix": {
+				"name": "プレフィックスでコスメ設定",
+				"itemDenomination": "コスメ設定",
+				"description": "!flossなどのプレフィックスでコスメを設定します。"
+			},
+			"acceptInvites": {
+				"name": "招待自動承認",
+				"itemDenomination": "招待承認",
+				"description": "グループへの招待や参加リクエストを自動で承認します。"
+			}
+		}
+	},
+	"triggers": {
+		"name": "トリガーとアクション"
+	},
+	"commandRestrictions": {
+		"name": "コマンド制限",
+		"settings": {
+			"onlyOwnerCommands": {
+				"name": "オーナー専用コマンド",
+				"itemDenomination": "コマンド",
+				"description": "ボットのオーナーのみが使用できるコマンド。"
+			},
+			"onlyAdminCommands": {
+				"name": "管理者専用コマンド",
+				"itemDenomination": "コマンド",
+				"description": "管理者またはオーナーのみが使用できるコマンド。"
+			},
+			"onlyWhitelistUsersCommands": {
+				"name": "ホワイトリストユーザー専用コマンド",
+				"itemDenomination": "コマンド",
+				"description": "ホワイトリストユーザー、管理者、オーナーのみのコマンド。"
+			},
+			"onlyFriendsCommands": {
+				"name": "フレンド専用コマンド",
+				"itemDenomination": "コマンド",
+				"description": "ボットのフレンドのみが利用できるコマンド。"
+			},
+			"onlyPartyMembersCommands": {
+				"name": "パーティメンバー専用コマンド",
+				"itemDenomination": "コマンド",
+				"description": "現在のパーティメンバーのみが利用できるコマンド。"
+			},
+			"onlyWhisperCommands": {
+				"name": "DM専用コマンド",
+				"itemDenomination": "コマンド",
+				"description": "DMで送信する必要があるコマンド。"
+			}
+		}
+	},
+	"cosmetics": {
+		"name": "コスメカスタマイズ",
+		"settings": {
+			"startOutfit": {
+				"name": "開始時のアウトフィット",
+				"itemDenomination": "アウトフィット",
+				"description": "ボット起動時のデフォルトアウトフィット。"
+			},
+			"startBackpack": {
+				"name": "開始時のバックパック",
+				"itemDenomination": "バックパック",
+				"description": "ボット起動時のデフォルトバックパック。"
+			},
+			"startPickaxe": {
+				"name": "開始時のピッケル",
+				"itemDenomination": "ピッケル",
+				"description": "ボット起動時のデフォルトピッケル。"
+			},
+			"startShoes": {
+				"name": "開始時のシューズ",
+				"itemDenomination": "シューズ",
+				"description": "ボット起動時のデフォルトシューズ。"
+			},
+			"startBanner": {
+				"name": "開始時のバナー",
+				"itemDenomination": "バナー",
+				"description": "ボット起動時のデフォルトバナー。"
+			},
+			"startBannerColor": {
+				"name": "開始時のバナーカラー",
+				"itemDenomination": "バナーカラー",
+				"description": "ボット起動時のデフォルトバナーカラー。"
+			},
+			"joinOutfit": {
+				"name": "参加時のアウトフィット",
+				"itemDenomination": "アウトフィット",
+				"description": "グループ参加時のアウトフィット。"
+			},
+			"joinBackpack": {
+				"name": "参加時のバックパック",
+				"itemDenomination": "バックパック",
+				"description": "グループ参加時のバックパック。"
+			},
+			"joinPickaxe": {
+				"name": "参加時のピッケル",
+				"itemDenomination": "ピッケル",
+				"description": "グループ参加時のピッケル。"
+			},
+			"joinEmote": {
+				"name": "参加時のエモート",
+				"itemDenomination": "エモート",
+				"description": "グループ参加時のエモート。"
+			},
+			"joinShoes": {
+				"name": "参加時のシューズ",
+				"itemDenomination": "シューズ",
+				"description": "グループ参加時のシューズ。"
+			},
+			"joinBanner": {
+				"name": "参加時のバナー",
+				"itemDenomination": "バナー",
+				"description": "グループ参加時のバナー。"
+			},
+			"joinBannerColor": {
+				"name": "参加時のバナーカラー",
+				"itemDenomination": "バナーカラー",
+				"description": "グループ参加時のバナーカラー。"
+			},
+			"memberJoinOutfit": {
+				"name": "メンバー参加時のアウトフィット",
+				"itemDenomination": "アウトフィット",
+				"description": "メンバーが参加した時のアウトフィット。"
+			},
+			"memberJoinBackpack": {
+				"name": "メンバー参加時のバックパック",
+				"itemDenomination": "バックパック",
+				"description": "メンバーが参加した時のバックパック。"
+			},
+			"memberJoinPickaxe": {
+				"name": "メンバー参加時のピッケル",
+				"itemDenomination": "ピッケル",
+				"description": "メンバーが参加した時のピッケル。"
+			},
+			"memberJoinEmote": {
+				"name": "メンバー参加時のエモート",
+				"itemDenomination": "エモート",
+				"description": "メンバーが参加した時のエモート。"
+			},
+			"memberJoinShoes": {
+				"name": "メンバー参加時のシューズ",
+				"itemDenomination": "シューズ",
+				"description": "メンバーが参加した時のシューズ。"
+			},
+			"memberJoinBanner": {
+				"name": "メンバー参加時のバナー",
+				"itemDenomination": "バナー",
+				"description": "メンバーが参加した時のバナー。"
+			},
+			"memberJoinBannerColor": {
+				"name": "メンバー参加時のバナーカラー",
+				"itemDenomination": "バナーカラー",
+				"description": "メンバーが参加した時のバナーカラー。"
+			}
+		}
+	}
+}

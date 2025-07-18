@@ -1,0 +1,350 @@
+{
+	"general": {
+		"name": "การตั้งค่าทั่วไป",
+		"settings": {
+			"searchLangs": {
+				"name": "ภาษาในการค้นหาเครื่องสำอาง",
+				"itemDenomination": "ภาษา",
+				"description": "ภาษาที่คุณสามารถใช้ค้นหาเครื่องสำอางได้"
+			},
+			"platform": {
+				"name": "ไอคอนแพลตฟอร์ม",
+				"itemDenomination": "ไอคอนแพลตฟอร์ม",
+				"description": "เลือกไอคอนแพลตฟอร์มสำหรับบอท (เช่น PC, คอนโซล)"
+			},
+			"privacy": {
+				"name": "ความเป็นส่วนตัวของปาร์ตี้",
+				"itemDenomination": "ความเป็นส่วนตัว",
+				"description": "การตั้งค่าความเป็นส่วนตัวเริ่มต้นของปาร์ตี้ เช่น สาธารณะหรือส่วนตัว"
+			},
+			"prefixes": {
+				"name": "คำนำหน้า",
+				"itemDenomination": "คำนำหน้า",
+				"description": "คำนำหน้าที่อนุญาตให้ใช้เรียกคำสั่ง"
+			},
+			"statusText": {
+				"name": "ข้อความสถานะ",
+				"itemDenomination": "ข้อความสถานะ",
+				"description": "ข้อความสถานะแบบกำหนดเองที่บอทสามารถแสดงได้",
+				"variables": {
+					"party_size": {
+						"name": "ขนาดปาร์ตี้",
+						"description": "จำนวนสมาชิกในปาร์ตี้ปัจจุบัน"
+					},
+					"party_max_size": {
+						"name": "ขนาดปาร์ตี้สูงสุด",
+						"description": "จำนวนสมาชิกสูงสุดที่อนุญาตในปาร์ตี้"
+					},
+					"busy_status": {
+						"name": "สถานะไม่ว่าง",
+						"description": "แสดงว่าบอทกำลังไม่ว่างอยู่หรือไม่"
+					},
+					"mms_status": {
+						"name": "สถานะจับคู่",
+						"description": "สถานะการจับคู่ปัจจุบัน"
+					},
+					"friends_count": {
+						"name": "จำนวนเพื่อน",
+						"description": "จำนวนเพื่อนทั้งหมดของบอท"
+					},
+					"pending_friends_count": {
+						"name": "คำขอเป็นเพื่อนที่รอดำเนินการ",
+						"description": "จำนวนคำขอเป็นเพื่อนที่รอดำเนินการ"
+					},
+					"blocked_users_count": {
+						"name": "ผู้ใช้ที่ถูกบล็อก",
+						"description": "จำนวนผู้ใช้ที่ถูกบอทบล็อก"
+					}
+				}
+			},
+			"statusInterval": {
+				"name": "ช่วงข้อความสถานะ",
+				"itemDenomination": "ช่วงเวลา (วินาที)",
+				"description": "ความถี่ในการเปลี่ยนข้อความสถานะ หน่วยเป็นวินาที"
+			},
+			"level": {
+				"name": "เลเวล",
+				"itemDenomination": "เลเวล",
+				"description": "เลเวลเครื่องสำอางของบอท"
+			},
+			"bpLevel": {
+				"name": "เลเวล Battle Pass",
+				"itemDenomination": "เลเวล Battle Pass",
+				"description": "เลเวล Battle Pass เครื่องสำอางของบอท"
+			}
+		}
+	},
+	"userManagement": {
+		"name": "การจัดการผู้ใช้",
+		"settings": {
+			"extraOwners": {
+				"name": "เจ้าของเพิ่มเติม",
+				"itemDenomination": "เจ้าของ",
+				"description": "ผู้ใช้เพิ่มเติมที่มีสิทธิ์เข้าถึงคำสั่งทั้งหมด"
+			},
+			"admins": {
+				"name": "ผู้ดูแลระบบ",
+				"itemDenomination": "ผู้ดูแลระบบ",
+				"description": "ผู้ใช้ที่มีสิทธิ์ผู้ดูแลสำหรับคำสั่งที่จำกัด"
+			},
+			"whitelistUsers": {
+				"name": "ผู้ใช้ในรายการขาว",
+				"itemDenomination": "ผู้ใช้ในรายการขาว",
+				"description": "ผู้ใช้ที่ได้รับอนุญาตให้ใช้คำสั่งที่จำกัดบางอย่าง"
+			},
+			"blacklistUsers": {
+				"name": "ผู้ใช้ในบัญชีดำ",
+				"itemDenomination": "ผู้ใช้ในบัญชีดำ",
+				"description": "ผู้ใช้ที่ถูกจำกัดหรือบล็อกจากการใช้บอท"
+			},
+			"excludedAutoAddFriends": {
+				"name": "ยกเว้นจากการเพิ่มเพื่อนอัตโนมัติ",
+				"itemDenomination": "เพื่อนที่ยกเว้น",
+				"description": "ผู้ใช้ที่ถูกยกเว้นจากการเพิ่มเป็นเพื่อนอัตโนมัติ"
+			},
+			"otherBots": {
+				"name": "บอทอื่น ๆ",
+				"itemDenomination": "บอท",
+				"description": "บอทที่คุณไม่ได้เป็นเจ้าของและต้องการละเว้น"
+			}
+		}
+	},
+	"limitsAndBehavior": {
+		"name": "ขีดจำกัดและพฤติกรรม",
+		"settings": {
+			"inviteTimeout": {
+				"name": "เวลารอเชิญ",
+				"itemDenomination": "เวลารอ (วินาที)",
+				"description": "ระยะเวลารอก่อนจะเชิญบอทอีกครั้ง หน่วยเป็นวินาที"
+			},
+			"maxBotsPerLobby": {
+				"name": "จำนวนบอทสูงสุดต่อกลุ่ม",
+				"itemDenomination": "บอทสูงสุดต่อกลุ่ม",
+				"description": "จำนวนบอทสูงสุดที่อนุญาตในกลุ่มเดียว"
+			},
+			"maxBotsPerLobbyWithOwner": {
+				"name": "จำนวนบอทสูงสุดเมื่อมีเจ้าของ",
+				"itemDenomination": "บอทสูงสุดต่อกลุ่ม",
+				"description": "จำนวนบอทสูงสุดเมื่อมีเจ้าของอยู่ในกลุ่ม"
+			},
+			"maxBotsPerLobbyWithAdmin": {
+				"name": "จำนวนบอทสูงสุดเมื่อมีแอดมิน",
+				"itemDenomination": "บอทสูงสุดต่อกลุ่ม",
+				"description": "จำนวนบอทสูงสุดเมื่อมีแอดมินอยู่ในกลุ่ม"
+			},
+			"maxBotsPerLobbyWithWhitelistUser": {
+				"name": "จำนวนบอทสูงสุดเมื่อมีผู้ใช้ในรายการขาว",
+				"itemDenomination": "บอทสูงสุดกับผู้ใช้ในรายการขาว",
+				"description": "จำนวนบอทสูงสุดเมื่อมีผู้ใช้ในรายการขาวอยู่ในกลุ่ม"
+			},
+			"allowMatchmaking": {
+				"name": "อนุญาตจับคู่",
+				"itemDenomination": "อนุญาตจับคู่",
+				"description": "เปิดหรือปิดการจับคู่กับบอท"
+			},
+			"leaveAfterMatchmaking": {
+				"name": "ออกหลังจับคู่",
+				"itemDenomination": "ออกหลังจับคู่",
+				"description": "บอทจะออกจากกลุ่มหลังเริ่มจับคู่"
+			},
+			"disableMatchmakingChecks": {
+				"name": "ปิดการตรวจสอบจับคู่",
+				"itemDenomination": "ปิดการตรวจสอบจับคู่",
+				"description": "ลบขีดจำกัดการจับคู่ (สูงสุด 5 แมตช์ต่อชั่วโมง)"
+			},
+			"disablePlaylistChecks": {
+				"name": "ปิดการตรวจสอบโหมดเกม",
+				"itemDenomination": "ปิดการตรวจสอบโหมดเกม",
+				"description": "อนุญาตให้บอทเล่นได้ทุกโหมด ยกเว้นจัดอันดับ ล็อบบี้บอทในโหมดอื่นไม่รับประกัน"
+			},
+			"disableJoinMessages": {
+				"name": "ปิดข้อความเข้าร่วม",
+				"itemDenomination": "ปิดข้อความเข้าร่วม",
+				"description": "ปิดข้อความเมื่อเข้าร่วมกลุ่ม"
+			},
+			"disableAutomaticMessages": {
+				"name": "ปิดข้อความอัตโนมัติ",
+				"itemDenomination": "ปิดข้อความอัตโนมัติ",
+				"description": "ปิดข้อความอัตโนมัติทั้งหมด"
+			},
+			"acceptFriendRequests": {
+				"name": "ยอมรับคำขอเป็นเพื่อน",
+				"itemDenomination": "ยอมรับคำขอเป็นเพื่อน",
+				"description": "ยอมรับคำขอเป็นเพื่อนที่เข้ามาโดยอัตโนมัติ"
+			},
+			"sendFriendRequestOnJoinParty": {
+				"name": "ส่งคำขอเป็นเพื่อนเมื่อเข้าร่วม",
+				"itemDenomination": "ส่งคำขอเป็นเพื่อน",
+				"description": "ส่งคำขอเป็นเพื่อนไปยังสมาชิกกลุ่มทุกคนเมื่อบอทเข้าร่วม"
+			},
+			"sendFriendRequestOnMemberJoinParty": {
+				"name": "ส่งคำขอเป็นเพื่อนเมื่อมีสมาชิกใหม่",
+				"itemDenomination": "ส่งคำขอถึงสมาชิกใหม่",
+				"description": "ส่งคำขอเป็นเพื่อนถึงสมาชิกใหม่เมื่อเข้าร่วมกลุ่ม"
+			},
+			"runCommandsWithoutPrefix": {
+				"name": "ใช้คำสั่งโดยไม่ต้องมีคำนำหน้า",
+				"itemDenomination": "ใช้คำสั่ง",
+				"description": "อนุญาตให้ใช้คำสั่งโดยไม่ต้องมีคำนำหน้า"
+			},
+			"setCosmeticsWithoutCommands": {
+				"name": "ตั้งค่าเครื่องสำอางโดยไม่ใช้คำสั่ง",
+				"itemDenomination": "ตั้งค่าเครื่องสำอาง",
+				"description": "ตั้งค่าเครื่องสำอางโดยพิมพ์ชื่อในแชทกลุ่มโดยไม่ต้องใช้คำสั่ง"
+			},
+			"setCosmeticsWithPrefix": {
+				"name": "ตั้งค่าเครื่องสำอางด้วยคำนำหน้า",
+				"itemDenomination": "ตั้งค่าเครื่องสำอาง",
+				"description": "ตั้งค่าเครื่องสำอางโดยใช้คำนำหน้า เช่น !floss"
+			},
+			"acceptInvites": {
+				"name": "ยอมรับคำเชิญ",
+				"itemDenomination": "ยอมรับคำเชิญ",
+				"description": "ยอมรับคำเชิญและคำขอเข้าร่วมกลุ่มโดยอัตโนมัติ"
+			}
+		}
+	},
+	"triggers": {
+		"name": "ทริกเกอร์และการกระทำ"
+	},
+	"commandRestrictions": {
+		"name": "ข้อจำกัดคำสั่ง",
+		"settings": {
+			"onlyOwnerCommands": {
+				"name": "คำสั่งสำหรับเจ้าของเท่านั้น",
+				"itemDenomination": "คำสั่ง",
+				"description": "คำสั่งที่ใช้ได้เฉพาะเจ้าของบอท"
+			},
+			"onlyAdminCommands": {
+				"name": "คำสั่งสำหรับแอดมินเท่านั้น",
+				"itemDenomination": "คำสั่ง",
+				"description": "คำสั่งที่ใช้ได้เฉพาะแอดมินหรือเจ้าของ"
+			},
+			"onlyWhitelistUsersCommands": {
+				"name": "คำสั่งสำหรับผู้ใช้ในรายการขาว",
+				"itemDenomination": "คำสั่ง",
+				"description": "คำสั่งสำหรับผู้ใช้ในรายการขาว แอดมิน หรือเจ้าของ"
+			},
+			"onlyFriendsCommands": {
+				"name": "คำสั่งสำหรับเพื่อนเท่านั้น",
+				"itemDenomination": "คำสั่ง",
+				"description": "คำสั่งที่ใช้ได้เฉพาะเพื่อนของบอท"
+			},
+			"onlyPartyMembersCommands": {
+				"name": "คำสั่งสำหรับสมาชิกกลุ่มเท่านั้น",
+				"itemDenomination": "คำสั่ง",
+				"description": "คำสั่งที่ใช้ได้เฉพาะสมาชิกกลุ่มปัจจุบัน"
+			},
+			"onlyWhisperCommands": {
+				"name": "คำสั่งสำหรับ DM เท่านั้น",
+				"itemDenomination": "คำสั่ง",
+				"description": "คำสั่งที่ต้องส่งผ่านข้อความส่วนตัว/DM"
+			}
+		}
+	},
+	"cosmetics": {
+		"name": "การปรับแต่งเครื่องสำอาง",
+		"settings": {
+			"startOutfit": {
+				"name": "ชุดเริ่มต้น",
+				"itemDenomination": "ชุด",
+				"description": "ชุดเริ่มต้นเมื่อบอทเริ่มทำงาน"
+			},
+			"startBackpack": {
+				"name": "กระเป๋าเริ่มต้น",
+				"itemDenomination": "กระเป๋า",
+				"description": "กระเป๋าเริ่มต้นเมื่อบอทเริ่มทำงาน"
+			},
+			"startPickaxe": {
+				"name": "ขวานเริ่มต้น",
+				"itemDenomination": "ขวาน",
+				"description": "ขวานเริ่มต้นเมื่อบอทเริ่มทำงาน"
+			},
+			"startShoes": {
+				"name": "รองเท้าเริ่มต้น",
+				"itemDenomination": "รองเท้า",
+				"description": "รองเท้าเริ่มต้นเมื่อบอทเริ่มทำงาน"
+			},
+			"startBanner": {
+				"name": "แบนเนอร์เริ่มต้น",
+				"itemDenomination": "แบนเนอร์",
+				"description": "แบนเนอร์เริ่มต้นเมื่อบอทเริ่มทำงาน"
+			},
+			"startBannerColor": {
+				"name": "สีแบนเนอร์เริ่มต้น",
+				"itemDenomination": "สีแบนเนอร์",
+				"description": "สีแบนเนอร์เริ่มต้นเมื่อบอทเริ่มทำงาน"
+			},
+			"joinOutfit": {
+				"name": "ชุดเมื่อเข้าร่วม",
+				"itemDenomination": "ชุด",
+				"description": "ชุดเมื่อเข้าร่วมกลุ่ม"
+			},
+			"joinBackpack": {
+				"name": "กระเป๋าเมื่อเข้าร่วม",
+				"itemDenomination": "กระเป๋า",
+				"description": "กระเป๋าเมื่อเข้าร่วมกลุ่ม"
+			},
+			"joinPickaxe": {
+				"name": "ขวานเมื่อเข้าร่วม",
+				"itemDenomination": "ขวาน",
+				"description": "ขวานเมื่อเข้าร่วมกลุ่ม"
+			},
+			"joinEmote": {
+				"name": "อีโมตเมื่อเข้าร่วม",
+				"itemDenomination": "อีโมต",
+				"description": "อีโมตเมื่อเข้าร่วมกลุ่ม"
+			},
+			"joinShoes": {
+				"name": "รองเท้าเมื่อเข้าร่วม",
+				"itemDenomination": "รองเท้า",
+				"description": "รองเท้าเมื่อเข้าร่วมกลุ่ม"
+			},
+			"joinBanner": {
+				"name": "แบนเนอร์เมื่อเข้าร่วม",
+				"itemDenomination": "แบนเนอร์",
+				"description": "แบนเนอร์เมื่อเข้าร่วมกลุ่ม"
+			},
+			"joinBannerColor": {
+				"name": "สีแบนเนอร์เมื่อเข้าร่วม",
+				"itemDenomination": "สีแบนเนอร์",
+				"description": "สีแบนเนอร์เมื่อเข้าร่วมกลุ่ม"
+			},
+			"memberJoinOutfit": {
+				"name": "ชุดเมื่อสมาชิกใหม่เข้าร่วม",
+				"itemDenomination": "ชุด",
+				"description": "ชุดเมื่อสมาชิกใหม่เข้าร่วมกลุ่ม"
+			},
+			"memberJoinBackpack": {
+				"name": "กระเป๋าเมื่อสมาชิกใหม่เข้าร่วม",
+				"itemDenomination": "กระเป๋า",
+				"description": "กระเป๋าเมื่อสมาชิกใหม่เข้าร่วมกลุ่ม"
+			},
+			"memberJoinPickaxe": {
+				"name": "ขวานเมื่อสมาชิกใหม่เข้าร่วม",
+				"itemDenomination": "ขวาน",
+				"description": "ขวานเมื่อสมาชิกใหม่เข้าร่วมกลุ่ม"
+			},
+			"memberJoinEmote": {
+				"name": "อีโมตเมื่อสมาชิกใหม่เข้าร่วม",
+				"itemDenomination": "อีโมต",
+				"description": "อีโมตเมื่อสมาชิกใหม่เข้าร่วมกลุ่ม"
+			},
+			"memberJoinShoes": {
+				"name": "รองเท้าเมื่อสมาชิกใหม่เข้าร่วม",
+				"itemDenomination": "รองเท้า",
+				"description": "รองเท้าเมื่อสมาชิกใหม่เข้าร่วมกลุ่ม"
+			},
+			"memberJoinBanner": {
+				"name": "แบนเนอร์เมื่อสมาชิกใหม่เข้าร่วม",
+				"itemDenomination": "แบนเนอร์",
+				"description": "แบนเนอร์เมื่อสมาชิกใหม่เข้าร่วมกลุ่ม"
+			},
+			"memberJoinBannerColor": {
+				"name": "สีแบนเนอร์เมื่อสมาชิกใหม่เข้าร่วม",
+				"itemDenomination": "สีแบนเนอร์",
+				"description": "สีแบนเนอร์เมื่อสมาชิกใหม่เข้าร่วมกลุ่ม"
+			}
+		}
+	}
+}

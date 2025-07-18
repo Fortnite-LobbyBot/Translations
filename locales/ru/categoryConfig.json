@@ -1,0 +1,350 @@
+{
+	"general": {
+		"name": "Общие настройки",
+		"settings": {
+			"searchLangs": {
+				"name": "Язык поиска косметики",
+				"itemDenomination": "язык",
+				"description": "Языки, которые можно использовать для поиска косметики."
+			},
+			"platform": {
+				"name": "Иконка платформы",
+				"itemDenomination": "иконка платформы",
+				"description": "Выберите иконку платформы для бота (например, ПК, консоль)."
+			},
+			"privacy": {
+				"name": "Приватность группы",
+				"itemDenomination": "приватность",
+				"description": "Стандартная настройка приватности группы, например, публичная или приватная."
+			},
+			"prefixes": {
+				"name": "Префиксы",
+				"itemDenomination": "префикс",
+				"description": "Разрешённые префиксы для вызова команд."
+			},
+			"statusText": {
+				"name": "Статус-сообщение",
+				"itemDenomination": "статус-сообщение",
+				"description": "Пользовательские статус-сообщения, которые может показывать бот.",
+				"variables": {
+					"party_size": {
+						"name": "Размер группы",
+						"description": "Текущее количество участников группы."
+					},
+					"party_max_size": {
+						"name": "Максимальный размер группы",
+						"description": "Максимально разрешённое количество участников."
+					},
+					"busy_status": {
+						"name": "Статус занятости",
+						"description": "Показывает, занят ли бот."
+					},
+					"mms_status": {
+						"name": "Статус матчмейкинга",
+						"description": "Текущий статус матчмейкинга."
+					},
+					"friends_count": {
+						"name": "Количество друзей",
+						"description": "Общее количество друзей бота."
+					},
+					"pending_friends_count": {
+						"name": "Ожидающие заявки в друзья",
+						"description": "Количество ожидающих заявок в друзья."
+					},
+					"blocked_users_count": {
+						"name": "Заблокированные пользователи",
+						"description": "Количество пользователей, заблокированных ботом."
+					}
+				}
+			},
+			"statusInterval": {
+				"name": "Интервал статус-сообщения",
+				"itemDenomination": "интервал (секунды)",
+				"description": "Как часто меняется статус-сообщение, в секундах."
+			},
+			"level": {
+				"name": "Уровень",
+				"itemDenomination": "уровень",
+				"description": "Косметический уровень бота."
+			},
+			"bpLevel": {
+				"name": "Уровень боевого пропуска",
+				"itemDenomination": "уровень боевого пропуска",
+				"description": "Косметический уровень боевого пропуска бота."
+			}
+		}
+	},
+	"userManagement": {
+		"name": "Управление пользователями",
+		"settings": {
+			"extraOwners": {
+				"name": "Дополнительные владельцы",
+				"itemDenomination": "владелец",
+				"description": "Пользователи с полным доступом к командам."
+			},
+			"admins": {
+				"name": "Администраторы",
+				"itemDenomination": "администратор",
+				"description": "Пользователи с правами администратора для ограниченных команд."
+			},
+			"whitelistUsers": {
+				"name": "Пользователи в белом списке",
+				"itemDenomination": "пользователь в белом списке",
+				"description": "Пользователи, которым разрешено выполнять определённые ограниченные команды."
+			},
+			"blacklistUsers": {
+				"name": "Пользователи в чёрном списке",
+				"itemDenomination": "пользователь в чёрном списке",
+				"description": "Пользователи, ограниченные или заблокированные для использования бота."
+			},
+			"excludedAutoAddFriends": {
+				"name": "Исключённые из авто-добавления в друзья",
+				"itemDenomination": "исключённый друг",
+				"description": "Пользователи, которых не добавлять автоматически в друзья."
+			},
+			"otherBots": {
+				"name": "Другие боты",
+				"itemDenomination": "бот",
+				"description": "Боты, которыми вы не владеете и хотите игнорировать."
+			}
+		}
+	},
+	"limitsAndBehavior": {
+		"name": "Ограничения и поведение",
+		"settings": {
+			"inviteTimeout": {
+				"name": "Таймаут приглашения",
+				"itemDenomination": "таймаут (секунды)",
+				"description": "Период ожидания перед повторным приглашением бота, в секундах."
+			},
+			"maxBotsPerLobby": {
+				"name": "Макс. ботов в группе",
+				"itemDenomination": "макс. ботов в группе",
+				"description": "Максимальное количество ботов, разрешённых в одной группе."
+			},
+			"maxBotsPerLobbyWithOwner": {
+				"name": "Макс. ботов с владельцем",
+				"itemDenomination": "макс. ботов в группе",
+				"description": "Максимум ботов, если в группе есть владелец."
+			},
+			"maxBotsPerLobbyWithAdmin": {
+				"name": "Макс. ботов с администратором",
+				"itemDenomination": "макс. ботов в группе",
+				"description": "Максимум ботов, если в группе есть администратор."
+			},
+			"maxBotsPerLobbyWithWhitelistUser": {
+				"name": "Макс. ботов с пользователем в белом списке",
+				"itemDenomination": "макс. ботов с пользователем в белом списке",
+				"description": "Максимум ботов, если в группе есть пользователь из белого списка."
+			},
+			"allowMatchmaking": {
+				"name": "Разрешить матчмейкинг",
+				"itemDenomination": "разрешить матчмейкинг",
+				"description": "Включить или отключить матчмейкинг с ботом."
+			},
+			"leaveAfterMatchmaking": {
+				"name": "Выйти после матчмейкинга",
+				"itemDenomination": "выйти после матчмейкинга",
+				"description": "Бот покидает группу после начала матчмейкинга."
+			},
+			"disableMatchmakingChecks": {
+				"name": "Отключить проверки матчмейкинга",
+				"itemDenomination": "отключить проверки матчмейкинга",
+				"description": "Убрать лимит ожидания матчмейкинга (макс. 5 матчей в час)."
+			},
+			"disablePlaylistChecks": {
+				"name": "Отключить проверки режима игры",
+				"itemDenomination": "отключить проверки режима игры",
+				"description": "Разрешить боту играть в любой режим, кроме рейтингового. Лобби с ботами не гарантируются в других режимах."
+			},
+			"disableJoinMessages": {
+				"name": "Отключить сообщения о входе",
+				"itemDenomination": "отключить сообщение о входе",
+				"description": "Отключить сообщения при входе в группу."
+			},
+			"disableAutomaticMessages": {
+				"name": "Отключить автоматические сообщения",
+				"itemDenomination": "отключить автоматическое сообщение",
+				"description": "Отключить все автоматические сообщения."
+			},
+			"acceptFriendRequests": {
+				"name": "Принимать заявки в друзья",
+				"itemDenomination": "принимать заявки в друзья",
+				"description": "Автоматически принимать входящие заявки в друзья."
+			},
+			"sendFriendRequestOnJoinParty": {
+				"name": "Отправлять заявку в друзья при входе",
+				"itemDenomination": "отправить заявку в друзья",
+				"description": "Отправлять заявки в друзья всем участникам группы при входе бота."
+			},
+			"sendFriendRequestOnMemberJoinParty": {
+				"name": "Отправлять заявку новому участнику",
+				"itemDenomination": "отправить заявку участнику",
+				"description": "Отправлять заявку в друзья новым участникам при их входе в группу."
+			},
+			"runCommandsWithoutPrefix": {
+				"name": "Выполнять команды без префикса",
+				"itemDenomination": "выполнять команды",
+				"description": "Разрешить выполнение команд без префикса."
+			},
+			"setCosmeticsWithoutCommands": {
+				"name": "Устанавливать косметику без команд",
+				"itemDenomination": "установить косметику",
+				"description": "Устанавливать косметику, просто написав её название в чате группы, без команды."
+			},
+			"setCosmeticsWithPrefix": {
+				"name": "Устанавливать косметику с префиксом",
+				"itemDenomination": "установить косметику",
+				"description": "Устанавливать косметику с помощью префикса, например !floss."
+			},
+			"acceptInvites": {
+				"name": "Принимать приглашения",
+				"itemDenomination": "принимать приглашения",
+				"description": "Автоматически принимать приглашения и заявки на вступление в группу."
+			}
+		}
+	},
+	"triggers": {
+		"name": "Триггеры и действия"
+	},
+	"commandRestrictions": {
+		"name": "Ограничения команд",
+		"settings": {
+			"onlyOwnerCommands": {
+				"name": "Команды только для владельца",
+				"itemDenomination": "команда",
+				"description": "Команды, которые может использовать только владелец бота."
+			},
+			"onlyAdminCommands": {
+				"name": "Команды только для администратора",
+				"itemDenomination": "команда",
+				"description": "Команды, которые может использовать только администратор или владелец."
+			},
+			"onlyWhitelistUsersCommands": {
+				"name": "Команды для пользователей в белом списке",
+				"itemDenomination": "команда",
+				"description": "Команды только для пользователей в белом списке, администраторов или владельцев."
+			},
+			"onlyFriendsCommands": {
+				"name": "Команды только для друзей",
+				"itemDenomination": "команда",
+				"description": "Команды доступны только друзьям бота."
+			},
+			"onlyPartyMembersCommands": {
+				"name": "Команды только для участников группы",
+				"itemDenomination": "команда",
+				"description": "Команды доступны только текущим участникам группы."
+			},
+			"onlyWhisperCommands": {
+				"name": "Команды только в ЛС",
+				"itemDenomination": "команда",
+				"description": "Команды, которые нужно отправлять в личные сообщения/ЛС."
+			}
+		}
+	},
+	"cosmetics": {
+		"name": "Настройка косметики",
+		"settings": {
+			"startOutfit": {
+				"name": "Начальный наряд",
+				"itemDenomination": "наряд",
+				"description": "Стандартный наряд при запуске бота."
+			},
+			"startBackpack": {
+				"name": "Начальный рюкзак",
+				"itemDenomination": "рюкзак",
+				"description": "Стандартный рюкзак при запуске бота."
+			},
+			"startPickaxe": {
+				"name": "Начальная кирка",
+				"itemDenomination": "кирка",
+				"description": "Стандартная кирка при запуске бота."
+			},
+			"startShoes": {
+				"name": "Начальная обувь",
+				"itemDenomination": "обувь",
+				"description": "Стандартная обувь при запуске бота."
+			},
+			"startBanner": {
+				"name": "Начальный баннер",
+				"itemDenomination": "баннер",
+				"description": "Стандартный баннер при запуске бота."
+			},
+			"startBannerColor": {
+				"name": "Начальный цвет баннера",
+				"itemDenomination": "цвет баннера",
+				"description": "Стандартный цвет баннера при запуске бота."
+			},
+			"joinOutfit": {
+				"name": "Наряд при входе",
+				"itemDenomination": "наряд",
+				"description": "Наряд при входе в группу."
+			},
+			"joinBackpack": {
+				"name": "Рюкзак при входе",
+				"itemDenomination": "рюкзак",
+				"description": "Рюкзак при входе в группу."
+			},
+			"joinPickaxe": {
+				"name": "Кирка при входе",
+				"itemDenomination": "кирка",
+				"description": "Кирка при входе в группу."
+			},
+			"joinEmote": {
+				"name": "Эмоция при входе",
+				"itemDenomination": "эмоция",
+				"description": "Эмоция при входе в группу."
+			},
+			"joinShoes": {
+				"name": "Обувь при входе",
+				"itemDenomination": "обувь",
+				"description": "Обувь при входе в группу."
+			},
+			"joinBanner": {
+				"name": "Баннер при входе",
+				"itemDenomination": "баннер",
+				"description": "Баннер при входе в группу."
+			},
+			"joinBannerColor": {
+				"name": "Цвет баннера при входе",
+				"itemDenomination": "цвет баннера",
+				"description": "Цвет баннера при входе в группу."
+			},
+			"memberJoinOutfit": {
+				"name": "Наряд при входе участника",
+				"itemDenomination": "наряд",
+				"description": "Наряд при входе участника в группу."
+			},
+			"memberJoinBackpack": {
+				"name": "Рюкзак при входе участника",
+				"itemDenomination": "рюкзак",
+				"description": "Рюкзак при входе участника в группу."
+			},
+			"memberJoinPickaxe": {
+				"name": "Кирка при входе участника",
+				"itemDenomination": "кирка",
+				"description": "Кирка при входе участника в группу."
+			},
+			"memberJoinEmote": {
+				"name": "Эмоция при входе участника",
+				"itemDenomination": "эмоция",
+				"description": "Эмоция при входе участника в группу."
+			},
+			"memberJoinShoes": {
+				"name": "Обувь при входе участника",
+				"itemDenomination": "обувь",
+				"description": "Обувь при входе участника в группу."
+			},
+			"memberJoinBanner": {
+				"name": "Баннер при входе участника",
+				"itemDenomination": "баннер",
+				"description": "Баннер при входе участника в группу."
+			},
+			"memberJoinBannerColor": {
+				"name": "Цвет баннера при входе участника",
+				"itemDenomination": "цвет баннера",
+				"description": "Цвет баннера при входе участника в группу."
+			}
+		}
+	}
+}

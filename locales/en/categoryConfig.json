@@ -1,0 +1,350 @@
+{
+	"general": {
+		"name": "General Settings",
+		"settings": {
+			"searchLangs": {
+				"name": "Cosmetic Search Language",
+				"itemDenomination": "language",
+				"description": "Languages you can use to search for cosmetics."
+			},
+			"platform": {
+				"name": "Platform Icon",
+				"itemDenomination": "platform icon",
+				"description": "Select the platform icon for the bot (e.g., PC, console)."
+			},
+			"privacy": {
+				"name": "Party Privacy",
+				"itemDenomination": "privacy",
+				"description": "Default privacy setting for the party, such as public or private."
+			},
+			"prefixes": {
+				"name": "Prefixes",
+				"itemDenomination": "prefix",
+				"description": "Allowed prefixes to trigger commands."
+			},
+			"statusText": {
+				"name": "Status Message",
+				"itemDenomination": "status message",
+				"description": "Custom status messages the bot can display.",
+				"variables": {
+					"party_size": {
+						"name": "Party Size",
+						"description": "Current number of party members."
+					},
+					"party_max_size": {
+						"name": "Party Max Size",
+						"description": "Maximum allowed party members."
+					},
+					"busy_status": {
+						"name": "Busy Status",
+						"description": "Shows if the bot is currently busy."
+					},
+					"mms_status": {
+						"name": "Matchmaking Status",
+						"description": "Current matchmaking status."
+					},
+					"friends_count": {
+						"name": "Friends Count",
+						"description": "Total number of friends the bot has."
+					},
+					"pending_friends_count": {
+						"name": "Pending Friends Count",
+						"description": "Number of pending friend requests."
+					},
+					"blocked_users_count": {
+						"name": "Blocked Users Count",
+						"description": "Number of users blocked by the bot."
+					}
+				}
+			},
+			"statusInterval": {
+				"name": "Status Message Interval",
+				"itemDenomination": "interval (seconds)",
+				"description": "How often the status message changes, in seconds."
+			},
+			"level": {
+				"name": "Level",
+				"itemDenomination": "level",
+				"description": "The bot's cosmetic level."
+			},
+			"bpLevel": {
+				"name": "Battle Pass Level",
+				"itemDenomination": "battle pass level",
+				"description": "The bot's cosmetic battle pass level."
+			}
+		}
+	},
+	"userManagement": {
+		"name": "User Management",
+		"settings": {
+			"extraOwners": {
+				"name": "Extra Owners",
+				"itemDenomination": "owner",
+				"description": "Additional users who have full command access."
+			},
+			"admins": {
+				"name": "Admins",
+				"itemDenomination": "admin",
+				"description": "Users with admin privileges for restricted commands."
+			},
+			"whitelistUsers": {
+				"name": "Whitelist Users",
+				"itemDenomination": "whitelist user",
+				"description": "Users allowed to run certain restricted commands."
+			},
+			"blacklistUsers": {
+				"name": "Blacklist Users",
+				"itemDenomination": "blacklist user",
+				"description": "Users who are restricted or banned from using the bot."
+			},
+			"excludedAutoAddFriends": {
+				"name": "Excluded Auto Add Friends",
+				"itemDenomination": "excluded friend",
+				"description": "Users excluded from being automatically added as friends."
+			},
+			"otherBots": {
+				"name": "Other Bots",
+				"itemDenomination": "bot",
+				"description": "Bots you don't own and want to ignore."
+			}
+		}
+	},
+	"limitsAndBehavior": {
+		"name": "Limits and Behavior",
+		"settings": {
+			"inviteTimeout": {
+				"name": "Invite Timeout",
+				"itemDenomination": "timeout (seconds)",
+				"description": "Cooldown period before the bot can be re-invited, in seconds."
+			},
+			"maxBotsPerLobby": {
+				"name": "Max Bots Per Party",
+				"itemDenomination": "max bots per party",
+				"description": "Maximum number of bots allowed in a single party."
+			},
+			"maxBotsPerLobbyWithOwner": {
+				"name": "Max Bots Per Party With Owner",
+				"itemDenomination": "max bots per party",
+				"description": "Maximum bots allowed in a single party when an owner is present."
+			},
+			"maxBotsPerLobbyWithAdmin": {
+				"name": "Max Bots Per Party With Admin",
+				"itemDenomination": "max bots per party",
+				"description": "Maximum bots allowed in a single party when an admin is present."
+			},
+			"maxBotsPerLobbyWithWhitelistUser": {
+				"name": "Max Bots Per Party With Whitelist User",
+				"itemDenomination": "max bots with whitelist user",
+				"description": "Maximum bots allowed in a single party when a whitelisted user is present."
+			},
+			"allowMatchmaking": {
+				"name": "Allow Matchmaking",
+				"itemDenomination": "allow matchmaking",
+				"description": "Enable or disable matchmaking with the bot."
+			},
+			"leaveAfterMatchmaking": {
+				"name": "Leave After Matchmaking",
+				"itemDenomination": "leave after matchmaking",
+				"description": "The bot leaves the party after matchmaking starts."
+			},
+			"disableMatchmakingChecks": {
+				"name": "Disable Matchmaking Checks",
+				"itemDenomination": "disable matchmaking checks",
+				"description": "Remove the matchmaking cooldown limit (max 5 matches per hour)."
+			},
+			"disablePlaylistChecks": {
+				"name": "Disable Game Mode Checks",
+				"itemDenomination": "disable game mode checks",
+				"description": "Allow the bot to play any game mode except ranked. Bot lobbies are not guaranteed in other modes."
+			},
+			"disableJoinMessages": {
+				"name": "Disable Join Messages",
+				"itemDenomination": "disable join message",
+				"description": "Turn off messages when joining a party."
+			},
+			"disableAutomaticMessages": {
+				"name": "Disable Automatic Messages",
+				"itemDenomination": "disable automatic message",
+				"description": "Turn off all automatic messages."
+			},
+			"acceptFriendRequests": {
+				"name": "Accept Friend Requests",
+				"itemDenomination": "accept friend requests",
+				"description": "Automatically accept incoming friend requests."
+			},
+			"sendFriendRequestOnJoinParty": {
+				"name": "Send Friend Request On Join Party",
+				"itemDenomination": "send friend request",
+				"description": "Send friend requests to all party members when the bot joins a party."
+			},
+			"sendFriendRequestOnMemberJoinParty": {
+				"name": "Send Friend Request On Member Join Party",
+				"itemDenomination": "send member friend request",
+				"description": "Send a friend request to new members when they join the party."
+			},
+			"runCommandsWithoutPrefix": {
+				"name": "Run Commands Without Prefix",
+				"itemDenomination": "run commands",
+				"description": "Allow commands to be run without a prefix."
+			},
+			"setCosmeticsWithoutCommands": {
+				"name": "Set Cosmetics Without Commands",
+				"itemDenomination": "set cosmetics",
+				"description": "Set cosmetics by just typing their name in party chat, no command needed."
+			},
+			"setCosmeticsWithPrefix": {
+				"name": "Set Cosmetics With Prefix",
+				"itemDenomination": "set cosmetics",
+				"description": "Set cosmetics using a prefix, like !floss."
+			},
+			"acceptInvites": {
+				"name": "Accept Invites",
+				"itemDenomination": "accept invites",
+				"description": "Automatically accept party invites and join requests."
+			}
+		}
+	},
+	"triggers": {
+		"name": "Triggers and Actions"
+	},
+	"commandRestrictions": {
+		"name": "Command Restrictions",
+		"settings": {
+			"onlyOwnerCommands": {
+				"name": "Owner Commands",
+				"itemDenomination": "command",
+				"description": "Commands only bot owners can use."
+			},
+			"onlyAdminCommands": {
+				"name": "Admin Commands",
+				"itemDenomination": "command",
+				"description": "Commands only admins or owners can use."
+			},
+			"onlyWhitelistUsersCommands": {
+				"name": "Whitelist User Commands",
+				"itemDenomination": "command",
+				"description": "Commands for whitelisted users, admins, or owners only."
+			},
+			"onlyFriendsCommands": {
+				"name": "Friends-Only Commands",
+				"itemDenomination": "command",
+				"description": "Commands only available to the bot's friends."
+			},
+			"onlyPartyMembersCommands": {
+				"name": "Party Members-Only Commands",
+				"itemDenomination": "command",
+				"description": "Commands only available to current party members."
+			},
+			"onlyWhisperCommands": {
+				"name": "DM-Only Commands",
+				"itemDenomination": "command",
+				"description": "Commands that must be sent via whisper/DM."
+			}
+		}
+	},
+	"cosmetics": {
+		"name": "Cosmetic Customization",
+		"settings": {
+			"startOutfit": {
+				"name": "Start Outfit",
+				"itemDenomination": "outfit",
+				"description": "Default outfit(s) when the bot starts."
+			},
+			"startBackpack": {
+				"name": "Start Backpack",
+				"itemDenomination": "backpack",
+				"description": "Default backpack(s) when the bot starts."
+			},
+			"startPickaxe": {
+				"name": "Start Pickaxe",
+				"itemDenomination": "pickaxe",
+				"description": "Default pickaxe(s) when the bot starts."
+			},
+			"startShoes": {
+				"name": "Start Shoes",
+				"itemDenomination": "shoes",
+				"description": "Default shoes when the bot starts."
+			},
+			"startBanner": {
+				"name": "Start Banner",
+				"itemDenomination": "banner",
+				"description": "Default banner(s) when the bot starts."
+			},
+			"startBannerColor": {
+				"name": "Start Banner Color",
+				"itemDenomination": "banner color",
+				"description": "Default banner color(s) when the bot starts."
+			},
+			"joinOutfit": {
+				"name": "Join Outfit",
+				"itemDenomination": "outfit",
+				"description": "Outfit(s) to wear when joining a party."
+			},
+			"joinBackpack": {
+				"name": "Join Backpack",
+				"itemDenomination": "backpack",
+				"description": "Backpack(s) to wear when joining a party."
+			},
+			"joinPickaxe": {
+				"name": "Join Pickaxe",
+				"itemDenomination": "pickaxe",
+				"description": "Pickaxe(s) to use when joining a party."
+			},
+			"joinEmote": {
+				"name": "Join Emote",
+				"itemDenomination": "emote",
+				"description": "Emote(s) to perform when joining a party."
+			},
+			"joinShoes": {
+				"name": "Join Shoes",
+				"itemDenomination": "shoes",
+				"description": "Shoes to wear when joining a party."
+			},
+			"joinBanner": {
+				"name": "Join Banner",
+				"itemDenomination": "banner",
+				"description": "Banner(s) to set when joining a party."
+			},
+			"joinBannerColor": {
+				"name": "Join Banner Color",
+				"itemDenomination": "banner color",
+				"description": "Banner color(s) to set when joining a party."
+			},
+			"memberJoinOutfit": {
+				"name": "Member Join Outfit",
+				"itemDenomination": "outfit",
+				"description": "Outfit(s) to set when a member joins the party."
+			},
+			"memberJoinBackpack": {
+				"name": "Member Join Backpack",
+				"itemDenomination": "backpack",
+				"description": "Backpack(s) to set when a member joins the party."
+			},
+			"memberJoinPickaxe": {
+				"name": "Member Join Pickaxe",
+				"itemDenomination": "pickaxe",
+				"description": "Pickaxe(s) to set when a member joins the party."
+			},
+			"memberJoinEmote": {
+				"name": "Member Join Emote",
+				"itemDenomination": "emote",
+				"description": "Emote(s) to set when a member joins the party."
+			},
+			"memberJoinShoes": {
+				"name": "Member Join Shoes",
+				"itemDenomination": "shoes",
+				"description": "Shoes to set when a member joins the party."
+			},
+			"memberJoinBanner": {
+				"name": "Member Join Banner",
+				"itemDenomination": "banner",
+				"description": "Banner(s) to set when a member joins the party."
+			},
+			"memberJoinBannerColor": {
+				"name": "Member Join Banner Color",
+				"itemDenomination": "banner color",
+				"description": "Banner color(s) to set when a member joins the party."
+			}
+		}
+	}
+}
