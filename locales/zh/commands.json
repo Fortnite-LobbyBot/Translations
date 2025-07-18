@@ -1,1307 +1,1306 @@
 {
-	"handler": {
-		"errors": {
-			"only_for_party_members": "此命令仅适用于我的聚会成员。",
-			"only_for_private_messages": "此命令仅在私人消息中可用。",
-			"need_party_leader": "我需要成为党的负责人来执行此命令！",
-			"only_for_owners": "此命令仅适用于机器人所有者。",
-			"only_for_admins": "此命令仅适用于机器人管理员。",
-			"only_for_whitelist": "此命令仅适用于机器人白名单上的用户。"
-		}
-	},
-	"all_items": {
-		"config": {
-			"description": "显示游戏的所有化妆品，可以添加一个可选的过滤器，您可以使用“ stop”命令停止。",
-			"usage": {
-				"filter": {
-					"name": "筛选",
-					"options": {
-						"outfits": "服装",
-						"backpacks": "背包",
-						"emojis": "表情符号",
-						"emotes": "情绪",
-						"pickaxes": "采摘",
-						"shoes": "鞋"
-					},
-					"description": "通过显示项目来设置的过滤器。"
-				},
-				"random_order": {
-					"name": "随机顺序",
-					"description": "使用随机订单而不是按最新订购。",
-					"options": {
-						"yes": "是的",
-						"no": "不"
-					}
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"no_items": "无法获取物品。",
-				"items_already_displaying": "化妆品已经在显示，必须首先使用“停止”命令停止。",
-				"setting_items": "设置所有游戏项目... {{filtered}}",
-				"filtered_by": "（由{{filter}}过滤）",
-				"items_showed": "我已经完成了所有项目..."
-			}
-		}
-	},
-	"backpack": {
-		"config": {
-			"description": "设置机器人的背包。",
-			"usage": {
-				"query": {
-					"name": "背包名称或ID",
-					"description": "要设置的背包的名称或ID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"backpack_not_found": "背包{{item}}找不到！",
-				"backpack_changed": "将背包设置为{{name}}！ （{{id}}）"
-			}
-		}
-	},
-	"backpack_variants": {
-		"config": {
-			"description": "设置背包的变体。"
-		},
-		"run": {
-			"msg": {
-				"backpack_not_found": "机器人没有背包！",
-				"invalid_backpack": "背包无效！",
-				"variants_not_founded": "这个背包没有变体！",
-				"variants_select": "发送您要选择{{type}}的变体",
-				"variants_changed": "设置背包变体！"
-			}
-		}
-	},
-	"banner": {
-		"config": {
-			"description": "设置了机器人的横幅。",
-			"usage": {
-				"query": {
-					"name": "横幅名称或ID",
-					"description": "横幅的名称或ID设置。"
-				},
-				"color": {
-					"name": "颜色名称或ID",
-					"description": "要设置的颜色的名称或ID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"banner_not_found": "横幅{{item}}找不到！",
-				"color_not_found": "颜色{{item}}找不到！",
-				"banner_changed": "将横幅设置为{{name}}！ （{{id}}）"
-			}
-		}
-	},
-	"clear_backpack": {
-		"config": {
-			"description": "卸下机器人的背包。"
-		},
-		"run": {
-			"msg": {
-				"backpack_cleared": "清理背包！"
-			}
-		}
-	},
-	"clear_emote": {
-		"config": {
-			"description": "停止机器人的舞蹈。"
-		},
-		"run": {
-			"msg": {
-				"emote_cleared": "清除了表情！"
-			}
-		}
-	},
-	"clear_shoes": {
-		"config": {
-			"description": "卸下机器人的鞋子。"
-		},
-		"run": {
-			"msg": {
-				"shoes_cleared": "清除的鞋子！"
-			}
-		}
-	},
-	"copy": {
-		"config": {
-			"description": "复制用户的化妆品，或者，如果未指定参数，则将化妆品复制。",
-			"usage": {
-				"filter": {
-					"name": "筛选",
-					"options": {
-						"all": "全部",
-						"outfit": "全套服装",
-						"backpack": "背包",
-						"emoji": "表情符号",
-						"emote": "表情",
-						"pickaxe": "Pickaxe",
-						"shoes": "鞋"
-					},
-					"description": "复制化妆品时要设置的过滤器。"
-				},
-				"query": {
-					"name": "会员名称或ID",
-					"description": "会员的名称或ID复制化妆品。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"members_found": "找到了多个成员：",
-				"member_not_found": "成员{{member}}找不到！",
-				"member_not_at_party": "你不是我党的成员。",
-				"member_copied": "复制{{member}}！"
-			}
-		}
-	},
-	"cosmetic": {
-		"config": {
-			"description": "设置机器人的化妆品。",
-			"usage": {
-				"query": {
-					"name": "化妆品名称或ID",
-					"description": "设置化妆品的名称或ID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"cosmetic_not_found": "找不到化妆品{{query}}找不到！",
-				"cosmetic_changed": "将{{type}}设置为{{name}}！ （{{id}}）"
-			}
-		}
-	},
-	"cosmetic_info": {
-		"config": {
-			"description": "显示有关化妆品的信息。",
-			"usage": {
-				"query": {
-					"name": "化妆品名称或ID",
-					"description": "设置化妆品的名称或ID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"cosmetic_not_found": "找不到化妆品{{query}}找不到！"
-			}
-		}
-	},
-	"emoji": {
-		"config": {
-			"description": "设置机器人的表情符号。",
-			"usage": {
-				"query": {
-					"name": "表情符号名称或ID",
-					"description": "要设置的表情符号的名称或ID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"emoji_not_found": "emoji {{query}}找不到！",
-				"emoji_changed": "将表情符号设置为{{name}}！ （{{id}}）"
-			}
-		}
-	},
-	"emote": {
-		"config": {
-			"description": "设置机器人的表情。",
-			"usage": {
-				"query": {
-					"name": "表情名称或ID",
-					"description": "符号的名称或ID设置。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"emote_not_found": "emote {{query}}找不到！",
-				"emote_changed": "将表情符号设置为{{name}}！ （{{id}}）"
-			}
-		}
-	},
-	"mimic": {
-		"config": {
-			"description": "如果未指定参数，则与用户相同或与您相同。 使用“停止”停止命令。",
-			"usage": {
-				"filter": {
-					"name": "筛选",
-					"options": {
-						"all": "全部",
-						"changes": "更改",
-						"outfits": "服装",
-						"backpacks": "背包",
-						"emojis": "表情符号",
-						"emotes": "情绪",
-						"pickaxes": "采摘",
-						"shoes": "鞋"
-					},
-					"description": "模仿化妆品时要设置的过滤器。"
-				},
-				"query": {
-					"name": "会员名称或ID",
-					"description": "成员的名称或ID模仿化妆品。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"members_found": "找到了多个成员：",
-				"member_not_found": "成员{{query}}找不到！",
-				"member_not_at_party": "你不是我党的成员。",
-				"mimic_enabled": "启用模拟{{member}} {{filter}}！",
-				"filter": "使用过滤器{{filter}}"
-			}
-		}
-	},
-	"new_items": {
-		"config": {
-			"description": "显示在游戏中添加的最新化妆品，可以添加一个可选的过滤器，您可以使用“停止”命令停止。",
-			"usage": {
-				"filter": {
-					"name": "筛选",
-					"options": {
-						"outfits": "服装",
-						"backpacks": "背包",
-						"emojis": "表情符号",
-						"emotes": "情绪",
-						"pickaxes": "采摘",
-						"shoes": "鞋"
-					},
-					"description": "通过显示项目来设置的过滤器。"
-				},
-				"random_order": {
-					"name": "随机顺序",
-					"description": "使用随机订单而不是按最新订购。",
-					"options": {
-						"yes": "是的",
-						"no": "不"
-					}
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"type_error": "如果您想要过滤器，请确保有效，只有衣服，背包，表情符号，情绪，拾音器或鞋子。",
-				"cosmetic_fetch_error": "无法获取最近添加化妆品。",
-				"already_showing": "化妆品已经在显示，必须首先使用“停止”命令停止。",
-				"showing_cosmetics": "设置所有最近添加的项目... {{filter}}",
-				"filter": "（由{{filter}}过滤）",
-				"ended": "完成了所有最近添加的项目..."
-			}
-		}
-	},
-	"outfit": {
-		"config": {
-			"description": "设置机器人的衣服。",
-			"usage": {
-				"query": {
-					"name": "服装名称或ID",
-					"description": "要设置的服装的名称或ID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"outfit_not_found": "未找到服装{{query}}！",
-				"outfit_changed": "将衣服设置为{{name}}！ （{{id}}）"
-			}
-		}
-	},
-	"outfit_variants": {
-		"config": {
-			"description": "设置服装的变体。"
-		},
-		"run": {
-			"msg": {
-				"outfit_not_found": "机器人没有衣服！",
-				"invalid_outfit": "无效的服装！",
-				"variants_not_found": "这件衣服没有变体！",
-				"variants_select": "发送您要选择{{type}}的变体",
-				"changed": "设置服装变体！"
-			}
-		}
-	},
-	"perfect_timing": {
-		"config": {
-			"description": "设置机器人的化妆品同步。",
-			"usage": {
-				"query": {
-					"name": "化妆品名称或ID",
-					"description": "设置化妆品的名称或ID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"cosmetic_not_found": "找不到化妆品{{query}}找不到！",
-				"perfect_timing_success": "同步执行完美的时机...",
-				"perfect_timing_done": "将{{value}}同步到{{name}}！ （{{id}}）"
-			}
-		}
-	},
-	"pickaxe": {
-		"config": {
-			"description": "设置机器人的拾音器。",
-			"usage": {
-				"query": {
-					"name": "选择名称或ID",
-					"description": "要设置的Pickaxe的名称或ID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"pickaxe_not_found": "挑选{{query}}找不到！",
-				"pickaxe_changed": "将Pickaxe设置为{{name}}！ （{{id}}）"
-			}
-		}
-	},
-	"pickaxe_variants": {
-		"config": {
-			"description": "设置Pickaxe的变体。"
-		},
-		"run": {
-			"msg": {
-				"pickaxe_not_found": "机器人没有拾音器！",
-				"invalid_pickaxe": "无效的Pickaxe！",
-				"variants_not_found": "这个拾音器没有变体！",
-				"variants_select": "发送您要选择{{type}}的变体",
-				"changed": "设置Pickaxe变体！"
-			}
-		}
-	},
-	"preset": {
-		"config": {
-			"description": "设置机器人的预设。 使用“无”去除化妆品。",
-			"usage": {
-				"outfit": {
-					"name": "服装ID",
-					"description": "服装的身份证。"
-				},
-				"backpack": {
-					"name": "背包ID",
-					"description": "背包的ID。"
-				},
-				"pickaxe": {
-					"name": "选择ID",
-					"description": "Pickaxe的ID。"
-				},
-				"emote": {
-					"name": "emote id",
-					"description": "表情的ID。"
-				},
-				"shoes": {
-					"name": "鞋子ID",
-					"description": "鞋子的身份证。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"preset_changed": "设置预设！"
-			}
-		}
-	},
-	"shoes": {
-		"config": {
-			"description": "设置了机器人的鞋子。",
-			"usage": {
-				"query": {
-					"name": "鞋子或身份证",
-					"description": "要设置的鞋子的名称或身份证。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"shoes_not_found": "鞋子{{query}}找不到！",
-				"shoes_changed": "将鞋子设置为{{name}}！ （{{id}}）"
-			}
-		}
-	},
-	"shoe_variants": {
-		"config": {
-			"description": "设置鞋子变体。"
-		},
-		"run": {
-			"msg": {
-				"shoes_not_found": "机器人没有鞋子！",
-				"invalid_shoes": "无效的鞋子！",
-				"variants_not_found": "这双鞋没有变体！",
-				"variants_select": "发送您要选择{{type}}的变体",
-				"changed": "设置鞋子变体！"
-			}
-		}
-	},
-	"shop_items": {
-		"config": {
-			"description": "显示物料商店中的化妆品，可以添加一个可选的过滤器，您可以使用“停止”命令停止。",
-			"usage": {
-				"filter": {
-					"name": "筛选",
-					"options": {
-						"outfits": "服装",
-						"backpacks": "背包",
-						"emojis": "表情符号",
-						"emotes": "情绪",
-						"pickaxes": "采摘",
-						"shoes": "鞋"
-					},
-					"description": "通过显示项目来设置的过滤器。"
-				},
-				"random_order": {
-					"name": "随机顺序",
-					"description": "使用随机订单而不是按最新订购。",
-					"options": {
-						"yes": "是的",
-						"no": "不"
-					}
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"invalid_type": "如果您想要过滤器，请确保有效，只有衣服，背包，表情符号，情绪，拾音器或鞋子。",
-				"fetch_failed": "无法获取商店物品。",
-				"already_displaying": "化妆品已经在显示，必须首先使用“停止”命令停止。",
-				"showing_items": "设置商店中的所有项目... {{filter}}",
-				"filter": "（由{{query}}过滤）",
-				"ended": "我已经完成了商店中的所有物品..."
-			}
-		}
-	},
-	"stop": {
-		"config": {
-			"description": "停止待处理的操作。"
-		},
-		"run": {
-			"msg": {
-				"stopped_items": "停止展示物品！",
-				"stopped_mimic": "停止模仿！",
-				"stopped_emote": "停止表情！",
-				"nothing_to_stop": "没什么可停止的！"
-			}
-		}
-	},
-	"accept_all_friends": {
-		"config": {
-			"description": "接受机器人的所有未决朋友。"
-		},
-		"run": {
-			"msg": {
-				"accepting_friends": "接受所有未决的朋友！",
-				"accepted_friends": "接受{{count}}朋友！"
-			}
-		}
-	},
-	"accept_friend": {
-		"config": {
-			"description": "接受朋友请求。",
-			"usage": {
-				"query": {
-					"name": "等待朋友的姓名或ID",
-					"description": "朋友的名称或ID等待接受。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "找到了多个朋友：",
-				"friends_not_found": "朋友{{query}}找不到！",
-				"self_request": "等待的朋友请求是我的！",
-				"error": "等待的朋友不接受！",
-				"request_accepted": "等待的朋友{{name}}成功接受！"
-			}
-		}
-	},
-	"add_friend": {
-		"config": {
-			"description": "将朋友请求发送给用户或接受朋友请求。",
-			"usage": {
-				"query": {
-					"name": "用户名或ID",
-					"description": "用户的名称或ID要添加。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "找到了多个朋友：",
-				"friends_not_found": "朋友{{query}}找不到！",
-				"already_friends": "已经是朋友！",
-				"error": "无法添加用户！",
-				"request_sent": "朋友请求发送到{{name}}"
-			}
-		}
-	},
-	"block_user": {
-		"config": {
-			"description": "阻止用户。",
-			"usage": {
-				"query": {
-					"name": "用户名或ID",
-					"description": "用户的名称或ID要阻止。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_users_found": "找到了多个用户：",
-				"user_not_found": "用户{{query}}找不到！",
-				"error": "无法阻止{{name}}！",
-				"user_blocked": "用户{{name}}成功地阻止了！"
-			}
-		}
-	},
-	"decline_all_friends": {
-		"config": {
-			"description": "拒绝了所有尚待机​​器人的朋友。"
-		},
-		"run": {
-			"msg": {
-				"declining_friends": "拒绝所有等待的朋友！",
-				"declined_friends": "拒绝{{count}}朋友！"
-			}
-		}
-	},
-	"decline_friend": {
-		"config": {
-			"description": "拒绝或中止朋友请求。",
-			"usage": {
-				"query": {
-					"name": "等待朋友的姓名或ID",
-					"description": "朋友的名称或身份证，等待拒绝或流产。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "找到了多个朋友：",
-				"friends_not_found": "朋友{{query}}找不到！",
-				"error": "待定的朋友没有被删除！",
-				"request_sent": "等待的朋友{{name}}成功地删除了！"
-			}
-		}
-	},
-	"friend_count": {
-		"config": {
-			"description": "显示了机器人的朋友的数量。"
-		},
-		"run": {
-			"msg": {
-				"info": "我有{{friends}}朋友，{{pending}}待定（{{incoming}}输入，{{outgoing}}向外发出）和{{blocked}} blocked！"
-			}
-		}
-	},
-	"invite": {
-		"config": {
-			"description": "邀请朋友或您参加聚会。",
-			"usage": {
-				"query": {
-					"name": "朋友的姓名或ID",
-					"description": "朋友的名字或ID邀请。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"alone": "在与我的聚会上，需要邀请用户。",
-				"multiple_friends_found": "找到了多个朋友：",
-				"friends_not_found": "朋友{{query}}找不到！",
-				"already_on_party": "{{name}}已经在我的聚会中！",
-				"invite_error": "无法将邀请发送到{{name}}！",
-				"invite_sent": "邀请发送到{{name}}！"
-			}
-		}
-	},
-	"join": {
-		"config": {
-			"description": "加入您的聚会或某些用户聚会。",
-			"usage": {
-				"query": {
-					"name": "朋友的姓名或ID",
-					"description": "朋友的姓名或ID加入。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"invalid_param": "您需要成为我的朋友或指定朋友！",
-				"multiple_friends_found": "找到了多个朋友：",
-				"friend_not_found": "朋友{{query}}找不到！",
-				"already_on_party": "朋友已经在我的聚会中！",
-				"party_error": "{{name}}没有聚会！",
-				"join_request_error": "无法将加入请求发送到{{name}}！",
-				"joined": "加入{{name}}！",
-				"join_request_sent": "加入发送到{{name}}的请求！"
-			}
-		}
-	},
-	"promote": {
-		"config": {
-			"description": "如果您不指定参数，则会促进会员或使您成为领导者。",
-			"usage": {
-				"query": {
-					"name": "会员名称或ID",
-					"description": "党派的名称或ID上升。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "找到了多个朋友：",
-				"member_not_found": "成员{{query}}找不到！",
-				"member_not_at_party": "你不是我党的成员。",
-				"member_promoted": "促进{{name}}！"
-			}
-		}
-	},
-	"remove_all_friends": {
-		"config": {
-			"description": "删除所有机器人的朋友。 管理员和所有者被排除在外。"
-		},
-		"run": {
-			"msg": {
-				"removing_friends": "删除所有朋友！",
-				"removed_friends": "删除了{{count}}朋友！"
-			}
-		}
-	},
-	"remove_friend": {
-		"config": {
-			"description": "删除了机器人的朋友。",
-			"usage": {
-				"query": {
-					"name": "朋友的姓名或ID",
-					"description": "朋友的姓名或ID要删除。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "找到了多个朋友：",
-				"friend_not_found": "朋友{{query}}找不到！",
-				"error": "无法删除{{name}}！",
-				"friend_removed": "朋友{{name}}成功删除了！"
-			}
-		}
-	},
-	"unblock_all_users": {
-		"config": {
-			"description": "解散机器人的所有阻止用户。"
-		},
-		"run": {
-			"msg": {
-				"removing_friends": "解除所有阻止用户！",
-				"removed_friends": "未阻止{{count}}阻止用户！"
-			}
-		}
-	},
-	"unblock_user": {
-		"config": {
-			"description": "解开用户。",
-			"usage": {
-				"query": {
-					"name": "用户名或ID",
-					"description": "用户的名称或ID取消阻止。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_users_found": "找到了多个用户：",
-				"user_not_found": "用户{{query}}找不到！",
-				"error": "不能解开{{name}}！",
-				"user_unblocked": "用户{{name}}成功地取消了封锁！"
-			}
-		}
-	},
-	"user_info": {
-		"config": {
-			"description": "显示指定用户的信息。",
-			"usage": {
-				"query": {
-					"name": "用户名或ID",
-					"description": "用户的名称或ID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_users_found": "找到了多个用户：",
-				"user_not_found": "用户{{query}}找不到！"
-			}
-		}
-	},
-	"eval": {
-		"run": {
-			"msg": {
-				"unauthorized_error": "只有tnfangel可以访问此命令。"
-			}
-		}
-	},
-	"help": {
-		"config": {
-			"description": "显示帮助和指挥面板。",
-			"usage": {
-				"query": {
-					"name": "命令的名称或ID",
-					"description": "命令的名称或ID获得详细帮助。"
-				}
-			}
-		}
-	},
-	"message": {
-		"config": {
-			"description": "向聚会发送消息。",
-			"usage": {
-				"message": {
-					"name": "信息",
-					"description": "将发送给聚会的消息。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "向聚会发送消息"
-			}
-		}
-	},
-	"ping": {
-		"config": {
-			"description": "显示机器人的延迟。"
-		},
-		"run": {
-			"msg": {
-				"measuring": "测量...",
-				"info": "p！ {{time}} MS"
-			}
-		}
-	},
-	"prev": {
-		"config": {
-			"description": "执行上一个命令。"
-		},
-		"run": {
-			"msg": {
-				"not_found": "以前的命令尚未执行！"
-			}
-		}
-	},
-	"restart_bot": {
-		"config": {
-			"description": "重新启动当前机器人。"
-		},
-		"run": {
-			"msg": {
-				"success": "机器人现在正在重新启动！"
-			}
-		}
-	},
-	"restart_category": {
-		"config": {
-			"description": "重新启动当前类别。"
-		},
-		"run": {
-			"msg": {
-				"success": "该类别正在重新启动！"
-			}
-		}
-	},
-	"restart_shard": {
-		"config": {
-			"description": "重新启动当前的碎片。"
-		},
-		"run": {
-			"msg": {
-				"success": "碎片现在正在重新启动！",
-				"error": "抱歉，该机器人在碎片中没有运行。"
-			}
-		}
-	},
-	"send": {
-		"config": {
-			"description": "将命令发送到指定机器人。",
-			"usage": {
-				"bot": {
-					"name": "机器人ID",
-					"description": "机器人ID发送命令。"
-				},
-				"command": {
-					"name": "命令",
-					"description": "该命令要在机器人中执行。"
-				},
-				"args": {
-					"name": "争论",
-					"description": "需要该命令的论点。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"sending_command": "将命令发送到bot {{user}}"
-			}
-		}
-	},
-	"send_all": {
-		"config": {
-			"description": "向所有机器人发送命令。",
-			"usage": {
-				"command": {
-					"name": "命令",
-					"description": "该命令要在机器人中执行。"
-				},
-				"args": {
-					"name": "争论",
-					"description": "需要该命令的论点。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"sending_command": "将命令发送到所有机器人..."
-			}
-		}
-	},
-	"send_category": {
-		"config": {
-			"description": "将命令发送到机器人类别。",
-			"usage": {
-				"command": {
-					"name": "命令",
-					"description": "该命令要在机器人中执行。"
-				},
-				"args": {
-					"name": "争论",
-					"description": "需要该命令的论点。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"sending_command": "将命令发送到我的碎片中的所有机器人...",
-				"error": "抱歉，此机器人在类别内没有运行。"
-			}
-		}
-	},
-	"send_number": {
-		"config": {
-			"description": "将命令发送到指定数量的机器人。",
-			"usage": {
-				"number": {
-					"name": "机器人数",
-					"description": "发送命令的机器人数。"
-				},
-				"command": {
-					"name": "命令",
-					"description": "该命令要在机器人中执行。"
-				},
-				"args": {
-					"name": "争论",
-					"description": "需要该命令的论点。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"count_negative": "这个数字必须大于0！",
-				"sending_command": "将命令发送到{{number}} bot ..."
-			}
-		}
-	},
-	"send_party": {
-		"config": {
-			"description": "向共享同一方的所有机器人发送命令。",
-			"usage": {
-				"command": {
-					"name": "命令",
-					"description": "该命令要在机器人中执行。"
-				},
-				"args": {
-					"name": "争论",
-					"description": "需要该命令的论点。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"sending_command": "将命令发送到我的聚会中的所有机器人..."
-			}
-		}
-	},
-	"send_shard": {
-		"config": {
-			"description": "将命令发送到机器人的碎片。",
-			"usage": {
-				"command": {
-					"name": "命令",
-					"description": "该命令要在机器人中执行。"
-				},
-				"args": {
-					"name": "争论",
-					"description": "需要该命令的论点。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"sending_command": "将命令发送到我的碎片中的所有机器人..."
-			}
-		}
-	},
-	"set_status": {
-		"config": {
-			"description": "设置机器人状态",
-			"usage": {
-				"status": {
-					"name": "地位",
-					"description": "机器人的新状态。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "状态设置成功！"
-			}
-		}
-	},
-	"whisper": {
-		"config": {
-			"description": "向朋友发送私人消息。",
-			"usage": {
-				"query": {
-					"name": "朋友的姓名或ID",
-					"description": "朋友的姓名或ID发送私人消息。"
-				},
-				"message": {
-					"name": "信息",
-					"description": "发送给朋友的消息。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "找到了多个朋友：",
-				"friend_not_found": "朋友{{query}}找不到！",
-				"whisper_sent": "发送到{{name}}！"
-			}
-		}
-	},
-	"bp_level": {
-		"config": {
-			"description": "设置机器人的战斗级别。",
-			"usage": {
-				"level": {
-					"name": "等级",
-					"description": "战斗通行证的设定水平。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"bp_level_set": "将战斗传球级别设置为{{level}}！"
-			}
-		}
-	},
-	"clear_custom_key": {
-		"config": {
-			"description": "清除自定义对接密钥。"
-		},
-		"run": {
-			"msg": {
-				"success": "清除了自定义对接密钥！"
-			}
-		}
-	},
-	"crowns": {
-		"config": {
-			"description": "设置机器人冠。",
-			"usage": {
-				"crowns": {
-					"name": "皇冠",
-					"description": "冠冕。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "将皇冠设置为{{crowns}}！"
-			}
-		}
-	},
-	"hide": {
-		"config": {
-			"description": "隐藏派对的球员，或者如果您不指定参数，则会隐藏您。",
-			"usage": {
-				"query": {
-					"name": "会员名称或ID",
-					"description": "党员的名称或ID隐藏。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "找到了多个朋友：",
-				"member_not_found": "成员{{query}}找不到！",
-				"member_not_at_party": "你不是我党的成员。",
-				"success": "隐藏{{name}}！"
-			}
-		}
-	},
-	"hide_all": {
-		"config": {
-			"description": "隐藏了聚会中的所有球员。"
-		},
-		"run": {
-			"msg": {
-				"success": "隐藏所有成员！"
-			}
-		}
-	},
-	"kick": {
-		"config": {
-			"description": "踢是聚会的球员。",
-			"usage": {
-				"query": {
-					"name": "会员名称或ID",
-					"description": "该党成员的名字或ID踢。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "找到了多个朋友：",
-				"member_not_found": "成员{{query}}找不到！",
-				"success": "踢{{name}}！"
-			}
-		}
-	},
-	"kick_all": {
-		"config": {
-			"description": "踢派对中的所有球员。"
-		},
-		"run": {
-			"msg": {
-				"user_kicked": "踢{{name}}！",
-				"success": "完成所有成员！"
-			}
-		}
-	},
-	"leave": {
-		"config": {
-			"description": "机器人离开聚会。"
-		},
-		"run": {
-			"msg": {
-				"success": "再见！"
-			}
-		}
-	},
-	"level": {
-		"config": {
-			"description": "设置机器人级别。",
-			"usage": {
-				"level": {
-					"name": "等级",
-					"description": "要设置的级别。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "将级别设置为{{level}}！"
-			}
-		}
-	},
-	"match": {
-		"config": {
-			"description": "设定州玩游戏。",
-			"usage": {
-				"number": {
-					"name": "球员数量",
-					"description": "游戏中的玩家数量。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "设置状态！"
-			}
-		}
-	},
-	"party_info": {
-		"config": {
-			"description": "显示有关聚会的信息。"
-		}
-	},
-	"playlist": {
-		"config": {
-			"description": "设置党的播放列表。",
-			"usage": {
-				"query": {
-					"name": "播放列表的名称或ID",
-					"description": "要设置的播放列表的名称或ID。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"error": "错误设置播放列表！",
-				"success": "将播放列表设置为{{query}}！"
-			}
-		}
-	},
-	"privacy": {
-		"config": {
-			"description": "设定党的隐私。",
-			"usage": {
-				"privacy": {
-					"name": "隐私",
-					"options": {
-						"public": "民众",
-						"private": "私人的"
-					},
-					"description": "政党设定的隐私。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "将政党隐私设置为{{privacy}}！",
-				"error": "无效的隐私，必须是公共或私人的！"
-			}
-		}
-	},
-	"rank": {
-		"config": {
-			"description": "设置机器人等级。",
-			"usage": {
-				"rank": {
-					"name": "秩",
-					"description": "等级。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "将等级设置为{{rank}}！"
-			}
-		}
-	},
-	"ready": {
-		"config": {
-			"description": "设置国家准备就绪。"
-		},
-		"run": {
-			"msg": {
-				"warning": "警告：如果您想发起对接会，请不要使用此命令！ 只要自己打个准备就绪，我会自动打击。",
-				"success": "准备好！"
-			}
-		}
-	},
-	"say": {
-		"config": {
-			"description": "向聚会聊天发送消息。",
-			"usage": {
-				"message": {
-					"name": "信息",
-					"description": "将发送给聚会的消息。"
-				}
-			}
-		},
-		"run": {}
-	},
-	"set_custom_key": {
-		"config": {
-			"description": "设置一个自定义对接密钥。",
-			"usage": {
-				"key": {
-					"name": "自定义密钥",
-					"description": "要设置的自定义对接键。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"success": "设置自定义对接密钥！"
-			}
-		}
-	},
-	"show": {
-		"config": {
-			"description": "在聚会中显示隐藏的玩家，或者向您展示您是否没有指定参数。",
-			"usage": {
-				"query": {
-					"name": "会员名称或ID",
-					"description": "该党成员的名称或ID显示。"
-				}
-			}
-		},
-		"run": {
-			"msg": {
-				"multiple_friends_found": "找到了多个朋友：",
-				"member_not_found": "成员{{query}}找不到！",
-				"member_not_at_party": "你不是我党的成员。",
-				"success": "显示{{name}}！"
-			}
-		}
-	},
-	"show_all": {
-		"config": {
-			"description": "展示聚会中所有隐藏的球员。"
-		},
-		"run": {
-			"msg": {
-				"success": "显示所有成员！"
-			}
-		}
-	},
-	"sit_in": {
-		"config": {
-			"description": "设定国家参加。"
-		},
-		"run": {
-			"msg": {
-				"success": "坐在..."
-			}
-		}
-	},
-	"sit_out": {
-		"config": {
-			"description": "设定国家不参加。"
-		},
-		"run": {
-			"msg": {
-				"success": "坐..."
-			}
-		}
-	},
-	"unmatch": {
-		"config": {
-			"description": "设定州不玩游戏。"
-		},
-		"run": {
-			"msg": {
-				"success": "删除了比赛状态！"
-			}
-		}
-	},
-	"unready": {
-		"config": {
-			"description": "设置国家未准备就绪。"
-		},
-		"run": {
-			"msg": {
-				"success": "还没准备好！"
-			}
-		}
-	}
+    "handler": {
+        "errors": {
+            "only_for_party_members": "此命令仅适用于我的聚会成员。",
+            "only_for_private_messages": "此命令仅在私人消息中可用。",
+            "need_party_leader": "我需要成为党的负责人来执行此命令！",
+            "only_for_owners": "此命令仅适用于机器人所有者。",
+            "only_for_admins": "此命令仅适用于机器人管理员。",
+            "only_for_whitelist": "此命令仅适用于机器人白名单上的用户。"
+        }
+    },
+    "all_items": {
+        "config": {
+            "description": "显示游戏的所有化妆品，可以添加一个可选的过滤器，您可以使用“ stop”命令停止。",
+            "usage": {
+                "filter": {
+                    "name": "筛选",
+                    "options": {
+                        "outfits": "服装",
+                        "backpacks": "背包",
+                        "emojis": "表情符号",
+                        "emotes": "情绪",
+                        "pickaxes": "采摘",
+                        "shoes": "鞋"
+                    },
+                    "description": "通过显示项目来设置的过滤器。"
+                },
+                "random_order": {
+                    "name": "随机顺序",
+                    "description": "使用随机订单而不是按最新订购。",
+                    "options": {
+                        "yes": "是的",
+                        "no": "不"
+                    }
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "no_items": "无法获取物品。",
+                "items_already_displaying": "化妆品已经在显示，必须首先使用“停止”命令停止。",
+                "setting_items": "设置所有游戏项目... {{filtered}}",
+                "filtered_by": "（由{{filter}}过滤）",
+                "items_showed": "我已经完成了所有项目..."
+            }
+        }
+    },
+    "backpack": {
+        "config": {
+            "description": "设置机器人的背包。",
+            "usage": {
+                "query": {
+                    "name": "背包名称或ID",
+                    "description": "要设置的背包的名称或ID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "backpack_not_found": "背包{{item}}找不到！",
+                "backpack_changed": "将背包设置为{{name}}！ （{{id}}）"
+            }
+        }
+    },
+    "backpack_variants": {
+        "config": {
+            "description": "设置背包的变体。"
+        },
+        "run": {
+            "msg": {
+                "backpack_not_found": "机器人没有背包！",
+                "invalid_backpack": "背包无效！",
+                "variants_not_founded": "这个背包没有变体！",
+                "variants_select": "发送您要选择{{type}}的变体",
+                "variants_changed": "设置背包变体！"
+            }
+        }
+    },
+    "banner": {
+        "config": {
+            "description": "设置了机器人的横幅。",
+            "usage": {
+                "query": {
+                    "name": "横幅名称或ID",
+                    "description": "横幅的名称或ID设置。"
+                },
+                "color": {
+                    "name": "颜色名称或ID",
+                    "description": "要设置的颜色的名称或ID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "banner_not_found": "横幅{{item}}找不到！",
+                "color_not_found": "颜色{{item}}找不到！",
+                "banner_changed": "将横幅设置为{{name}}！ （{{id}}）"
+            }
+        }
+    },
+    "clear_backpack": {
+        "config": {
+            "description": "卸下机器人的背包。"
+        },
+        "run": {
+            "msg": {
+                "backpack_cleared": "清理背包！"
+            }
+        }
+    },
+    "clear_emote": {
+        "config": {
+            "description": "停止机器人的舞蹈。"
+        },
+        "run": {
+            "msg": {
+                "emote_cleared": "清除了表情！"
+            }
+        }
+    },
+    "clear_shoes": {
+        "config": {
+            "description": "卸下机器人的鞋子。"
+        },
+        "run": {
+            "msg": {
+                "shoes_cleared": "清除的鞋子！"
+            }
+        }
+    },
+    "copy": {
+        "config": {
+            "description": "复制用户的化妆品，或者，如果未指定参数，则将化妆品复制。",
+            "usage": {
+                "filter": {
+                    "name": "筛选",
+                    "options": {
+                        "all": "全部",
+                        "outfit": "全套服装",
+                        "backpack": "背包",
+                        "emoji": "表情符号",
+                        "emote": "表情",
+                        "pickaxe": "Pickaxe",
+                        "shoes": "鞋"
+                    },
+                    "description": "复制化妆品时要设置的过滤器。"
+                },
+                "query": {
+                    "name": "会员名称或ID",
+                    "description": "会员的名称或ID复制化妆品。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "members_found": "找到了多个成员：",
+                "member_not_found": "成员{{member}}找不到！",
+                "member_not_at_party": "你不是我党的成员。",
+                "member_copied": "复制{{member}}！"
+            }
+        }
+    },
+    "cosmetic": {
+        "config": {
+            "description": "设置机器人的化妆品。",
+            "usage": {
+                "query": {
+                    "name": "化妆品名称或ID",
+                    "description": "设置化妆品的名称或ID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "cosmetic_not_found": "找不到化妆品{{query}}找不到！",
+                "cosmetic_changed": "将{{type}}设置为{{name}}！ （{{id}}）"
+            }
+        }
+    },
+    "cosmetic_info": {
+        "config": {
+            "description": "显示有关化妆品的信息。",
+            "usage": {
+                "query": {
+                    "name": "化妆品名称或ID",
+                    "description": "设置化妆品的名称或ID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "cosmetic_not_found": "找不到化妆品{{query}}找不到！"
+            }
+        }
+    },
+    "emoji": {
+        "config": {
+            "description": "设置机器人的表情符号。",
+            "usage": {
+                "query": {
+                    "name": "表情符号名称或ID",
+                    "description": "要设置的表情符号的名称或ID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "emoji_not_found": "emoji {{query}}找不到！",
+                "emoji_changed": "将表情符号设置为{{name}}！ （{{id}}）"
+            }
+        }
+    },
+    "emote": {
+        "config": {
+            "description": "设置机器人的表情。",
+            "usage": {
+                "query": {
+                    "name": "表情名称或ID",
+                    "description": "符号的名称或ID设置。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "emote_not_found": "emote {{query}}找不到！",
+                "emote_changed": "将表情符号设置为{{name}}！ （{{id}}）"
+            }
+        }
+    },
+    "mimic": {
+        "config": {
+            "description": "如果未指定参数，则与用户相同或与您相同。 使用“停止”停止命令。",
+            "usage": {
+                "filter": {
+                    "name": "筛选",
+                    "options": {
+                        "all": "全部",
+                        "changes": "更改",
+                        "outfits": "服装",
+                        "backpacks": "背包",
+                        "emojis": "表情符号",
+                        "emotes": "情绪",
+                        "pickaxes": "采摘",
+                        "shoes": "鞋"
+                    },
+                    "description": "模仿化妆品时要设置的过滤器。"
+                },
+                "query": {
+                    "name": "会员名称或ID",
+                    "description": "成员的名称或ID模仿化妆品。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "members_found": "找到了多个成员：",
+                "member_not_found": "成员{{query}}找不到！",
+                "member_not_at_party": "你不是我党的成员。",
+                "mimic_enabled": "启用模拟{{member}} {{filter}}！",
+                "filter": "使用过滤器{{filter}}"
+            }
+        }
+    },
+    "new_items": {
+        "config": {
+            "description": "显示在游戏中添加的最新化妆品，可以添加一个可选的过滤器，您可以使用“停止”命令停止。",
+            "usage": {
+                "filter": {
+                    "name": "筛选",
+                    "options": {
+                        "outfits": "服装",
+                        "backpacks": "背包",
+                        "emojis": "表情符号",
+                        "emotes": "情绪",
+                        "pickaxes": "采摘",
+                        "shoes": "鞋"
+                    },
+                    "description": "通过显示项目来设置的过滤器。"
+                },
+                "random_order": {
+                    "name": "随机顺序",
+                    "description": "使用随机订单而不是按最新订购。",
+                    "options": {
+                        "yes": "是的",
+                        "no": "不"
+                    }
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "type_error": "如果您想要过滤器，请确保有效，只有衣服，背包，表情符号，情绪，拾音器或鞋子。",
+                "cosmetic_fetch_error": "无法获取最近添加化妆品。",
+                "already_showing": "化妆品已经在显示，必须首先使用“停止”命令停止。",
+                "showing_cosmetics": "设置所有最近添加的项目... {{filter}}",
+                "filter": "（由{{filter}}过滤）",
+                "ended": "完成了所有最近添加的项目..."
+            }
+        }
+    },
+    "outfit": {
+        "config": {
+            "description": "设置机器人的衣服。",
+            "usage": {
+                "query": {
+                    "name": "服装名称或ID",
+                    "description": "要设置的服装的名称或ID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "outfit_not_found": "未找到服装{{query}}！",
+                "outfit_changed": "将衣服设置为{{name}}！ （{{id}}）"
+            }
+        }
+    },
+    "outfit_variants": {
+        "config": {
+            "description": "设置服装的变体。"
+        },
+        "run": {
+            "msg": {
+                "outfit_not_found": "机器人没有衣服！",
+                "invalid_outfit": "无效的服装！",
+                "variants_not_found": "这件衣服没有变体！",
+                "variants_select": "发送您要选择{{type}}的变体",
+                "changed": "设置服装变体！"
+            }
+        }
+    },
+    "perfect_timing": {
+        "config": {
+            "description": "设置机器人的化妆品同步。",
+            "usage": {
+                "query": {
+                    "name": "化妆品名称或ID",
+                    "description": "设置化妆品的名称或ID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "cosmetic_not_found": "找不到化妆品{{query}}找不到！",
+                "perfect_timing_success": "同步执行完美的时机...",
+                "perfect_timing_done": "将{{value}}同步到{{name}}！ （{{id}}）"
+            }
+        }
+    },
+    "pickaxe": {
+        "config": {
+            "description": "设置机器人的拾音器。",
+            "usage": {
+                "query": {
+                    "name": "选择名称或ID",
+                    "description": "要设置的Pickaxe的名称或ID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "pickaxe_not_found": "挑选{{query}}找不到！",
+                "pickaxe_changed": "将Pickaxe设置为{{name}}！ （{{id}}）"
+            }
+        }
+    },
+    "pickaxe_variants": {
+        "config": {
+            "description": "设置Pickaxe的变体。"
+        },
+        "run": {
+            "msg": {
+                "pickaxe_not_found": "机器人没有拾音器！",
+                "invalid_pickaxe": "无效的Pickaxe！",
+                "variants_not_found": "这个拾音器没有变体！",
+                "variants_select": "发送您要选择{{type}}的变体",
+                "changed": "设置Pickaxe变体！"
+            }
+        }
+    },
+    "preset": {
+        "config": {
+            "description": "设置机器人的预设。 使用“无”去除化妆品。",
+            "usage": {
+                "outfit": {
+                    "name": "服装ID",
+                    "description": "服装的身份证。"
+                },
+                "backpack": {
+                    "name": "背包ID",
+                    "description": "背包的ID。"
+                },
+                "pickaxe": {
+                    "name": "选择ID",
+                    "description": "Pickaxe的ID。"
+                },
+                "emote": {
+                    "name": "emote id",
+                    "description": "表情的ID。"
+                },
+                "shoes": {
+                    "name": "鞋子ID",
+                    "description": "鞋子的身份证。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "preset_changed": "设置预设！"
+            }
+        }
+    },
+    "shoes": {
+        "config": {
+            "description": "设置了机器人的鞋子。",
+            "usage": {
+                "query": {
+                    "name": "鞋子或身份证",
+                    "description": "要设置的鞋子的名称或身份证。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "shoes_not_found": "鞋子{{query}}找不到！",
+                "shoes_changed": "将鞋子设置为{{name}}！ （{{id}}）"
+            }
+        }
+    },
+    "shoe_variants": {
+        "config": {
+            "description": "设置鞋子变体。"
+        },
+        "run": {
+            "msg": {
+                "shoes_not_found": "机器人没有鞋子！",
+                "invalid_shoes": "无效的鞋子！",
+                "variants_not_found": "这双鞋没有变体！",
+                "variants_select": "发送您要选择{{type}}的变体",
+                "changed": "设置鞋子变体！"
+            }
+        }
+    },
+    "shop_items": {
+        "config": {
+            "description": "显示物料商店中的化妆品，可以添加一个可选的过滤器，您可以使用“停止”命令停止。",
+            "usage": {
+                "filter": {
+                    "name": "筛选",
+                    "options": {
+                        "outfits": "服装",
+                        "backpacks": "背包",
+                        "emojis": "表情符号",
+                        "emotes": "情绪",
+                        "pickaxes": "采摘",
+                        "shoes": "鞋"
+                    },
+                    "description": "通过显示项目来设置的过滤器。"
+                },
+                "random_order": {
+                    "name": "随机顺序",
+                    "description": "使用随机订单而不是按最新订购。",
+                    "options": {
+                        "yes": "是的",
+                        "no": "不"
+                    }
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "invalid_type": "如果您想要过滤器，请确保有效，只有衣服，背包，表情符号，情绪，拾音器或鞋子。",
+                "fetch_failed": "无法获取商店物品。",
+                "already_displaying": "化妆品已经在显示，必须首先使用“停止”命令停止。",
+                "showing_items": "设置商店中的所有项目... {{filter}}",
+                "filter": "（由{{query}}过滤）",
+                "ended": "我已经完成了商店中的所有物品..."
+            }
+        }
+    },
+    "stop": {
+        "config": {
+            "description": "停止待处理的操作。"
+        },
+        "run": {
+            "msg": {
+                "stopped_items": "停止展示物品！",
+                "stopped_mimic": "停止模仿！",
+                "stopped_emote": "停止表情！",
+                "nothing_to_stop": "没什么可停止的！"
+            }
+        }
+    },
+    "accept_all_friends": {
+        "config": {
+            "description": "接受机器人的所有未决朋友。"
+        },
+        "run": {
+            "msg": {
+                "accepting_friends": "接受所有未决的朋友！",
+                "accepted_friends": "接受{{count}}朋友！"
+            }
+        }
+    },
+    "accept_friend": {
+        "config": {
+            "description": "接受朋友请求。",
+            "usage": {
+                "query": {
+                    "name": "等待朋友的姓名或ID",
+                    "description": "朋友的名称或ID等待接受。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "找到了多个朋友：",
+                "friends_not_found": "朋友{{query}}找不到！",
+                "self_request": "等待的朋友请求是我的！",
+                "error": "等待的朋友不接受！",
+                "request_accepted": "等待的朋友{{name}}成功接受！"
+            }
+        }
+    },
+    "add_friend": {
+        "config": {
+            "description": "将朋友请求发送给用户或接受朋友请求。",
+            "usage": {
+                "query": {
+                    "name": "用户名或ID",
+                    "description": "用户的名称或ID要添加。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "找到了多个朋友：",
+                "friends_not_found": "朋友{{query}}找不到！",
+                "already_friends": "已经是朋友！",
+                "error": "无法添加用户！",
+                "request_sent": "朋友请求发送到{{name}}"
+            }
+        }
+    },
+    "block_user": {
+        "config": {
+            "description": "阻止用户。",
+            "usage": {
+                "query": {
+                    "name": "用户名或ID",
+                    "description": "用户的名称或ID要阻止。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_users_found": "找到了多个用户：",
+                "user_not_found": "用户{{query}}找不到！",
+                "error": "无法阻止{{name}}！",
+                "user_blocked": "用户{{name}}成功地阻止了！"
+            }
+        }
+    },
+    "decline_all_friends": {
+        "config": {
+            "description": "拒绝了所有尚待机​​器人的朋友。"
+        },
+        "run": {
+            "msg": {
+                "declining_friends": "拒绝所有等待的朋友！",
+                "declined_friends": "拒绝{{count}}朋友！"
+            }
+        }
+    },
+    "decline_friend": {
+        "config": {
+            "description": "拒绝或中止朋友请求。",
+            "usage": {
+                "query": {
+                    "name": "等待朋友的姓名或ID",
+                    "description": "朋友的名称或身份证，等待拒绝或流产。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "找到了多个朋友：",
+                "friends_not_found": "朋友{{query}}找不到！",
+                "error": "待定的朋友没有被删除！",
+                "request_sent": "等待的朋友{{name}}成功地删除了！"
+            }
+        }
+    },
+    "friend_count": {
+        "config": {
+            "description": "显示了机器人的朋友的数量。"
+        },
+        "run": {
+            "msg": {
+                "info": "我有{{friends}}朋友，{{pending}}待定（{{incoming}}输入，{{outgoing}}向外发出）和{{blocked}} blocked！"
+            }
+        }
+    },
+    "invite": {
+        "config": {
+            "description": "邀请朋友或您参加聚会。",
+            "usage": {
+                "query": {
+                    "name": "朋友的姓名或ID",
+                    "description": "朋友的名字或ID邀请。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "alone": "在与我的聚会上，需要邀请用户。",
+                "multiple_friends_found": "找到了多个朋友：",
+                "friends_not_found": "朋友{{query}}找不到！",
+                "already_on_party": "{{name}}已经在我的聚会中！",
+                "invite_error": "无法将邀请发送到{{name}}！",
+                "invite_sent": "邀请发送到{{name}}！"
+            }
+        }
+    },
+    "join": {
+        "config": {
+            "description": "加入您的聚会或某些用户聚会。",
+            "usage": {
+                "query": {
+                    "name": "朋友的姓名或ID",
+                    "description": "朋友的姓名或ID加入。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "invalid_param": "您需要成为我的朋友或指定朋友！",
+                "multiple_friends_found": "找到了多个朋友：",
+                "friend_not_found": "朋友{{query}}找不到！",
+                "already_on_party": "朋友已经在我的聚会中！",
+                "party_error": "{{name}}没有聚会！",
+                "join_request_error": "无法将加入请求发送到{{name}}！",
+                "joined": "加入{{name}}！",
+                "join_request_sent": "加入发送到{{name}}的请求！"
+            }
+        }
+    },
+    "promote": {
+        "config": {
+            "description": "如果您不指定参数，则会促进会员或使您成为领导者。",
+            "usage": {
+                "query": {
+                    "name": "会员名称或ID",
+                    "description": "党派的名称或ID上升。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "找到了多个朋友：",
+                "member_not_found": "成员{{query}}找不到！",
+                "member_not_at_party": "你不是我党的成员。",
+                "member_promoted": "促进{{name}}！"
+            }
+        }
+    },
+    "remove_all_friends": {
+        "config": {
+            "description": "删除所有机器人的朋友。 管理员和所有者被排除在外。"
+        },
+        "run": {
+            "msg": {
+                "removing_friends": "删除所有朋友！",
+                "removed_friends": "删除了{{count}}朋友！"
+            }
+        }
+    },
+    "remove_friend": {
+        "config": {
+            "description": "删除了机器人的朋友。",
+            "usage": {
+                "query": {
+                    "name": "朋友的姓名或ID",
+                    "description": "朋友的姓名或ID要删除。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "找到了多个朋友：",
+                "friend_not_found": "朋友{{query}}找不到！",
+                "error": "无法删除{{name}}！",
+                "friend_removed": "朋友{{name}}成功删除了！"
+            }
+        }
+    },
+    "unblock_all_users": {
+        "config": {
+            "description": "解散机器人的所有阻止用户。"
+        },
+        "run": {
+            "msg": {
+                "removing_friends": "解除所有阻止用户！",
+                "removed_friends": "未阻止{{count}}阻止用户！"
+            }
+        }
+    },
+    "unblock_user": {
+        "config": {
+            "description": "解开用户。",
+            "usage": {
+                "query": {
+                    "name": "用户名或ID",
+                    "description": "用户的名称或ID取消阻止。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_users_found": "找到了多个用户：",
+                "user_not_found": "用户{{query}}找不到！",
+                "error": "不能解开{{name}}！",
+                "user_unblocked": "用户{{name}}成功地取消了封锁！"
+            }
+        }
+    },
+    "user_info": {
+        "config": {
+            "description": "显示指定用户的信息。",
+            "usage": {
+                "query": {
+                    "name": "用户名或ID",
+                    "description": "用户的名称或ID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_users_found": "找到了多个用户：",
+                "user_not_found": "用户{{query}}找不到！"
+            }
+        }
+    },
+    "eval": {
+        "run": {
+            "msg": {
+                "unauthorized_error": "只有tnfangel可以访问此命令。"
+            }
+        }
+    },
+    "help": {
+        "config": {
+            "description": "显示帮助和指挥面板。",
+            "usage": {
+                "query": {
+                    "name": "命令的名称或ID",
+                    "description": "命令的名称或ID获得详细帮助。"
+                }
+            }
+        }
+    },
+    "message": {
+        "config": {
+            "description": "向聚会发送消息。",
+            "usage": {
+                "message": {
+                    "name": "信息",
+                    "description": "将发送给聚会的消息。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "向聚会发送消息"
+            }
+        }
+    },
+    "ping": {
+        "config": {
+            "description": "显示机器人的延迟。"
+        },
+        "run": {
+            "msg": {
+                "measuring": "测量...",
+                "info": "p！ {{time}} MS"
+            }
+        }
+    },
+    "prev": {
+        "config": {
+            "description": "执行上一个命令。"
+        },
+        "run": {
+            "msg": {
+                "not_found": "以前的命令尚未执行！"
+            }
+        }
+    },
+    "restart_bot": {
+        "config": {
+            "description": "重新启动当前机器人。"
+        },
+        "run": {
+            "msg": {
+                "success": "机器人现在正在重新启动！"
+            }
+        }
+    },
+    "restart_category": {
+        "config": {
+            "description": "重新启动当前类别。"
+        },
+        "run": {
+            "msg": {
+                "success": "该类别正在重新启动！"
+            }
+        }
+    },
+    "restart_shard": {
+        "config": {
+            "description": "重新启动当前的碎片。"
+        },
+        "run": {
+            "msg": {
+                "success": "碎片现在正在重新启动！",
+                "error": "抱歉，该机器人在碎片中没有运行。"
+            }
+        }
+    },
+    "send": {
+        "config": {
+            "description": "将命令发送到指定机器人。",
+            "usage": {
+                "bot": {
+                    "name": "机器人ID",
+                    "description": "机器人ID发送命令。"
+                },
+                "command": {
+                    "name": "命令",
+                    "description": "该命令要在机器人中执行。"
+                },
+                "args": {
+                    "name": "争论",
+                    "description": "需要该命令的论点。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "sending_command": "将命令发送到bot {{user}}"
+            }
+        }
+    },
+    "send_all": {
+        "config": {
+            "description": "向所有机器人发送命令。",
+            "usage": {
+                "command": {
+                    "name": "命令",
+                    "description": "该命令要在机器人中执行。"
+                },
+                "args": {
+                    "name": "争论",
+                    "description": "需要该命令的论点。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "sending_command": "将命令发送到所有机器人..."
+            }
+        }
+    },
+    "send_category": {
+        "config": {
+            "description": "将命令发送到机器人类别。",
+            "usage": {
+                "command": {
+                    "name": "命令",
+                    "description": "该命令要在机器人中执行。"
+                },
+                "args": {
+                    "name": "争论",
+                    "description": "需要该命令的论点。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "sending_command": "将命令发送到我的碎片中的所有机器人...",
+                "error": "抱歉，此机器人在类别内没有运行。"
+            }
+        }
+    },
+    "send_number": {
+        "config": {
+            "description": "将命令发送到指定数量的机器人。",
+            "usage": {
+                "number": {
+                    "name": "机器人数",
+                    "description": "发送命令的机器人数。"
+                },
+                "command": {
+                    "name": "命令",
+                    "description": "该命令要在机器人中执行。"
+                },
+                "args": {
+                    "name": "争论",
+                    "description": "需要该命令的论点。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "count_negative": "这个数字必须大于0！",
+                "sending_command": "将命令发送到{{number}} bot ..."
+            }
+        }
+    },
+    "send_party": {
+        "config": {
+            "description": "向共享同一方的所有机器人发送命令。",
+            "usage": {
+                "command": {
+                    "name": "命令",
+                    "description": "该命令要在机器人中执行。"
+                },
+                "args": {
+                    "name": "争论",
+                    "description": "需要该命令的论点。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "sending_command": "将命令发送到我的聚会中的所有机器人..."
+            }
+        }
+    },
+    "send_shard": {
+        "config": {
+            "description": "将命令发送到机器人的碎片。",
+            "usage": {
+                "command": {
+                    "name": "命令",
+                    "description": "该命令要在机器人中执行。"
+                },
+                "args": {
+                    "name": "争论",
+                    "description": "需要该命令的论点。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "sending_command": "将命令发送到我的碎片中的所有机器人..."
+            }
+        }
+    },
+    "set_status": {
+        "config": {
+            "description": "设置机器人状态",
+            "usage": {
+                "status": {
+                    "name": "地位",
+                    "description": "机器人的新状态。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "状态设置成功！"
+            }
+        }
+    },
+    "whisper": {
+        "config": {
+            "description": "向朋友发送私人消息。",
+            "usage": {
+                "query": {
+                    "name": "朋友的姓名或ID",
+                    "description": "朋友的姓名或ID发送私人消息。"
+                },
+                "message": {
+                    "name": "信息",
+                    "description": "发送给朋友的消息。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "找到了多个朋友：",
+                "friend_not_found": "朋友{{query}}找不到！",
+                "whisper_sent": "发送到{{name}}！"
+            }
+        }
+    },
+    "bp_level": {
+        "config": {
+            "description": "设置机器人的战斗级别。",
+            "usage": {
+                "level": {
+                    "name": "等级",
+                    "description": "战斗通行证的设定水平。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "bp_level_set": "将战斗传球级别设置为{{level}}！"
+            }
+        }
+    },
+    "clear_custom_key": {
+        "config": {
+            "description": "清除自定义对接密钥。"
+        },
+        "run": {
+            "msg": {
+                "success": "清除了自定义对接密钥！"
+            }
+        }
+    },
+    "crowns": {
+        "config": {
+            "description": "设置机器人冠。",
+            "usage": {
+                "crowns": {
+                    "name": "皇冠",
+                    "description": "冠冕。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "将皇冠设置为{{crowns}}！"
+            }
+        }
+    },
+    "hide": {
+        "config": {
+            "description": "隐藏派对的球员，或者如果您不指定参数，则会隐藏您。",
+            "usage": {
+                "query": {
+                    "name": "会员名称或ID",
+                    "description": "党员的名称或ID隐藏。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "找到了多个朋友：",
+                "member_not_found": "成员{{query}}找不到！",
+                "member_not_at_party": "你不是我党的成员。",
+                "success": "隐藏{{name}}！"
+            }
+        }
+    },
+    "hide_all": {
+        "config": {
+            "description": "隐藏了聚会中的所有球员。"
+        },
+        "run": {
+            "msg": {
+                "success": "隐藏所有成员！"
+            }
+        }
+    },
+    "kick": {
+        "config": {
+            "description": "踢是聚会的球员。",
+            "usage": {
+                "query": {
+                    "name": "会员名称或ID",
+                    "description": "该党成员的名字或ID踢。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "找到了多个朋友：",
+                "member_not_found": "成员{{query}}找不到！",
+                "success": "踢{{name}}！"
+            }
+        }
+    },
+    "kick_all": {
+        "config": {
+            "description": "踢派对中的所有球员。"
+        },
+        "run": {
+            "msg": {
+                "user_kicked": "踢{{name}}！",
+                "success": "完成所有成员！"
+            }
+        }
+    },
+    "leave": {
+        "config": {
+            "description": "机器人离开聚会。"
+        },
+        "run": {
+            "msg": {
+                "success": "再见！"
+            }
+        }
+    },
+    "level": {
+        "config": {
+            "description": "设置机器人级别。",
+            "usage": {
+                "level": {
+                    "name": "等级",
+                    "description": "要设置的级别。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "将级别设置为{{level}}！"
+            }
+        }
+    },
+    "match": {
+        "config": {
+            "description": "设定州玩游戏。",
+            "usage": {
+                "number": {
+                    "name": "球员数量",
+                    "description": "游戏中的玩家数量。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "设置状态！"
+            }
+        }
+    },
+    "party_info": {
+        "config": {
+            "description": "显示有关聚会的信息。"
+        }
+    },
+    "playlist": {
+        "config": {
+            "description": "设置党的播放列表。",
+            "usage": {
+                "query": {
+                    "name": "播放列表的名称或ID",
+                    "description": "要设置的播放列表的名称或ID。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "error": "错误设置播放列表！",
+                "success": "将播放列表设置为{{query}}！"
+            }
+        }
+    },
+    "privacy": {
+        "config": {
+            "description": "设定党的隐私。",
+            "usage": {
+                "privacy": {
+                    "name": "隐私",
+                    "options": {
+                        "public": "民众",
+                        "private": "私人的"
+                    },
+                    "description": "政党设定的隐私。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "将政党隐私设置为{{privacy}}！",
+                "error": "无效的隐私，必须是公共或私人的！"
+            }
+        }
+    },
+    "rank": {
+        "config": {
+            "description": "设置机器人等级。",
+            "usage": {
+                "rank": {
+                    "name": "秩",
+                    "description": "等级。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "将等级设置为{{rank}}！"
+            }
+        }
+    },
+    "ready": {
+        "config": {
+            "description": "设置国家准备就绪。"
+        },
+        "run": {
+            "msg": {
+                "warning": "警告：如果您想发起对接会，请不要使用此命令！ 只要自己打个准备就绪，我会自动打击。",
+                "success": "准备好！"
+            }
+        }
+    },
+    "say": {
+        "config": {
+            "description": "向聚会聊天发送消息。",
+            "usage": {
+                "message": {
+                    "name": "信息",
+                    "description": "将发送给聚会的消息。"
+                }
+            }
+        }
+    },
+    "set_custom_key": {
+        "config": {
+            "description": "设置一个自定义对接密钥。",
+            "usage": {
+                "key": {
+                    "name": "自定义密钥",
+                    "description": "要设置的自定义对接键。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "设置自定义对接密钥！"
+            }
+        }
+    },
+    "show": {
+        "config": {
+            "description": "在聚会中显示隐藏的玩家，或者向您展示您是否没有指定参数。",
+            "usage": {
+                "query": {
+                    "name": "会员名称或ID",
+                    "description": "该党成员的名称或ID显示。"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "找到了多个朋友：",
+                "member_not_found": "成员{{query}}找不到！",
+                "member_not_at_party": "你不是我党的成员。",
+                "success": "显示{{name}}！"
+            }
+        }
+    },
+    "show_all": {
+        "config": {
+            "description": "展示聚会中所有隐藏的球员。"
+        },
+        "run": {
+            "msg": {
+                "success": "显示所有成员！"
+            }
+        }
+    },
+    "sit_in": {
+        "config": {
+            "description": "设定国家参加。"
+        },
+        "run": {
+            "msg": {
+                "success": "坐在..."
+            }
+        }
+    },
+    "sit_out": {
+        "config": {
+            "description": "设定国家不参加。"
+        },
+        "run": {
+            "msg": {
+                "success": "坐..."
+            }
+        }
+    },
+    "unmatch": {
+        "config": {
+            "description": "设定州不玩游戏。"
+        },
+        "run": {
+            "msg": {
+                "success": "删除了比赛状态！"
+            }
+        }
+    },
+    "unready": {
+        "config": {
+            "description": "设置国家未准备就绪。"
+        },
+        "run": {
+            "msg": {
+                "success": "还没准备好！"
+            }
+        }
+    }
 }
