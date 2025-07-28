@@ -430,7 +430,9 @@
         "botCreated": "Bot created successfully",
         "enjoyYourNewBot": "Enjoy your new bot.",
         "accountConnected": "Account connected successfully",
-        "startYourBot": "You can now start your bot!"
+        "startYourBot": "You can now start your bot!",
+        "categoryCloned": "Category Cloned Successfully",
+        "categoryClonedDescription": "The category has been cloned successfully"
     },
     "createBotModal": {
         "createCustomBot": "Create your Custom FNLB Bot",
@@ -877,7 +879,8 @@
         "clone": "Clone Category",
         "cloneCategory": "Clone Category: {{name}}",
         "newCategoryName": "New Category Name",
-        "newCategoryNameDescription": "Enter a name for the new category"
+        "newCategoryNameDescription": "Enter a name for the new category",
+        "copyCategoryName": "{{name}} (Copy)"
     },
     "vipModal": {
         "benefitsLobbyBot": "24/7 Lobby Bot*",
