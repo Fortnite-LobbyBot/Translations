@@ -293,7 +293,9 @@
         "linearGradient": "Linear Gradient",
         "radialGradient": "Radial Gradient",
         "enterImageUrl": "Enter image URL",
-        "rotation": "Rotation"
+        "rotation": "Rotation",
+        "hardwareAccelerationDesc": "Uses your GPU to make FNLB run smoother. Turn this off if you are experiencing visual problems.",
+        "hardwareAcceleration": "Hardware Acceleration"
     },
     "menuDrawer": {
         "publicBots": "Public bots",
