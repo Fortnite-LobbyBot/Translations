@@ -36,7 +36,8 @@
         "statusWebsite": "Status Website",
         "back": "Back",
         "next": "Next",
-        "finish": "Finish"
+        "finish": "Finish",
+        "none": "None"
     },
     "badges": {
         "inMatch": "In Match",
