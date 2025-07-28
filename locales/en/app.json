@@ -900,6 +900,10 @@
         "yourVipBenefits": "Your VIP Benefits:"
     },
     "validators": {
-        "usernameTooLong": "Username cannot have more than 32 characters."
+        "usernameTooLong": "Username cannot have more than 32 characters.",
+        "emailInvalid": "Email is invalid.",
+        "passwordTooLong": "Password is too long.",
+        "passwordTooShort": "Password must be at least 8 characters long.",
+        "emailTooLong": "Email is too long."
     }
 }
