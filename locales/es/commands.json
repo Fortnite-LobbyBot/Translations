@@ -72,7 +72,8 @@
                 "invalid_backpack": "¡Mochila no válida!",
                 "variants_not_founded": "¡Esta mochila no tiene variantes!",
                 "variants_select": "Envíe la variante que desea seleccionar para {{type}}",
-                "variants_changed": "¡Establece las variantes de la mochila!"
+                "variants_changed": "¡Establece las variantes de la mochila!",
+                "variants_not_found": "Esta mochila no tiene variantes!"
             }
         }
     },
