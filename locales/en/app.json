@@ -878,5 +878,25 @@
         "cloneCategory": "Clone Category: {{name}}",
         "newCategoryName": "New Category Name",
         "newCategoryNameDescription": "Enter a name for the new category"
+    },
+    "vipModal": {
+        "benefitsLobbyBot": "24/7 Lobby Bot*",
+        "vipIsFree": "VIP is 100% free!",
+        "benefitsMoreToCome": "More To Come!",
+        "vipMemberThanks": "Thanks for being a VIP member! Here are the benefits you currently enjoy:",
+        "joinDiscord": "Join Discord",
+        "benefitsCustomThemes": "Custom Themes",
+        "freeVipBenefits": "Free VIP Benefits Include:",
+        "benefitsMoreGameModes": "More Game Modes*",
+        "vipRequirements": "You just need to be a member of the FNLB Discord server and meet some requirements.",
+        "benefitsCustomPresets": "Custom Presets",
+        "benefitsPrioritySupport": "Priority Support",
+        "conditionsApply": "* Conditions apply. Learn more on the Discord server.",
+        "vipLogoAlt": "VIP Logo",
+        "maybeLater": "Maybe Later",
+        "yourVipBenefits": "Your VIP Benefits:"
+    },
+    "validators": {
+        "usernameTooLong": "Username cannot have more than 32 characters."
     }
 }
