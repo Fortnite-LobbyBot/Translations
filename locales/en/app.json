@@ -37,7 +37,8 @@
         "back": "Back",
         "next": "Next",
         "finish": "Finish",
-        "none": "None"
+        "none": "None",
+        "later": "Later"
     },
     "badges": {
         "inMatch": "In Match",
@@ -295,7 +296,10 @@
         "enterImageUrl": "Enter image URL",
         "rotation": "Rotation",
         "hardwareAccelerationDesc": "Uses your GPU to make FNLB run smoother. Turn this off if you are experiencing visual problems.",
-        "hardwareAcceleration": "Hardware Acceleration"
+        "hardwareAcceleration": "Hardware Acceleration",
+        "restartNow": "Restart Now",
+        "restartRequiredDesc": "This setting requires a restart to take effect: {{setting}}",
+        "restartRequired": "Restart Required"
     },
     "menuDrawer": {
         "publicBots": "Public bots",
