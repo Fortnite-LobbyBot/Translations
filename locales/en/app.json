@@ -299,7 +299,9 @@
         "hardwareAcceleration": "Hardware Acceleration",
         "restartNow": "Restart Now",
         "restartRequiredDesc": "This setting requires a restart to take effect: {{setting}}",
-        "restartRequired": "Restart Required"
+        "restartRequired": "Restart Required",
+        "discordRPCDesc": "Enables the RPC connection between Discord and FNLB.",
+        "discordRPC": "Enable Discord RPC"
     },
     "menuDrawer": {
         "publicBots": "Public bots",
