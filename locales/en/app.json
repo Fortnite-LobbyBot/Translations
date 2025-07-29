@@ -914,5 +914,10 @@
         "passwordTooLong": "Password is too long.",
         "passwordTooShort": "Password must be at least 8 characters long.",
         "emailTooLong": "Email is too long."
+    },
+    "exitConfirmation": {
+        "title": "You have bots running!",
+        "description": "If you close the app, the bots will go offline. Are you sure you want to exit?",
+        "confirm": "Exit App"
     }
 }
