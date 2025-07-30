@@ -868,7 +868,10 @@
         "selectItem": "Select {{item}}",
         "enterItem": "Enter {{item}}",
         "saveChanges": "Save changes",
-        "discardChanges": "Discard changes"
+        "discardChanges": "Discard changes",
+        "importSetting": "Import Setting From Category",
+        "importFromCategory": "Import",
+        "selectCategoryToImport": "Select Category to Import From"
     },
     "textInput": {
         "isRequired": "{{label}} is required.",
