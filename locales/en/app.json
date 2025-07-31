@@ -201,7 +201,8 @@
         "botsRange": "({{start}}-{{end}} of {{total}} bots)",
         "botsRangeNoBots": "(No bots)",
         "shardNumber": "Shard #{{number}}",
-        "cloneCategory": "Clone Category"
+        "cloneCategory": "Clone Category",
+        "bulkImport": "Bulk Import"
     },
     "publicBotsScreen": {
         "title": "Public Bots",
@@ -519,7 +520,8 @@
         "disableCategory": "Disable category",
         "deleteCategoryTitle": "Delete {{name}}",
         "deleteCategoryDescription": "Are you sure you want to delete your category?",
-        "deleteCategoryAcceptLabel": "Delete category"
+        "deleteCategoryAcceptLabel": "Delete category",
+        "cloneCategory": "Clone Category"
     },
     "editBotModal": {
         "editBot": "Edit Bot",
@@ -922,5 +924,22 @@
         "title": "You have bots running!",
         "description": "If you close the app, the bots will go offline. Are you sure you want to exit?",
         "confirm": "Exit App"
+    },
+    "bulkImportModal": {
+        "selectCategory": "Select Category",
+        "matchmakingNotice": "Note: You need to prepare the accounts for matchmaking yourself before import.",
+        "searchCategories": "Search categories...",
+        "title": "Bulk Import Bots",
+        "fileUpload": "JSON File with Android Client Device Auths",
+        "clickToUpload": "Click to upload file",
+        "fileFormat": "Supported format: .json",
+        "requiredFormat": "Required format:",
+        "category": "Category",
+        "showFormat": "Show required format",
+        "example": "Example:",
+        "import": "Import",
+        "importing": "Importing...",
+        "importError": "Import failed",
+        "importSuccess": "Import successful"
     }
 }
