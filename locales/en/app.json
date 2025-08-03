@@ -202,7 +202,8 @@
         "botsRangeNoBots": "(No bots)",
         "shardNumber": "Shard #{{number}}",
         "cloneCategory": "Clone Category",
-        "bulkImport": "Bulk Import"
+        "bulkImport": "Bulk Import",
+        "bulkExport": "Bulk Export"
     },
     "publicBotsScreen": {
         "title": "Public Bots",
@@ -941,5 +942,15 @@
         "importing": "Importing...",
         "importError": "Import failed",
         "importSuccess": "Import successful"
+    },
+    "bulkExportModal": {
+        "deleteWarning": "Warning: You need to delete the bots from your account first to be able to import them.",
+        "title": "Bulk Export Bots",
+        "exporting": "Exporting...",
+        "export": "Export",
+        "deleteAfterExport": "Delete bots after export",
+        "exportSuccess": "Export successful",
+        "exportedBots_other": "Exported {{count}} bots",
+        "exportedBots_one": "Exported {{count}} bot"
     }
 }
