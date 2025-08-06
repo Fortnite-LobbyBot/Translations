@@ -114,7 +114,8 @@
         "createBot": "Create bot",
         "settings": "Settings",
         "login": "Login",
-        "register": "Register"
+        "register": "Register",
+        "vipTools": "VIP Tools"
     },
     "indexScreen": {
         "availableBots_zero": "No available bots",
@@ -303,7 +304,8 @@
         "restartRequiredDesc": "This setting requires a restart to take effect: {{setting}}",
         "restartRequired": "Restart Required",
         "discordRPCDesc": "Enables the RPC connection between Discord and FNLB.",
-        "discordRPC": "Enable Discord RPC"
+        "discordRPC": "Enable Discord RPC",
+        "discordRPCWarning": "You will lose access to the <b>@USING FNLB</b> role when disabling this option."
     },
     "menuDrawer": {
         "publicBots": "Public bots",
