@@ -205,8 +205,12 @@
 				"name": "Accept Invites",
 				"itemDenomination": "accept invites",
 				"description": "Automatically accept party invites and join requests."
+			},
+			"startBannedBots": {
+				"name": "Start Banned Bots",
+				"itemDenomination": "start banned bots",
+				"description": "If enabled, bots will start even if they are banned from matchmaking."
 			}
-		}
 	},
 	"triggers": {
 		"name": "Triggers and Actions"
