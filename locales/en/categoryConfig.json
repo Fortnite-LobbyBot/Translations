@@ -211,6 +211,7 @@
 				"itemDenomination": "start banned bots",
 				"description": "If enabled, bots will start even if they are banned from matchmaking."
 			}
+		}
 	},
 	"triggers": {
 		"name": "Triggers and Actions"
