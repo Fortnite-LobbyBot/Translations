@@ -4,8 +4,8 @@
             "only_for_private_messages": "פקודה זו זמינה רק בהודעות פרטיות.",
             "only_for_owners": "הפקודה הזו זמינה רק לבעלי הבוט.",
             "only_for_whitelist": "פקודה זו זמינה רק למשתמשים שנמצאים ברשימה המאושרת של הבוט.",
-            "only_for_party_members": "פקודה זו זמינה רק לחברי ה-Party שלי.",
-            "need_party_leader": "אני צריך להיות מנהיג ה-Party כדי לבצע את הפקודה הזו!",
+            "only_for_party_members": "פקודה זו זמינה רק לחברי הפארטי שלי.",
+            "need_party_leader": "אני צריך להיות מנהיג הפארטי כדי לבצע את הפקודה הזו!",
             "only_for_admins": "פקודה זו זמינה רק למנהלי בוטים."
         }
     },
@@ -38,7 +38,10 @@
         "run": {
             "msg": {
                 "setting_items": "מציג את כל פריטי המשחק... {{filtered}}",
-                "items_already_displaying": "‍מוצרי קוסמטיקה כבר מוצגים. אנא עצור אותם תחילה באמצעות הפקודה \"עצור\"."
+                "items_already_displaying": "‍מוצרי קוסמטיקה כבר מוצגים. אנא עצור אותם תחילה באמצעות הפקודה \"עצור\".",
+                "no_items": "לא ניתן להביא פריטים.",
+                "filtered_by": "(מסונן לפי {{filter}})",
+                "items_showed": "הצגת את כל הפריטים הסתיימה."
             }
         }
     },
@@ -46,6 +49,1257 @@
         "run": {
             "msg": {
                 "success": "לא מוכן!"
+            }
+        },
+        "config": {
+            "description": "מגדיר את המצב ל'לא מוכן'."
+        }
+    },
+    "clear_emote": {
+        "config": {
+            "description": "‍מפסיק את ריקוד הבוט."
+        },
+        "run": {
+            "msg": {
+                "emote_cleared": "ריקוד נוקה!"
+            }
+        }
+    },
+    "copy": {
+        "config": {
+            "description": "העתק את הקוסמטיקה של משתמש או העתק את הקוסמטיקה אליך אם לא צוין הסבר.",
+            "usage": {
+                "query": {
+                    "description": "השם או מספר המזהה של המשתמש להעתקת הקוסמטיקה.",
+                    "name": "השם או המספר המזהה של המשתמש"
+                },
+                "filter": {
+                    "name": "סנן",
+                    "options": {
+                        "all": "הכל",
+                        "outfit": "סקין",
+                        "backpack": "תיק",
+                        "emoji": "אמוג׳י",
+                        "emote": "ריקוד",
+                        "pickaxe": "פיקקס",
+                        "shoes": "נעליים"
+                    },
+                    "description": "הפילטר שיש להגדיר בעת העתקת מוצרי קוסמטיקה."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "members_found": "נמצאו מספר משתמשים:",
+                "member_not_found": "המשתמש {{member}} לא נמצא!",
+                "member_not_at_party": "אתה לא משתמש שנמצא בפארטי שלי.",
+                "member_copied": "{{member}} הועתק!"
+            }
+        }
+    },
+    "cosmetic": {
+        "config": {
+            "description": "מגדיר את הקוסמטיקה של הבוט.",
+            "usage": {
+                "query": {
+                    "name": "השם או המספר המזהה של הקוסמטיקה",
+                    "description": "השם או המספר המזהה של הפריט הקוסמטי שיש להגדיר."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "cosmetic_not_found": "הקוסמטיקה {{query}} לא נמצאה!",
+                "cosmetic_changed": "ה-{{type}} הוגדר ל-{{name}}! ({{id}})"
+            }
+        }
+    },
+    "emoji": {
+        "config": {
+            "usage": {
+                "query": {
+                    "description": "השם או המספר המזהה של האימוג'י שיש להגדיר.",
+                    "name": "השם או המספר המזהה של האימוג'י"
+                }
+            },
+            "description": "מגדיר את האימוג'י של הבוט."
+        },
+        "run": {
+            "msg": {
+                "emoji_not_found": "האימוג'י {{query}} לא נמצא!",
+                "emoji_changed": "האימוג'י הוגדר ל- {{name}}! ({{id}})"
+            }
+        }
+    },
+    "emote": {
+        "config": {
+            "usage": {
+                "query": {
+                    "description": "השם או המספר המזהה של הריקוד שיש להגדיר.",
+                    "name": "השם או המספר המזהה של הריקוד"
+                }
+            },
+            "description": "ריקוד הבוט הוגדר."
+        },
+        "run": {
+            "msg": {
+                "emote_not_found": "הריקוד {{query}} לא נמצא!",
+                "emote_changed": "הריקוד (אימוג'י) הוגדר ל- {{name}}! ({{id}})"
+            }
+        }
+    },
+    "mimic": {
+        "config": {
+            "usage": {
+                "filter": {
+                    "options": {
+                        "emojis": "אימוג'ים",
+                        "all": "הכל",
+                        "changes": "שינויים",
+                        "outfits": "סקינים",
+                        "backpacks": "תיקים",
+                        "emotes": "ריקודים",
+                        "pickaxes": "פיקקסים",
+                        "shoes": "נעליים"
+                    },
+                    "description": "הפילטר שיש להגדיר‏ בעת חיקוי מוצרי קוסמטיקה.",
+                    "name": "פילטר"
+                },
+                "query": {
+                    "name": "השם או המספר המזהה של המשתמש",
+                    "description": "‍השם או המספר המזהה של המשתמש לצורך חיקוי מוצרי קוסמטיקה."
+                }
+            },
+            "description": "עשה את אותו הדבר כמו משתמש או את אותו הדבר כמוך אם לא צוין אחד. השתמש בכפתור \"עצור\" כדי לעצור את הפקודה."
+        },
+        "run": {
+            "msg": {
+                "member_not_found": "המשתמש {{query}} לא נמצא!",
+                "members_found": "נמצאו מספר משתמשים:",
+                "member_not_at_party": "‬אתה לא משתמש בפארטי שלי.",
+                "mimic_enabled": "‍חיקוי הופעל עבור {{member}}{{filter}}!",
+                "filter": " עם הפילטר {{filter}}"
+            }
+        }
+    },
+    "new_items": {
+        "config": {
+            "description": "מציג את הקוסמטיקה האחרונה שנוספה למשחק. ניתן להוסיף פילטר אופציונלי, ולעצור בעזרת הפקודה \"עצור\".",
+            "usage": {
+                "random_order": {
+                    "description": "השתמשו בסדר אקראי במקום לסדר לפי החדש ביותר תחילה.",
+                    "name": "סדר אקראי",
+                    "options": {
+                        "yes": "כן",
+                        "no": "לא"
+                    }
+                },
+                "filter": {
+                    "name": "פילטר",
+                    "options": {
+                        "outfits": "‍סקינים",
+                        "backpacks": "תיקים",
+                        "emojis": "אימוג'ים",
+                        "emotes": "ריקודים",
+                        "pickaxes": "פיקקסים",
+                        "shoes": "נעליים"
+                    },
+                    "description": "הפילטר שיוגדר על ידי הצגת הפריטים."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "already_showing": "הקוסמטיקה כבר מוצגת. יש לעצור אותה תחילה באמצעות הפקודה \"עצור\".",
+                "cosmetic_fetch_error": "‌לא ניתן להביא פריטי קוסמטיקה שנוספו לאחרונה.",
+                "type_error": "אם אתה רוצה פילטר, וודא שהוא חוקי. רק סקינים, תיקים, אימוג'ים, ריקודים, פיקקסים או נעליים.",
+                "showing_cosmetics": "מגדיר את כל הפריטים שנוספו לאחרונה... {{filter}}",
+                "filter": "(סונן על ידי {{filter}})",
+                "ended": "מסיים להציג את כל הפריטים שנוספו לאחרונה..."
+            }
+        }
+    },
+    "outfit_variants": {
+        "run": {
+            "msg": {
+                "variants_not_found": "לסקין הזה אין סטיילים!",
+                "outfit_not_found": "לבוט אין סקין!",
+                "invalid_outfit": "סקין לא חוקי!",
+                "variants_select": "הסטייל שברצונך לבחור עבור ה-{{type}}",
+                "changed": "הגדר את סטייל התיק!"
+            }
+        },
+        "config": {
+            "description": "מגדיר את סטייל הסקין."
+        }
+    },
+    "pickaxe_variants": {
+        "config": {
+            "description": "מגדיר את הסטיילים של הפיקקס."
+        },
+        "run": {
+            "msg": {
+                "pickaxe_not_found": "לבוט אין פיקקס!",
+                "invalid_pickaxe": "פיקקס לא חוקי!",
+                "variants_not_found": "לפיקקס הזה אין סטיילים!",
+                "variants_select": "הסטייל שאת/ה רוצה לבחור עבור {{type}}",
+                "changed": "מגדיר את סטייל הפיקקס!"
+            }
+        }
+    },
+    "shop_items": {
+        "config": {
+            "description": "מציג את מוצרי הקוסמטיקה מהחנות. ניתן להוסיף פילטר אופציונלי, ולעצור באמצעות הפקודה \"עצור\".",
+            "usage": {
+                "filter": {
+                    "description": "הפילטר שיוגדר על ידי הצגת הפריטים.",
+                    "options": {
+                        "emotes": "ריקודים",
+                        "outfits": "סקינים",
+                        "backpacks": "תיקים",
+                        "emojis": "אימוג'ים",
+                        "pickaxes": "פיקקסים",
+                        "shoes": "נעליים"
+                    },
+                    "name": "פילטר"
+                },
+                "random_order": {
+                    "name": "סדר אקראי",
+                    "description": "השתמש בסדר אקראי במקום לסדר לפי החדש ביותר תחילה.",
+                    "options": {
+                        "yes": "כן",
+                        "no": "לא"
+                    }
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "invalid_type": "אם את/ה רוצה פילטר, וודא שהוא חוקי. רק סקינים, תיקים אימוג'ים, ריקודים, פיקקסים או נעליים.",
+                "fetch_failed": "לא ניתן להציג את פריטי החנות.",
+                "already_displaying": "פריטי קוסמטיקה כבר מוצגים. יש לעצור אותם תחילה באמצעות הפקודה \"עצור\".",
+                "showing_items": "מגדיר את כל הפריטים בחנות...{{filter}}",
+                "filter": "(סונן על ידי {{query}})",
+                "ended": "סיימתי להציג את כל הפריטים בחנות..."
+            }
+        }
+    },
+    "accept_all_friends": {
+        "config": {
+            "description": "אשר את כל בקשות החברות הממתינות של הבוט."
+        },
+        "run": {
+            "msg": {
+                "accepting_friends": "מאשר את כל בקשות החברוץ הממתינות!",
+                "accepted_friends": "אושרו {{count}} חברים!"
+            }
+        }
+    },
+    "accept_friend": {
+        "run": {
+            "msg": {
+                "request_accepted": "החבר הממתין {{name}} אושר בהצלחה!",
+                "multiple_friends_found": "נמצאו מספר חברים:",
+                "friends_not_found": "החבר {{query}} לא נמצא!",
+                "self_request": "בקשת החברות הממתינה היא שלי!",
+                "error": "החבר הממתין לא אושר!"
+            }
+        },
+        "config": {
+            "usage": {
+                "query": {
+                    "name": "השם או המספר המזהה של החבר הממתין",
+                    "description": "השם או המספר המזהה של בקשת החברות הממתינה לאישור."
+                }
+            },
+            "description": "בקשת החברות אושרה."
+        }
+    },
+    "add_friend": {
+        "run": {
+            "msg": {
+                "friends_not_found": "החבר {{query}} לא נמצא!",
+                "multiple_friends_found": "נמצאו מספר חברים:",
+                "already_friends": "כבר חבר!",
+                "error": "לא ניתן להוסיף את המשתמש!",
+                "request_sent": "בקשת חברות נשלחה ל-{{name}}"
+            }
+        },
+        "config": {
+            "description": "שלח בקשת חברות למשתמש או אשר בקשת חברות.",
+            "usage": {
+                "query": {
+                    "name": "שם משתמש או מספר מזהה",
+                    "description": "שם המשתמש או המספר המזהה שיש להוסיף."
+                }
+            }
+        }
+    },
+    "block_user": {
+        "config": {
+            "usage": {
+                "query": {
+                    "description": "שם המשתמש או המספר המזהה של המשתמש שיש לחסום.",
+                    "name": "שם משתמש או מספר מזהה"
+                }
+            },
+            "description": "חוסם משתמש."
+        },
+        "run": {
+            "msg": {
+                "error": "לא ניתן לחסום את {{name}}!",
+                "multiple_users_found": "נמצאו מספר משתמשים:",
+                "user_not_found": "המשתמש {{query}} לא נמצא!",
+                "user_blocked": "המשתמש {{name}} נחסם בהצלחה!"
+            }
+        }
+    },
+    "decline_friend": {
+        "config": {
+            "usage": {
+                "query": {
+                    "description": "שם המשתמש או המספר המזהה של החבר הממתין לדחייה או ביטול.",
+                    "name": "שם משתמש או מספר מזהה של חבר ממתין"
+                }
+            },
+            "description": "דחה או בטל בקשת חברות."
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "נמצאו מספר חברים:",
+                "friends_not_found": "החבר {{query}}לא נמצא!",
+                "error": "חברים ממתינים לא נמחקו!",
+                "request_sent": "החבר הממתין {{name}} נמחק בהצלחה!"
+            }
+        }
+    },
+    "invite": {
+        "run": {
+            "msg": {
+                "already_on_party": "{{name}} כבר בפארטי שלי!",
+                "alone": "בפארטי איתי, הזמנת משתמש נדרשת.",
+                "multiple_friends_found": "נמצאו מספר חברים:",
+                "friends_not_found": "החבר {{query}} לא נמצא!",
+                "invite_error": "לא ניתן לשלוח את ההזמנה ל-{{name}}!",
+                "invite_sent": "ההזמנה נשלחה ל-{{name}}!"
+            }
+        },
+        "config": {
+            "description": "מזמין חבר או אותך לפארטי.",
+            "usage": {
+                "query": {
+                    "name": "שם המשתמש או המספר המזהה של החבר",
+                    "description": "שם המשתמש או המספר המזהה של החבר שיש להזמין."
+                }
+            }
+        }
+    },
+    "join": {
+        "run": {
+            "msg": {
+                "friend_not_found": "‍החבר {{query}} לא נמצא!",
+                "join_request_sent": "ברשת הצטרפות נשלחה ל-({{name}}!",
+                "invalid_param": "אתה צריך להיות חבר שלי או לציין חבר!",
+                "multiple_friends_found": "נמצאו מספר חברים:",
+                "already_on_party": "חבר כבר בפארטי!",
+                "party_error": "ל-({{name}} אין פארטי!",
+                "join_request_error": "לא ניתן לשלוח את בקשת ההצטרפות ל-({{name}}!",
+                "joined": "הצטרף ל-{{name}}!"
+            }
+        },
+        "config": {
+            "usage": {
+                "query": {
+                    "name": "שם המשתמש או המספר המזהה של חבר",
+                    "description": "שם המשתמש או המספר המזהה של החבר כדי להצטרף."
+                }
+            },
+            "description": "מצטרף לפארטי שלך או לפארטי של משתמש אחר."
+        }
+    },
+    "outfit": {
+        "config": {
+            "usage": {
+                "query": {
+                    "description": "השם או המספר המזהה של הסקין שיש להגדיר.",
+                    "name": "השם או המספר המזהה של הסקין"
+                }
+            },
+            "description": "מגדיר את סקין הבוט."
+        },
+        "run": {
+            "msg": {
+                "outfit_not_found": "הסקין {{query}}לא נמצא!",
+                "outfit_changed": "הסקין הוגדר ל- {{name}}! ({{id}}"
+            }
+        }
+    },
+    "perfect_timing": {
+        "config": {
+            "usage": {
+                "query": {
+                    "description": "‌השם או המספר המזהה של הפריט הקוסמטי שיש להגדיר.",
+                    "name": "השם או המספר המזהה של הפריט הקוסמטי"
+                }
+            },
+            "description": "הגדר את סנכרון את קוסמטיקת הבוט."
+        },
+        "run": {
+            "msg": {
+                "cosmetic_not_found": "הפריט הקוסמטי {{query}} לא נמצא!",
+                "perfect_timing_success": "מסנכרן לביצוע תזמון מושלם...",
+                "perfect_timing_done": "ה-{{value}} סונכרן ל-{{name}}! {{id}}"
+            }
+        }
+    },
+    "preset": {
+        "config": {
+            "usage": {
+                "pickaxe": {
+                    "description": "המספר המזהה של הפיקקס.",
+                    "name": "מספר מזהה של פיקקס"
+                },
+                "outfit": {
+                    "name": "מספר מזהה של סקין",
+                    "description": "המספר המזהה של הסקין."
+                },
+                "backpack": {
+                    "name": "מספר מזהה של תיק",
+                    "description": "המספר המזהה של התיק."
+                },
+                "emote": {
+                    "name": "מספר מזהה של ריקוד",
+                    "description": "המספר המזהה של הריקוד."
+                },
+                "shoes": {
+                    "name": "מספר מזהה של נעליים",
+                    "description": "המספר המזהה של הנעליים."
+                }
+            },
+            "description": "מגדיר את הסט הקבוע מראש של הבוט. השתמש ב-\"\"ללא\" כדי למחוק פריט קוסמטי מסוים."
+        },
+        "run": {
+            "msg": {
+                "preset_changed": "הגדר את הסט הקבוע מראש!"
+            }
+        }
+    },
+    "stop": {
+        "run": {
+            "msg": {
+                "stopped_items": "הצגת הפריטים הופסקה!",
+                "stopped_mimic": "פעולת החיקוי הופסקה!",
+                "stopped_emote": "הריקוד הופסק!",
+                "nothing_to_stop": "אין כלום שניתן לעצור!"
+            }
+        },
+        "config": {
+            "description": "מפסיק פעולות בהמתנה."
+        }
+    },
+    "friend_count": {
+        "run": {
+            "msg": {
+                "info": "יש לי {{friends}} חברים, {{pending}} ממתינים, ({{incoming}} נכנסים, ({{outgoing}} יוצאים ו({{blocked}} חסומים!"
+            }
+        },
+        "config": {
+            "description": "מציג את מספר החברים של הבוט."
+        }
+    },
+    "send": {
+        "config": {
+            "description": "שולח פקודה לבוט מוגדר.",
+            "usage": {
+                "bot": {
+                    "description": "המספר המזהה של הבוט שיש לשלוח לו את הפקודה.",
+                    "name": "מספר מזהה של בוט"
+                },
+                "command": {
+                    "name": "פקודה",
+                    "description": "הפקודה שיש לבצע בבוט."
+                },
+                "args": {
+                    "name": "טיעונים",
+                    "description": "הטיעונים של הפקודה נדרשים."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "sending_command": "שולח את הפקודה לבוט {{user}}"
+            }
+        }
+    },
+    "send_category": {
+        "run": {
+            "msg": {
+                "sending_command": "שולח פקודה לכל הבוטים ב'שרד'...",
+                "error": "סליחה, הבוט הזה לא רץ בתוך קטגוריה."
+            }
+        },
+        "config": {
+            "description": "שולח פקודה לקטגוריית הבוט.",
+            "usage": {
+                "command": {
+                    "name": "פקודה",
+                    "description": "הפקודה שיש לבצע בבוטים."
+                },
+                "args": {
+                    "name": "טיעונים",
+                    "description": "הטיעונים של הפקודה נדרשים."
+                }
+            }
+        }
+    },
+    "send_number": {
+        "config": {
+            "usage": {
+                "number": {
+                    "description": "כמות הבוטים שיש לשלוח להם את הפקודה.",
+                    "name": "כמות הבוטים"
+                },
+                "command": {
+                    "name": "פקודה",
+                    "description": "הפקודה שיש לבצע בבוטים."
+                },
+                "args": {
+                    "name": "טיעונים",
+                    "description": "הטיעונים של הפקודה נדרשים."
+                }
+            },
+            "description": "שולח פקודה לכמות בוטים מוגדרת."
+        },
+        "run": {
+            "msg": {
+                "count_negative": "המספר חייב להיות גדול מ-0!",
+                "sending_command": "שולח את הפקודה ל- {{number}} בוטים..."
+            }
+        }
+    },
+    "send_party": {
+        "config": {
+            "description": "שולח את הפקודה לכל הבוטים מחולקים את אותו הפארטי.",
+            "usage": {
+                "command": {
+                    "name": "פקודה",
+                    "description": "הפקודה שיש לבצע בבוטים."
+                },
+                "args": {
+                    "name": "טיעונים",
+                    "description": "הטיעונים של הפקודה נדרשים."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "sending_command": "שולח פקודה לכל הבוטים בפארטי שלי..."
+            }
+        }
+    },
+    "send_shard": {
+        "config": {
+            "description": "שולח פקודה ל'שרד' של הבוט.",
+            "usage": {
+                "command": {
+                    "name": "פקודה",
+                    "description": "הפקודה שיש לבצע בבוטים."
+                },
+                "args": {
+                    "name": "טיעונים",
+                    "description": "הטיעונים של הפקודה נדרשים."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "sending_command": "שולח פקודה לכל הבוטים ב'שרד' שלי..."
+            }
+        }
+    },
+    "crowns": {
+        "config": {
+            "usage": {
+                "crowns": {
+                    "description": "כמות הכתרים שיש להגדיר.",
+                    "name": "כתרים"
+                }
+            },
+            "description": "מגדיר את כמות הכתרים של הבוט."
+        },
+        "run": {
+            "msg": {
+                "success": "כמות הכתרים הוגדרה ל-{{crowns}}!"
+            }
+        }
+    },
+    "hide_all": {
+        "config": {
+            "description": "מסתיר את כל השחקנים בפארטי."
+        },
+        "run": {
+            "msg": {
+                "success": "כל המשתמשים הוסתרו!"
+            }
+        }
+    },
+    "ready": {
+        "run": {
+            "msg": {
+                "warning": "אזהרה: אם אתם מנסים להפעיל משחקים, אל תשתמשו בפקודה זו! - פשוט לחצו על כפתור 'מוכן' במשחק בעצמכם והבוט ילחץ גם אוטומטית.",
+                "success": "מוכן!"
+            }
+        },
+        "config": {
+            "description": "מגדיר את המצב ל'מוכן'."
+        }
+    },
+    "cosmetic_info": {
+        "config": {
+            "usage": {
+                "query": {
+                    "name": "השם או המספר המזהה של פריט הקוסמטיקה",
+                    "description": "השם או המספר המזהה של הפריט הקוסמטי שיש להגדיר."
+                }
+            },
+            "description": "מציג מידע על הפריט הקוסמטי."
+        },
+        "run": {
+            "msg": {
+                "cosmetic_not_found": "הפריט הקוסמטי {{query}} לא נמצא!"
+            }
+        }
+    },
+    "pickaxe": {
+        "config": {
+            "usage": {
+                "query": {
+                    "name": "השם או המספר המזהה של הפיקקס",
+                    "description": "השם או המספר המזהה של הפיקקס שיש להגדיר."
+                }
+            },
+            "description": "מגדיר את פיקקס הבוט."
+        },
+        "run": {
+            "msg": {
+                "pickaxe_not_found": "הפיקקס {{query}} לא נמצא!",
+                "pickaxe_changed": "הפיקקס הוגדר ל-{{name}}! {{id}}"
+            }
+        }
+    },
+    "shoes": {
+        "config": {
+            "description": "מגדיר את נעלי הבוט.",
+            "usage": {
+                "query": {
+                    "description": "השם או המספר המזהה של הנעליים שיש להגדיר.",
+                    "name": "‍המספר המזהה או השם של הנעליים"
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "shoes_not_found": "הנעליים {{query}} לא נמצאו!",
+                "shoes_changed": "הנעליים הוגדרו ל-{{name}}! {{id}}"
+            }
+        }
+    },
+    "shoe_variants": {
+        "run": {
+            "msg": {
+                "variants_not_found": "לנעליים האלו אין סטיילים!",
+                "shoes_not_found": "לבוט אין נעליים!",
+                "invalid_shoes": "נעליים לא חוקיות!",
+                "variants_select": "הסטייל שאת/ה רוצה לבחור עבור ה-{{type}}",
+                "changed": "סטייל הנעל הוגדר!"
+            }
+        },
+        "config": {
+            "description": "מגדיר את הסטיילים של הנעליים."
+        }
+    },
+    "decline_all_friends": {
+        "run": {
+            "msg": {
+                "declining_friends": "דוחה את כל החברים הממתינים!",
+                "declined_friends": "{{count}} חברים נדחו!"
+            }
+        },
+        "config": {
+            "description": "‍דוחה את כל בקשות החברות הממתינות של הבוט."
+        }
+    },
+    "remove_all_friends": {
+        "run": {
+            "msg": {
+                "removing_friends": "מוחק את כל החברים!",
+                "removed_friends": "{{count}} חברים נמחקו!"
+            }
+        },
+        "config": {
+            "description": "מוחק את כל החברים של הבוט. מנהלים ובעלים אינם כלולים."
+        }
+    },
+    "promote": {
+        "config": {
+            "usage": {
+                "query": {
+                    "description": "שם המשתמש או המספר המזהה של הפארטי שעתיד לעלות.",
+                    "name": "שם המשתמש או המספר המזהה של המשתמש"
+                }
+            },
+            "description": "מקדם חבר למנהיג הפארטי או ממנה אותך למנהיג הפארטי אם לא תפרט."
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "נמצאו מספר חברים:",
+                "member_not_found": "המשתמש {{query}} לא נמצא!",
+                "member_not_at_party": "אתה לא משתמש בפארטי שלי.",
+                "member_promoted": "{{name}} קודם!"
+            }
+        }
+    },
+    "remove_friend": {
+        "config": {
+            "usage": {
+                "query": {
+                    "name": "שם משתמש או מספר מזהה של חבר",
+                    "description": "שם המשתמש או המספר המזהה של החבר שיש למחוק."
+                }
+            },
+            "description": "מוחק חבר של הבוט."
+        },
+        "run": {
+            "msg": {
+                "friend_removed": "החבר {{name}} נמחק בהצלחה!",
+                "multiple_friends_found": "נמצאו מספר חברים:",
+                "friend_not_found": "החבר {{query}} לא נמצא!",
+                "error": "לא ניתן למחוק את {{name}}!"
+            }
+        }
+    },
+    "help": {
+        "config": {
+            "usage": {
+                "query": {
+                    "description": "השם או המספר המזהה של הפקודה על מנת להשיג עבורה עזרה מפורטת.",
+                    "name": "שם או מספר מזהה של הפקודה"
+                }
+            },
+            "description": "מציג את לוח העזרה והפקודות."
+        }
+    },
+    "ping": {
+        "run": {
+            "msg": {
+                "info": "פינג פונג! {{time}}ms",
+                "measuring": "‬מודד..."
+            }
+        },
+        "config": {
+            "description": "מציג את זמן העיכוב של הבוט."
+        }
+    },
+    "restart_bot": {
+        "run": {
+            "msg": {
+                "success": "הבוט מופעל מחדש עכשיו!"
+            }
+        },
+        "config": {
+            "description": "מפעיל מחדש את הבוט הנוכחי."
+        }
+    },
+    "send_all": {
+        "run": {
+            "msg": {
+                "sending_command": "שולח פקודה לכל הבוטים..."
+            }
+        },
+        "config": {
+            "description": "שולח את הפקודה לכל הבוטים.",
+            "usage": {
+                "command": {
+                    "name": "פקודה",
+                    "description": "הפקודה שיש לבצע בבוטים."
+                },
+                "args": {
+                    "name": "טיעונים",
+                    "description": "הטיעונים של הפקודות נדרשות."
+                }
+            }
+        }
+    },
+    "set_status": {
+        "config": {
+            "usage": {
+                "status": {
+                    "description": "הסטטוס החדש של הבוט.",
+                    "name": "סטטוס"
+                }
+            },
+            "description": "מגדיר את הסטטוס של הבוט"
+        },
+        "run": {
+            "msg": {
+                "success": "הסטטוס הוגדר בהצלחה!"
+            }
+        }
+    },
+    "whisper": {
+        "config": {
+            "usage": {
+                "query": {
+                    "description": "השם או המספר המזהה של החבר שיש לשלוח לו הודעה פרטית.",
+                    "name": "שם או מספר מזהה של חבר"
+                },
+                "message": {
+                    "name": "הודעה",
+                    "description": "ההודעה שיש לשלוח לחבר."
+                }
+            },
+            "description": "שולח הודעה פרטית לחבר."
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "נמצאו מספר חברים:",
+                "friend_not_found": "החבר {{query}} לא נמצא!",
+                "whisper_sent": "נשלח ל-{{name}}!"
+            }
+        }
+    },
+    "level": {
+        "config": {
+            "description": "מגדיר את רמת הבוט.",
+            "usage": {
+                "level": {
+                    "name": "רמה",
+                    "description": "הרמה שיש להגדיר."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "הרמה הוגדרה ל-{{level}}!"
+            }
+        }
+    },
+    "match": {
+        "config": {
+            "usage": {
+                "number": {
+                    "description": "מספר השחקנים במשחק.",
+                    "name": "מספר השחקנים"
+                }
+            },
+            "description": "מגדיר את המצב ל\"משחק משחק\"."
+        },
+        "run": {
+            "msg": {
+                "success": "מצב \"משחק\" הוגדר!"
+            }
+        }
+    },
+    "party_info": {
+        "config": {
+            "description": "מציג מידע על הפארטי."
+        }
+    },
+    "privacy": {
+        "config": {
+            "description": "מגדיר את פרטיות הפארטי.",
+            "usage": {
+                "privacy": {
+                    "name": "פרטיות",
+                    "options": {
+                        "public": "ציבורי",
+                        "private": "פרטי"
+                    },
+                    "description": "הפרטיות של הפארטי שיש להגדיר."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "error": "פרטיות לא חוקית, זה חייב להיות או ציבורי או פרטי!",
+                "success": "פרטיות הפארטי הוגדרה ל-{{privacy}}!"
+            }
+        }
+    },
+    "set_custom_key": {
+        "run": {
+            "msg": {
+                "success": "הגדר קוד משחקים מותאם אישית!"
+            }
+        },
+        "config": {
+            "description": "מגדיר קוד משחקים מותאמים אישית.",
+            "usage": {
+                "key": {
+                    "name": "קוד משחקים מותאמים אישית",
+                    "description": "קוד המשחקים המותאמים אישית שיש להגדיר."
+                }
+            }
+        }
+    },
+    "unblock_all_users": {
+        "run": {
+            "msg": {
+                "removing_friends": "מבטל את החסימה של המשתמשים החסומים!",
+                "removed_friends": "בוטלה החסימה של {{count}} משתמשים חסומים!"
+            }
+        },
+        "config": {
+            "description": "מבטל את החסימה של כל המשתמשים החסומים של הבוט."
+        }
+    },
+    "unblock_user": {
+        "config": {
+            "usage": {
+                "query": {
+                    "description": "שם המשתמש או המספר המזהה של המשתמש שיש לבטל לו חסימה.",
+                    "name": "שם משתמש או מספר מזהה"
+                }
+            },
+            "description": "מבטל חסימה של משתמש."
+        },
+        "run": {
+            "msg": {
+                "multiple_users_found": "נמצאו מספר משתמשים:",
+                "user_not_found": "המשתמש {{query}} לא נמצא!",
+                "error": "לא ניתן לבטל את חסימת {{name}}!",
+                "user_unblocked": "בוטלה בהצלחה חסימת המשתמש {{name}}!"
+            }
+        }
+    },
+    "user_info": {
+        "config": {
+            "usage": {
+                "query": {
+                    "description": "שם המשתמש או המספר המזהה של המשתמש.",
+                    "name": "שם משתמש או מספר מזהה"
+                }
+            },
+            "description": "מציג את המידע של משתמש מסוים."
+        },
+        "run": {
+            "msg": {
+                "multiple_users_found": "נמצאו מספר משתמשים:",
+                "user_not_found": "המשתמש {{query}} לא נמצא!"
+            }
+        }
+    },
+    "restart_shard": {
+        "run": {
+            "msg": {
+                "success": "ה'שרד' מופעל מחדש עכשיו!",
+                "error": "סליחה, הבוט הזה לא רץ בתוך 'שרד'."
+            }
+        },
+        "config": {
+            "description": "מפעיל מחדש את השרד הנוכחי."
+        }
+    },
+    "bp_level": {
+        "run": {
+            "msg": {
+                "bp_level_set": "רמת הבאטל פאס הוגדרה ל-{{level}}!"
+            }
+        },
+        "config": {
+            "description": "מגדיר את רמת הבאטל פאס של הבוט.",
+            "usage": {
+                "level": {
+                    "name": "רמה",
+                    "description": "רמת הבאטל פאס שיש להגדיר."
+                }
+            }
+        }
+    },
+    "hide": {
+        "config": {
+            "description": "מסתיר שחקן מהפארטי או מסתיר אותך אם לא צוינו טיעונים.",
+            "usage": {
+                "query": {
+                    "name": "שם או מספר מזהה של משתמש",
+                    "description": "השם או המספר המזהה של משתמש הפארטי שיש להסתיר."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "נמצאו מספר חברים:",
+                "member_not_found": "המשתמש {{query}} לא נמצא!",
+                "member_not_at_party": "אתה לא משתמש בפארטי שלי.",
+                "success": "{{name}} הוסתר!"
+            }
+        }
+    },
+    "kick": {
+        "config": {
+            "usage": {
+                "query": {
+                    "description": "השם או המספר המזהה של השחקן שיש להעיף מהפארטי.",
+                    "name": "שם או מספר מזהה של משתמש"
+                }
+            },
+            "description": "מעיף שחקן מהפארטי."
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "נמצאו מספר חברים:",
+                "member_not_found": "המשתמש {{query}} לא נמצא!",
+                "success": "{{name}} הועף!"
+            }
+        }
+    },
+    "show": {
+        "config": {
+            "usage": {
+                "query": {
+                    "description": "השם או מספר המזהה של המשתמש של הפארטי שיש להציג.",
+                    "name": "שם או מספר מזהה של משתמש"
+                }
+            },
+            "description": "מציג שחקן מוסתר מהקבוצה או מראה לך אם לא ציינת טיעונים."
+        },
+        "run": {
+            "msg": {
+                "multiple_friends_found": "נמצאו מספר חברים:",
+                "member_not_found": "המשתמש {{query}} לא נמצא!",
+                "member_not_at_party": "אתה לא משתמש בפארטי שלי.",
+                "success": "{{name}} הוצג!"
+            }
+        }
+    },
+    "show_all": {
+        "config": {
+            "description": "מציג את כל השחקנים המוסתרין שבפארטי."
+        },
+        "run": {
+            "msg": {
+                "success": "מציג את כל השחקנים!"
+            }
+        }
+    },
+    "backpack": {
+        "config": {
+            "description": "הגדר את תיק הבוט.",
+            "usage": {
+                "query": {
+                    "name": "שם או מספר זיהוי של תיק",
+                    "description": "השם או המספר המזהה של התיק שיש להגדיר."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "backpack_not_found": "התיק {{item}} לא נמצא!",
+                "backpack_changed": "התיק הוגדר ל-{{name}}! ({{id}})"
+            }
+        }
+    },
+    "backpack_variants": {
+        "config": {
+            "description": "מגדיר את הסטיילים של התיק."
+        },
+        "run": {
+            "msg": {
+                "backpack_not_found": "לבוט אין תיק!",
+                "invalid_backpack": "תיק לא חוקי!",
+                "variants_not_found": "לתיק הזה אין סטיילים!",
+                "variants_select": "שלח את הסטייל שברצונך לבחור עבור {{type}}.",
+                "variants_changed": "סטייל התיק הוגדר!"
+            }
+        }
+    },
+    "banner": {
+        "config": {
+            "description": "הגדר את באנר הבוט.",
+            "usage": {
+                "query": {
+                    "name": "שם או מספר מזהה של הבאנר",
+                    "description": "השם או המספר המזהה של הבאנר שיש להגדיר."
+                },
+                "color": {
+                    "name": "שם או מספר מזהה של צבע הבאנר",
+                    "description": "השם או המספר המזהה של צבע הבאנר שיש להגדיר."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "banner_not_found": "הבאנר {{item}} לא נמצא!",
+                "color_not_found": "צבע הבאנר {{item}} לא נמצא!",
+                "banner_changed": "הבאנר הוגדר ל-{{name}}! ({{id}})"
+            }
+        }
+    },
+    "clear_backpack": {
+        "config": {
+            "description": "מוחק את תיק הבוט."
+        },
+        "run": {
+            "msg": {
+                "backpack_cleared": "התיק נוקה!"
+            }
+        }
+    },
+    "clear_shoes": {
+        "config": {
+            "description": "מוחק את נעלי הבוט."
+        },
+        "run": {
+            "msg": {
+                "shoes_cleared": "‏נעליים נוקו!"
+            }
+        }
+    },
+    "eval": {
+        "run": {
+            "msg": {
+                "unauthorized_error": "רק ל-tnfAngel יש גישה לפקודה הזו."
+            }
+        }
+    },
+    "message": {
+        "config": {
+            "description": "שולח הודעה לפארטי.",
+            "usage": {
+                "message": {
+                    "name": "הודעה",
+                    "description": "ההודעה שיש לשלוח לפארטי."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "נשלחה הודעה לפארטי"
+            }
+        }
+    },
+    "prev": {
+        "config": {
+            "description": "מבצע את הפקודה הקודמת."
+        },
+        "run": {
+            "msg": {
+                "not_found": "פקודה קודמת לא בוצעה!"
+            }
+        }
+    },
+    "restart_category": {
+        "config": {
+            "description": "מפעיל מחדש את הקטגורייה הנוכחית."
+        },
+        "run": {
+            "msg": {
+                "success": "הקטגורייה מופעלת מחדש עכשיו!"
+            }
+        }
+    },
+    "clear_custom_key": {
+        "config": {
+            "description": "מנקה את קוד המשחקים המותאמים אישית."
+        },
+        "run": {
+            "msg": {
+                "success": "קוד המשחקים המותאמים אישית נוקה!"
+            }
+        }
+    },
+    "kick_all": {
+        "config": {
+            "description": "מעיף את כל השחקנים שבפארטי."
+        },
+        "run": {
+            "msg": {
+                "user_kicked": "{{name}} הועף!",
+                "success": "העפת כל המשתמשים הסתיימה!"
+            }
+        }
+    },
+    "leave": {
+        "config": {
+            "description": "הבוט עזב את הפארטי."
+        },
+        "run": {
+            "msg": {
+                "success": "ביי!"
+            }
+        }
+    },
+    "playlist": {
+        "config": {
+            "description": "מגדיר את המוד של הפארטי.",
+            "usage": {
+                "query": {
+                    "name": "שם או מספר מזהה של מוד",
+                    "description": "השם או המספר המזהה של המוד שיש להגדיר."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "error": "שגיאה בהגדרת מוד!",
+                "success": "המוד הוגדר ל-{{query}}!"
+            }
+        }
+    },
+    "rank": {
+        "config": {
+            "description": "מגדיר את ראנק הבוט.",
+            "usage": {
+                "rank": {
+                    "name": "ראנק",
+                    "description": "הראנק שיש להגדיר."
+                }
+            }
+        },
+        "run": {
+            "msg": {
+                "success": "הראנק הוגדר ל-{{rank}}!"
+            }
+        }
+    },
+    "say": {
+        "config": {
+            "description": "שולח הודעה לצ'אט הפארטי.",
+            "usage": {
+                "message": {
+                    "name": "הודעה",
+                    "description": "ההודעה שיש לשלוח לפארטי."
+                }
+            }
+        }
+    },
+    "sit_in": {
+        "config": {
+            "description": "מגדיר את המצב ל'משתתף'."
+        },
+        "run": {
+            "msg": {
+                "success": "יושב ב..."
+            }
+        }
+    },
+    "sit_out": {
+        "config": {
+            "description": "מגדיר את המצב ל'לא משתתף'."
+        },
+        "run": {
+            "msg": {
+                "success": "יושב בחוץ..."
+            }
+        }
+    },
+    "unmatch": {
+        "config": {
+            "description": "מגדיר את המצב ל'לא משחק משחק'."
+        },
+        "run": {
+            "msg": {
+                "success": "מצב 'משחק' נמחק!"
             }
         }
     }
