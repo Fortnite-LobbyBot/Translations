@@ -1,0 +1,359 @@
+{
+	"general": {
+		"name": "הגדרות כלליות",
+		"settings": {
+			"searchLangs": {
+				"name": "שפת חיפוש קוסמטית",
+				"itemDenomination": "שָׂפָה",
+				"description": "שפות בהן תוכלו להשתמש כדי לחפש קוסמטיקה."
+			},
+			"platform": {
+				"name": "סמל פלטפורמה",
+				"itemDenomination": "סמל פלטפורמה",
+				"description": "בחר את סמל הפלטפורמה עבור ה- BOT (למשל, מחשב, קונסולה)."
+			},
+			"privacy": {
+				"name": "פרטיות מפלגה",
+				"itemDenomination": "פְּרָטִיוּת",
+				"description": "הגדרת פרטיות ברירת מחדל עבור המפלגה, כגון ציבורי או פרטי.",
+				"selectOptions": {
+					"private": "פְּרָטִי",
+					"public": "פּוּמְבֵּי"
+				}
+			},
+			"prefixes": {
+				"name": "קידומות",
+				"itemDenomination": "קידומת",
+				"description": "קידומות מותרות להפעיל פקודות."
+			},
+			"statusText": {
+				"name": "הודעת סטטוס",
+				"itemDenomination": "הודעת סטטוס",
+				"description": "הודעות סטטוס בהתאמה אישית הבוט יכול להציג.",
+				"variables": {
+					"party_size": {
+						"name": "גודל המסיבה",
+						"description": "המספר הנוכחי של חברי המפלגה."
+					},
+					"party_max_size": {
+						"name": "גודל מקסימום של מסיבות",
+						"description": "חברי מפלגה מקסימליים המותרים."
+					},
+					"busy_status": {
+						"name": "סטטוס עסוק",
+						"description": "מראה אם ​​הבוט עמוס כרגע."
+					},
+					"mms_status": {
+						"name": "סטטוס שידוכים",
+						"description": "סטטוס שידוכים נוכחי."
+					},
+					"friends_count": {
+						"name": "חברים נחשבים",
+						"description": "המספר הכולל של החברים שיש לבוט."
+					},
+					"pending_friends_count": {
+						"name": "חברים תלויים ועומדים",
+						"description": "מספר בקשות החברים הממתינים."
+					},
+					"blocked_users_count": {
+						"name": "משתמשים חסומים נחשבים",
+						"description": "מספר המשתמשים שנחסמו על ידי ה- BOT."
+					}
+				}
+			},
+			"statusInterval": {
+				"name": "מרווח הודעות סטטוס",
+				"itemDenomination": "מרווח (שניות)",
+				"description": "באיזו תדירות הודעת הסטטוס משתנה, תוך שניות."
+			},
+			"level": {
+				"name": "רָמָה",
+				"itemDenomination": "רָמָה",
+				"description": "רמת הקוסמטיקה של הבוט."
+			},
+			"bpLevel": {
+				"name": "רמת מעבר קרב",
+				"itemDenomination": "רמת מעבר קרב",
+				"description": "הקרב הקוסמטי של הבוט עובר את רמת העברת."
+			}
+		}
+	},
+	"userManagement": {
+		"name": "ניהול משתמשים",
+		"settings": {
+			"extraOwners": {
+				"name": "בעלים נוספים",
+				"itemDenomination": "בַּעַל",
+				"description": "משתמשים נוספים בעלי גישה מלאה לפקודה."
+			},
+			"admins": {
+				"name": "מנהלים",
+				"itemDenomination": "מנהל",
+				"description": "משתמשים עם הרשאות ניהול לפקודות מוגבלות."
+			},
+			"whitelistUsers": {
+				"name": "משתמשי רשימת הלבנים",
+				"itemDenomination": "משתמש רשימת הלבנים",
+				"description": "משתמשים הרשו להריץ פקודות מוגבלות מסוימות."
+			},
+			"blacklistUsers": {
+				"name": "משתמשי רשימה שחורה",
+				"itemDenomination": "משתמש ברשימה שחורה",
+				"description": "משתמשים המוגבלים או אסורים להשתמש ב- BOT."
+			},
+			"excludedAutoAddFriends": {
+				"name": "הוסיפו רכב הוסף חברים",
+				"itemDenomination": "חבר לא נכלל",
+				"description": "משתמשים שלא הוחרגו מלבד הוספו אוטומטית כחברים."
+			},
+			"otherBots": {
+				"name": "בוטים אחרים",
+				"itemDenomination": "בוט",
+				"description": "בוטים שאינך בבעלותך ורוצים להתעלם מהם."
+			}
+		}
+	},
+	"limitsAndBehavior": {
+		"name": "מגבלות והתנהגות",
+		"settings": {
+			"inviteTimeout": {
+				"name": "להזמין פסק זמן",
+				"itemDenomination": "פסק זמן (שניות)",
+				"description": "תקופת COOLDOWN לפני שהבוט ניתן להופיע מחדש, תוך שניות."
+			},
+			"maxBotsPerLobby": {
+				"name": "מקסימום בוטים למסיבה",
+				"itemDenomination": "מקסימום בוטים למסיבה",
+				"description": "המספר המרבי של הבוטים המותרים במסיבה יחידה."
+			},
+			"maxBotsPerLobbyWithOwner": {
+				"name": "מקסימום בוטים למסיבה עם הבעלים",
+				"itemDenomination": "מקסימום בוטים למסיבה",
+				"description": "בוטים מקסימליים המותרים במסיבה יחידה כאשר בעל נוכח."
+			},
+			"maxBotsPerLobbyWithAdmin": {
+				"name": "מקסימום בוטים למסיבה עם מנהל",
+				"itemDenomination": "מקסימום בוטים למסיבה",
+				"description": "בוטים מקסימליים המותרים במפלגה יחידה כאשר מנהל מנהל."
+			},
+			"maxBotsPerLobbyWithWhitelistUser": {
+				"name": "מקסימום בוטים למסיבה עם משתמש רשימת הלבנים",
+				"itemDenomination": "מקסימום בוטים עם משתמש רשימת הלבנים",
+				"description": "בוטים מקסימליים המותרים במסיבה יחידה כאשר משתמש ברשימת הלבנים קיים."
+			},
+			"allowMatchmaking": {
+				"name": "אפשר שידוכים",
+				"itemDenomination": "אפשר שידוכים",
+				"description": "הפעל או השבת שידוכים עם הבוט."
+			},
+			"leaveAfterMatchmaking": {
+				"name": "עזוב לאחר שידוכים",
+				"itemDenomination": "עזוב לאחר שידוכים",
+				"description": "הבוט עוזב את המסיבה לאחר תחילת השידוכים."
+			},
+			"disableMatchmakingChecks": {
+				"name": "השבת בדיקות שידוכים",
+				"itemDenomination": "השבת בדיקות שידוכים",
+				"description": "הסר את גבול ההשתקפות (מקסימום 5 התאמות לשעה)."
+			},
+			"disablePlaylistChecks": {
+				"name": "השבת בדיקות מצב משחק",
+				"itemDenomination": "השבת בדיקות מצב משחק",
+				"description": "אפשר לבוט לשחק כל מצב משחק למעט מדורגים. "
+			},
+			"disableJoinMessages": {
+				"name": "השבת הודעות הצטרפות",
+				"itemDenomination": "השבת את הודעת ההצטרפות",
+				"description": "כבה הודעות בעת הצטרפות למסיבה."
+			},
+			"disableAutomaticMessages": {
+				"name": "השבת הודעות אוטומטיות",
+				"itemDenomination": "השבת הודעה אוטומטית",
+				"description": "כבה את כל ההודעות האוטומטיות."
+			},
+			"acceptFriendRequests": {
+				"name": "קבל בקשות לחברים",
+				"itemDenomination": "קבל בקשות לחברים",
+				"description": "קבל אוטומטית בקשות חברים נכנסות."
+			},
+			"sendFriendRequestOnJoinParty": {
+				"name": "שלח בקשת חברות למסיבת הצטרפות",
+				"itemDenomination": "שלח בקשת חברים",
+				"description": "שלח בקשות לחברים לכל חברי המפלגה כאשר הבוט מצטרף למסיבה."
+			},
+			"sendFriendRequestOnMemberJoinParty": {
+				"name": "שלח בקשת חברים לחבר להצטרף למסיבה",
+				"itemDenomination": "שלח בקשת חבר לחבר",
+				"description": "שלח בקשת חברות לחברים חדשים כאשר הם מצטרפים למסיבה."
+			},
+			"runCommandsWithoutPrefix": {
+				"name": "הפעל פקודות ללא קידומת",
+				"itemDenomination": "הפעל פקודות",
+				"description": "אפשר להפעיל פקודות ללא קידומת."
+			},
+			"setCosmeticsWithoutCommands": {
+				"name": "הגדר קוסמטיקה ללא פקודות",
+				"itemDenomination": "הגדר קוסמטיקה",
+				"description": "הגדר קוסמטיקה רק על ידי הקלדת שמם בצ'אט מסיבות, אין צורך בפקודה."
+			},
+			"setCosmeticsWithPrefix": {
+				"name": "הגדר קוסמטיקה עם קידומת",
+				"itemDenomination": "הגדר קוסמטיקה",
+				"description": "הגדר קוסמטיקה באמצעות קידומת, כמו! חוט דנטלי."
+			},
+			"acceptInvites": {
+				"name": "לקבל הזמנות",
+				"itemDenomination": "לקבל הזמנות",
+				"description": "קבל באופן אוטומטי הזמנות של מפלגה והצטרף לבקשות."
+			},
+			"startBannedBots": {
+				"name": "התחל בוטים אסורים",
+				"itemDenomination": "התחל בוטים אסורים",
+				"description": "אם יופעלו, בוטים יתחיל גם אם נאסרים עליהם לשידוך."
+			}
+		}
+	},
+	"triggers": {
+		"name": "מפעילים ופעולות"
+	},
+	"commandRestrictions": {
+		"name": "מגבלות פקודה",
+		"settings": {
+			"onlyOwnerCommands": {
+				"name": "פקודות בעלים",
+				"itemDenomination": "פְּקוּדָה",
+				"description": "פקודות שרק בעלי בוט יכולים להשתמש בהם."
+			},
+			"onlyAdminCommands": {
+				"name": "פקודות מנהל",
+				"itemDenomination": "פְּקוּדָה",
+				"description": "פקודות רק מנהלים או בעלים יכולים להשתמש בהם."
+			},
+			"onlyWhitelistUsersCommands": {
+				"name": "פקודות משתמש לבנות",
+				"itemDenomination": "פְּקוּדָה",
+				"description": "פקודות למשתמשים, מנהלים או בעלים בעלי רשימות לבנים בלבד."
+			},
+			"onlyFriendsCommands": {
+				"name": "פקודות בלבד",
+				"itemDenomination": "פְּקוּדָה",
+				"description": "פקודות זמינות רק לחבריו של הבוט."
+			},
+			"onlyPartyMembersCommands": {
+				"name": "פקודות של חברי המפלגה בלבד",
+				"itemDenomination": "פְּקוּדָה",
+				"description": "פקודות זמינות רק לחברי המפלגה הנוכחיים."
+			},
+			"onlyWhisperCommands": {
+				"name": "פקודות DM בלבד",
+				"itemDenomination": "פְּקוּדָה",
+				"description": "פקודות שיש לשלוח באמצעות לחישה/DM."
+			}
+		}
+	},
+	"cosmetics": {
+		"name": "התאמה אישית קוסמטית",
+		"settings": {
+			"startOutfit": {
+				"name": "התחל תלבושת",
+				"itemDenomination": "תִלְבּוֹשֶׁת",
+				"description": "תלבושת ברירת מחדל (ים) כאשר הבוט מתחיל."
+			},
+			"startBackpack": {
+				"name": "התחל תרמיל",
+				"itemDenomination": "תַרמִיל",
+				"description": "תרמיל (ים) ברירת מחדל כאשר הבוט מתחיל."
+			},
+			"startPickaxe": {
+				"name": "התחל פיקקס",
+				"itemDenomination": "מַכּוֹשׁ",
+				"description": "ברירת מחדל Pickaxe / ים כאשר הבוט מתחיל."
+			},
+			"startShoes": {
+				"name": "התחל נעליים",
+				"itemDenomination": "נעליים",
+				"description": "נעלי ברירת מחדל כאשר הבוט מתחיל."
+			},
+			"startBanner": {
+				"name": "התחל באנר",
+				"itemDenomination": "דֶגֶל",
+				"description": "באנר ברירת מחדל כאשר הבוט מתחיל."
+			},
+			"startBannerColor": {
+				"name": "התחל צבע באנר",
+				"itemDenomination": "צבע באנר",
+				"description": "ברירת מחדל צבעי באנר ברירת מחדל כאשר הבוט מתחיל."
+			},
+			"joinOutfit": {
+				"name": "הצטרף לתלבושת",
+				"itemDenomination": "תִלְבּוֹשֶׁת",
+				"description": "תלבושת (ים) ללבוש בעת הצטרפות למסיבה."
+			},
+			"joinBackpack": {
+				"name": "הצטרף לתרמיל",
+				"itemDenomination": "תַרמִיל",
+				"description": "תרמיל (ים) ללבוש בעת הצטרפות למסיבה."
+			},
+			"joinPickaxe": {
+				"name": "הצטרף ל- Pickaxe",
+				"itemDenomination": "מַכּוֹשׁ",
+				"description": "Pickaxe (S) לשימוש בעת הצטרפות למסיבה."
+			},
+			"joinEmote": {
+				"name": "הצטרף ל- EMOTE",
+				"itemDenomination": "emote",
+				"description": "אמורים (ים) להופיע בעת הצטרפות למסיבה."
+			},
+			"joinShoes": {
+				"name": "הצטרף לנעליים",
+				"itemDenomination": "נעליים",
+				"description": "נעליים ללבוש בעת הצטרפות למסיבה."
+			},
+			"joinBanner": {
+				"name": "הצטרף לאנדר",
+				"itemDenomination": "דֶגֶל",
+				"description": "באנר (ים) לקבוע בעת הצטרפות למסיבה."
+			},
+			"joinBannerColor": {
+				"name": "הצטרף לצבע באנר",
+				"itemDenomination": "צבע באנר",
+				"description": "צבעי באנר (ים) לקבוע בעת הצטרפות למסיבה."
+			},
+			"memberJoinOutfit": {
+				"name": "חבר הצטרף לתלבושת",
+				"itemDenomination": "תִלְבּוֹשֶׁת",
+				"description": "תלבושת (ים) לקבוע כאשר חבר מצטרף למסיבה."
+			},
+			"memberJoinBackpack": {
+				"name": "חבר הצטרף לתרמיל",
+				"itemDenomination": "תַרמִיל",
+				"description": "תרמיל (ים) לקבוע כאשר חבר מצטרף למסיבה."
+			},
+			"memberJoinPickaxe": {
+				"name": "חבר הצטרף לפסקרס",
+				"itemDenomination": "מַכּוֹשׁ",
+				"description": "Pickaxe (ים) להגדיר כאשר חבר מצטרף למסיבה."
+			},
+			"memberJoinEmote": {
+				"name": "החבר מצטרף לאמוטה",
+				"itemDenomination": "emote",
+				"description": "אמורה (ים) לקבוע כאשר חבר מצטרף למסיבה."
+			},
+			"memberJoinShoes": {
+				"name": "חבר להצטרף לנעליים",
+				"itemDenomination": "נעליים",
+				"description": "נעליים להגדיר כאשר חבר מצטרף למסיבה."
+			},
+			"memberJoinBanner": {
+				"name": "חבר הצטרף לאנדר",
+				"itemDenomination": "דֶגֶל",
+				"description": "באנר (ים) לקבוע כאשר חבר מצטרף למפלגה."
+			},
+			"memberJoinBannerColor": {
+				"name": "חבר הצטרף לצבע באנר",
+				"itemDenomination": "צבע באנר",
+				"description": "צבעי באנר (ים) לקבוע כאשר חבר מצטרף למסיבה."
+			}
+		}
+	}
+}
