@@ -72,7 +72,7 @@
 				"invalid_backpack": "Invalid backpack!",
 				"variants_not_found": "This backpack does not have variants!",
 				"variants_select": "Send the variant you want to select for {{type}}.",
-				"variants_changed": "Backpack variants set!"
+				"changed": "Backpack variants set!"
 			}
 		}
 	},
@@ -125,6 +125,16 @@
 		"run": {
 			"msg": {
 				"shoes_cleared": "Shoes cleared!"
+			}
+		}
+	},
+	"clear_sidekick": {
+		"config": {
+			"description": "Removes the bot's sidekick."
+		},
+		"run": {
+			"msg": {
+				"sidekick_cleared": "Sidekick cleared!"
 			}
 		}
 	},
@@ -475,6 +485,37 @@
 				"showing_items": "Setting all the items in the shop... {{filter}}",
 				"filter": "(filtered by {{query}})",
 				"ended": "I have finished showing all the items in the store..."
+			}
+		}
+	},
+	"sidekick": {
+		"config": {
+			"description": "Sets the bot's sidekick.",
+			"usage": {
+				"query": {
+					"name": "Sidekick name or ID",
+					"description": "The name or ID of the sidekick to be set."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sidekick_not_found": "Sidekick {{query}} not found!",
+				"sidekick_changed": "Set the sidekick to {{name}}! ({{id}})"
+			}
+		}
+	},
+	"sidekick_variants": {
+		"config": {
+			"description": "Sets the sidekick variants."
+		},
+		"run": {
+			"msg": {
+				"sidekick_not_found": "The bot does not have a sidekick!",
+				"invalid_sidekick": "Invalid sidekick!",
+				"variants_not_found": "This sidekick does not have variants!",
+				"variants_select": "Send the variant you want to select for {{type}}",
+				"changed": "Set the sidekick variants!"
 			}
 		}
 	},
