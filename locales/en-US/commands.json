@@ -223,7 +223,7 @@
 		"run": {
 			"msg": {
 				"emote_not_found": "Emote {{query}} not found!",
-				"emote_changed": "Set the emote emoji to {{name}}! ({{id}})"
+				"emote_changed": "Set the emote to {{name}}! ({{id}})"
 			}
 		}
 	},

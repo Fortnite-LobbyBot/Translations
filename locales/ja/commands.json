@@ -223,7 +223,7 @@
 		"run": {
 			"msg": {
 				"emote_not_found": "emote {{query}}見つかりません！",
-				"emote_changed": "emote emojiを{{name}}に設定してください！ （{{id}}）"
+				"emote_changed": "emote を{{name}}に設定してください！ （{{id}}）"
 			}
 		}
 	},
