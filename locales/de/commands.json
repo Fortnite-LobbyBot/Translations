@@ -410,6 +410,10 @@
 				"shoes": {
 					"name": "Schuhe id",
 					"description": "Der Ausweis der Schuhe."
+				},
+				"sidekick": {
+					"name": "Sidekick-ID",
+					"description": "Die ID des Sidekicks."
 				}
 			}
 		},

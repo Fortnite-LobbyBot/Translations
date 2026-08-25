@@ -410,6 +410,10 @@
 				"shoes": {
 					"name": "Identyfikator butów",
 					"description": "Identyfikator butów."
+				},
+				"sidekick": {
+					"name": "Identyfikator sidekicka",
+					"description": "Identyfikator sidekicka."
 				}
 			}
 		},

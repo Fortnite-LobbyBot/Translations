@@ -410,6 +410,10 @@
 				"shoes": {
 					"name": "鞋子ID",
 					"description": "鞋子的身份證。"
+				},
+				"sidekick": {
+					"name": "搭檔ID",
+					"description": "搭檔的ID。"
 				}
 			}
 		},

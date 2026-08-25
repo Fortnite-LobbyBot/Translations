@@ -410,6 +410,10 @@
 				"shoes": {
 					"name": "ID sepatu",
 					"description": "ID sepatu."
+				},
+				"sidekick": {
+					"name": "ID Sidekick",
+					"description": "ID sidekick."
 				}
 			}
 		},

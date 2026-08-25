@@ -410,6 +410,10 @@
 				"shoes": {
 					"name": "靴ID",
 					"description": "靴のID。"
+				},
+				"sidekick": {
+					"name": "サイドキックID",
+					"description": "サイドキックのID。"
 				}
 			}
 		},

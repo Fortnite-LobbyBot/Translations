@@ -410,6 +410,10 @@
 				"shoes": {
 					"name": "Ayakkabı kimliği",
 					"description": "Ayakkabıların kimliği."
+				},
+				"sidekick": {
+					"name": "Sidekick kimliği",
+					"description": "Sidekick kimliği."
 				}
 			}
 		},

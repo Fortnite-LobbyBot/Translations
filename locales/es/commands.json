@@ -411,6 +411,10 @@
 				"shoes": {
 					"name": "ID de zapatos",
 					"description": "La identificación de los zapatos."
+				},
+				"sidekick": {
+					"name": "ID de acompañante",
+					"description": "El ID del acompañante."
 				}
 			}
 		},

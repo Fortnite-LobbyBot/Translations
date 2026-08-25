@@ -410,6 +410,10 @@
 				"shoes": {
 					"name": "ID giày",
 					"description": "ID của đôi giày."
+				},
+				"sidekick": {
+					"name": "ID Sidekick",
+					"description": "ID của sidekick."
 				}
 			}
 		},

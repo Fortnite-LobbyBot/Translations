@@ -410,6 +410,10 @@
 				"shoes": {
 					"name": "신발 ID",
 					"description": "신발의 ID."
+				},
+				"sidekick": {
+					"name": "사이드킥 ID",
+					"description": "사이드킥의 ID."
 				}
 			}
 		},

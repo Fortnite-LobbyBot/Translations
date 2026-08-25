@@ -410,6 +410,10 @@
 				"shoes": {
 					"name": "รหัสรองเท้า",
 					"description": "ID ของรองเท้า"
+				},
+				"sidekick": {
+					"name": "รหัส Sidekick",
+					"description": "ID ของ Sidekick"
 				}
 			}
 		},

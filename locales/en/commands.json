@@ -448,6 +448,10 @@
 				"shoes": {
 					"name": "Shoes ID",
 					"description": "The ID of the shoes."
+				},
+				"sidekick": {
+					"name": "Sidekick ID",
+					"description": "The ID of the sidekick."
 				}
 			}
 		},
