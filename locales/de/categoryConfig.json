@@ -75,6 +75,16 @@
 				"name": "Battle Pass Level",
 				"itemDenomination": "Battle Pass Level",
 				"description": "Kosmetisches Battle Pass Level des Bots."
+			},
+			"statusType": {
+				"name": "Statustyp",
+				"itemDenomination": "Statustyp",
+				"description": "Wie die Online-Präsenz des Bots angezeigt wird.",
+				"selectOptions": {
+					"auto": "Auto",
+					"online": "Online",
+					"away": "Abwesend"
+				}
 			}
 		}
 	},
@@ -154,7 +164,7 @@
 			"disableMatchmakingChecks": {
 				"name": "Matchmaking-Prüfungen deaktivieren",
 				"itemDenomination": "Matchmaking-Prüfungen deaktivieren",
-				"description": "Matchmaking-Abkühlzeit entfernen (max. 5 Spiele pro Stunde)."
+				"description": "Entfernt die 20-minütige Abkühlzeit zwischen Bot-Lobby-Spielen."
 			},
 			"disablePlaylistChecks": {
 				"name": "Spielmodus-Prüfungen deaktivieren",
@@ -205,6 +215,11 @@
 				"name": "Einladungen annehmen",
 				"itemDenomination": "Einladungen annehmen",
 				"description": "Einladungen und Beitrittsanfragen automatisch annehmen."
+			},
+			"startBannedBots": {
+				"name": "Gebannte Bots starten",
+				"itemDenomination": "gebannte Bots starten",
+				"description": "Wenn aktiviert, starten Bots auch bei Matchmaking-Sperre."
 			}
 		}
 	},
@@ -348,6 +363,21 @@
 				"name": "Mitgliedsbeitritt-Bannerfarbe",
 				"itemDenomination": "Bannerfarbe",
 				"description": "Bannerfarbe, wenn ein Mitglied der Gruppe beitritt."
+			},
+			"startSidekick": {
+				"name": "Start-Sidekick",
+				"itemDenomination": "sidekick",
+				"description": "Standard-Sidekick(s) beim Start des Bots."
+			},
+			"joinSidekick": {
+				"name": "Beitritts-Sidekick",
+				"itemDenomination": "sidekick",
+				"description": "Sidekick beim Beitritt zu einer Gruppe."
+			},
+			"memberJoinSidekick": {
+				"name": "Mitgliedsbeitritt-Sidekick",
+				"itemDenomination": "sidekick",
+				"description": "Sidekick, wenn ein Mitglied der Gruppe beitritt."
 			}
 		}
 	}

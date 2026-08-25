@@ -75,6 +75,16 @@
 				"name": "Niveau du Passe de Combat",
 				"itemDenomination": "niveau du passe de combat",
 				"description": "Niveau du passe de combat cosmétique du bot."
+			},
+			"statusType": {
+				"name": "Type de statut",
+				"itemDenomination": "type de statut",
+				"description": "Comment la présence en ligne du bot est affichée.",
+				"selectOptions": {
+					"auto": "Auto",
+					"online": "En ligne",
+					"away": "Absent"
+				}
 			}
 		}
 	},
@@ -154,7 +164,7 @@
 			"disableMatchmakingChecks": {
 				"name": "Désactiver les vérifications de matchmaking",
 				"itemDenomination": "désactiver les vérifications de matchmaking",
-				"description": "Supprimer la limite de délai du matchmaking (max 5 parties par heure)."
+				"description": "Supprime le délai de 20 minutes entre les parties en lobby bots."
 			},
 			"disablePlaylistChecks": {
 				"name": "Désactiver les vérifications de mode de jeu",
@@ -205,6 +215,11 @@
 				"name": "Accepter les invitations",
 				"itemDenomination": "accepter les invitations",
 				"description": "Accepter automatiquement les invitations et demandes de rejoindre le groupe."
+			},
+			"startBannedBots": {
+				"name": "Démarrer les bots bannis",
+				"itemDenomination": "démarrer les bots bannis",
+				"description": "Si activé, les bots démarreront même s'ils sont bannis du matchmaking."
 			}
 		}
 	},
@@ -348,6 +363,21 @@
 				"name": "Couleur de bannière à l'arrivée d'un membre",
 				"itemDenomination": "couleur de bannière",
 				"description": "Couleur(s) de bannière à définir lorsqu'un membre rejoint le groupe."
+			},
+			"startSidekick": {
+				"name": "Sidekick de démarrage",
+				"itemDenomination": "sidekick",
+				"description": "Sidekick(s) par défaut au démarrage du bot."
+			},
+			"joinSidekick": {
+				"name": "Sidekick à l'entrée",
+				"itemDenomination": "sidekick",
+				"description": "Sidekick(s) à l'entrée dans une fête."
+			},
+			"memberJoinSidekick": {
+				"name": "Sidekick à l'arrivée d'un membre",
+				"itemDenomination": "sidekick",
+				"description": "Sidekick(s) à l'arrivée d'un membre."
 			}
 		}
 	}

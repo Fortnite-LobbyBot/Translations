@@ -7,6 +7,15 @@
 			"only_for_owners": "Bu komut yalnızca bot sahipleri için kullanılabilir.",
 			"only_for_admins": "Bu komut yalnızca bot yöneticileri için kullanılabilir.",
 			"only_for_whitelist": "Bu komut yalnızca botun beyaz listesindeki kullanıcılar için kullanılabilir."
+		},
+		"cosmetic_types": {
+			"outfit": "Kıyafet",
+			"backpack": "Sırt çantası",
+			"emoji": "Emoji",
+			"emote": "Zorlamak",
+			"pickaxe": "Kazma",
+			"shoe": "Ayakkabı",
+			"sidekick": "Sidekick"
 		}
 	},
 	"all_items": {

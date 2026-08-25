@@ -75,6 +75,16 @@
 				"name": "Cấp độ Battle Pass",
 				"itemDenomination": "cấp độ battle pass",
 				"description": "Cấp độ battle pass vật phẩm của bot."
+			},
+			"statusType": {
+				"name": "Loại trạng thái",
+				"itemDenomination": "loại trạng thái",
+				"description": "Cách hiển thị trạng thái trực tuyến của bot.",
+				"selectOptions": {
+					"auto": "Tự động",
+					"online": "Trực tuyến",
+					"away": "Vắng mặt"
+				}
 			}
 		}
 	},
@@ -154,7 +164,7 @@
 			"disableMatchmakingChecks": {
 				"name": "Tắt kiểm tra ghép trận",
 				"itemDenomination": "tắt kiểm tra ghép trận",
-				"description": "Bỏ giới hạn chờ ghép trận (tối đa 5 trận mỗi giờ)."
+				"description": "Bỏ thời gian chờ 20 phút giữa các trận trong lobby bot."
 			},
 			"disablePlaylistChecks": {
 				"name": "Tắt kiểm tra chế độ chơi",
@@ -205,6 +215,11 @@
 				"name": "Chấp nhận lời mời",
 				"itemDenomination": "chấp nhận lời mời",
 				"description": "Tự động chấp nhận lời mời và yêu cầu tham gia nhóm."
+			},
+			"startBannedBots": {
+				"name": "Khởi động bot bị cấm",
+				"itemDenomination": "khởi động bot bị cấm",
+				"description": "Nếu bật, bot sẽ khởi động ngay cả khi bị cấm matchmaking."
 			}
 		}
 	},
@@ -348,6 +363,21 @@
 				"name": "Màu biểu ngữ khi thành viên mới tham gia",
 				"itemDenomination": "màu biểu ngữ",
 				"description": "Màu biểu ngữ khi thành viên mới tham gia nhóm."
+			},
+			"startSidekick": {
+				"name": "Sidekick khởi động",
+				"itemDenomination": "sidekick",
+				"description": "Sidekick mặc định khi bot khởi động."
+			},
+			"joinSidekick": {
+				"name": "Sidekick khi tham gia",
+				"itemDenomination": "sidekick",
+				"description": "Sidekick khi tham gia party."
+			},
+			"memberJoinSidekick": {
+				"name": "Sidekick khi thành viên tham gia",
+				"itemDenomination": "sidekick",
+				"description": "Sidekick khi thành viên tham gia party."
 			}
 		}
 	}

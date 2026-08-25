@@ -75,6 +75,16 @@
 				"name": "Livello Pass Battaglia",
 				"itemDenomination": "livello pass battaglia",
 				"description": "Livello pass battaglia cosmetico del bot."
+			},
+			"statusType": {
+				"name": "Tipo di stato",
+				"itemDenomination": "tipo di stato",
+				"description": "Come viene mostrata la presenza online del bot.",
+				"selectOptions": {
+					"auto": "Auto",
+					"online": "Online",
+					"away": "Assente"
+				}
 			}
 		}
 	},
@@ -154,7 +164,7 @@
 			"disableMatchmakingChecks": {
 				"name": "Disabilita controlli matchmaking",
 				"itemDenomination": "disabilita controlli matchmaking",
-				"description": "Rimuovi il limite di attesa per il matchmaking (max 5 partite all'ora)."
+				"description": "Rimuove l'attesa di 20 minuti tra le partite nelle lobby bot."
 			},
 			"disablePlaylistChecks": {
 				"name": "Disabilita controlli modalità di gioco",
@@ -205,6 +215,11 @@
 				"name": "Accetta inviti",
 				"itemDenomination": "accetta inviti",
 				"description": "Accetta automaticamente inviti e richieste di ingresso nel gruppo."
+			},
+			"startBannedBots": {
+				"name": "Avvia bot bannati",
+				"itemDenomination": "avvia bot bannati",
+				"description": "Se abilitato, i bot si avvieranno anche se bannati dal matchmaking."
 			}
 		}
 	},
@@ -348,6 +363,21 @@
 				"name": "Colore banner all'ingresso membro",
 				"itemDenomination": "colore banner",
 				"description": "Colore banner da impostare quando un membro entra nel gruppo."
+			},
+			"startSidekick": {
+				"name": "Sidekick iniziale",
+				"itemDenomination": "sidekick",
+				"description": "Sidekick predefiniti all'avvio del bot."
+			},
+			"joinSidekick": {
+				"name": "Sidekick all'ingresso",
+				"itemDenomination": "sidekick",
+				"description": "Sidekick all'ingresso in una festa."
+			},
+			"memberJoinSidekick": {
+				"name": "Sidekick ingresso membro",
+				"itemDenomination": "sidekick",
+				"description": "Sidekick quando un membro entra nella festa."
 			}
 		}
 	}

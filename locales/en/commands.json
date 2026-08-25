@@ -6,7 +6,25 @@
 			"need_party_leader": "I need to be the party leader to execute this command!",
 			"only_for_owners": "This command is only available to bot owners.",
 			"only_for_admins": "This command is only available to bot administrators.",
-			"only_for_whitelist": "This command is only available to users on the bot's whitelist."
+			"only_for_whitelist": "This command is only available to users on the bot's whitelist.",
+			"requires_author_target": "Specify a user for this command (or link your Epic account to use yourself as the target)."
+		},
+		"cosmetic_types": {
+			"outfit": "Outfit",
+			"backpack": "Backpack",
+			"petcarrier": "Pet Carrier",
+			"emoji": "Emoji",
+			"emote": "Emote",
+			"track": "Track",
+			"pickaxe": "Pickaxe",
+			"shoe": "Shoes",
+			"sidekick": "Sidekick"
+		},
+		"track_instruments": {
+			"drum": "Drums",
+			"vox": "Vocals",
+			"bass": "Bass",
+			"lead": "Lead"
 		}
 	},
 	"all_items": {
@@ -50,8 +68,8 @@
 			"description": "Sets the bot's backpack.",
 			"usage": {
 				"query": {
-					"name": "Backpack name or ID",
-					"description": "The name or ID of the backpack to set."
+					"name": "Backbling name or ID",
+					"description": "The name or ID of the backbling to set."
 				}
 			}
 		},
@@ -183,7 +201,9 @@
 		"run": {
 			"msg": {
 				"cosmetic_not_found": "Cosmetic {{query}} not found!",
-				"cosmetic_changed": "Set the {{type}} to {{name}}! ({{id}})"
+				"cosmetic_changed": "Set the {{type}} to {{name}}! ({{id}})",
+				"instrument_select": "Select an instrument for {{name}}:",
+				"instrument_not_found": "Instrument {{query}} not found!"
 			}
 		}
 	},
@@ -388,6 +408,23 @@
 			}
 		}
 	},
+	"petcarrier": {
+		"config": {
+			"description": "Sets the bot's pet carrier.",
+			"usage": {
+				"query": {
+					"name": "Pet carrier name or ID",
+					"description": "The name or ID of the pet carrier to set."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"petcarrier_not_found": "Pet carrier {{query}} not found!",
+				"petcarrier_changed": "Set the pet carrier to {{name}}! ({{id}})"
+			}
+		}
+	},
 	"preset": {
 		"config": {
 			"description": "Sets the bot's preset. Use \"none\" to remove a cosmetic.",
@@ -485,6 +522,29 @@
 				"showing_items": "Setting all the items in the shop... {{filter}}",
 				"filter": "(filtered by {{query}})",
 				"ended": "I have finished showing all the items in the store..."
+			}
+		}
+	},
+	"track": {
+		"config": {
+			"description": "Sets the bot's jam track.",
+			"usage": {
+				"query": {
+					"name": "Track name or ID",
+					"description": "The name or ID of the track to set."
+				},
+				"instrument": {
+					"name": "Instrument",
+					"description": "The instrument part to play (Drum, Vox, Bass, or Lead)."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"track_not_found": "Track {{query}} not found!",
+				"track_changed": "Set the track to {{name}} ({{instrument}})! ({{id}})",
+				"instrument_select": "Select an instrument for {{name}}:",
+				"instrument_not_found": "Instrument {{query}} not found!"
 			}
 		}
 	},

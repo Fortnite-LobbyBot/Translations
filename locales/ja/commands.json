@@ -7,6 +7,15 @@
 			"only_for_owners": "このコマンドは、ボット所有者のみが利用できます。",
 			"only_for_admins": "このコマンドは、ボット管理者のみが利用できます。",
 			"only_for_whitelist": "このコマンドは、ボットのホワイトリストのユーザーのみが利用できます。"
+		},
+		"cosmetic_types": {
+			"outfit": "衣装",
+			"backpack": "バックパック",
+			"emoji": "絵文字",
+			"emote": "エモート",
+			"pickaxe": "ピカクセ",
+			"shoe": "靴",
+			"sidekick": "サイドキック"
 		}
 	},
 	"all_items": {

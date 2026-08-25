@@ -75,6 +75,16 @@
 				"name": "バトルパスレベル",
 				"itemDenomination": "バトルパスレベル",
 				"description": "ボットのコスメバトルパスレベル。"
+			},
+			"statusType": {
+				"name": "ステータスタイプ",
+				"itemDenomination": "ステータスタイプ",
+				"description": "ボットのオンライン表示方法。",
+				"selectOptions": {
+					"auto": "自動",
+					"online": "オンライン",
+					"away": "退席中"
+				}
 			}
 		}
 	},
@@ -154,7 +164,7 @@
 			"disableMatchmakingChecks": {
 				"name": "マッチメイキングチェック無効化",
 				"itemDenomination": "マッチメイキングチェック無効化",
-				"description": "マッチメイキングのクールダウン制限を解除（1時間あたり最大5回）。"
+				"description": "ボットロビーの試合間の20分クールダウンを解除します。"
 			},
 			"disablePlaylistChecks": {
 				"name": "ゲームモードチェック無効化",
@@ -205,6 +215,11 @@
 				"name": "招待自動承認",
 				"itemDenomination": "招待承認",
 				"description": "グループへの招待や参加リクエストを自動で承認します。"
+			},
+			"startBannedBots": {
+				"name": "BANされたボットを起動",
+				"itemDenomination": "BANされたボットを起動",
+				"description": "有効にすると、マッチメイキングBANされていてもボットが起動します。"
 			}
 		}
 	},
@@ -348,6 +363,21 @@
 				"name": "メンバー参加時のバナーカラー",
 				"itemDenomination": "バナーカラー",
 				"description": "メンバーが参加した時のバナーカラー。"
+			},
+			"startSidekick": {
+				"name": "スタートサイドキック",
+				"itemDenomination": "サイドキック",
+				"description": "ボット起動時のデフォルトサイドキック。"
+			},
+			"joinSidekick": {
+				"name": "参加時サイドキック",
+				"itemDenomination": "サイドキック",
+				"description": "パーティー参加時に装備するサイドキック。"
+			},
+			"memberJoinSidekick": {
+				"name": "メンバー参加時サイドキック",
+				"itemDenomination": "サイドキック",
+				"description": "メンバーがパーティーに参加したときのサイドキック。"
 			}
 		}
 	}

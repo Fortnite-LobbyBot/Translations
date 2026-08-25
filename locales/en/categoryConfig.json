@@ -26,6 +26,16 @@
 				"itemDenomination": "prefix",
 				"description": "Allowed prefixes to trigger commands."
 			},
+			"statusType": {
+				"name": "Status Type",
+				"itemDenomination": "status type",
+				"description": "How the bot's online presence is shown.",
+				"selectOptions": {
+					"auto": "Auto",
+					"online": "Online",
+					"away": "Away"
+				}
+			},
 			"statusText": {
 				"name": "Status Message",
 				"itemDenomination": "status message",
@@ -152,9 +162,9 @@
 				"description": "The bot leaves the party after matchmaking starts."
 			},
 			"disableMatchmakingChecks": {
-				"name": "Disable Matchmaking Checks",
-				"itemDenomination": "disable matchmaking checks",
-				"description": "Remove the matchmaking cooldown limit (max 5 matches per hour)."
+				"name": "Disable Matchmaking Cooldown",
+				"itemDenomination": "disable matchmaking cooldown",
+				"description": "Remove the 20-minute cooldown between bot lobby matches."
 			},
 			"disablePlaylistChecks": {
 				"name": "Disable Game Mode Checks",
@@ -274,6 +284,11 @@
 				"itemDenomination": "shoes",
 				"description": "Default shoes when the bot starts."
 			},
+			"startSidekick": {
+				"name": "Start Sidekick",
+				"itemDenomination": "sidekick",
+				"description": "Default sidekick(s) when the bot starts."
+			},
 			"startBanner": {
 				"name": "Start Banner",
 				"itemDenomination": "banner",
@@ -309,6 +324,11 @@
 				"itemDenomination": "shoes",
 				"description": "Shoes to wear when joining a party."
 			},
+			"joinSidekick": {
+				"name": "Join Sidekick",
+				"itemDenomination": "sidekick",
+				"description": "Sidekick(s) to equip when joining a party."
+			},
 			"joinBanner": {
 				"name": "Join Banner",
 				"itemDenomination": "banner",
@@ -343,6 +363,11 @@
 				"name": "Member Join Shoes",
 				"itemDenomination": "shoes",
 				"description": "Shoes to set when a member joins the party."
+			},
+			"memberJoinSidekick": {
+				"name": "Member Join Sidekick",
+				"itemDenomination": "sidekick",
+				"description": "Sidekick(s) to set when a member joins the party."
 			},
 			"memberJoinBanner": {
 				"name": "Member Join Banner",

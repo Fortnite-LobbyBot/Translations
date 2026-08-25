@@ -7,6 +7,15 @@
 			"only_for_owners": "To polecenie jest dostępne tylko dla właścicieli botów.",
 			"only_for_admins": "To polecenie jest dostępne tylko dla administratorów BOT.",
 			"only_for_whitelist": "To polecenie jest dostępne tylko dla użytkowników na białej bota."
+		},
+		"cosmetic_types": {
+			"outfit": "Strój",
+			"backpack": "Plecak",
+			"emoji": "Emoji",
+			"emote": "Emotka",
+			"pickaxe": "Kilof",
+			"shoe": "Buty",
+			"sidekick": "Sidekick"
 		}
 	},
 	"all_items": {

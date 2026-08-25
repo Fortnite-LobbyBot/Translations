@@ -75,6 +75,16 @@
 				"name": "مستوى بطاقة المعركة",
 				"itemDenomination": "مستوى بطاقة المعركة",
 				"description": "مستوى بطاقة المعركة التجميلية للبوت."
+			},
+			"statusType": {
+				"name": "نوع الحالة",
+				"itemDenomination": "نوع الحالة",
+				"description": "كيفية عرض حالة البوت على الإنترنت.",
+				"selectOptions": {
+					"auto": "تلقائي",
+					"online": "متصل",
+					"away": "بعيد"
+				}
 			}
 		}
 	},
@@ -154,7 +164,7 @@
 			"disableMatchmakingChecks": {
 				"name": "تعطيل فحوصات المطابقة",
 				"itemDenomination": "تعطيل فحوصات المطابقة",
-				"description": "إزالة حد التهدئة للمطابقة (5 مباريات كحد أقصى في الساعة)."
+				"description": "يزيل فترة الانتظار لمدة 20 دقيقة بين مباريات لوبي البوتات."
 			},
 			"disablePlaylistChecks": {
 				"name": "تعطيل فحوصات أوضاع اللعب",
@@ -205,6 +215,11 @@
 				"name": "قبول الدعوات",
 				"itemDenomination": "قبول الدعوات",
 				"description": "قبول الدعوات وطلبات الانضمام تلقائياً."
+			},
+			"startBannedBots": {
+				"name": "تشغيل البوتات المحظورة",
+				"itemDenomination": "تشغيل البوتات المحظورة",
+				"description": "إذا تم التفعيل، ستبدأ البوتات حتى لو كانت محظورة من المطابقة."
 			}
 		}
 	},
@@ -348,6 +363,21 @@
 				"name": "لون الشعار عند انضمام عضو",
 				"itemDenomination": "لون الشعار",
 				"description": "لون الشعار عند انضمام عضو إلى المجموعة."
+			},
+			"startSidekick": {
+				"name": "رفيق البدء",
+				"itemDenomination": "رفيق",
+				"description": "الرفيق الافتراضي عند بدء البوت."
+			},
+			"joinSidekick": {
+				"name": "رفيق الانضمام",
+				"itemDenomination": "رفيق",
+				"description": "الرفيق عند الانضمام إلى المجموعة."
+			},
+			"memberJoinSidekick": {
+				"name": "رفيق انضمام العضو",
+				"itemDenomination": "رفيق",
+				"description": "الرفيق عند انضمام عضو إلى المجموعة."
 			}
 		}
 	}

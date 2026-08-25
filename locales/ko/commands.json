@@ -7,6 +7,15 @@
 			"only_for_owners": "이 명령은 봇 소유자에게만 사용할 수 있습니다.",
 			"only_for_admins": "이 명령은 봇 관리자에게만 사용할 수 있습니다.",
 			"only_for_whitelist": "이 명령은 봇의 화이트리스트에있는 사용자 만 사용할 수 있습니다."
+		},
+		"cosmetic_types": {
+			"outfit": "차림새",
+			"backpack": "배낭",
+			"emoji": "이모티콘",
+			"emote": "감정",
+			"pickaxe": "곡괭이",
+			"shoe": "신발",
+			"sidekick": "사이드킥"
 		}
 	},
 	"all_items": {

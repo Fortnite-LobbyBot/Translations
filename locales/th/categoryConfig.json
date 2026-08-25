@@ -75,6 +75,16 @@
 				"name": "เลเวล Battle Pass",
 				"itemDenomination": "เลเวล Battle Pass",
 				"description": "เลเวล Battle Pass เครื่องสำอางของบอท"
+			},
+			"statusType": {
+				"name": "ประเภทสถานะ",
+				"itemDenomination": "ประเภทสถานะ",
+				"description": "วิธีแสดงสถานะออนไลน์ของบอท",
+				"selectOptions": {
+					"auto": "อัตโนมัติ",
+					"online": "ออนไลน์",
+					"away": "ไม่อยู่"
+				}
 			}
 		}
 	},
@@ -154,7 +164,7 @@
 			"disableMatchmakingChecks": {
 				"name": "ปิดการตรวจสอบจับคู่",
 				"itemDenomination": "ปิดการตรวจสอบจับคู่",
-				"description": "ลบขีดจำกัดการจับคู่ (สูงสุด 5 แมตช์ต่อชั่วโมง)"
+				"description": "ลบเวลารอ 20 นาทีระหว่างแมตช์ในล็อบบี้บอท"
 			},
 			"disablePlaylistChecks": {
 				"name": "ปิดการตรวจสอบโหมดเกม",
@@ -205,6 +215,11 @@
 				"name": "ยอมรับคำเชิญ",
 				"itemDenomination": "ยอมรับคำเชิญ",
 				"description": "ยอมรับคำเชิญและคำขอเข้าร่วมกลุ่มโดยอัตโนมัติ"
+			},
+			"startBannedBots": {
+				"name": "เริ่มบอทที่ถูกแบน",
+				"itemDenomination": "เริ่มบอทที่ถูกแบน",
+				"description": "หากเปิดใช้งาน บอทจะเริ่มแม้ถูกแบนจากแมตช์เมกกิ้ง"
 			}
 		}
 	},
@@ -348,6 +363,21 @@
 				"name": "สีแบนเนอร์เมื่อสมาชิกใหม่เข้าร่วม",
 				"itemDenomination": "สีแบนเนอร์",
 				"description": "สีแบนเนอร์เมื่อสมาชิกใหม่เข้าร่วมกลุ่ม"
+			},
+			"startSidekick": {
+				"name": "Sidekick เริ่มต้น",
+				"itemDenomination": "sidekick",
+				"description": "Sidekick เริ่มต้นเมื่อบอทเริ่มทำงาน"
+			},
+			"joinSidekick": {
+				"name": "Sidekick เมื่อเข้าร่วม",
+				"itemDenomination": "sidekick",
+				"description": "Sidekick เมื่อเข้าร่วมปาร์ตี้"
+			},
+			"memberJoinSidekick": {
+				"name": "Sidekick เมื่อสมาชิกเข้าร่วม",
+				"itemDenomination": "sidekick",
+				"description": "Sidekick เมื่อสมาชิกเข้าร่วมปาร์ตี้"
 			}
 		}
 	}

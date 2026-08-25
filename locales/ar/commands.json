@@ -7,6 +7,15 @@
 			"only_for_owners": "هذا الأمر متاح فقط لأصحاب الروبوت.",
 			"only_for_admins": "هذا الأمر متاح فقط لمسؤولي BOT.",
 			"only_for_whitelist": "هذا الأمر متاح فقط للمستخدمين على القائمة البيضاء في الروبوت."
+		},
+		"cosmetic_types": {
+			"outfit": "زيّ",
+			"backpack": "حقيبة ظهر",
+			"emoji": "الرموز التعبيرية",
+			"emote": "emote",
+			"pickaxe": "معول",
+			"shoe": "أحذية",
+			"sidekick": "رفيق"
 		}
 	},
 	"all_items": {

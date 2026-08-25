@@ -75,6 +75,16 @@
 				"name": "戰令等級",
 				"itemDenomination": "戰令等級",
 				"description": "機器人的外觀戰令等級。"
+			},
+			"statusType": {
+				"name": "狀態類型",
+				"itemDenomination": "狀態類型",
+				"description": "機器人線上狀態的顯示方式。",
+				"selectOptions": {
+					"auto": "自動",
+					"online": "線上",
+					"away": "離開"
+				}
 			}
 		}
 	},
@@ -154,7 +164,7 @@
 			"disableMatchmakingChecks": {
 				"name": "停用配對檢查",
 				"itemDenomination": "停用配對檢查",
-				"description": "移除配對冷卻限制（每小時最多5場）。"
+				"description": "移除機器人大廳對局之間的20分鐘冷卻時間。"
 			},
 			"disablePlaylistChecks": {
 				"name": "停用模式檢查",
@@ -205,6 +215,11 @@
 				"name": "自動接受邀請",
 				"itemDenomination": "自動接受邀請",
 				"description": "自動接受組隊邀請和加入請求。"
+			},
+			"startBannedBots": {
+				"name": "啟動被禁機器人",
+				"itemDenomination": "啟動被禁機器人",
+				"description": "啟用後，即使機器人被禁止配對也會啟動。"
 			}
 		}
 	},
@@ -348,6 +363,21 @@
 				"name": "成員加入旗幟顏色",
 				"itemDenomination": "旗幟顏色",
 				"description": "成員加入組隊時設定的旗幟顏色。"
+			},
+			"startSidekick": {
+				"name": "啟動搭檔",
+				"itemDenomination": "搭檔",
+				"description": "機器人啟動時的預設搭檔。"
+			},
+			"joinSidekick": {
+				"name": "加入搭檔",
+				"itemDenomination": "搭檔",
+				"description": "加入派對時裝備的搭檔。"
+			},
+			"memberJoinSidekick": {
+				"name": "成員加入搭檔",
+				"itemDenomination": "搭檔",
+				"description": "成員加入派對時設定的搭檔。"
 			}
 		}
 	}

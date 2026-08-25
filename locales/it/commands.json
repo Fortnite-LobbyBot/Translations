@@ -7,6 +7,15 @@
 			"only_for_owners": "Questo comando è disponibile solo per i proprietari di bot.",
 			"only_for_admins": "Questo comando è disponibile solo per gli amministratori di bot.",
 			"only_for_whitelist": "Questo comando è disponibile solo per gli utenti nella whitelist del bot."
+		},
+		"cosmetic_types": {
+			"outfit": "Vestito",
+			"backpack": "Zaino",
+			"emoji": "Emoji",
+			"emote": "Emote",
+			"pickaxe": "Piccone",
+			"shoe": "Scarpe",
+			"sidekick": "Sidekick"
 		}
 	},
 	"all_items": {

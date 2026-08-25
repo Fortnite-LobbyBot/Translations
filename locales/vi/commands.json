@@ -7,6 +7,15 @@
 			"only_for_owners": "Lệnh này chỉ có sẵn cho chủ sở hữu bot.",
 			"only_for_admins": "Lệnh này chỉ có sẵn cho quản trị viên bot.",
 			"only_for_whitelist": "Lệnh này chỉ có sẵn cho người dùng trên danh sách trắng của bot."
+		},
+		"cosmetic_types": {
+			"outfit": "Trang phục",
+			"backpack": "Balo",
+			"emoji": "Biểu tượng cảm xúc",
+			"emote": "Emote",
+			"pickaxe": "Pickaxe",
+			"shoe": "Đôi giày",
+			"sidekick": "Sidekick"
 		}
 	},
 	"all_items": {

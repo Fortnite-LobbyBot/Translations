@@ -75,6 +75,16 @@
 				"name": "Poziom karnetu bojowego",
 				"itemDenomination": "poziom karnetu bojowego",
 				"description": "Kosmetyczny poziom karnetu bojowego bota."
+			},
+			"statusType": {
+				"name": "Typ statusu",
+				"itemDenomination": "typ statusu",
+				"description": "Jak wyświetlana jest obecność bota online.",
+				"selectOptions": {
+					"auto": "Auto",
+					"online": "Online",
+					"away": "Nieobecny"
+				}
 			}
 		}
 	},
@@ -154,7 +164,7 @@
 			"disableMatchmakingChecks": {
 				"name": "Wyłącz sprawdzanie matchmakingu",
 				"itemDenomination": "wyłącz sprawdzanie matchmakingu",
-				"description": "Usuń limit czasu matchmakingu (maks 5 gier na godzinę)."
+				"description": "Usuwa 20-minutowy czas oczekiwania między meczami w lobby botów."
 			},
 			"disablePlaylistChecks": {
 				"name": "Wyłącz sprawdzanie trybu gry",
@@ -205,6 +215,11 @@
 				"name": "Akceptuj zaproszenia",
 				"itemDenomination": "akceptuj zaproszenia",
 				"description": "Automatycznie akceptuj zaproszenia do grupy i prośby o dołączenie."
+			},
+			"startBannedBots": {
+				"name": "Uruchom zbanowane boty",
+				"itemDenomination": "uruchom zbanowane boty",
+				"description": "Jeśli włączone, boty uruchomią się nawet przy banie matchmakingu."
 			}
 		}
 	},
@@ -348,6 +363,21 @@
 				"name": "Kolor banera przy dołączeniu członka",
 				"itemDenomination": "kolor banera",
 				"description": "Kolor banera do ustawienia, gdy członek dołącza do grupy."
+			},
+			"startSidekick": {
+				"name": "Sidekick startowy",
+				"itemDenomination": "sidekick",
+				"description": "Domyślny sidekick przy starcie bota."
+			},
+			"joinSidekick": {
+				"name": "Sidekick przy dołączeniu",
+				"itemDenomination": "sidekick",
+				"description": "Sidekick przy dołączeniu do grupy."
+			},
+			"memberJoinSidekick": {
+				"name": "Sidekick przy dołączeniu członka",
+				"itemDenomination": "sidekick",
+				"description": "Sidekick, gdy członek dołącza do grupy."
 			}
 		}
 	}

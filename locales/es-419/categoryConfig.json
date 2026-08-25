@@ -75,6 +75,16 @@
 				"name": "Nivel de Pase de Batalla",
 				"itemDenomination": "nivel de pase de batalla",
 				"description": "Nivel de pase de batalla cosmético del bot."
+			},
+			"statusType": {
+				"name": "Tipo de estado",
+				"itemDenomination": "tipo de estado",
+				"description": "Cómo se muestra la presencia en línea del bot.",
+				"selectOptions": {
+					"auto": "Automático",
+					"online": "En línea",
+					"away": "Ausente"
+				}
 			}
 		}
 	},
@@ -154,7 +164,7 @@
 			"disableMatchmakingChecks": {
 				"name": "Desactivar Comprobaciones de Emparejamiento",
 				"itemDenomination": "desactivar comprobaciones de emparejamiento",
-				"description": "Quitar el límite de enfriamiento de emparejamiento (máx 5 partidas por hora)."
+				"description": "Quita la espera de 20 minutos entre partidas en lobby de bots."
 			},
 			"disablePlaylistChecks": {
 				"name": "Desactivar Comprobaciones de Modo de Juego",
@@ -205,6 +215,11 @@
 				"name": "Aceptar Invitaciones",
 				"itemDenomination": "aceptar invitaciones",
 				"description": "Aceptar automáticamente invitaciones y solicitudes para unirse al grupo."
+			},
+			"startBannedBots": {
+				"name": "Iniciar bots baneados",
+				"itemDenomination": "iniciar bots baneados",
+				"description": "Si está activado, los bots iniciarán aunque estén baneados del emparejamiento."
 			}
 		}
 	},
@@ -348,6 +363,21 @@
 				"name": "Color de Banner al Unirse un Miembro",
 				"itemDenomination": "color de banner",
 				"description": "Color(es) de banner al unirse un miembro al grupo."
+			},
+			"startSidekick": {
+				"name": "Acompañante de inicio",
+				"itemDenomination": "acompañante",
+				"description": "Acompañante(s) predeterminado(s) cuando el bot inicia."
+			},
+			"joinSidekick": {
+				"name": "Acompañante al unirse",
+				"itemDenomination": "acompañante",
+				"description": "Acompañante(s) al unirse a una fiesta."
+			},
+			"memberJoinSidekick": {
+				"name": "Acompañante al unirse un miembro",
+				"itemDenomination": "acompañante",
+				"description": "Acompañante(s) cuando un miembro se une a la fiesta."
 			}
 		}
 	}

@@ -7,6 +7,15 @@
 			"only_for_owners": "Perintah ini hanya tersedia untuk pemilik bot.",
 			"only_for_admins": "Perintah ini hanya tersedia untuk administrator bot.",
 			"only_for_whitelist": "Perintah ini hanya tersedia untuk pengguna di daftar putih bot."
+		},
+		"cosmetic_types": {
+			"outfit": "Pakaian",
+			"backpack": "Ransel",
+			"emoji": "Emoji",
+			"emote": "Emote",
+			"pickaxe": "Beliung",
+			"shoe": "Sepatu",
+			"sidekick": "Sidekick"
 		}
 	},
 	"all_items": {

@@ -7,6 +7,15 @@
 			"only_for_party_members": "פקודה זו זמינה רק לחברי הפארטי שלי.",
 			"need_party_leader": "אני צריך להיות מנהיג הפארטי כדי לבצע את הפקודה הזו!",
 			"only_for_admins": "פקודה זו זמינה רק למנהלי בוטים."
+		},
+		"cosmetic_types": {
+			"outfit": "סקין",
+			"backpack": "תיק",
+			"emoji": "אמוג׳י",
+			"emote": "ריקוד",
+			"pickaxe": "פיקקס",
+			"shoe": "נעליים",
+			"sidekick": "Sidekick"
 		}
 	},
 	"all_items": {

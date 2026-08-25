@@ -7,6 +7,15 @@
 			"only_for_owners": "此命令仅适用于机器人所有者。",
 			"only_for_admins": "此命令仅适用于机器人管理员。",
 			"only_for_whitelist": "此命令仅适用于机器人白名单上的用户。"
+		},
+		"cosmetic_types": {
+			"outfit": "全套服装",
+			"backpack": "背包",
+			"emoji": "表情符号",
+			"emote": "表情",
+			"pickaxe": "Pickaxe",
+			"shoe": "鞋",
+			"sidekick": "搭档"
 		}
 	},
 	"all_items": {

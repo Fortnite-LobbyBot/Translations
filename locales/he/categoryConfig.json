@@ -75,6 +75,16 @@
 				"name": "רמת מעבר קרב",
 				"itemDenomination": "רמת מעבר קרב",
 				"description": "הקרב הקוסמטי של הבוט עובר את רמת העברת."
+			},
+			"statusType": {
+				"name": "סוג סטטוס",
+				"itemDenomination": "סוג סטטוס",
+				"description": "כיצד מוצגת נוכחות מקוונת של הבוט.",
+				"selectOptions": {
+					"auto": "אוטומטי",
+					"online": "מחובר",
+					"away": "לא זמין"
+				}
 			}
 		}
 	},
@@ -154,7 +164,7 @@
 			"disableMatchmakingChecks": {
 				"name": "השבת בדיקות שידוכים",
 				"itemDenomination": "השבת בדיקות שידוכים",
-				"description": "הסר את גבול ההשתקפות (מקסימום 5 התאמות לשעה)."
+				"description": "מסיר את ההמתנה של 20 דקות בין משחקים בלובי בוטים."
 			},
 			"disablePlaylistChecks": {
 				"name": "השבת בדיקות מצב משחק",
@@ -353,6 +363,21 @@
 				"name": "חבר הצטרף לצבע באנר",
 				"itemDenomination": "צבע באנר",
 				"description": "צבעי באנר (ים) לקבוע כאשר חבר מצטרף למסיבה."
+			},
+			"startSidekick": {
+				"name": "Sidekick התחלה",
+				"itemDenomination": "sidekick",
+				"description": "Sidekick ברירת מחדל בעת הפעלת הבוט."
+			},
+			"joinSidekick": {
+				"name": "Sidekick הצטרפות",
+				"itemDenomination": "sidekick",
+				"description": "Sidekick בעת הצטרפות למסיבה."
+			},
+			"memberJoinSidekick": {
+				"name": "Sidekick הצטרפת חבר",
+				"itemDenomination": "sidekick",
+				"description": "Sidekick כשחבר מצטרף למסיבה."
 			}
 		}
 	}

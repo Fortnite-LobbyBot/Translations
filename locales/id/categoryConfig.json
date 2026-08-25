@@ -75,6 +75,16 @@
 				"name": "Level Battle Pass",
 				"itemDenomination": "level battle pass",
 				"description": "Level battle pass kosmetik bot."
+			},
+			"statusType": {
+				"name": "Jenis Status",
+				"itemDenomination": "jenis status",
+				"description": "Cara kehadiran online bot ditampilkan.",
+				"selectOptions": {
+					"auto": "Otomatis",
+					"online": "Online",
+					"away": "Away"
+				}
 			}
 		}
 	},
@@ -154,7 +164,7 @@
 			"disableMatchmakingChecks": {
 				"name": "Nonaktifkan Cek Matchmaking",
 				"itemDenomination": "nonaktifkan cek matchmaking",
-				"description": "Hapus batas cooldown matchmaking (maks 5 pertandingan per jam)."
+				"description": "Menghapus jeda 20 menit antar pertandingan di lobby bot."
 			},
 			"disablePlaylistChecks": {
 				"name": "Nonaktifkan Cek Mode Permainan",
@@ -205,6 +215,11 @@
 				"name": "Terima Undangan",
 				"itemDenomination": "terima undangan",
 				"description": "Otomatis menerima undangan dan permintaan gabung grup."
+			},
+			"startBannedBots": {
+				"name": "Mulai Bot yang Diblokir",
+				"itemDenomination": "mulai bot yang diblokir",
+				"description": "Jika diaktifkan, bot akan tetap mulai meskipun diblokir dari matchmaking."
 			}
 		}
 	},
@@ -348,6 +363,21 @@
 				"name": "Warna Banner Saat Anggota Gabung",
 				"itemDenomination": "warna banner",
 				"description": "Warna banner saat anggota bergabung ke grup."
+			},
+			"startSidekick": {
+				"name": "Sidekick Mulai",
+				"itemDenomination": "sidekick",
+				"description": "Sidekick default saat bot dimulai."
+			},
+			"joinSidekick": {
+				"name": "Sidekick Bergabung",
+				"itemDenomination": "sidekick",
+				"description": "Sidekick saat bergabung ke pesta."
+			},
+			"memberJoinSidekick": {
+				"name": "Sidekick Anggota Bergabung",
+				"itemDenomination": "sidekick",
+				"description": "Sidekick saat anggota bergabung ke pesta."
 			}
 		}
 	}

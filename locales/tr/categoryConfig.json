@@ -75,6 +75,16 @@
 				"name": "Battle Pass Seviyesi",
 				"itemDenomination": "battle pass seviyesi",
 				"description": "Botun kozmetik battle pass seviyesi."
+			},
+			"statusType": {
+				"name": "Durum Türü",
+				"itemDenomination": "durum türü",
+				"description": "Botun çevrimiçi durumunun nasıl gösterildiği.",
+				"selectOptions": {
+					"auto": "Otomatik",
+					"online": "Çevrimiçi",
+					"away": "Uzakta"
+				}
 			}
 		}
 	},
@@ -154,7 +164,7 @@
 			"disableMatchmakingChecks": {
 				"name": "Eşleştirme Kontrollerini Devre Dışı Bırak",
 				"itemDenomination": "eşleştirme kontrollerini devre dışı bırak",
-				"description": "Eşleştirme bekleme sınırını kaldır (saatte en fazla 5 maç)."
+				"description": "Bot lobisi maçları arasındaki 20 dakikalık bekleme süresini kaldırır."
 			},
 			"disablePlaylistChecks": {
 				"name": "Oyun Modu Kontrollerini Devre Dışı Bırak",
@@ -205,6 +215,11 @@
 				"name": "Davetleri Kabul Et",
 				"itemDenomination": "davetleri kabul et",
 				"description": "Davetleri ve gruba katılma isteklerini otomatik olarak kabul et."
+			},
+			"startBannedBots": {
+				"name": "Yasaklı botları başlat",
+				"itemDenomination": "yasaklı botları başlat",
+				"description": "Etkinleştirilirse, eşleştirmeden yasaklı botlar bile başlar."
 			}
 		}
 	},
@@ -348,6 +363,21 @@
 				"name": "Üye Katılınca Afiş Rengi",
 				"itemDenomination": "afiş rengi",
 				"description": "Bir üye katılınca ayarlanacak afiş rengi."
+			},
+			"startSidekick": {
+				"name": "Başlangıç Sidekick",
+				"itemDenomination": "sidekick",
+				"description": "Bot başlarken varsayılan sidekick."
+			},
+			"joinSidekick": {
+				"name": "Katılım Sidekick",
+				"itemDenomination": "sidekick",
+				"description": "Partiye katılırken sidekick."
+			},
+			"memberJoinSidekick": {
+				"name": "Üye Katılım Sidekick",
+				"itemDenomination": "sidekick",
+				"description": "Üye partiye katıldığında sidekick."
 			}
 		}
 	}

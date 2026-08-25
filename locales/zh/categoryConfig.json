@@ -75,6 +75,16 @@
 				"name": "战令等级",
 				"itemDenomination": "战令等级",
 				"description": "机器人的外观战令等级。"
+			},
+			"statusType": {
+				"name": "状态类型",
+				"itemDenomination": "状态类型",
+				"description": "机器人在线状态的显示方式。",
+				"selectOptions": {
+					"auto": "自动",
+					"online": "在线",
+					"away": "离开"
+				}
 			}
 		}
 	},
@@ -154,7 +164,7 @@
 			"disableMatchmakingChecks": {
 				"name": "禁用匹配检查",
 				"itemDenomination": "禁用匹配检查",
-				"description": "移除匹配冷却限制（每小时最多5场）。"
+				"description": "移除机器人大厅对局之间的20分钟冷却时间。"
 			},
 			"disablePlaylistChecks": {
 				"name": "禁用模式检查",
@@ -205,6 +215,11 @@
 				"name": "自动接受邀请",
 				"itemDenomination": "自动接受邀请",
 				"description": "自动接受组队邀请和加入请求。"
+			},
+			"startBannedBots": {
+				"name": "启动被禁机器人",
+				"itemDenomination": "启动被禁机器人",
+				"description": "启用后，即使机器人被禁止匹配也会启动。"
 			}
 		}
 	},
@@ -348,6 +363,21 @@
 				"name": "成员加入旗帜颜色",
 				"itemDenomination": "旗帜颜色",
 				"description": "成员加入组队时设置的旗帜颜色。"
+			},
+			"startSidekick": {
+				"name": "启动搭档",
+				"itemDenomination": "搭档",
+				"description": "机器人启动时的默认搭档。"
+			},
+			"joinSidekick": {
+				"name": "加入搭档",
+				"itemDenomination": "搭档",
+				"description": "加入派对时装备的搭档。"
+			},
+			"memberJoinSidekick": {
+				"name": "成员加入搭档",
+				"itemDenomination": "搭档",
+				"description": "成员加入派对时设置的搭档。"
 			}
 		}
 	}
