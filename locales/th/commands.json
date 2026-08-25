@@ -7,6 +7,15 @@
 			"only_for_owners": "คำสั่งนี้ใช้ได้เฉพาะกับเจ้าของบอทเท่านั้น",
 			"only_for_admins": "คำสั่งนี้ใช้ได้เฉพาะสำหรับผู้ดูแลระบบบอทเท่านั้น",
 			"only_for_whitelist": "คำสั่งนี้ใช้ได้เฉพาะกับผู้ใช้ที่ได้รับการอนุญาตของบอท"
+		},
+		"cosmetic_types": {
+			"outfit": "ชุดเสื้อผ้า",
+			"backpack": "กระเป๋าเป้สะพายหลัง",
+			"emoji": "อีโมจิ",
+			"emote": "เปล่งเสียง",
+			"pickaxe": "รั้ว",
+			"shoe": "รองเท้า",
+			"sidekick": "Sidekick"
 		}
 	},
 	"all_items": {
@@ -401,6 +410,10 @@
 				"shoes": {
 					"name": "รหัสรองเท้า",
 					"description": "ID ของรองเท้า"
+				},
+				"sidekick": {
+					"name": "รหัส Sidekick",
+					"description": "ID ของ Sidekick"
 				}
 			}
 		},
@@ -1216,8 +1229,7 @@
 					"description": "ข้อความที่จะส่งไปยังปาร์ตี้"
 				}
 			}
-		},
-		"run": {}
+		}
 	},
 	"set_custom_key": {
 		"config": {

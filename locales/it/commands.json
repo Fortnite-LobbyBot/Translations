@@ -7,6 +7,15 @@
 			"only_for_owners": "Questo comando è disponibile solo per i proprietari di bot.",
 			"only_for_admins": "Questo comando è disponibile solo per gli amministratori di bot.",
 			"only_for_whitelist": "Questo comando è disponibile solo per gli utenti nella whitelist del bot."
+		},
+		"cosmetic_types": {
+			"outfit": "Vestito",
+			"backpack": "Zaino",
+			"emoji": "Emoji",
+			"emote": "Emote",
+			"pickaxe": "Piccone",
+			"shoe": "Scarpe",
+			"sidekick": "Sidekick"
 		}
 	},
 	"all_items": {
@@ -223,7 +232,7 @@
 		"run": {
 			"msg": {
 				"emote_not_found": "EMOTE {{query}} non trovato!",
-				"emote_changed": "Imposta Emote Emoji su {{name}}! ({{id}})"
+				"emote_changed": "Imposta Emote su {{name}}! ({{id}})"
 			}
 		}
 	},
@@ -401,6 +410,10 @@
 				"shoes": {
 					"name": "Scarpe id",
 					"description": "L'ID delle scarpe."
+				},
+				"sidekick": {
+					"name": "ID sidekick",
+					"description": "L'ID del sidekick."
 				}
 			}
 		},
@@ -1216,8 +1229,7 @@
 					"description": "Il messaggio da inviare alla parte."
 				}
 			}
-		},
-		"run": {}
+		}
 	},
 	"set_custom_key": {
 		"config": {

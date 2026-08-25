@@ -1,17 +1,35 @@
 {
 	"handler": {
 		"errors": {
-			"only_for_party_members": "This command is only available for members of my party.",
+			"only_for_party_members": "This command is only available to members of my party.",
 			"only_for_private_messages": "This command is only available in private messages.",
 			"need_party_leader": "I need to be the party leader to execute this command!",
-			"only_for_owners": "This command is only available for bot owners.",
-			"only_for_admins": "This command is only available for bot administrators.",
-			"only_for_whitelist": "This command is only available for users on the whitelist of the bot."
+			"only_for_owners": "This command is only available to bot owners.",
+			"only_for_admins": "This command is only available to bot administrators.",
+			"only_for_whitelist": "This command is only available to users on the bot's whitelist.",
+			"requires_author_target": "Specify a user for this command (or link your Epic account to use yourself as the target)."
+		},
+		"cosmetic_types": {
+			"outfit": "Outfit",
+			"backpack": "Backpack",
+			"petcarrier": "Pet Carrier",
+			"emoji": "Emoji",
+			"emote": "Emote",
+			"track": "Track",
+			"pickaxe": "Pickaxe",
+			"shoe": "Shoes",
+			"sidekick": "Sidekick"
+		},
+		"track_instruments": {
+			"drum": "Drums",
+			"vox": "Vocals",
+			"bass": "Bass",
+			"lead": "Lead"
 		}
 	},
 	"all_items": {
 		"config": {
-			"description": "Shows all the cosmetics of the game, an optional filter can be added and you can stop with the \"stop\" command.",
+			"description": "Displays all in-game cosmetics. You can add an optional filter and stop with the \"stop\" command.",
 			"usage": {
 				"filter": {
 					"name": "Filter",
@@ -23,11 +41,11 @@
 						"pickaxes": "Pickaxes",
 						"shoes": "Shoes"
 					},
-					"description": "The filter to be set by showing the items."
+					"description": "The filter to apply when showing items."
 				},
 				"random_order": {
 					"name": "Random order",
-					"description": "Use a random order instead of ordering by newest first.",
+					"description": "Show items in a random order instead of by newest first.",
 					"options": {
 						"yes": "Yes",
 						"no": "No"
@@ -37,11 +55,11 @@
 		},
 		"run": {
 			"msg": {
-				"no_items": "Unable to fetch the items.",
-				"items_already_displaying": "Cosmetics are already being displayed, it must first be stopped with the \"stop\" command.",
-				"setting_items": "Setting all game items... {{filtered}}",
+				"no_items": "Unable to fetch items.",
+				"items_already_displaying": "Cosmetics are already being displayed. Please stop them first with the \"stop\" command.",
+				"setting_items": "Displaying all game items... {{filtered}}",
 				"filtered_by": "(filtered by {{filter}})",
-				"items_showed": "I have finished showing all the items..."
+				"items_showed": "Finished displaying all items."
 			}
 		}
 	},
@@ -50,8 +68,8 @@
 			"description": "Sets the bot's backpack.",
 			"usage": {
 				"query": {
-					"name": "Backpack name or ID",
-					"description": "The name or ID of the backpack to be set."
+					"name": "Backbling name or ID",
+					"description": "The name or ID of the backbling to set."
 				}
 			}
 		},
@@ -70,9 +88,9 @@
 			"msg": {
 				"backpack_not_found": "The bot does not have a backpack!",
 				"invalid_backpack": "Invalid backpack!",
-				"variants_not_founded": "This backpack does not have variants!",
-				"variants_select": "Send the variant you want to select for {{type}}",
-				"variants_changed": "Set the backpack variants!"
+				"variants_not_found": "This backpack does not have variants!",
+				"variants_select": "Send the variant you want to select for {{type}}.",
+				"changed": "Backpack variants set!"
 			}
 		}
 	},
@@ -94,17 +112,17 @@
 			"msg": {
 				"banner_not_found": "Banner {{item}} not found!",
 				"color_not_found": "Color {{item}} not found!",
-				"banner_changed": "Set the banner to {{name}}! ({{id}})"
+				"banner_changed": "Banner set to {{name}}! ({{id}})"
 			}
 		}
 	},
 	"clear_backpack": {
 		"config": {
-			"description": "Removes the backpack of the bot."
+			"description": "Removes the bot's backpack."
 		},
 		"run": {
 			"msg": {
-				"backpack_cleared": "Cleared backpack!"
+				"backpack_cleared": "Backpack cleared!"
 			}
 		}
 	},
@@ -114,17 +132,27 @@
 		},
 		"run": {
 			"msg": {
-				"emote_cleared": "Cleared emote!"
+				"emote_cleared": "Emote cleared!"
 			}
 		}
 	},
 	"clear_shoes": {
 		"config": {
-			"description": "Removes the shoes of the bot."
+			"description": "Removes the bot's shoes."
 		},
 		"run": {
 			"msg": {
-				"shoes_cleared": "Cleared shoes!"
+				"shoes_cleared": "Shoes cleared!"
+			}
+		}
+	},
+	"clear_sidekick": {
+		"config": {
+			"description": "Removes the bot's sidekick."
+		},
+		"run": {
+			"msg": {
+				"sidekick_cleared": "Sidekick cleared!"
 			}
 		}
 	},
@@ -173,7 +201,9 @@
 		"run": {
 			"msg": {
 				"cosmetic_not_found": "Cosmetic {{query}} not found!",
-				"cosmetic_changed": "Set the {{type}} to {{name}}! ({{id}})"
+				"cosmetic_changed": "Set the {{type}} to {{name}}! ({{id}})",
+				"instrument_select": "Select an instrument for {{name}}:",
+				"instrument_not_found": "Instrument {{query}} not found!"
 			}
 		}
 	},
@@ -223,7 +253,7 @@
 		"run": {
 			"msg": {
 				"emote_not_found": "Emote {{query}} not found!",
-				"emote_changed": "Set the emote emoji to {{name}}! ({{id}})"
+				"emote_changed": "Set the emote to {{name}}! ({{id}})"
 			}
 		}
 	},
@@ -378,6 +408,23 @@
 			}
 		}
 	},
+	"petcarrier": {
+		"config": {
+			"description": "Sets the bot's pet carrier.",
+			"usage": {
+				"query": {
+					"name": "Pet carrier name or ID",
+					"description": "The name or ID of the pet carrier to set."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"petcarrier_not_found": "Pet carrier {{query}} not found!",
+				"petcarrier_changed": "Set the pet carrier to {{name}}! ({{id}})"
+			}
+		}
+	},
 	"preset": {
 		"config": {
 			"description": "Sets the bot's preset. Use \"none\" to remove a cosmetic.",
@@ -401,6 +448,10 @@
 				"shoes": {
 					"name": "Shoes ID",
 					"description": "The ID of the shoes."
+				},
+				"sidekick": {
+					"name": "Sidekick ID",
+					"description": "The ID of the sidekick."
 				}
 			}
 		},
@@ -475,6 +526,60 @@
 				"showing_items": "Setting all the items in the shop... {{filter}}",
 				"filter": "(filtered by {{query}})",
 				"ended": "I have finished showing all the items in the store..."
+			}
+		}
+	},
+	"track": {
+		"config": {
+			"description": "Sets the bot's jam track.",
+			"usage": {
+				"query": {
+					"name": "Track name or ID",
+					"description": "The name or ID of the track to set."
+				},
+				"instrument": {
+					"name": "Instrument",
+					"description": "The instrument part to play (Drum, Vox, Bass, or Lead)."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"track_not_found": "Track {{query}} not found!",
+				"track_changed": "Set the track to {{name}} ({{instrument}})! ({{id}})",
+				"instrument_select": "Select an instrument for {{name}}:",
+				"instrument_not_found": "Instrument {{query}} not found!"
+			}
+		}
+	},
+	"sidekick": {
+		"config": {
+			"description": "Sets the bot's sidekick.",
+			"usage": {
+				"query": {
+					"name": "Sidekick name or ID",
+					"description": "The name or ID of the sidekick to be set."
+				}
+			}
+		},
+		"run": {
+			"msg": {
+				"sidekick_not_found": "Sidekick {{query}} not found!",
+				"sidekick_changed": "Set the sidekick to {{name}}! ({{id}})"
+			}
+		}
+	},
+	"sidekick_variants": {
+		"config": {
+			"description": "Sets the sidekick variants."
+		},
+		"run": {
+			"msg": {
+				"sidekick_not_found": "The bot does not have a sidekick!",
+				"invalid_sidekick": "Invalid sidekick!",
+				"variants_not_found": "This sidekick does not have variants!",
+				"variants_select": "Send the variant you want to select for {{type}}",
+				"changed": "Set the sidekick variants!"
 			}
 		}
 	},

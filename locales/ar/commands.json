@@ -7,6 +7,15 @@
 			"only_for_owners": "هذا الأمر متاح فقط لأصحاب الروبوت.",
 			"only_for_admins": "هذا الأمر متاح فقط لمسؤولي BOT.",
 			"only_for_whitelist": "هذا الأمر متاح فقط للمستخدمين على القائمة البيضاء في الروبوت."
+		},
+		"cosmetic_types": {
+			"outfit": "زيّ",
+			"backpack": "حقيبة ظهر",
+			"emoji": "الرموز التعبيرية",
+			"emote": "emote",
+			"pickaxe": "معول",
+			"shoe": "أحذية",
+			"sidekick": "رفيق"
 		}
 	},
 	"all_items": {
@@ -223,7 +232,7 @@
 		"run": {
 			"msg": {
 				"emote_not_found": "emote {{query}} لم يتم العثور عليها!",
-				"emote_changed": "اضبط Emote Emoji على {{name}}! ({{id}})"
+				"emote_changed": "اضبط Emote على {{name}}! ({{id}})"
 			}
 		}
 	},
@@ -401,6 +410,10 @@
 				"shoes": {
 					"name": "معرف الأحذية",
 					"description": "معرف الأحذية."
+				},
+				"sidekick": {
+					"name": "معرف الرفيق",
+					"description": "معرف الرفيق."
 				}
 			}
 		},
@@ -1216,8 +1229,7 @@
 					"description": "الرسالة التي سيتم إرسالها إلى الحزب."
 				}
 			}
-		},
-		"run": {}
+		}
 	},
 	"set_custom_key": {
 		"config": {

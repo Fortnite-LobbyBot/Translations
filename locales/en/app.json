@@ -2,10 +2,12 @@
 	"languages": {
 		"en": "English",
 		"es": "Spanish",
+		"en-US": "English (US)",
 		"es-419": "Spanish (Latin America)",
 		"ar": "Arabic",
 		"de": "German",
 		"fr": "French",
+		"he": "Hebrew",
 		"id": "Indonesian",
 		"it": "Italian",
 		"ja": "Japanese",
@@ -35,7 +37,10 @@
 		"statusWebsite": "Status Website",
 		"back": "Back",
 		"next": "Next",
-		"finish": "Finish"
+		"finish": "Finish",
+		"none": "None",
+		"later": "Later",
+		"categoryRecommendedForConfig": "A category is recommended to be able to change the config of your bots."
 	},
 	"badges": {
 		"inMatch": "In Match",
@@ -111,7 +116,8 @@
 		"createBot": "Create bot",
 		"settings": "Settings",
 		"login": "Login",
-		"register": "Register"
+		"register": "Register",
+		"vipTools": "VIP Tools"
 	},
 	"indexScreen": {
 		"availableBots_zero": "No available bots",
@@ -197,7 +203,10 @@
 		"myBots": "My Bots",
 		"botsRange": "({{start}}-{{end}} of {{total}} bots)",
 		"botsRangeNoBots": "(No bots)",
-		"shardNumber": "Shard #{{number}}"
+		"shardNumber": "Shard #{{number}}",
+		"cloneCategory": "Clone Category",
+		"bulkImport": "Bulk Import",
+		"bulkExport": "Bulk Export"
 	},
 	"publicBotsScreen": {
 		"title": "Public Bots",
@@ -213,7 +222,11 @@
 		"alreadyHaveAccount": "Already have an account?",
 		"dontHaveAccount": "Don't have an account?",
 		"forgotPassword": "Forgot your password?",
-		"resetIt": "Reset it"
+		"resetIt": "Reset it",
+		"loginWithBrowser": "Log in with browser",
+		"browserLoginFailed": "Unable to complete browser login. Please try again.",
+		"loginWithDiscord": "Log in with Discord",
+		"discordLoginFailed": "Unable to complete Discord login. Please try again."
 	},
 	"loginForm": {
 		"email": "Email",
@@ -290,7 +303,15 @@
 		"linearGradient": "Linear Gradient",
 		"radialGradient": "Radial Gradient",
 		"enterImageUrl": "Enter image URL",
-		"rotation": "Rotation"
+		"rotation": "Rotation",
+		"hardwareAccelerationDesc": "Uses your GPU to make FNLB run smoother. Turn this off if you are experiencing visual problems.",
+		"hardwareAcceleration": "Hardware Acceleration",
+		"restartNow": "Restart Now",
+		"restartRequiredDesc": "This setting requires a restart to take effect: {{setting}}",
+		"restartRequired": "Restart Required",
+		"discordRPCDesc": "Enables the RPC connection between Discord and FNLB.",
+		"discordRPC": "Enable Discord RPC",
+		"discordRPCWarning": "You will lose access to the <b>@USING FNLB</b> role when disabling this option."
 	},
 	"menuDrawer": {
 		"publicBots": "Public bots",
@@ -299,11 +320,54 @@
 		"register": "Register",
 		"login": "Login",
 		"changeTheme": "Change theme",
+		"submitFeedback": "Submit Feedback",
 		"settings": "Settings",
 		"discordServer": "Discord Server",
 		"systemStatus": "System Status",
 		"privacyPolicy": "Privacy Policy",
 		"legalNotice": "Legal Notice"
+	},
+	"feedbackModal": {
+		"title": "Submit Feedback",
+		"stepProgress": "Step {{current}} of {{total}}",
+		"stepKind": "What is this about?",
+		"stepKindDesc": "Choose whether you want to report an issue or share an idea.",
+		"stepCategory": "Pick a category",
+		"stepCategoryDesc": "Help us route your feedback to the right team.",
+		"stepDetails": "Tell us more",
+		"stepReview": "Review & submit",
+		"stepReviewDesc": "Double-check your feedback before sending.",
+		"continue": "Continue",
+		"feedbackKind": "What is this about?",
+		"feedbackKindProblem": "Problem",
+		"feedbackKindSuggestion": "Suggestion",
+		"kindProblemDesc": "Something is broken, not working, or behaving unexpectedly.",
+		"kindSuggestionDesc": "An idea for a new feature or improvement to the app.",
+		"category": "Category",
+		"categoryBots": "Bots",
+		"categoryApp": "App / UI",
+		"categoryAccount": "Account",
+		"categoryOther": "Other",
+		"categoryBotsDesc": "Bot startup, commands, matchmaking, or in-game behavior.",
+		"categoryAppDesc": "Interface, performance, themes, or general app experience.",
+		"categoryAccountDesc": "Login, registration, connections, or account settings.",
+		"categoryOtherDesc": "Anything else that doesn't fit the categories above.",
+		"messageProblem": "What's the problem?",
+		"messageSuggestion": "What would you like to see improved or added?",
+		"messageProblemPlaceholder": "Describe what went wrong...",
+		"messageSuggestionPlaceholder": "Share your idea...",
+		"attachLogs": "Attach bot logs from this session",
+		"attachLogsHint": "{{count}} log entries ({{errors}} errors) will be included.",
+		"attachLogsEmpty": "No logs available in this session.",
+		"reviewKind": "Type",
+		"reviewCategory": "Category",
+		"reviewMessage": "Message",
+		"reviewLogs": "Bot logs",
+		"submit": "Submit",
+		"success": "Thank you for your feedback!",
+		"messageRequired": "Please describe your feedback",
+		"categoryRequired": "Please select a category",
+		"feedbackKindRequired": "Please select feedback type"
 	},
 	"botScreen": {
 		"myBots": "My Bots",
@@ -405,13 +469,59 @@
 		"addPickaxe": "Add pickaxe",
 		"addBackpack": "Add backpack",
 		"addEmote": "Add emote",
+		"addEmoji": "Add emoji",
+		"addTrack": "Add track",
 		"addShoes": "Add Shoes",
+		"addGlider": "Add glider",
+		"addContrail": "Add contrail",
+		"addSidekick": "Add sidekick",
 		"addPreset": "Add Preset",
 		"moreOptions": "More options",
 		"inMatch": "In Match",
 		"sittingOut": "Sitting Out",
 		"createAccountToControlBot": "Create your FNLB account to control the bot",
 		"loginToControlBot": "Login with your FNLB account to control the bot"
+	},
+	"partyMemberModal": {
+		"title": "Party member",
+		"copyId": "Copy ID",
+		"partyState": "Party state",
+		"socialRelation": "Social",
+		"matchState": "Match",
+		"profile": "Profile",
+		"level": "Level",
+		"platform": "Platform",
+		"banner": "Banner",
+		"battlePass": "Battle Pass",
+		"notReady": "Not ready",
+		"leader": "Leader",
+		"member": "Member",
+		"bot": "Bot",
+		"friend": "Friend",
+		"blocked": "Blocked",
+		"incomingRequest": "Incoming request",
+		"outgoingRequest": "Outgoing request",
+		"noRelation": "No relation",
+		"inGame": "In game",
+		"inLobby": "In lobby",
+		"playersLeft": "{{count}} players left",
+		"matchDuration": "Duration: {{duration}}",
+		"preloaded": "Preloaded",
+		"actions": "Actions",
+		"outfit": "Outfit",
+		"pickaxe": "Pickaxe",
+		"emote": "Emote",
+		"backpack": "Backpack",
+		"shoes": "Shoes",
+		"sidekick": "Sidekick",
+		"glider": "Glider",
+		"contrail": "Contrail",
+		"emoji": "Emoji",
+		"track": "Track",
+		"petcarrier": "Pet carrier",
+		"playlist": "Playlist",
+		"loading": "Loading member info…",
+		"error": "Could not load member info"
 	},
 	"chat": {
 		"open": "Chat",
@@ -428,7 +538,9 @@
 		"botCreated": "Bot created successfully",
 		"enjoyYourNewBot": "Enjoy your new bot.",
 		"accountConnected": "Account connected successfully",
-		"startYourBot": "You can now start your bot!"
+		"startYourBot": "You can now start your bot!",
+		"categoryCloned": "Category Cloned Successfully",
+		"categoryClonedDescription": "The category has been cloned successfully"
 	},
 	"createBotModal": {
 		"createCustomBot": "Create your Custom FNLB Bot",
@@ -506,7 +618,8 @@
 		"disableCategory": "Disable category",
 		"deleteCategoryTitle": "Delete {{name}}",
 		"deleteCategoryDescription": "Are you sure you want to delete your category?",
-		"deleteCategoryAcceptLabel": "Delete category"
+		"deleteCategoryAcceptLabel": "Delete category",
+		"cloneCategory": "Clone Category"
 	},
 	"editBotModal": {
 		"editBot": "Edit Bot",
@@ -546,11 +659,27 @@
 		"pickaxes": "Pickaxes",
 		"backpacks": "Backpacks",
 		"shoes": "Shoes",
+		"sidekicks": "Sidekicks",
 		"outfitSingle": "Outfit",
 		"emoteSingle": "Emote",
 		"pickaxeSingle": "Pickaxe",
 		"backpackSingle": "Backpack",
-		"shoeSingle": "Shoe"
+		"shoeSingle": "Shoe",
+		"sidekickSingle": "Sidekick",
+		"emojis": "Emojis",
+		"emojiSingle": "Emoji",
+		"tracks": "Tracks",
+		"trackSingle": "Track",
+		"petCarriers": "Pet carriers",
+		"petCarrierSingle": "Pet carrier"
+	},
+	"trackInstrumentModal": {
+		"title": "Select instrument",
+		"apply": "Equip track",
+		"drum": "Drums",
+		"vox": "Vocals",
+		"bass": "Bass",
+		"lead": "Lead"
 	},
 	"updatePasswordModal": {
 		"changeYourFNLBPassword": "Change your FNLB Password"
@@ -855,7 +984,10 @@
 		"selectItem": "Select {{item}}",
 		"enterItem": "Enter {{item}}",
 		"saveChanges": "Save changes",
-		"discardChanges": "Discard changes"
+		"discardChanges": "Discard changes",
+		"importSetting": "Import Setting From Category",
+		"importFromCategory": "Import",
+		"selectCategoryToImport": "Select Category to Import From"
 	},
 	"textInput": {
 		"isRequired": "{{label}} is required.",
@@ -870,5 +1002,68 @@
 		"removed": "Removed",
 		"fixed": "Fixed",
 		"security": "Security"
+	},
+	"cloneCategoryModal": {
+		"clone": "Clone Category",
+		"cloneCategory": "Clone Category: {{name}}",
+		"newCategoryName": "New Category Name",
+		"newCategoryNameDescription": "Enter a name for the new category",
+		"copyCategoryName": "{{name}} (Copy)"
+	},
+	"vipModal": {
+		"benefitsLobbyBot": "24/7 Lobby Bot*",
+		"vipIsFree": "VIP is 100% free!",
+		"benefitsMoreToCome": "More To Come!",
+		"vipMemberThanks": "Thanks for being a VIP member! Here are the benefits you currently enjoy:",
+		"joinDiscord": "Join Discord",
+		"benefitsCustomThemes": "Custom Themes",
+		"freeVipBenefits": "Free VIP Benefits Include:",
+		"benefitsMoreGameModes": "More Game Modes*",
+		"vipRequirements": "You just need to be a member of the FNLB Discord server and meet some requirements.",
+		"benefitsCustomPresets": "Custom Presets",
+		"benefitsPrioritySupport": "Priority Support",
+		"conditionsApply": "* Conditions apply. Learn more on the Discord server.",
+		"vipLogoAlt": "VIP Logo",
+		"maybeLater": "Maybe Later",
+		"yourVipBenefits": "Your VIP Benefits:"
+	},
+	"validators": {
+		"usernameTooLong": "Username cannot have more than 32 characters.",
+		"emailInvalid": "Email is invalid.",
+		"passwordTooLong": "Password is too long.",
+		"passwordTooShort": "Password must be at least 8 characters long.",
+		"emailTooLong": "Email is too long."
+	},
+	"exitConfirmation": {
+		"title": "You have bots running!",
+		"description": "If you close the app, the bots will go offline. Are you sure you want to exit?",
+		"confirm": "Exit App"
+	},
+	"bulkImportModal": {
+		"selectCategory": "Select Category",
+		"matchmakingNotice": "Note: You need to prepare the accounts for matchmaking yourself before import.",
+		"searchCategories": "Search categories...",
+		"title": "Bulk Import Bots",
+		"fileUpload": "JSON File with Android Client Device Auths",
+		"clickToUpload": "Click to upload file",
+		"fileFormat": "Supported format: .json",
+		"requiredFormat": "Required format:",
+		"category": "Category",
+		"showFormat": "Show required format",
+		"example": "Example:",
+		"import": "Import",
+		"importing": "Importing...",
+		"importError": "Import failed",
+		"importSuccess": "Import successful"
+	},
+	"bulkExportModal": {
+		"deleteWarning": "Warning: You need to delete the bots from your account first to be able to import them.",
+		"title": "Bulk Export Bots",
+		"exporting": "Exporting...",
+		"export": "Export",
+		"deleteAfterExport": "Delete bots after export",
+		"exportSuccess": "Export successful",
+		"exportedBots_other": "Exported {{count}} bots",
+		"exportedBots_one": "Exported {{count}} bot"
 	}
 }

@@ -7,6 +7,15 @@
 			"only_for_owners": "このコマンドは、ボット所有者のみが利用できます。",
 			"only_for_admins": "このコマンドは、ボット管理者のみが利用できます。",
 			"only_for_whitelist": "このコマンドは、ボットのホワイトリストのユーザーのみが利用できます。"
+		},
+		"cosmetic_types": {
+			"outfit": "衣装",
+			"backpack": "バックパック",
+			"emoji": "絵文字",
+			"emote": "エモート",
+			"pickaxe": "ピカクセ",
+			"shoe": "靴",
+			"sidekick": "サイドキック"
 		}
 	},
 	"all_items": {
@@ -223,7 +232,7 @@
 		"run": {
 			"msg": {
 				"emote_not_found": "emote {{query}}見つかりません！",
-				"emote_changed": "emote emojiを{{name}}に設定してください！ （{{id}}）"
+				"emote_changed": "emote を{{name}}に設定してください！ （{{id}}）"
 			}
 		}
 	},
@@ -257,7 +266,7 @@
 				"member_not_found": "メンバー{{query}}見つかりません！",
 				"member_not_at_party": "あなたは私のパーティーのメンバーではありません。",
 				"mimic_enabled": "{{member}} {{filter}}のmimicを有効にしました！",
-				"filter": "フィルター付き{{filter}}"
+				"filter": " フィルター付き{{filter}}"
 			}
 		}
 	},
@@ -401,6 +410,10 @@
 				"shoes": {
 					"name": "靴ID",
 					"description": "靴のID。"
+				},
+				"sidekick": {
+					"name": "サイドキックID",
+					"description": "サイドキックのID。"
 				}
 			}
 		},
@@ -1216,8 +1229,7 @@
 					"description": "パーティーに送信されるメッセージ。"
 				}
 			}
-		},
-		"run": {}
+		}
 	},
 	"set_custom_key": {
 		"config": {

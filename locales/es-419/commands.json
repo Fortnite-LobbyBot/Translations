@@ -7,6 +7,15 @@
 			"only_for_owners": "Este comando sólo está disponible para propietarios de bots.",
 			"only_for_admins": "Este comando solo está disponible para administradores de bots.",
 			"only_for_whitelist": "Este comando solo está disponible para usuarios en la lista blanca del bot."
+		},
+		"cosmetic_types": {
+			"outfit": "Traje",
+			"backpack": "Mochila",
+			"emoji": "Emoji",
+			"emote": "Baile",
+			"pickaxe": "Pico",
+			"shoe": "Zapatos",
+			"sidekick": "Acompañante"
 		}
 	},
 	"all_items": {
@@ -401,6 +410,10 @@
 				"shoes": {
 					"name": "ID de zapatos",
 					"description": "La identificación de los zapatos."
+				},
+				"sidekick": {
+					"name": "ID de acompañante",
+					"description": "El ID del acompañante."
 				}
 			}
 		},
@@ -1216,8 +1229,7 @@
 					"description": "El mensaje que se enviará a la fiesta."
 				}
 			}
-		},
-		"run": {}
+		}
 	},
 	"set_custom_key": {
 		"config": {

@@ -7,6 +7,15 @@
 			"only_for_owners": "Perintah ini hanya tersedia untuk pemilik bot.",
 			"only_for_admins": "Perintah ini hanya tersedia untuk administrator bot.",
 			"only_for_whitelist": "Perintah ini hanya tersedia untuk pengguna di daftar putih bot."
+		},
+		"cosmetic_types": {
+			"outfit": "Pakaian",
+			"backpack": "Ransel",
+			"emoji": "Emoji",
+			"emote": "Emote",
+			"pickaxe": "Beliung",
+			"shoe": "Sepatu",
+			"sidekick": "Sidekick"
 		}
 	},
 	"all_items": {
@@ -401,6 +410,10 @@
 				"shoes": {
 					"name": "ID sepatu",
 					"description": "ID sepatu."
+				},
+				"sidekick": {
+					"name": "ID Sidekick",
+					"description": "ID sidekick."
 				}
 			}
 		},
@@ -1216,8 +1229,7 @@
 					"description": "Pesan yang akan dikirim ke pesta."
 				}
 			}
-		},
-		"run": {}
+		}
 	},
 	"set_custom_key": {
 		"config": {

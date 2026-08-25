@@ -7,6 +7,15 @@
 			"only_for_owners": "Bu komut yalnızca bot sahipleri için kullanılabilir.",
 			"only_for_admins": "Bu komut yalnızca bot yöneticileri için kullanılabilir.",
 			"only_for_whitelist": "Bu komut yalnızca botun beyaz listesindeki kullanıcılar için kullanılabilir."
+		},
+		"cosmetic_types": {
+			"outfit": "Kıyafet",
+			"backpack": "Sırt çantası",
+			"emoji": "Emoji",
+			"emote": "Zorlamak",
+			"pickaxe": "Kazma",
+			"shoe": "Ayakkabı",
+			"sidekick": "Sidekick"
 		}
 	},
 	"all_items": {
@@ -223,7 +232,7 @@
 		"run": {
 			"msg": {
 				"emote_not_found": "Emote {{query}} bulunamadı!",
-				"emote_changed": "Emote emojisini {{name}} olarak ayarlayın! ({{id}})"
+				"emote_changed": "Emote {{name}} olarak ayarlayın! ({{id}})"
 			}
 		}
 	},
@@ -401,6 +410,10 @@
 				"shoes": {
 					"name": "Ayakkabı kimliği",
 					"description": "Ayakkabıların kimliği."
+				},
+				"sidekick": {
+					"name": "Sidekick kimliği",
+					"description": "Sidekick kimliği."
 				}
 			}
 		},
@@ -1216,8 +1229,7 @@
 					"description": "Partiye gönderilecek mesaj."
 				}
 			}
-		},
-		"run": {}
+		}
 	},
 	"set_custom_key": {
 		"config": {

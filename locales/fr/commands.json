@@ -7,6 +7,15 @@
 			"only_for_owners": "Cette commande n'est disponible que pour les propriétaires de bots.",
 			"only_for_admins": "Cette commande n'est disponible que pour les administrateurs de bot.",
 			"only_for_whitelist": "Cette commande n'est disponible que pour les utilisateurs sur la liste blanche du bot."
+		},
+		"cosmetic_types": {
+			"outfit": "Tenue",
+			"backpack": "Sac à dos",
+			"emoji": "Emoji",
+			"emote": "Émoter",
+			"pickaxe": "Pioche",
+			"shoe": "Chaussures",
+			"sidekick": "Sidekick"
 		}
 	},
 	"all_items": {
@@ -223,7 +232,7 @@
 		"run": {
 			"msg": {
 				"emote_not_found": "EMOTE {{query}} INTORSEMBLE!",
-				"emote_changed": "Définissez l'emote emoji sur {{name}}! ({{id}})"
+				"emote_changed": "Définissez l'emote sur {{name}}! ({{id}})"
 			}
 		}
 	},
@@ -401,6 +410,10 @@
 				"shoes": {
 					"name": "ID de chaussures",
 					"description": "L'identité des chaussures."
+				},
+				"sidekick": {
+					"name": "ID du sidekick",
+					"description": "L'ID du sidekick."
 				}
 			}
 		},
@@ -1216,8 +1229,7 @@
 					"description": "Le message à envoyer à la fête."
 				}
 			}
-		},
-		"run": {}
+		}
 	},
 	"set_custom_key": {
 		"config": {

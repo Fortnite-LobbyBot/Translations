@@ -7,6 +7,15 @@
 			"only_for_owners": "Эта команда доступна только для владельцев бота.",
 			"only_for_admins": "Эта команда доступна только для администраторов бота.",
 			"only_for_whitelist": "Эта команда доступна только для пользователей в белом списке бота."
+		},
+		"cosmetic_types": {
+			"outfit": "Одежда",
+			"backpack": "Рюкзак",
+			"emoji": "Эмодзи",
+			"emote": "Эмоция",
+			"pickaxe": "Пикса",
+			"shoe": "Обувь",
+			"sidekick": "Сайдкик"
 		}
 	},
 	"all_items": {
@@ -223,7 +232,7 @@
 		"run": {
 			"msg": {
 				"emote_not_found": "Emote {{query}} не найден!",
-				"emote_changed": "Установите Emote Emoji на {{name}}! ({{id}})"
+				"emote_changed": "Установите Emote на {{name}}! ({{id}})"
 			}
 		}
 	},
@@ -401,6 +410,10 @@
 				"shoes": {
 					"name": "Обувь идентификатор",
 					"description": "Идентификатор обуви."
+				},
+				"sidekick": {
+					"name": "ID сайдкика",
+					"description": "Идентификатор сайдкика."
 				}
 			}
 		},
@@ -1216,8 +1229,7 @@
 					"description": "Сообщение, которое будет отправлено на сторону."
 				}
 			}
-		},
-		"run": {}
+		}
 	},
 	"set_custom_key": {
 		"config": {

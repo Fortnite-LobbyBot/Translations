@@ -7,6 +7,15 @@
 			"only_for_owners": "Lệnh này chỉ có sẵn cho chủ sở hữu bot.",
 			"only_for_admins": "Lệnh này chỉ có sẵn cho quản trị viên bot.",
 			"only_for_whitelist": "Lệnh này chỉ có sẵn cho người dùng trên danh sách trắng của bot."
+		},
+		"cosmetic_types": {
+			"outfit": "Trang phục",
+			"backpack": "Balo",
+			"emoji": "Biểu tượng cảm xúc",
+			"emote": "Emote",
+			"pickaxe": "Pickaxe",
+			"shoe": "Đôi giày",
+			"sidekick": "Sidekick"
 		}
 	},
 	"all_items": {
@@ -401,6 +410,10 @@
 				"shoes": {
 					"name": "ID giày",
 					"description": "ID của đôi giày."
+				},
+				"sidekick": {
+					"name": "ID Sidekick",
+					"description": "ID của sidekick."
 				}
 			}
 		},
@@ -1216,8 +1229,7 @@
 					"description": "Thông điệp sẽ được gửi đến bữa tiệc."
 				}
 			}
-		},
-		"run": {}
+		}
 	},
 	"set_custom_key": {
 		"config": {
