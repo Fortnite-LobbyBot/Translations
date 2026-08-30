@@ -160,6 +160,7 @@
 		"deleteAccountDesc": "If you decide to delete your account, please be aware that this action is irreversible. All your data will be permanently removed.",
 		"deleteAccountBtn": "Delete Account",
 		"apiTokens": "API Tokens",
+		"apiTokensDesc": "API Tokens are useful for <selfHostingLink>self-hosting your own bots</selfHostingLink> or for using the <apiDocsLink>FNLB API</apiDocsLink>. Guides and documentation are in the <developerPortalLink>Developer Portal</developerPortalLink>.",
 		"neverShareApiToken": "Never share your API Tokens!",
 		"neverShareApiTokenDesc": "Your API Tokens are private. Sharing them can lead to unauthorized access to your bots and security risks. Keep them safe!",
 		"regenerateApiTokenTitle": "Regenerate your API Token",
