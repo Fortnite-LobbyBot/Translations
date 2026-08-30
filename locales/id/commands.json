@@ -150,7 +150,8 @@
 						"emoji": "Emoji",
 						"emote": "Emote",
 						"pickaxe": "Beliung",
-						"shoes": "Sepatu"
+						"shoes": "Sepatu",
+						"sidekick": "Sidekick"
 					},
 					"description": "Filter untuk diatur saat menyalin kosmetik."
 				},
@@ -165,7 +166,8 @@
 				"members_found": "Menemukan banyak anggota:",
 				"member_not_found": "Anggota {{member}} tidak ditemukan!",
 				"member_not_at_party": "Anda bukan anggota partai saya.",
-				"member_copied": "Disalin {{member}}!"
+				"member_copied": "Disalin {{member}}{{filter}}!",
+				"filter": "dengan filter {{filter}}"
 			}
 		}
 	},
@@ -250,7 +252,8 @@
 						"emojis": "Emoji",
 						"emotes": "Emotes",
 						"pickaxes": "Pickaxes",
-						"shoes": "Sepatu"
+						"shoes": "Sepatu",
+						"sidekicks": "Sidekick"
 					},
 					"description": "Filter untuk diatur saat meniru kosmetik."
 				},

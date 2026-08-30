@@ -150,7 +150,8 @@
 						"emoji": "絵文字",
 						"emote": "エモート",
 						"pickaxe": "ピカクセ",
-						"shoes": "靴"
+						"shoes": "靴",
+						"sidekick": "サイドキック"
 					},
 					"description": "化粧品をコピーするときに設定するフィルター。"
 				},
@@ -165,7 +166,8 @@
 				"members_found": "複数のメンバーが見つかりました：",
 				"member_not_found": "メンバー{{member}}見つかりません！",
 				"member_not_at_party": "あなたは私のパーティーのメンバーではありません。",
-				"member_copied": "コピー{{member}}！"
+				"member_copied": "コピー{{member}}{{filter}}！",
+				"filter": " フィルター付き{{filter}}"
 			}
 		}
 	},
@@ -250,7 +252,8 @@
 						"emojis": "絵文字",
 						"emotes": "emotes",
 						"pickaxes": "ピタックス",
-						"shoes": "靴"
+						"shoes": "靴",
+						"sidekicks": "サイドキック"
 					},
 					"description": "化粧品を模倣するときに設定するフィルター。"
 				},

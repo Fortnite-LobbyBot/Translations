@@ -150,7 +150,8 @@
 						"emoji": "이모티콘",
 						"emote": "감정",
 						"pickaxe": "곡괭이",
-						"shoes": "신발"
+						"shoes": "신발",
+						"sidekick": "사이드킥"
 					},
 					"description": "화장품을 복사 할 때 설정할 필터."
 				},
@@ -165,7 +166,8 @@
 				"members_found": "발견 된 여러 회원 :",
 				"member_not_found": "회원 {{member}}를 찾을 수 없습니다!",
 				"member_not_at_party": "당신은 내 파티의 일원이 아닙니다.",
-				"member_copied": "복사 {{member}}!"
+				"member_copied": "복사 {{member}}{{filter}}!",
+				"filter": "필터 {{filter}}"
 			}
 		}
 	},
@@ -250,7 +252,8 @@
 						"emojis": "이모티콘",
 						"emotes": "감정",
 						"pickaxes": "곡예물",
-						"shoes": "신발"
+						"shoes": "신발",
+						"sidekicks": "사이드킥"
 					},
 					"description": "화장품을 모방 할 때 설정하는 필터."
 				},

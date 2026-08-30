@@ -150,7 +150,8 @@
 						"emoji": "表情符号",
 						"emote": "表情",
 						"pickaxe": "Pickaxe",
-						"shoes": "鞋"
+						"shoes": "鞋",
+						"sidekick": "搭档"
 					},
 					"description": "复制化妆品时要设置的过滤器。"
 				},
@@ -165,7 +166,8 @@
 				"members_found": "找到了多个成员：",
 				"member_not_found": "成员{{member}}找不到！",
 				"member_not_at_party": "你不是我党的成员。",
-				"member_copied": "复制{{member}}！"
+				"member_copied": "复制{{member}}{{filter}}！",
+				"filter": "使用过滤器{{filter}}"
 			}
 		}
 	},
@@ -250,7 +252,8 @@
 						"emojis": "表情符号",
 						"emotes": "情绪",
 						"pickaxes": "采摘",
-						"shoes": "鞋"
+						"shoes": "鞋",
+						"sidekicks": "搭档"
 					},
 					"description": "模仿化妆品时要设置的过滤器。"
 				},

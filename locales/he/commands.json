@@ -91,7 +91,8 @@
 						"emoji": "אמוג׳י",
 						"emote": "ריקוד",
 						"pickaxe": "פיקקס",
-						"shoes": "נעליים"
+						"shoes": "נעליים",
+						"sidekick": "Sidekick"
 					},
 					"description": "הפילטר שיש להגדיר בעת העתקת מוצרי קוסמטיקה."
 				}
@@ -102,7 +103,8 @@
 				"members_found": "נמצאו מספר משתמשים:",
 				"member_not_found": "המשתמש {{member}} לא נמצא!",
 				"member_not_at_party": "אתה לא משתמש שנמצא בפארטי שלי.",
-				"member_copied": "{{member}} הועתק!"
+				"member_copied": "{{member}} הועתק{{filter}}!",
+				"filter": " עם הפילטר {{filter}}"
 			}
 		}
 	},
@@ -169,7 +171,8 @@
 						"backpacks": "תיקים",
 						"emotes": "ריקודים",
 						"pickaxes": "פיקקסים",
-						"shoes": "נעליים"
+						"shoes": "נעליים",
+						"sidekicks": "Sidekick"
 					},
 					"description": "הפילטר שיש להגדיר‏ בעת חיקוי מוצרי קוסמטיקה.",
 					"name": "פילטר"

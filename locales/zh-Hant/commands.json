@@ -150,7 +150,8 @@
 						"emoji": "表情符號",
 						"emote": "表情",
 						"pickaxe": "Pickaxe",
-						"shoes": "鞋"
+						"shoes": "鞋",
+						"sidekick": "搭檔"
 					},
 					"description": "複製化妝品時要設置的過濾器。"
 				},
@@ -165,7 +166,8 @@
 				"members_found": "找到了多個成員：",
 				"member_not_found": "成員{{member}}找不到！",
 				"member_not_at_party": "你不是我黨的成員。",
-				"member_copied": "複製{{member}}！"
+				"member_copied": "複製{{member}}{{filter}}！",
+				"filter": "使用過濾器{{filter}}"
 			}
 		}
 	},
@@ -250,7 +252,8 @@
 						"emojis": "表情符號",
 						"emotes": "情緒",
 						"pickaxes": "採摘",
-						"shoes": "鞋"
+						"shoes": "鞋",
+						"sidekicks": "搭檔"
 					},
 					"description": "模仿化妝品時要設置的過濾器。"
 				},

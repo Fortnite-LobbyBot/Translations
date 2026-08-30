@@ -150,7 +150,8 @@
 						"emoji": "Emoji",
 						"emote": "Emotka",
 						"pickaxe": "Kilof",
-						"shoes": "Buty"
+						"shoes": "Buty",
+						"sidekick": "Sidekick"
 					},
 					"description": "Filtr, który ma ustawić podczas kopiowania kosmetyków."
 				},
@@ -165,7 +166,8 @@
 				"members_found": "Znalazłem wielu członków:",
 				"member_not_found": "Członek {{member}} nie znaleziono!",
 				"member_not_at_party": "Nie jesteś członkiem mojej partii.",
-				"member_copied": "Skopiowane {{member}}!"
+				"member_copied": "Skopiowane {{member}}{{filter}}!",
+				"filter": "z filtrem {{filter}}"
 			}
 		}
 	},
@@ -250,7 +252,8 @@
 						"emojis": "Emoji",
 						"emotes": "Emocje",
 						"pickaxes": "Pickaxes",
-						"shoes": "Buty"
+						"shoes": "Buty",
+						"sidekicks": "Sidekick"
 					},
 					"description": "Filtr do naśladowania kosmetyków."
 				},

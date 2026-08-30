@@ -150,7 +150,8 @@
 						"emoji": "Biểu tượng cảm xúc",
 						"emote": "Emote",
 						"pickaxe": "Pickaxe",
-						"shoes": "Đôi giày"
+						"shoes": "Đôi giày",
+						"sidekick": "Sidekick"
 					},
 					"description": "Bộ lọc để đặt khi sao chép mỹ phẩm."
 				},
@@ -165,7 +166,8 @@
 				"members_found": "Tìm thấy nhiều thành viên:",
 				"member_not_found": "Thành viên {{member}} Không tìm thấy!",
 				"member_not_at_party": "Bạn không phải là thành viên trong nhóm của tôi.",
-				"member_copied": "Đã sao chép {{member}}!"
+				"member_copied": "Đã sao chép {{member}}{{filter}}!",
+				"filter": "với bộ lọc {{filter}}"
 			}
 		}
 	},
@@ -250,7 +252,8 @@
 						"emojis": "Biểu tượng cảm xúc",
 						"emotes": "Cảm xúc",
 						"pickaxes": "Pickaxes",
-						"shoes": "Đôi giày"
+						"shoes": "Đôi giày",
+						"sidekicks": "Sidekick"
 					},
 					"description": "Bộ lọc để đặt khi bắt chước mỹ phẩm."
 				},

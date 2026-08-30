@@ -160,7 +160,8 @@
 						"emoji": "Emoji",
 						"emote": "Emote",
 						"pickaxe": "Pickaxe",
-						"shoes": "Shoes"
+						"shoes": "Shoes",
+						"sidekick": "Sidekick"
 					},
 					"description": "The filter to set when copying cosmetics."
 				},
@@ -175,7 +176,8 @@
 				"members_found": "Found multiple members:",
 				"member_not_found": "Member {{member}} not found!",
 				"member_not_at_party": "You are not a member of my party.",
-				"member_copied": "Copied {{member}}!"
+				"member_copied": "Copied {{member}}{{filter}}!",
+				"filter": " with filter {{filter}}"
 			}
 		}
 	},
@@ -262,7 +264,8 @@
 						"emojis": "Emojis",
 						"emotes": "Emotes",
 						"pickaxes": "Pickaxes",
-						"shoes": "Shoes"
+						"shoes": "Shoes",
+						"sidekicks": "Sidekick"
 					},
 					"description": "The filter to set when imitating cosmetics."
 				},

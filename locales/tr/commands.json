@@ -150,7 +150,8 @@
 						"emoji": "Emoji",
 						"emote": "Zorlamak",
 						"pickaxe": "Kazma",
-						"shoes": "Ayakkabı"
+						"shoes": "Ayakkabı",
+						"sidekick": "Sidekick"
 					},
 					"description": "Kozmetik kopyalarken ayarlanacak filtre."
 				},
@@ -165,7 +166,8 @@
 				"members_found": "Birden fazla üye bulundu:",
 				"member_not_found": "Üye {{member}} bulunamadı!",
 				"member_not_at_party": "Partimin bir üyesi değilsin.",
-				"member_copied": "Kopyalandı {{member}}!"
+				"member_copied": "Kopyalandı {{member}}{{filter}}!",
+				"filter": "filtre ile {{filter}}"
 			}
 		}
 	},
@@ -250,7 +252,8 @@
 						"emojis": "Emojiler",
 						"emotes": "Eşler",
 						"pickaxes": "Kazık",
-						"shoes": "Ayakkabı"
+						"shoes": "Ayakkabı",
+						"sidekicks": "Sidekick"
 					},
 					"description": "Kozmetik taklit ederken ayarlanacak filtre."
 				},

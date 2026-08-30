@@ -150,7 +150,8 @@
 						"emoji": "الرموز التعبيرية",
 						"emote": "emote",
 						"pickaxe": "معول",
-						"shoes": "أحذية"
+						"shoes": "أحذية",
+						"sidekick": "رفيق"
 					},
 					"description": "المرشح لتعيين عند نسخ مستحضرات التجميل."
 				},
@@ -165,7 +166,8 @@
 				"members_found": "تم العثور على أعضاء متعددين:",
 				"member_not_found": "عضو {{member}} لم يتم العثور عليه!",
 				"member_not_at_party": "أنت لست عضوًا في حزبي.",
-				"member_copied": "نسخ {{member}}!"
+				"member_copied": "نسخ {{member}}{{filter}}!",
+				"filter": "مع Filter {{filter}}"
 			}
 		}
 	},
@@ -250,7 +252,8 @@
 						"emojis": "الرموز التعبيرية",
 						"emotes": "العواطف",
 						"pickaxes": "Pickaxes",
-						"shoes": "أحذية"
+						"shoes": "أحذية",
+						"sidekicks": "رفيق"
 					},
 					"description": "المرشح لضبطه عند تقليد مستحضرات التجميل."
 				},

@@ -150,7 +150,8 @@
 						"emoji": "Emoji",
 						"emote": "Emote",
 						"pickaxe": "Spitzhacke",
-						"shoes": "Schuhe"
+						"shoes": "Schuhe",
+						"sidekick": "Sidekick"
 					},
 					"description": "Der Filter, der beim Kopieren von Kosmetika festgelegt ist."
 				},
@@ -165,7 +166,8 @@
 				"members_found": "Mehrere Mitglieder gefunden:",
 				"member_not_found": "Mitglied {{member}} Nicht gefunden!",
 				"member_not_at_party": "Sie sind kein Mitglied meiner Partei.",
-				"member_copied": "Kopiert {{member}}!"
+				"member_copied": "Kopiert {{member}}{{filter}}!",
+				"filter": "mit filter {{filter}}"
 			}
 		}
 	},
@@ -250,7 +252,8 @@
 						"emojis": "Emojis",
 						"emotes": "Emotes",
 						"pickaxes": "Spitzhahn",
-						"shoes": "Schuhe"
+						"shoes": "Schuhe",
+						"sidekicks": "Sidekick"
 					},
 					"description": "Der Filter, der beim Nachahmung von Kosmetika festgelegt wird."
 				},

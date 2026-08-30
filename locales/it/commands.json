@@ -150,7 +150,8 @@
 						"emoji": "Emoji",
 						"emote": "Emote",
 						"pickaxe": "Piccone",
-						"shoes": "Scarpe"
+						"shoes": "Scarpe",
+						"sidekick": "Sidekick"
 					},
 					"description": "Il filtro da impostare durante la copia dei cosmetici."
 				},
@@ -165,7 +166,8 @@
 				"members_found": "Trovato più membri:",
 				"member_not_found": "Membro {{member}} non trovato!",
 				"member_not_at_party": "Non sei un membro del mio partito.",
-				"member_copied": "Copiato {{member}}!"
+				"member_copied": "Copiato {{member}}{{filter}}!",
+				"filter": "con filtro {{filter}}"
 			}
 		}
 	},
@@ -250,7 +252,8 @@
 						"emojis": "Emoji",
 						"emotes": "Emote",
 						"pickaxes": "Pichaxes",
-						"shoes": "Scarpe"
+						"shoes": "Scarpe",
+						"sidekicks": "Sidekick"
 					},
 					"description": "Il filtro da impostare quando si imita i cosmetici."
 				},

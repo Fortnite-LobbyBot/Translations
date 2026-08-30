@@ -150,7 +150,8 @@
 						"emoji": "Emoji",
 						"emote": "EMOTE",
 						"pickaxe": "Picareta",
-						"shoes": "Sapato"
+						"shoes": "Sapato",
+						"sidekick": "Sidekick"
 					},
 					"description": "O filtro para definir ao copiar cosméticos."
 				},
@@ -165,7 +166,8 @@
 				"members_found": "Encontrou vários membros:",
 				"member_not_found": "Membro {{member}} não encontrado!",
 				"member_not_at_party": "Você não é um membro do meu partido.",
-				"member_copied": "Copiado {{member}}!"
+				"member_copied": "Copiado {{member}}{{filter}}!",
+				"filter": "com filtro {{filter}}"
 			}
 		}
 	},
@@ -250,7 +252,8 @@
 						"emojis": "Emojis",
 						"emotes": "Emotas",
 						"pickaxes": "Picaretas",
-						"shoes": "Sapato"
+						"shoes": "Sapato",
+						"sidekicks": "Sidekick"
 					},
 					"description": "O filtro para definir ao imitar cosméticos."
 				},

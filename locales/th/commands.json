@@ -150,7 +150,8 @@
 						"emoji": "อีโมจิ",
 						"emote": "เปล่งเสียง",
 						"pickaxe": "รั้ว",
-						"shoes": "รองเท้า"
+						"shoes": "รองเท้า",
+						"sidekick": "Sidekick"
 					},
 					"description": "ตัวกรองที่จะตั้งค่าเมื่อคัดลอกเครื่องสำอาง"
 				},
@@ -165,7 +166,8 @@
 				"members_found": "พบสมาชิกหลายคน:",
 				"member_not_found": "สมาชิก {{member}} ไม่พบ!",
 				"member_not_at_party": "คุณไม่ได้เป็นสมาชิกของปาร์ตี้ของฉัน",
-				"member_copied": "คัดลอก {{member}}!"
+				"member_copied": "คัดลอก {{member}}{{filter}}!",
+				"filter": "ด้วยตัวกรอง {{filter}}"
 			}
 		}
 	},
@@ -250,7 +252,8 @@
 						"emojis": "อีโมจิ",
 						"emotes": "อารมณ์",
 						"pickaxes": "เพล็กซ์",
-						"shoes": "รองเท้า"
+						"shoes": "รองเท้า",
+						"sidekicks": "Sidekick"
 					},
 					"description": "ตัวกรองที่จะตั้งค่าเมื่อเลียนแบบเครื่องสำอาง"
 				},
