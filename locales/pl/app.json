@@ -1,4 +1,4 @@
-{
+﻿{
 	"languages": {
 		"en": "Angielski",
 		"en-US": "Angielski (Stany Zjednoczone)",
@@ -437,6 +437,11 @@
 		"createCustomBot": "Utwórz swój niestandardowy bot FNLB",
 		"createCustomBotDesc": "Aby utworzyć bota FNLB, potrzebujesz zupełnie nowego konta Epic Games.",
 		"createEpicAccount": "Utwórz nowe konto Epic Games",
+		"generateTempEmail": "Generate temporary email",
+		"unableGenerateTempEmail": "Unable to generate a temporary email.",
+		"tempEmailLabel": "Temporary email",
+		"waitingVerificationCode": "Waiting for Epic verification code…",
+		"verificationCodeLabel": "Verification code",
 		"or": "LUB",
 		"alreadyHaveAccount": "Mam już nowe konto Epic Games.",
 		"importBotTitle": "Zaimportujmy konto Epic Games twojego bota",

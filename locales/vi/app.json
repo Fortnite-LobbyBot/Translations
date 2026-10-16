@@ -1,4 +1,4 @@
-{
+﻿{
 	"languages": {
 		"en": "Tiếng Anh",
 		"es": "Tiếng Tây Ban Nha",
@@ -437,6 +437,11 @@
 		"createCustomBot": "Tạo bot FNLB tùy chỉnh",
 		"createCustomBotDesc": "Để tạo bot FNLB, bạn cần tài khoản Epic Games mới.",
 		"createEpicAccount": "Tạo tài khoản Epic Games mới",
+		"generateTempEmail": "Generate temporary email",
+		"unableGenerateTempEmail": "Unable to generate a temporary email.",
+		"tempEmailLabel": "Temporary email",
+		"waitingVerificationCode": "Waiting for Epic verification code…",
+		"verificationCodeLabel": "Verification code",
 		"or": "HOẶC",
 		"alreadyHaveAccount": "Tôi đã có tài khoản Epic Games mới.",
 		"importBotTitle": "Nhập tài khoản Epic Games cho bot",

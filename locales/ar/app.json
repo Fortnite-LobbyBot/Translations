@@ -1,4 +1,4 @@
-{
+﻿{
 	"languages": {
 		"en": "الإنجليزية",
 		"en-US": "الإنجليزية (الولايات المتحدة)",
@@ -437,6 +437,11 @@
 		"createCustomBot": "أنشئ روبوت FNLB مخصص",
 		"createCustomBotDesc": "لإنشاء روبوت FNLB، تحتاج إلى حساب Epic Games جديد.",
 		"createEpicAccount": "أنشئ حساب Epic Games جديد",
+		"generateTempEmail": "Generate temporary email",
+		"unableGenerateTempEmail": "Unable to generate a temporary email.",
+		"tempEmailLabel": "Temporary email",
+		"waitingVerificationCode": "Waiting for Epic verification code…",
+		"verificationCodeLabel": "Verification code",
 		"or": "أو",
 		"alreadyHaveAccount": "لدي بالفعل حساب Epic Games جديد.",
 		"importBotTitle": "لنقم باستيراد حساب روبوت Epic Games الخاص بك",

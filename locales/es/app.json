@@ -1,4 +1,4 @@
-{
+﻿{
 	"languages": {
 		"en": "Inglés",
 		"en-US": "Inglés (Estados Unidos)",
@@ -65,7 +65,7 @@
 		"categories_one": "{{count}} Categoría",
 		"categories_other": "{{count}} Categorías",
 		"inUse": "En uso {{count}}/{{total}}",
-		"online": "En l�nea {{count}}/{{total}}",
+		"online": "En l�nea {{count}}/{{total}}",
 		"beta": "Beta",
 		"variants_zero": "Sin Variantes",
 		"variants_one": "{{count}} Variante",
@@ -437,6 +437,11 @@
 		"createCustomBot": "Crea tu Bot Personalizado de FNLB",
 		"createCustomBotDesc": "Para crear un bot de FNLB, necesitas una cuenta completamente nueva de Epic Games.",
 		"createEpicAccount": "Crear una nueva cuenta de Epic Games",
+		"generateTempEmail": "Generar email temporal",
+		"unableGenerateTempEmail": "No se pudo generar un email temporal.",
+		"tempEmailLabel": "Email temporal",
+		"waitingVerificationCode": "Esperando el código de verificación de Epic…",
+		"verificationCodeLabel": "Código de verificación",
 		"or": "O",
 		"alreadyHaveAccount": "Ya tengo una cuenta nueva de Epic Games.",
 		"importBotTitle": "Importemos la Cuenta de Epic Games de tu Bot",

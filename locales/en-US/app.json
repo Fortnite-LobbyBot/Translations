@@ -1,4 +1,4 @@
-{
+﻿{
 	"languages": {
 		"en": "English",
 		"en-US": "English (US)",
@@ -484,6 +484,11 @@
 		"createCustomBot": "Create your Custom FNLB Bot",
 		"createCustomBotDesc": "To create a FNLB bot, you need a brand new Epic Games account.",
 		"createEpicAccount": "Create a new Epic Games account",
+		"generateTempEmail": "Generate temporary email",
+		"unableGenerateTempEmail": "Unable to generate a temporary email.",
+		"tempEmailLabel": "Temporary email",
+		"waitingVerificationCode": "Waiting for Epic verification code…",
+		"verificationCodeLabel": "Verification code",
 		"or": "OR",
 		"alreadyHaveAccount": "I already have a new Epic Games account.",
 		"importBotTitle": "Let's Import your Bot's Epic Games Account",
@@ -766,7 +771,7 @@
 		"accountSuspended": "Account Suspended",
 		"sorryWithUsername": "Sorry <b>{{username}}</b>, your account has been banned from using FNLB.",
 		"sorryGeneric": "Sorry, your account has been banned from using FNLB.",
-		"suspendedDueToViolation": "Your account has been suspended due to a violation of our <0>Term Of Service</0>.",
+		"suspendedDueToViolation": "Your account has been suspended due to a violation of our <0>Terms of Service</0>. Please contact support if you have any questions.",
 		"needHelp": "Need Help?",
 		"helpDescription": "If you believe this was a mistake or have questions regarding your account suspension, our support team is here to help.",
 		"joinDiscordCommunity": "Join our Discord Community",
@@ -869,6 +874,8 @@
 		"stoppedBots_other": "Stopped {{count}} bots.",
 		"stoppedAutoRunningBots": "Stopped auto-running bots.",
 		"startBots": "Start bots",
+		"startBotsDisabledTitle": "Starting bots is disabled",
+		"startBotsDisabledDesc": "Starting bots is currently unavailable in the app.",
 		"getBotsOnlineWithApp": "Get Your Bots Online with the FNLB App",
 		"getBotsOnlineDesc": "Start your bots and get the best experience by downloading the official FNLB app.",
 		"learnMore": "Learn More.",

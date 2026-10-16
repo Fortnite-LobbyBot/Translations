@@ -1,4 +1,4 @@
-{
+﻿{
 	"languages": {
 		"en": "Inggris",
 		"en-US": "Inggris (AS)",
@@ -437,6 +437,11 @@
 		"createCustomBot": "Buat Bot FNLB Kustom Anda",
 		"createCustomBotDesc": "Untuk membuat bot FNLB, Anda memerlukan akun Epic Games yang benar-benar baru.",
 		"createEpicAccount": "Buat akun Epic Games baru",
+		"generateTempEmail": "Generate temporary email",
+		"unableGenerateTempEmail": "Unable to generate a temporary email.",
+		"tempEmailLabel": "Temporary email",
+		"waitingVerificationCode": "Waiting for Epic verification code…",
+		"verificationCodeLabel": "Verification code",
 		"or": "ATAU",
 		"alreadyHaveAccount": "Saya sudah memiliki akun Epic Games baru.",
 		"importBotTitle": "Mari Impor Akun Epic Games Bot Anda",

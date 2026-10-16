@@ -1,4 +1,4 @@
-{
+﻿{
 	"languages": {
 		"en": "英语",
 		"es": "西班牙语",
@@ -437,6 +437,11 @@
 		"createCustomBot": "创建自定义FNLB机器人",
 		"createCustomBotDesc": "要创建FNLB机器人，您需要一个全新的Epic Games账户。",
 		"createEpicAccount": "创建新的Epic Games账户",
+		"generateTempEmail": "Generate temporary email",
+		"unableGenerateTempEmail": "Unable to generate a temporary email.",
+		"tempEmailLabel": "Temporary email",
+		"waitingVerificationCode": "Waiting for Epic verification code…",
+		"verificationCodeLabel": "Verification code",
 		"or": "或",
 		"alreadyHaveAccount": "我已有新的Epic Games账户。",
 		"importBotTitle": "导入您的机器人Epic Games账户",

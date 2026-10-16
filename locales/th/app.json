@@ -1,4 +1,4 @@
-{
+﻿{
 	"languages": {
 		"en": "ภาษาอังกฤษ",
 		"en-US": "ภาษาอังกฤษ (สหรัฐอเมริกา)",
@@ -437,6 +437,11 @@
 		"createCustomBot": "สร้างบอท FNLB แบบกำหนดเองของคุณ",
 		"createCustomBotDesc": "เพื่อสร้างบอท FNLB คุณต้องมีบัญชี Epic Games ที่ใหม่ทั้งหมด",
 		"createEpicAccount": "สร้างบัญชี Epic Games ใหม่",
+		"generateTempEmail": "Generate temporary email",
+		"unableGenerateTempEmail": "Unable to generate a temporary email.",
+		"tempEmailLabel": "Temporary email",
+		"waitingVerificationCode": "Waiting for Epic verification code…",
+		"verificationCodeLabel": "Verification code",
 		"or": "หรือ",
 		"alreadyHaveAccount": "ฉันมีบัญชี Epic Games ใหม่แล้ว",
 		"importBotTitle": "มาเริ่มนำเข้าบัญชี Epic Games ของบอทของคุณ",

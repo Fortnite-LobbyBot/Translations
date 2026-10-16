@@ -1,4 +1,4 @@
-{
+﻿{
 	"languages": {
 		"en": "אַנגְלִית",
 		"es": "סְפָרַדִית",
@@ -473,6 +473,11 @@
 		"createCustomBot": "צור את ה- FNLB BOT המותאם אישית שלך",
 		"createCustomBotDesc": "כדי ליצור בוט FNLB, אתה זקוק לחשבון משחקי Epic חדש לגמרי.",
 		"createEpicAccount": "צור חשבון משחקי Epic חדש",
+		"generateTempEmail": "Generate temporary email",
+		"unableGenerateTempEmail": "Unable to generate a temporary email.",
+		"tempEmailLabel": "Temporary email",
+		"waitingVerificationCode": "Waiting for Epic verification code…",
+		"verificationCodeLabel": "Verification code",
 		"or": "אוֹ",
 		"alreadyHaveAccount": "יש לי כבר חשבון משחקי Epic חדש.",
 		"importBotTitle": "בואו ונבוא את חשבון משחקי ה- Epic של הבוט שלך",

@@ -1,4 +1,4 @@
-{
+﻿{
 	"languages": {
 		"en": "영어",
 		"en-US": "영어 (미국)",
@@ -437,6 +437,11 @@
 		"createCustomBot": "커스텀 FNLB 봇 생성",
 		"createCustomBotDesc": "FNLB 봇을 생성하려면 완전히 새로운 Epic Games 계정이 필요합니다.",
 		"createEpicAccount": "새 Epic Games 계정 생성",
+		"generateTempEmail": "Generate temporary email",
+		"unableGenerateTempEmail": "Unable to generate a temporary email.",
+		"tempEmailLabel": "Temporary email",
+		"waitingVerificationCode": "Waiting for Epic verification code…",
+		"verificationCodeLabel": "Verification code",
 		"or": "또는",
 		"alreadyHaveAccount": "이미 새로운 Epic Games 계정이 있습니다.",
 		"importBotTitle": "봇의 Epic Games 계정을 가져오겠습니다",

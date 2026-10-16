@@ -1,4 +1,4 @@
-{
+﻿{
 	"languages": {
 		"en": "İngilizce",
 		"es": "İspanyolca",
@@ -65,7 +65,7 @@
 		"categories_one": "{{count}} Kategori",
 		"categories_other": "{{count}} Kategori",
 		"inUse": "Kullanımda {{count}}/{{total}}",
-		"online": "�evrimi�i {{count}}/{{total}}",
+		"online": "�evrimi�i {{count}}/{{total}}",
 		"beta": "Beta",
 		"variants_zero": "Varyant Yok",
 		"variants_one": "{{count}} Varyant",
@@ -437,6 +437,11 @@
 		"createCustomBot": "Özel FNLB Botunu Oluştur",
 		"createCustomBotDesc": "Bir FNLB botu oluşturmak için yeni bir Epic Games hesabına ihtiyacın var.",
 		"createEpicAccount": "Yeni Epic Games hesabı oluştur",
+		"generateTempEmail": "Generate temporary email",
+		"unableGenerateTempEmail": "Unable to generate a temporary email.",
+		"tempEmailLabel": "Temporary email",
+		"waitingVerificationCode": "Waiting for Epic verification code…",
+		"verificationCodeLabel": "Verification code",
 		"or": "VEYA",
 		"alreadyHaveAccount": "Zaten yeni bir Epic Games hesabım var.",
 		"importBotTitle": "Botunun Epic Games Hesabını İçe Aktar",

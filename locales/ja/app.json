@@ -1,4 +1,4 @@
-{
+﻿{
 	"languages": {
 		"en": "英語",
 		"en-US": "英語 (アメリカ)",
@@ -437,6 +437,11 @@
 		"createCustomBot": "カスタムFNLBボットを作成",
 		"createCustomBotDesc": "FNLBボットを作成するには新しいEpic Gamesアカウントが必要です。",
 		"createEpicAccount": "新しいEpic Gamesアカウントを作成",
+		"generateTempEmail": "Generate temporary email",
+		"unableGenerateTempEmail": "Unable to generate a temporary email.",
+		"tempEmailLabel": "Temporary email",
+		"waitingVerificationCode": "Waiting for Epic verification code…",
+		"verificationCodeLabel": "Verification code",
 		"or": "または",
 		"alreadyHaveAccount": "すでに新しいEpic Gamesアカウントを持っています。",
 		"importBotTitle": "ボットのEpic Gamesアカウントをインポートしましょう",
